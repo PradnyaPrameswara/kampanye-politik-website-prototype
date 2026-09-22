@@ -1,0 +1,7 @@
+{
+  "amount": 100,
+  "title": "Donate $100",
+  "description": "Support our mission with your generous donation.",
+  "image": "../../assets/images/donations/donation-image.svg",
+  "stripePriceId": "price_placeholder_100"
+}

@@ -1,0 +1,97 @@
+/* Scroll-driven reveal animations — CivicUnity */
+
+/* Keyframes */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translate3d(0, 100px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes reveal-left {
+  from { opacity: 0; transform: translate3d(-90px, 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes reveal-right {
+  from { opacity: 0; transform: translate3d(90px, 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes reveal-scale {
+  from { opacity: 0; transform: translate3d(-90px, 0, 0) scale3d(0.8, 0.8, 1); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* CSS Scroll-Driven Animations (modern browsers) */
+@supports (animation-timeline: view()) {
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade {
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+    animation-duration: 1ms; /* required but overridden by timeline */
+  }
+
+  .reveal-up    { animation-name: reveal-up; }
+  .reveal-left  { animation-name: reveal-left; }
+  .reveal-right { animation-name: reveal-right; }
+  .reveal-scale { animation-name: reveal-scale; }
+  .reveal-fade  { animation-name: fade-in; }
+}
+
+/* Intersection Observer fallback (for browsers without animation-timeline) */
+@supports not (animation-timeline: view()) {
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal-up    { transform: translate3d(0, 100px, 0); }
+  .reveal-left  { transform: translate3d(-90px, 0, 0); }
+  .reveal-right { transform: translate3d(90px, 0, 0); }
+  .reveal-scale { transform: translate3d(-90px, 0, 0) scale3d(0.8, 0.8, 1); }
+  .reveal-fade  { transform: none; }
+
+  .reveal-up.is-visible,
+  .reveal-left.is-visible,
+  .reveal-right.is-visible,
+  .reveal-scale.is-visible,
+  .reveal-fade.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+/* Hover animations (pure CSS, no JS) */
+.card-image-hover img {
+  transition: transform 0.3s ease;
+}
+
+.card-image-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

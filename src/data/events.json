@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Community Action Forum",
+    "description": "Adipiscing massa aenean dictum in non. Lectus ut quisque non urna",
+    "location": "Central Library Auditorium",
+    "date": "September 15, 2024",
+    "time": "10:00 AM - 1:00 PM",
+    "image": "event-image-1.jpg"
+  },
+  {
+    "title": "Advocacy Training Workshop",
+    "description": "Adipiscing massa aenean dictum in non. Lectus ut quisque non urna",
+    "location": "Downtown Community Center",
+    "date": "September 15, 2024",
+    "time": "9:00 AM - 12:00 PM",
+    "image": "event-image-2.avif"
+  },
+  {
+    "title": "Voter Registration Drive",
+    "description": "Adipiscing massa aenean dictum in non. Lectus ut quisque non urna",
+    "location": "City Park Pavilion",
+    "date": "October 12, 2024",
+    "time": "11:00 AM - 4:00 PM",
+    "image": "event-image-3.jpg"
+  }
+]

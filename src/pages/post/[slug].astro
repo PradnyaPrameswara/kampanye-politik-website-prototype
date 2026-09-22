@@ -1,0 +1,63 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map(entry => ({
+    params: { slug: entry.slug || entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const { Content } = await entry.render();
+
+const allPosts = await getCollection('blog');
+
+const getCategoryId = (cat: { id: string } | string) => ('id' in Object(cat) ? Object(cat).id : String(cat || ''));
+
+const currentCat = getCategoryId(entry.data.category);
+
+const currentId = entry.slug || entry.id;
+
+const relatedPosts = allPosts
+  .filter(post => getCategoryId(post.data.category) === currentCat && (post.slug || post.id) !== currentId)
+  .slice(0, 3);
+---
+
+<BlogLayout 
+  title={entry.data.title}
+  publishDate={entry.data.publishDate}
+  readTime={entry.data.readTime}
+  category={entry.data.category}
+  image={entry.data.image}
+>
+  <div class="prose max-w-none text-neutral-black-700">
+    <Content />
+  </div>
+
+  <!-- Related Posts -->
+  {relatedPosts.length > 0 && (
+    <div class="mt-16 pt-12 border-t border-neutral-white-300">
+      <h3 class="text-2xl font-bold font-lora text-neutral-black-900 mb-8">Related Posts</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {relatedPosts.map((post) => (
+          <article class="rounded-[0.75rem] bg-neutral-white p-5 shadow-subtle flex flex-col">
+            <a href={`/post/${post.slug}`} class="block overflow-hidden rounded-lg mb-4">
+              <img src={post.data.image || '/images/default-blog.jpg'} alt={post.data.title} class="w-full h-40 object-cover" />
+            </a>
+            <h5 class="text-lg font-bold font-lora text-neutral-black-900 mb-2 line-clamp-2 hover:text-brand-blue">
+              <a href={`/post/${post.slug}`}>{post.data.title}</a>
+            </h5>
+            <div class="flex items-center text-sm text-neutral-black-500 mt-auto pt-2">
+              <span>{new Date(post.data.publishDate).toLocaleDateString()}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  )}
+</BlogLayout>

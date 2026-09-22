@@ -1,0 +1,39 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import Banner from '@/components/sections/Banner.astro';
+import SectionWrapper from '@/components/ui/SectionWrapper.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const objectives = await getCollection('objectives');
+
+  return objectives.map(objective => ({
+    params: { slug: objective.slug || objective.id },
+    props: { objective },
+  }));
+}
+
+const { objective } = Astro.props;
+
+const { Content } = await objective.render();
+---
+
+<ContentLayout title={`${objective.data.title} | CivicUnity`}>
+  <Banner title={objective.data.title} />
+
+  <SectionWrapper class="py-24" id="objective-detail">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal-up rounded-[0.75rem] overflow-hidden mb-12 aspect-[21/9]">
+        <img 
+          src={objective.data.image || '/images/default-objective-hero.jpg'} 
+          alt={objective.data.title} 
+          class="w-full h-full object-cover" 
+        />
+      </div>
+      
+      <div class="reveal-up prose prose-lg md:prose-xl prose-headings:font-serif prose-headings:font-bold prose-headings:text-neutral-black-900 prose-p:text-neutral-black-600 prose-a:text-brand-blue hover:prose-a:text-brand-red max-w-none">
+        <Content />
+      </div>
+    </div>
+  </SectionWrapper>
+</ContentLayout>

@@ -1,0 +1,56 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import Banner from '@/components/sections/Banner.astro';
+import SectionWrapper from '@/components/ui/SectionWrapper.astro';
+import Headline from '@/components/sections/Headline.astro';
+import Button from '@/components/ui/Button.astro';
+import { getCollection } from 'astro:content';
+
+const objectives = await getCollection('objectives');
+---
+
+<ContentLayout title="Our Objectives | CivicUnity">
+  <Banner title="Our Objectives" />
+
+  <SectionWrapper class="py-24" id="objectives-grid">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+      <Headline text="Our objectives" class="justify-center" />
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
+        What we are fighting for
+      </h2>
+      <p class="text-neutral-black-600 text-lg leading-relaxed">
+        Our core objectives focus on the most pressing issues in our community. We are dedicated to creating sustainable, long-term solutions.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-up">
+      {objectives.map(objective => (
+        <a href={`/objectives/${objective.slug}`} class="block group bg-white border border-neutral-white-300 rounded-[0.75rem] overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div class="aspect-[16/9] overflow-hidden">
+            <img 
+              src={objective.data.image || '/images/default-objective.jpg'} 
+              alt={objective.data.title} 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+            />
+          </div>
+          <div class="p-8">
+            <h5 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4 group-hover:text-brand-blue transition-colors">{objective.data.title}</h5>
+            <p class="text-neutral-black-600 mb-6 line-clamp-3">{objective.data.description}</p>
+            <span class="inline-flex items-center text-brand-blue font-medium group-hover:text-brand-red transition-colors">
+              Read more
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </SectionWrapper>
+
+  <SectionWrapper class="py-24 bg-brand-blue text-white" id="cta" isContainer={false}>
+    <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-fade">
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold mb-8 leading-tight">Support our cause today</h2>
+      <Button href="/donate" variant="primary" class="bg-white text-brand-blue hover:bg-neutral-white-200">Donate now</Button>
+    </div>
+  </SectionWrapper>
+
+</ContentLayout>

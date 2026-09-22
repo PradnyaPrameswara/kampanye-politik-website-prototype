@@ -1,0 +1,44 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import Banner from '@/components/sections/Banner.astro';
+import SectionWrapper from '@/components/ui/SectionWrapper.astro';
+import Headline from '@/components/sections/Headline.astro';
+import { getCollection } from 'astro:content';
+
+const team = await getCollection('team');
+---
+
+<ContentLayout title="Our Team | CivicUnity">
+  <Banner title="Our Team" />
+
+  <SectionWrapper class="py-24" id="team-grid">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+      <Headline text="Our team" class="justify-center" />
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
+        Meet the people behind our mission
+      </h2>
+      <p class="text-neutral-black-600 text-lg leading-relaxed">
+        Our dedicated team of professionals and volunteers work tirelessly to bring positive change to our community.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 reveal-up">
+      {team.map(member => (
+        <a href={`/member/${member.id}`} class="block group rounded-[0.75rem] overflow-hidden relative aspect-[3/4] bg-neutral-white-200">
+          <div class="absolute inset-0 z-0 bg-[url('/images/pattern-bg.svg')] bg-cover bg-center opacity-50"></div>
+          <img 
+            src={member.data.image || '/images/default-member.jpg'} 
+            alt={member.data.name} 
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 h-[90%] w-auto object-cover object-bottom z-10 transition-transform duration-500 group-hover:scale-105" 
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-black-900/80 via-transparent to-transparent z-20"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-30">
+            <h5 class="text-xl font-serif font-bold text-white mb-1 group-hover:text-brand-blue transition-colors">{member.data.name}</h5>
+            <p class="text-neutral-white-200 text-sm">{member.data.role}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </SectionWrapper>
+
+</ContentLayout>

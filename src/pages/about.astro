@@ -1,0 +1,128 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import Banner from '@/components/sections/Banner.astro';
+import SectionWrapper from '@/components/ui/SectionWrapper.astro';
+import Headline from '@/components/sections/Headline.astro';
+import Button from '@/components/ui/Button.astro';
+---
+
+<ContentLayout title="About Us | CivicUnity">
+  <Banner title="About Us" />
+
+  <SectionWrapper class="py-24" id="about">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-16 items-center">
+      <div class="reveal-left">
+        <Headline text="About us" />
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
+          We are dedicated to building a stronger community together
+        </h2>
+        <p class="text-neutral-black-600 text-lg mb-8 leading-relaxed">
+          Through civic engagement and community-driven initiatives, we strive to make a positive impact in our society. Our mission is to empower individuals to become active participants in shaping their future.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h6 class="text-lg font-bold text-neutral-black-900">Community First</h6>
+          </div>
+          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <h6 class="text-lg font-bold text-neutral-black-900">Education</h6>
+          </div>
+          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h6 class="text-lg font-bold text-neutral-black-900">Empowerment</h6>
+          </div>
+          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
+            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h6 class="text-lg font-bold text-neutral-black-900">Integrity</h6>
+          </div>
+        </div>
+        <Button href="/about" variant="primary">More about us</Button>
+      </div>
+      <div class="reveal-right h-full">
+        <img src="/images/shared/about-image.webp" alt="About CivicUnity" class="w-full h-full object-cover rounded-[0.75rem] min-h-[400px]" />
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <SectionWrapper class="py-16 bg-neutral-black-900" id="stats" isContainer={false}>
+    <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal-up">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">20000+</h2>
+          <p class="text-neutral-white-200 text-lg">Donors</p>
+        </div>
+        <div>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">15000+</h2>
+          <p class="text-neutral-white-200 text-lg">Volunteers</p>
+        </div>
+        <div>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">90+</h2>
+          <p class="text-neutral-white-200 text-lg">Days in campaign</p>
+        </div>
+        <div>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">$40000+</h2>
+          <p class="text-neutral-white-200 text-lg">Active voters</p>
+        </div>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <SectionWrapper class="py-24 bg-neutral-white-200" id="mission">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+      <Headline text="Our mission" class="justify-center" />
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
+        Dedicated to progressive change
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-up">
+      <div class="bg-white p-8 rounded-[0.75rem] shadow-sm">
+        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Empower citizens</h3>
+        <p class="text-neutral-black-600 leading-relaxed">Providing resources and education to help every citizen make informed decisions and participate actively in our democratic process.</p>
+      </div>
+      <div class="bg-white p-8 rounded-[0.75rem] shadow-sm">
+        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Promote equality</h3>
+        <p class="text-neutral-black-600 leading-relaxed">Fighting for policies that ensure equal opportunities and justice for all members of our community, regardless of background.</p>
+      </div>
+      <div class="bg-white p-8 rounded-[0.75rem] shadow-sm">
+        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Sustainable growth</h3>
+        <p class="text-neutral-black-600 leading-relaxed">Advocating for environmentally conscious policies that promote economic growth without compromising our future.</p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <SectionWrapper class="py-24" id="values">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+      <Headline text="Our values" class="justify-center" />
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
+        Core principles that guide us
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-up">
+       <div class="bg-neutral-white-200 p-8 rounded-[0.75rem]">
+        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Integrity in Action</h3>
+        <p class="text-neutral-black-600 leading-relaxed">We believe in transparent, honest leadership that prioritizes the needs of the community above all else.</p>
+      </div>
+      <div class="bg-neutral-white-200 p-8 rounded-[0.75rem]">
+        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Inclusive Community</h3>
+        <p class="text-neutral-black-600 leading-relaxed">Every voice matters. We strive to create platforms where all perspectives are heard and valued.</p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <SectionWrapper class="py-24 bg-brand-blue text-white" id="cta" isContainer={false}>
+    <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-fade">
+      <h2 class="text-4xl lg:text-5xl font-serif font-bold mb-8 leading-tight">Ready to make a difference?</h2>
+      <Button href="/contact" variant="primary" class="bg-white text-brand-blue hover:bg-neutral-white-200">Join us now</Button>
+    </div>
+  </SectionWrapper>
+
+</ContentLayout>

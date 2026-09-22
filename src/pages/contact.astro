@@ -1,0 +1,32 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import Banner from '@/components/sections/Banner.astro';
+import SectionWrapper from '@/components/ui/SectionWrapper.astro';
+import Headline from '@/components/sections/Headline.astro';
+import { ContactForm } from '@/components/react/ContactForm';
+---
+
+<ContentLayout title="Contact Us | CivicUnity">
+  <Banner title="Contact Us" />
+
+  <SectionWrapper class="py-24" id="contact">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="reveal-left">
+        <Headline text="Get in touch" />
+        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
+          We'd love to hear from you
+        </h2>
+        <p class="text-neutral-black-600 text-lg mb-10 leading-relaxed">
+          Whether you have a question, want to volunteer, or just want to say hello, we are here for you. Fill out the form and we will get back to you as soon as possible.
+        </p>
+        
+        <ContactForm client:visible />
+      </div>
+      
+      <div class="reveal-right h-full">
+        <img src="/images/shared/contact-image.webp" alt="Contact CivicUnity" class="w-full h-full object-cover rounded-[0.75rem] min-h-[500px]" />
+      </div>
+    </div>
+  </SectionWrapper>
+
+</ContentLayout>

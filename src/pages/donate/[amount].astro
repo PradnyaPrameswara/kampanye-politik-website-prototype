@@ -1,0 +1,63 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getCollection } from 'astro:content';
+import { DonateButton } from '../../components/react/DonateButton';
+
+export async function getStaticPaths() {
+  const donations = await getCollection('donations');
+
+  return donations.map(entry => ({
+    params: { amount: entry.data.amount.toString() },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const allDonations = await getCollection('donations');
+
+const relatedDonations = allDonations.filter(d => d.data.amount !== entry.data.amount);
+---
+
+<ContentLayout title={`Donate $${entry.data.amount}`}>
+  <div class="bg-neutral-white-200 py-16 text-center">
+    <div class="max-w-container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold font-lora text-neutral-black-900">Support Our Work</h1>
+    </div>
+  </div>
+
+  <div class="max-w-container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="reveal-left">
+        <span class="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">Contribute us</span>
+        <h2 class="text-3xl md:text-4xl font-bold font-lora text-neutral-black-900 mb-6">{entry.data.title}</h2>
+        <p class="text-neutral-black-600 mb-8 text-lg">{entry.data.description}</p>
+        
+        <DonateButton 
+          client:visible
+          stripePriceId={entry.data.stripePriceId}
+          amount={entry.data.amount}
+        />
+      </div>
+
+      <!-- Right Image -->
+      <div>
+        <img src={entry.data.image || '/images/donate-default.jpg'} alt="Donation" class="w-full h-auto rounded-[0.75rem] shadow-subtle object-cover" />
+      </div>
+    </div>
+
+    <!-- Related Donations -->
+    <div class="mt-24">
+      <h3 class="text-2xl font-bold font-lora text-neutral-black-900 mb-8 text-center">Other ways to give</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {relatedDonations.map(donation => (
+          <a href={`/donate/${donation.data.amount}`} class="block rounded-[0.75rem] border border-neutral-white-300 p-6 text-center hover:shadow-subtle hover:border-brand-blue transition-all">
+            <h4 class="text-2xl font-bold text-neutral-black-900 mb-2">${donation.data.amount}</h4>
+            <p class="text-neutral-black-600 text-sm">{donation.data.title}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</ContentLayout>

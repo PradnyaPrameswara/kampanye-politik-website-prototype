@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://civicunity.webflow.io/sitemap-index.xml

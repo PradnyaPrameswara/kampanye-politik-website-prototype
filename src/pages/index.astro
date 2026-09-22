@@ -1,0 +1,423 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Navbar from '@/components/layout/Navbar.astro';
+import Headline from '@/components/sections/Headline.astro';
+import SectionWrapper from '@/components/layout/SectionWrapper.astro';
+import FaqAccordion from '@/components/react/FaqAccordion.tsx';
+import VideoLightbox from '@/components/react/VideoLightbox.tsx';
+import { getCollection } from 'astro:content';
+import events from '@/data/events.json';
+
+const objectives = await getCollection('objectives');
+
+const teamMembers = await getCollection('team');
+
+const blogPosts = await getCollection('blog');
+
+const faqItems = [
+  { question: 'What is CivicUnity?', answer: 'CivicUnity is a platform dedicated to empowering communities through advocacy, policy change, and collective action for a stronger nation.' },
+  { question: 'How can I get involved?', answer: 'You can join us by volunteering, donating, or attending our community events. Visit our contact page to learn more about opportunities.' },
+  { question: 'Where does my donation go?', answer: 'Your donations directly support community programs, advocacy campaigns, and policy research that drive real change in communities across the nation.' },
+  { question: 'How do I contact the team?', answer: 'You can reach us through our contact form, by email, or by attending one of our community events. We are always happy to hear from supporters.' },
+];
+---
+
+<BaseLayout 
+  title="CivicUnity — Inspiring Change Together" 
+  description="CivicUnity empowers communities through advocacy, policy change, and collective action."
+  hideNav={true}
+>
+  <!-- Hero Section & Floating Category Header -->
+  <div class="header-bg-wrapper">
+    <div class="header-bg">
+      <Navbar currentPath="/" />
+      
+      <div class="section-hero">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="hero-component">
+              <div class="hero-left-content-wrapper reveal-left">
+                <div class="hero-left-content">
+                  <div class="hero-left-top-content">
+                    <div class="dot"></div>
+                    <div>Together, We Can Make a Difference</div>
+                  </div>
+                  <h1 class="heading-style-h1 text-color-white">Inspiring change together we shape our nation.</h1>
+                </div>
+                <a class="button w-inline-block" href="/contact">
+                  <div>Join us now</div>
+                </a>
+              </div>
+              
+              <div class="hero-right-content-wrapper reveal-right">
+                <div class="hero-right-content">
+                  <h5 class="heading-style-h5 text-color-white">Farret ipsum dolor sit amet consectetur.</h5>
+                  <div class="text-size-regular text-color-white-300">Nulla arcu nec turpis quis vulputate sit arcu amet. Pellentesque elit metus sed malesuada eros et odio duis</div>
+                </div>
+                <VideoLightbox
+                  client:visible
+                  thumbnailSrc="/images/shared/hero-video-thumb.jpg"
+                  videoUrl="https://www.youtube.com/watch?v=EMcS_sUYeqU"
+                  triggerLabel="Watch"
+                />
+              </div>
+              
+              <img 
+                alt="Civic Leader" 
+                class="hero-bg-image" 
+                loading="eager" 
+                src="/images/shared/hero-image-1.webp"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Donation Category Card -->
+    <div class="section-category">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="category-component">
+            <div class="category-left-content-wrapper">
+              <h3 class="heading-style-h3 text-color-white">Contribute</h3>
+              <div class="text-size-small text-color-white-200">Help us reach our goal</div>
+            </div>
+            <div class="category-collection-list-wrapper w-dyn-list">
+              <div class="category-collection-list w-dyn-items" role="list">
+                {[100, 50, 25, 10, 5].map((amount) => (
+                  <div class="category-collection-list-item w-dyn-item" role="listitem">
+                    <a class="category-card w-inline-block" href={`/donate/${amount}`}>
+                      <div>${amount}</div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="section-about">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="about-component">
+            <div class="about-left-content-wrapper reveal-left">
+              <div class="about-left-top-content-wrapper">
+                <div class="headline">
+                  <div class="dot"></div>
+                  <div>About us</div>
+                </div>
+                <div class="about-left-top-content">
+                  <h2 class="heading-style-h2">Learn about our commitment to political impact</h2>
+                  <p class="text-size-regular">Nulla morbi donec nulla tempor scelerisque nisi enim amet. Metus sed vitae nec dignissim id morbi egestas. Odio porta enim cras vitae.</p>
+                </div>
+              </div>
+              <div class="padding-bottom padding-large"></div>
+              <div class="w-layout-grid about-grid">
+                <div class="about-card">
+                  <img alt="" loading="lazy" src="/icons/about-logo-4.svg"/>
+                  <div class="about-card-content">
+                    <h6 class="heading-style-h6">Director of the Developing Communities</h6>
+                  </div>
+                </div>
+                <div class="about-card">
+                  <img alt="" loading="lazy" src="/icons/about-logo-3.svg"/>
+                  <div class="about-card-content">
+                    <h6 class="heading-style-h6">Majored in Political Science</h6>
+                  </div>
+                </div>
+                <div class="about-card">
+                  <img alt="" loading="lazy" src="/icons/about-logo-2.svg"/>
+                  <div class="about-card-content">
+                    <h6 class="heading-style-h6">Law School and Civil Rights Attorney</h6>
+                  </div>
+                </div>
+                <div class="about-card">
+                  <img alt="" loading="lazy" src="/icons/about-logo-4.svg"/>
+                  <div class="about-card-content">
+                    <h6 class="heading-style-h6">Deputy Attorney General Media Project</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="padding-bottom padding-medium"></div>
+              <a class="button w-inline-block" href="/about"><div>More about us</div></a>
+            </div>
+            <div class="about-image-wrapper is-about reveal-right">
+              <img alt="About CivicUnity" class="about-image" loading="lazy" src="/images/shared/about-image.webp"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Objectives Section -->
+  <div class="section-objective">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="objective-component">
+            <div class="objective-top-content-wrapper reveal-fade">
+              <div class="objective-top-left-content-wrapper">
+                <div class="headline"><div class="dot"></div><div>Our objectives</div></div>
+                <h2 class="heading-style-h2">Guiding our nation with purposeful strategic objectives.</h2>
+              </div>
+              <p class="text-size-regular">Arcu duis in venenatis turpis phasellus morbi nulla eu purus. Viverra enim arcu magna adipiscing suscipit eu viverra mollis vitae.</p>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="objective-collection-list-wrapper w-dyn-list">
+              <div class="objective-collection-list w-dyn-items" role="list">
+                {objectives.slice(0, 3).map((obj) => (
+                  <div class="objective-collection-item w-dyn-item" role="listitem">
+                    <a class="objective-card w-inline-block" href={`/objectives/${obj.slug}`}>
+                      <div class="objective-image-wrapper">
+                        <img alt={obj.data.title} class="objective-image" loading="lazy" src={`/images/objectives/${obj.slug}.jpg`} />
+                      </div>
+                      <div class="objective-card-content-wrapper">
+                        <h5 class="heading-style-h5">{obj.data.title}</h5>
+                        <p class="text-size-regular">{obj.data.description}</p>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Stats Section -->
+  <div class="section-community">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="community-component reveal-up">
+            <div class="community-card">
+              <h2 class="heading-style-h2">20000+</h2>
+              <div class="text-size-regular">Donars</div>
+            </div>
+            <div class="community-card">
+              <h2 class="heading-style-h2">15000+</h2>
+              <div class="text-size-regular">Volunteers</div>
+            </div>
+            <div class="community-card">
+              <h2 class="heading-style-h2">90+</h2>
+              <div class="text-size-regular">Days in campaign</div>
+            </div>
+            <div class="community-card _2nd">
+              <h2 class="heading-style-h2">$40000+</h2>
+              <div class="text-size-regular">Active voters</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="section-team">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="team-component">
+            <div class="team-top-content-wrapper reveal-fade">
+              <div class="team-top-left-content-wrapper">
+                <div class="headline"><div class="dot"></div><div>Our team</div></div>
+                <h2 class="heading-style-h2">Building a stronger community together.</h2>
+              </div>
+              <div class="text-size-regular">Cras nulla diam quam sollicitudin bibendum nunc mattis felis pharetra. Faucibus sed hendrerit nisl lacus velit sem faucibus.</div>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="team-collection-list-wrapper w-dyn-list">
+              <div class="team-collection-list w-dyn-items" role="list">
+                {teamMembers.slice(0, 3).map((member) => (
+                  <div class="team-collection-list-item w-dyn-item" role="listitem">
+                    <a class="team-card w-inline-block" href={`/team/${member.id}`}>
+                      <div class="team-image-wrapper" style="background-image:url('/images/team/team-bg.jpg')">
+                        <img alt={member.data.name} class="team-image" loading="lazy" src={`/images/team/${member.id}.webp`} />
+                      </div>
+                      <div class="team-card-content-wrapper">
+                        <div class="team-card-content">
+                          <h5 class="heading-style-h5 text-color-white">{member.data.name}</h5>
+                          <img alt="" loading="lazy" src="/icons/team-arrow.svg"/>
+                        </div>
+                        <div class="text-size-regular text-color-white">{member.data.title}</div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Events Section -->
+  <div class="section-event">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="event-component">
+            <div class="event-top-content-wrapper reveal-fade">
+              <div class="event-top-left-content">
+                <div class="headline"><div class="dot"></div><div>Our events</div></div>
+                <h2 class="heading-style-h2">Explore our upcoming events for community impact.</h2>
+              </div>
+              <div class="event-top-right-content-wrapper">
+                <div class="text-size-regular">Tristique aliquet aliquet venenatis sem nullam. Augue risus commodo ultrices amet quisque.</div>
+              </div>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="event-bottom-content-wrapper">
+              {events.map((event, i) => {
+                const eventImg = i === 1 ? '/images/events/event-image-2.avif' : `/images/events/event-image-${i + 1}.jpg`;
+                return (
+                  <div class="event-card reveal-up">
+                    <div class="event-image-wrapper">
+                      <img alt={event.title} class="event-image" loading="lazy" src={eventImg} />
+                    </div>
+                    <div class="event-card-content-wrapper">
+                      <div class="event-card-top-content">
+                        <h5 class="heading-style-h5">{event.title}</h5>
+                        <div class="text-size-regular">{event.description}</div>
+                      </div>
+                      <div class="event-card-bottom-content-wrapper">
+                        <div class="event-card-bottom-content">
+                          <img alt="" class="event-icon" loading="lazy" src="/icons/event-location.png" />
+                          <div class="text-size-small">{event.location}</div>
+                        </div>
+                        <div class="event-card-bottom-content">
+                          <img alt="" class="event-icon" loading="lazy" src="/icons/event-date.png" />
+                          <div class="text-size-small">{event.date}</div>
+                        </div>
+                        <div class="event-card-bottom-content">
+                          <img alt="" class="event-icon" loading="lazy" src="/icons/event-time.png" />
+                          <div class="text-size-small">{event.time}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="section-cta">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="cta-component">
+            <div class="cta-content-wrapper">
+              <h2 class="heading-style-h2">Take action for change.</h2>
+              <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <SectionWrapper padding="medium">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-gap-lg reveal-fade">
+        <Headline label="FAQ" class="justify-center" />
+        <h2 class="mt-4">Frequently asked questions</h2>
+      </div>
+      <FaqAccordion client:visible items={faqItems} />
+    </div>
+  </SectionWrapper>
+
+  <!-- Blog Section -->
+  <div class="section-blog">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="blog-component">
+            <div class="blog-top-content-wrapper reveal-fade">
+              <div class="blog-top-left-content-wrapper">
+                <div class="headline"><div class="dot"></div><div>Latest blog</div></div>
+                <h2 class="heading-style-h2">Insights and updates from our community.</h2>
+              </div>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="blog-collection-list-wrapper w-dyn-list">
+              <div class="blog-collection-list w-dyn-items" role="list">
+                {blogPosts.slice(0, 3).map((post) => (
+                  <div class="blog-collection-list-item w-dyn-item" role="listitem">
+                    <div class="blog-card reveal-up">
+                      <div class="blog-image-wrapper">
+                        <img alt={post.data.title} class="blog-image" loading="lazy" src={`/images/blog/${post.slug}.jpg`} />
+                      </div>
+                      <div class="blog-card-content-wrapper">
+                        <div class="text-size-small">{post.data.publishDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+                        <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
+                          <h5 class="heading-style-h5">{post.data.title}</h5>
+                        </a>
+                        <div class="blog-card-content">
+                          <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
+                            <div>Read More</div>
+                            <img alt="" class="arrow" loading="lazy" src="/icons/team-arrow.svg" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Donation Mission Section -->
+  <div class="section-donation">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="donation-component">
+            <div class="donation-left-content-wrapper">
+              <div class="donation-left-top-content-wrapper">
+                <div class="headline"><div class="dot"></div><div>Contribute us</div></div>
+                <div class="donation-left-top-content">
+                  <h2 class="heading-style-h2">Support our mission with your generous donation today.</h2>
+                  <p class="text-size-regular">Egestas purus fermentum vel scelerisque aliquam. Ipsum pellentesque at sagittis varius commodo sed integer mattis sed.</p>
+                </div>
+              </div>
+              <div class="donation-collection-list-wrapper w-dyn-list">
+                <div class="donation-collection-list w-dyn-items" role="list">
+                  {[100, 50, 25, 10, 5].map((amount) => (
+                    <div class="donation-collection-list-item w-dyn-item" role="listitem">
+                      <a class="donation-card w-inline-block" href={`/donate/${amount}`}>
+                        <div>${amount}</div>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div class="donation-image-wrapper">
+              <img alt="Donation mission" class="donation-image" loading="lazy" src="/images/donations/donation-image.webp" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

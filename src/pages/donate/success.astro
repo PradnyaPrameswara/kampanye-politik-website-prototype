@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Donation Successful — CivicUnity">
+  <div class="min-h-[60vh] flex items-center justify-center bg-neutral-white-200 py-16">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <div class="bg-neutral-white p-12 rounded-[0.75rem] shadow-subtle">
+        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h1 class="text-3xl font-bold text-neutral-black-900 mb-4">Thank You for Your Donation!</h1>
+        <p class="text-lg text-neutral-black-600 mb-6">
+          Your generous contribution has been received successfully. A confirmation receipt has been sent to your email by Stripe.
+        </p>
+        <p class="text-neutral-black-600 mb-8">
+          Your support helps us create meaningful change in communities across the nation.
+        </p>
+        <a href="/" class="inline-block px-8 py-[0.8125rem] bg-brand-blue text-neutral-white font-medium rounded-[0.75rem] hover:bg-brand-red transition-colors">
+          Return to Home
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

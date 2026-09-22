@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  publishDate: Date;
+  readTime: string;
+  category: { id: string; slug?: string } | string;
+  image: ImageMetadata;
+}
+
+const { title, description, publishDate, readTime, category, image } = Astro.props;
+
+// Formatting date
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).format(publishDate);
+
+const categoryLabel = 'id' in Object(category) ? Object(category).id : String(category || 'Policy');
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="blog-detail px-[1.5rem] laptop:px-[1.875rem] tablet:px-[1.5rem] mobile:px-[1rem] mx-auto w-full max-w-container py-section-lg">
+    
+    <header class="blog-header flex flex-col laptop:flex-row gap-8 mb-12">
+      <div class="blog-header-left flex-1 flex flex-col justify-center">
+        <div class="category-label text-brand-blue font-bold mb-4 uppercase tracking-wider text-sm">{categoryLabel}</div>
+        <h1 class="text-4xl laptop:text-5xl font-bold text-neutral-black-900 mb-6">{title}</h1>
+        <div class="meta text-neutral-black-600 flex gap-4 items-center">
+          <time datetime={publishDate.toISOString()}>{formattedDate}</time>
+          <span class="w-1.5 h-1.5 rounded-full bg-neutral-black-500"></span>
+          <span>{readTime}</span>
+        </div>
+      </div>
+      <div class="blog-header-right flex-1">
+        <Image 
+          src={image} 
+          alt={title} 
+          class="w-full h-auto rounded-[0.75rem] object-cover aspect-video" 
+        />
+      </div>
+    </header>
+
+    <div class="article-content prose prose-lg prose-headings:text-neutral-black-900 prose-a:text-brand-blue max-w-none">
+      <slot />
+    </div>
+
+  </article>
+</BaseLayout>

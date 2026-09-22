@@ -1,0 +1,63 @@
+---
+import MobileNavMenu from '../react/MobileNavMenu';
+
+interface Props {
+  currentPath?: string;
+}
+
+const currentPath = Astro.props.currentPath || Astro.url.pathname;
+
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Contact', path: '/contact' },
+  { name: 'Team', path: '/team' },
+  { name: 'Blog', path: '/blog' },
+];
+
+const isCurrent = (path: string) => {
+  if (path === '/' && currentPath === '/') return true;
+
+  if (path !== '/' && currentPath.startsWith(path)) return true;
+
+  return false;
+};
+---
+
+<div class="navbar w-nav" data-collapse="medium" role="banner">
+  <div class="nav-container">
+    <a aria-current={currentPath === '/' ? 'page' : undefined} class={`brand-logo-wrapper w-nav-brand ${currentPath === '/' ? 'w--current' : ''}`} href="/">
+      <img alt="CivicUnity Logo" class="brand-logo" loading="lazy" src="/images/nav-logo.svg" />
+    </a>
+    <nav class="nav-menu w-nav-menu" role="navigation">
+      {navLinks.map((link) => (
+        <a 
+          aria-current={isCurrent(link.path) ? 'page' : undefined}
+          class={`nav-link w-nav-link ${isCurrent(link.path) ? 'w--current' : ''}`} 
+          href={link.path}
+        >
+          {link.name}
+        </a>
+      ))}
+      <div class="nav-bottom-content hide-dekstop">
+        <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+      </div>
+    </nav>
+    <div class="nav-left-content">
+      <a class="w-commerce-commercecartopenlink nav-cart-button w-inline-block" href="/donate" role="button" aria-label="Donate">
+        <svg class="w-commerce-commercecartopenlinkicon" height="17px" viewBox="0 0 17 17" width="17px">
+          <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+            <path d="M2.60592789,2 L0,2 L0,0 L4.39407211,0 L4.84288393,4 L16,4 L16,9.93844589 L3.76940945,12.3694378 L2.60592789,2 Z M15.5,17 C14.6715729,17 14,16.3284271 14,15.5 C14,14.6715729 14.6715729,14 15.5,14 C16.3284271,14 17,14.6715729 17,15.5 C17,16.3284271 16.3284271,17 15.5,17 Z M5.5,17 C4.67157288,17 4,16.3284271 4,15.5 C4,14.6715729 4.67157288,14 5.5,14 C6.32842712,14 7,14.6715729 7,15.5 C7,16.3284271 6.32842712,17 5.5,17 Z" fill="currentColor" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+        <div class="text-block w-inline-block">Donate</div>
+      </a>
+      <div class="nav-bottom-content hide-tablet">
+        <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+      </div>
+      <div class="laptop:hidden flex items-center">
+        <MobileNavMenu client:media="(max-width: 991px)" currentPath={currentPath} />
+      </div>
+    </div>
+  </div>
+</div>

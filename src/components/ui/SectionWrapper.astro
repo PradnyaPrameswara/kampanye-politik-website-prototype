@@ -1,0 +1,41 @@
+---
+interface Props {
+  as?: string;
+  id?: string;
+  class?: string;
+  padding?: 'medium' | 'large' | 'none';
+  isContainer?: boolean;
+}
+
+const {
+  as: Tag = 'section',
+  id,
+  class: className = '',
+  padding = 'medium',
+  isContainer = true,
+} = Astro.props;
+
+const paddingClassMap = {
+  medium: 'py-16 laptop:py-24',
+  large: 'py-24 laptop:py-32',
+  none: 'py-0',
+};
+
+const paddingClass = paddingClassMap[padding] || '';
+---
+
+<Tag id={id} class={className}>
+  {
+    isContainer ? (
+      <div class="px-[1.5rem] laptop:px-[1.875rem] mobile:px-[1rem]">
+        <div class="mx-auto w-full max-w-container">
+          <div class={paddingClass}>
+            <slot />
+          </div>
+        </div>
+      </div>
+    ) : (
+      <slot />
+    )
+  }
+</Tag>
