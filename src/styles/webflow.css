@@ -4704,6 +4704,8 @@ blockquote {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  display: block;
+  width: 100%;
 }
 
 .team-image-wrapper {
@@ -4712,10 +4714,15 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  aspect-ratio: 384 / 490;
+  width: 100%;
 }
 
 .team-image {
   transition: transform .4s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .team-card-content-wrapper {

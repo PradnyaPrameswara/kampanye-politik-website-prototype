@@ -1,6 +1,6 @@
 ---
-title: ""
-publishDate: 2024-09-15
+title: "Understanding Recent Policy Changes"
+publishDate: 2024-08-28
 readTime: "5 min read"
 category: policy
 image: ../../assets/images/blog/understanding-recent-policy-changes.svg

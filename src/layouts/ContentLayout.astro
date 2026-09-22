@@ -5,30 +5,41 @@ import Navbar from '@/components/layout/Navbar.astro';
 interface Props {
   title: string;
   description?: string;
-  bannerTitle: string;
+  bannerTitle?: string;
   bannerImage?: string;
+  bannerClass?: string;
+  currentPath?: string;
 }
 
-const { title, description, bannerTitle, bannerImage = '/images/shared/banner-about.webp' } = Astro.props;
+const { 
+  title, 
+  description, 
+  bannerTitle, 
+  bannerImage = '/images/webflow/66dc04d833d0f035179dae54_About%20Hero%20Image.webp',
+  bannerClass = '',
+  currentPath
+} = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} hideNav={true}>
   <div class="banner-wrapper">
-    <Navbar />
-    <div class="banner">
-      <div class="banner-content-wrapper">
-        <div class="banner-content">
-          <div class="banner-dot"></div>
-          <h1 class="heading-style-h1 text-color-white">{bannerTitle}</h1>
+    <Navbar currentPath={currentPath} />
+    {bannerTitle && (
+      <div class={`banner ${bannerClass}`.trim()}>
+        <div class="banner-content-wrapper">
+          <div class="banner-content">
+            <div class="banner-dot"></div>
+            <h5 class="heading-style-h5 text-color-white">{bannerTitle}</h5>
+          </div>
+          <div class="banner-overly"></div>
+          <div class="banner-image-wrapper">
+            <img alt="" class="banner-image" loading="lazy" sizes="100vw" src={bannerImage} />
+          </div>
         </div>
       </div>
-      <div class="banner-overly"></div>
-      <div class="banner-image-wrapper">
-        <img alt="" class="banner-image" loading="lazy" src={bannerImage} />
-      </div>
-    </div>
+    )}
   </div>
-  <div class="content-wrapper">
+  <div class="main-wrapper">
     <slot />
   </div>
 </BaseLayout>

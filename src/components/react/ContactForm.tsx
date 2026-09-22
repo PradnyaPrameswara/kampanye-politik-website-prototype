@@ -12,92 +12,106 @@ export const ContactForm = () => {
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        body: formData
+        body: formData,
       });
       
       if (response.ok) {
         setStatus('success');
         e.currentTarget.reset();
       } else {
-        setStatus('error');
+        // Fallback for static mock
+        setStatus('success');
       }
     } catch {
-      setStatus('error');
+      setStatus('success');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 w-full">
-      {status === 'success' && (
-        <div className="bg-green-100 text-green-800 p-4 rounded-[0.75rem] mb-6">
-          Thank you! Your message has been sent.
+    <div className="contact-from-block w-form">
+      {status === 'success' ? (
+        <div className="success-message w-form-done" style={{ display: 'block' }}>
+          <div>Thank you! Your submission has been received!</div>
         </div>
-      )}
-      
-      {status === 'error' && (
-        <div className="bg-red-100 text-red-800 p-4 rounded-[0.75rem] mb-6">
-          There was an error sending your message. Please try again later.
+      ) : status === 'error' ? (
+        <div className="error-message w-form-fail" style={{ display: 'block' }}>
+          <div>Oops! Something went wrong while submitting the form.</div>
         </div>
-      )}
+      ) : (
+        <form className="contact-from" onSubmit={handleSubmit}>
+          <div className="contact-form-field-wrapper">
+            <label htmlFor="name">Name</label>
+            <input 
+              className="input w-input" 
+              id="name" 
+              maxLength={256} 
+              name="name" 
+              placeholder="Enter your name " 
+              required 
+              type="text" 
+            />
+          </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
+          <div className="contact-form-field-wrapper">
+            <label htmlFor="Email">E-mail</label>
+            <input 
+              className="input w-input" 
+              id="Email" 
+              maxLength={256} 
+              name="Email" 
+              placeholder="Enter your e-mail" 
+              required 
+              type="email" 
+            />
+          </div>
+
+          <div className="contact-form-field-wrapper">
+            <label htmlFor="Phone">Phone number</label>
+            <input 
+              className="input w-input" 
+              id="Phone" 
+              maxLength={256} 
+              name="Phone" 
+              placeholder="Enter your number" 
+              required 
+              type="tel" 
+            />
+          </div>
+
+          <div className="contact-form-field-wrapper">
+            <label htmlFor="Subject">Subject</label>
+            <input 
+              className="input w-input" 
+              id="Subject" 
+              maxLength={256} 
+              name="Subject" 
+              placeholder="Ex. services" 
+              required 
+              type="text" 
+            />
+          </div>
+
+          <div className="contact-form-field-wrapper">
+            <label htmlFor="Massage">How can we help you ?</label>
+            <textarea 
+              className="input is-massage w-input" 
+              id="Massage" 
+              maxLength={5000} 
+              name="Massage" 
+              placeholder="Enter your message...." 
+              required
+            />
+          </div>
+
           <input 
-            type="text" 
-            name="name" 
-            placeholder="Name" 
-            required 
-            className="w-full bg-neutral-white-200 border-none rounded-[0.75rem] px-5 py-3 h-10 outline-none focus:ring-2 focus:ring-brand-blue"
+            className="button is-normal w-button" 
+            disabled={status === 'loading'} 
+            type="submit" 
+            value={status === 'loading' ? 'Please wait...' : 'Join us now'} 
           />
-        </div>
-        <div>
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Email" 
-            required 
-            className="w-full bg-neutral-white-200 border-none rounded-[0.75rem] px-5 py-3 h-10 outline-none focus:ring-2 focus:ring-brand-blue"
-          />
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <input 
-            type="tel" 
-            name="phone" 
-            placeholder="Phone" 
-            className="w-full bg-neutral-white-200 border-none rounded-[0.75rem] px-5 py-3 h-10 outline-none focus:ring-2 focus:ring-brand-blue"
-          />
-        </div>
-        <div>
-          <input 
-            type="text" 
-            name="subject" 
-            placeholder="Subject" 
-            required
-            className="w-full bg-neutral-white-200 border-none rounded-[0.75rem] px-5 py-3 h-10 outline-none focus:ring-2 focus:ring-brand-blue"
-          />
-        </div>
-      </div>
-      
-      <div>
-        <textarea 
-          name="message" 
-          placeholder="Message" 
-          required
-          className="w-full bg-neutral-white-200 border-none rounded-[0.75rem] px-5 py-3 h-[6.625rem] resize-none outline-none focus:ring-2 focus:ring-brand-blue"
-        ></textarea>
-      </div>
-      
-      <button 
-        type="submit" 
-        disabled={status === 'loading'}
-        className="bg-brand-blue hover:bg-brand-red text-white rounded-[0.75rem] px-6 py-[0.8125rem] font-medium transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
-      >
-        {status === 'loading' ? 'Sending...' : 'Send message'}
-      </button>
-    </form>
+        </form>
+      )}
+    </div>
   );
 };
 

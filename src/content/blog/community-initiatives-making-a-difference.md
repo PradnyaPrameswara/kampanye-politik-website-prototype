@@ -1,6 +1,6 @@
 ---
-title: ""
-publishDate: 2024-09-15
+title: "Community Initiatives Making a Difference"
+publishDate: 2024-08-30
 readTime: "5 min read"
 category: community
 image: ../../assets/images/blog/community-initiatives-making-a-difference.svg

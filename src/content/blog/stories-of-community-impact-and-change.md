@@ -1,6 +1,6 @@
 ---
-title: ""
-publishDate: 2024-09-15
+title: "Stories of Community Impact and Change"
+publishDate: 2024-08-30
 readTime: "5 min read"
 category: community
 image: ../../assets/images/blog/stories-of-community-impact-and-change.svg

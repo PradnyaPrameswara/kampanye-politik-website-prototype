@@ -1,128 +1,335 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
-import Banner from '@/components/sections/Banner.astro';
-import SectionWrapper from '@/components/ui/SectionWrapper.astro';
-import Headline from '@/components/sections/Headline.astro';
-import Button from '@/components/ui/Button.astro';
+import FaqAccordion from '@/components/react/FaqAccordion';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+
+const blogPosts = allPosts.slice(0, 2);
+
+const blogImages = {
+  'understanding-recent-policy-changes': '/images/webflow/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
+  'building-strong-advocacy-coalitions': '/images/webflow/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
+  'community-initiatives-making-a-difference': '/images/webflow/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
+  'impact-of-policy-on-local-communities': '/images/webflow/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
+  'effective-advocacy-strategies-for-success': '/images/webflow/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
+  'stories-of-community-impact-and-change': '/images/webflow/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
+} as const;
+
+const teamMembers = [
+  {
+    name: 'John Smith',
+    role: 'Executive Director',
+    slug: 'john-smith',
+    image: '/images/webflow/66de885235a491ec7c9579d4_Team%20Image%206.webp',
+  },
+  {
+    name: 'Sarah Johnson',
+    role: 'Policy Advisor',
+    slug: 'sarah-johnson',
+    image: '/images/webflow/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
+  },
+  {
+    name: 'Michael Brown',
+    role: 'Communications Director',
+    slug: 'michael-brown',
+    image: '/images/webflow/66de8840477d16d8930afdba_Team%20Image%204.webp',
+  },
+];
 ---
 
-<ContentLayout title="About Us | CivicUnity">
-  <Banner title="About Us" />
-
-  <SectionWrapper class="py-24" id="about">
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-16 items-center">
-      <div class="reveal-left">
-        <Headline text="About us" />
-        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
-          We are dedicated to building a stronger community together
-        </h2>
-        <p class="text-neutral-black-600 text-lg mb-8 leading-relaxed">
-          Through civic engagement and community-driven initiatives, we strive to make a positive impact in our society. Our mission is to empower individuals to become active participants in shaping their future.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
-            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<ContentLayout 
+  title="CivicUnity - About" 
+  bannerTitle="About us" 
+  bannerImage="/images/webflow/66dc04d833d0f035179dae54_About%20Hero%20Image.webp"
+  currentPath="/about"
+>
+  <!-- Section About -->
+  <div class="section-about">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium is-header">
+          <div class="about-component is-about">
+            <div class="about-top-content-wrapper">
+              <div class="about-top-left-content">
+                <h2 class="heading-style-h2">Committed to upholding democracy and citizen rights.</h2>
+                <p class="text-size-regular">Auctor vel arcu aliquet eros faucibus etiam tincidunt velit adipiscing. Et risque orci leo quam suspendisse viverra amet</p>
+              </div>
+              <div class="about-image-wrapper _2nd">
+                <img alt="About Hero" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 484px" src="/images/webflow/66eb100ae5b4a9769e10e8d1_About%20Hero%20Image.jpg" />
+              </div>
             </div>
-            <h6 class="text-lg font-bold text-neutral-black-900">Community First</h6>
-          </div>
-          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
-            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <div class="padding-bottom padding-large"></div>
+            <div class="about-bottom-content-wrapper">
+              <div class="about-image-wrapper _3rd">
+                <img alt="About Hero 4" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/webflow/66dc04da39706fc65e5ae289_About%20Hero%20Image%204.webp" />
+              </div>
+              <div class="about-image-wrapper _02">
+                <img alt="About Hero 3" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/webflow/66dc04daf0ccb5209771b2c5_About%20Hero%20Image%203.webp" />
+              </div>
+              <div class="about-image-wrapper">
+                <img alt="About Hero 2" class="about-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 384px" src="/images/webflow/66dc04db22177f0428b4ccdf_About%20Hero%20Image%202.webp" />
+              </div>
             </div>
-            <h6 class="text-lg font-bold text-neutral-black-900">Education</h6>
-          </div>
-          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
-            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
-            <h6 class="text-lg font-bold text-neutral-black-900">Empowerment</h6>
-          </div>
-          <div class="about-card flex items-center gap-4 bg-neutral-white-200 p-6 rounded-[0.75rem]">
-            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <h6 class="text-lg font-bold text-neutral-black-900">Integrity</h6>
           </div>
         </div>
-        <Button href="/about" variant="primary">More about us</Button>
-      </div>
-      <div class="reveal-right h-full">
-        <img src="/images/shared/about-image.webp" alt="About CivicUnity" class="w-full h-full object-cover rounded-[0.75rem] min-h-[400px]" />
       </div>
     </div>
-  </SectionWrapper>
+  </div>
 
-  <SectionWrapper class="py-16 bg-neutral-black-900" id="stats" isContainer={false}>
-    <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal-up">
-        <div>
-          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">20000+</h2>
-          <p class="text-neutral-white-200 text-lg">Donors</p>
+  <!-- Section Community Stats -->
+  <div class="section-community">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="community-component">
+            <div class="community-card">
+              <h2 class="heading-style-h2">20000+</h2>
+              <div class="text-size-regular">Donars</div>
+            </div>
+            <div class="community-card">
+              <h2 class="heading-style-h2">15000+</h2>
+              <div class="text-size-regular">Volunteers</div>
+            </div>
+            <div class="community-card">
+              <h2 class="heading-style-h2">90+</h2>
+              <div class="text-size-regular">Days in campaign</div>
+            </div>
+            <div class="community-card _2nd">
+              <h2 class="heading-style-h2">$40000+</h2>
+              <div class="text-size-regular">Active voters</div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">15000+</h2>
-          <p class="text-neutral-white-200 text-lg">Volunteers</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Mission -->
+  <div class="section-mission">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="mission-component">
+            <div class="mission-top-content-wrapper">
+              <div class="mission-top-left-content">
+                <div class="headline"><div class="dot"></div><div>Our mission and vision</div></div>
+                <h2 class="heading-style-h2">Discover our mission and vision for lasting impact.</h2>
+              </div>
+              <p class="text-size-regular">Habitant enim non accumsan fringilla id egestas arcu placerat ac. Fames odio aliquam blandit eleifend a nam tellus amet dignissim.</p>
+            </div>
+            <div class="mission-bottom-content-wrapper">
+              <div class="mission-card">
+                <div class="mission-image-wraper">
+                  <img alt="Mission" class="mission-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px" src="/images/webflow/66dc04d9dd607b08dfac0c60_Mission%20Image%202.webp" />
+                </div>
+                <div class="mission-card-content-wrapper">
+                  <h4 class="heading-style-h4">Mission</h4>
+                  <div class="mission-card-content">
+                    <p class="text-size-regular">Our mission is to empower every citizen by fostering an inclusive, transparent, and accountable government that serves the people. We are committed to promoting justice, equality, and opportunity for all, ensuring that every voice is heard and every community is represented. By championing policies that prioritize the well-being of individuals and families, we strive to create a sustainable and prosperous future for our nation.</p>
+                  </div>
+                  <div class="mission-button">
+                    <div class="mission-button-text">See more....</div>
+                    <div class="mission-button-text" style="display:none">See less....</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mission-card">
+                <div class="mission-image-wraper">
+                  <img alt="Vision" class="mission-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px" src="/images/webflow/66dc04db185f32d46eb9e05f_Mission%20Image%2001.webp" />
+                </div>
+                <div class="mission-card-content-wrapper">
+                  <h4 class="heading-style-h4">Vision</h4>
+                  <div class="mission-card-content">
+                    <p class="text-size-regular">Our vision is to build a fair and just society where every individual has the opportunity to thrive. We envision a future where government works for the people, guided by the principles of democracy, human rights, and social responsibility. We aim to create a community united by shared values, where diversity is celebrated, and every person has a role in shaping the future. Together, we will work towards a nation that is stronger, more resilient, and inclusive.</p>
+                  </div>
+                  <div class="mission-button">
+                    <div class="mission-button-text">See more....</div>
+                    <div class="mission-button-text" style="display:none">See less....</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">90+</h2>
-          <p class="text-neutral-white-200 text-lg">Days in campaign</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Value -->
+  <div class="section-value">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium is-value">
+          <div class="value-component">
+            <div class="value-top-content-wrapper">
+              <div class="value-top-left-content">
+                <div class="headline"><div class="dot"></div><div>Our Value</div></div>
+                <h2 class="heading-style-h2">Discover our values that drive our mission forward.</h2>
+              </div>
+              <div class="value-top-right-content">
+                <div class="text-size-regular">Condimentum mi consequat quis et mauris. Bibendum semper enim volutpat donec nunc. Sit leo rutrum maecenas morbi</div>
+              </div>
+            </div>
+            <div class="value-card-list-wrapper">
+              <div class="value-card-left-card-wrapper">
+                <div class="value-card" style="background-color:rgb(255,255,255)">
+                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Transparency</h6>
+                  <div class="text-size-small" style="color:rgb(75,100,147)">Accumsan sit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo</div>
+                </div>
+                <div class="value-card" style="background-color:rgb(255,255,255)">
+                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Commitment</h6>
+                  <div class="text-size-small" style="color:rgb(75,100,147)">Lccumsan sit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo</div>
+                </div>
+              </div>
+              <div class="value-content-wrapper">
+                <div class="value-tab">
+                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">1</h2>
+                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
+                </div>
+                <div class="value-tab">
+                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">2</h2>
+                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
+                </div>
+                <div class="value-tab">
+                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">3</h2>
+                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
+                </div>
+                <div class="value-tab">
+                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">4</h2>
+                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
+                </div>
+              </div>
+              <div class="value-card-right-card-wrapper">
+                <div class="value-card" style="background-color:rgb(255,255,255)">
+                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Integrity</h6>
+                  <div class="text-size-small" style="color:rgb(75,100,147)">Lisit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo</div>
+                </div>
+                <div class="value-card" style="background-color:rgb(255,255,255)">
+                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Accountability</h6>
+                  <div class="text-size-small" style="color:rgb(75,100,147)">Bibendum leo Accumsan sit malesuada tellus ut in sed etiam lorem. Morbi</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-2">$40000+</h2>
-          <p class="text-neutral-white-200 text-lg">Active voters</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Team -->
+  <div class="section-team">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="team-component">
+            <div class="team-top-content-wrapper">
+              <div class="team-top-left-content-wrapper">
+                <div class="headline"><div class="dot"></div><div>Our team</div></div>
+                <h2 class="heading-style-h2">Building a stronger community together.</h2>
+              </div>
+              <div class="text-size-regular">Cras nulla diam quam sollicitudin bibendum nunc mattis felis pharetra. Faucibus sed hendrerit nisl lacus velit sem faucibus.</div>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="team-collection-list-wrapper w-dyn-list">
+              <div class="team-collection-list w-dyn-items" role="list">
+                {teamMembers.map((member) => (
+                  <div class="team-collection-list-item w-dyn-item" role="listitem">
+                    <a class="team-card w-inline-block" href={`/member/${member.slug}`}>
+                      <div class="team-image-wrapper" style="background-image:url('/images/webflow/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
+                        <img alt={member.name} class="team-image" loading="lazy" sizes="100vw" src={member.image} />
+                      </div>
+                      <div class="team-card-content-wrapper">
+                        <div class="team-card-content">
+                          <h5 class="heading-style-h5 text-color-white">{member.name}</h5>
+                          <img alt="" loading="lazy" src="/images/webflow/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
+                        </div>
+                        <div class="text-size-regular text-color-white">{member.role}</div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </SectionWrapper>
+  </div>
 
-  <SectionWrapper class="py-24 bg-neutral-white-200" id="mission">
-    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-      <Headline text="Our mission" class="justify-center" />
-      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
-        Dedicated to progressive change
-      </h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-up">
-      <div class="bg-white p-8 rounded-[0.75rem] shadow-sm">
-        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Empower citizens</h3>
-        <p class="text-neutral-black-600 leading-relaxed">Providing resources and education to help every citizen make informed decisions and participate actively in our democratic process.</p>
-      </div>
-      <div class="bg-white p-8 rounded-[0.75rem] shadow-sm">
-        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Promote equality</h3>
-        <p class="text-neutral-black-600 leading-relaxed">Fighting for policies that ensure equal opportunities and justice for all members of our community, regardless of background.</p>
-      </div>
-      <div class="bg-white p-8 rounded-[0.75rem] shadow-sm">
-        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Sustainable growth</h3>
-        <p class="text-neutral-black-600 leading-relaxed">Advocating for environmentally conscious policies that promote economic growth without compromising our future.</p>
+  <!-- Section CTA -->
+  <div class="section-cta">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="cta-component">
+            <div class="cta-content-wrapper">
+              <h2 class="heading-style-h2">Take action for change.</h2>
+              <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </SectionWrapper>
+  </div>
 
-  <SectionWrapper class="py-24" id="values">
-    <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-      <Headline text="Our values" class="justify-center" />
-      <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mt-4 mb-6 leading-tight">
-        Core principles that guide us
-      </h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-up">
-       <div class="bg-neutral-white-200 p-8 rounded-[0.75rem]">
-        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Integrity in Action</h3>
-        <p class="text-neutral-black-600 leading-relaxed">We believe in transparent, honest leadership that prioritizes the needs of the community above all else.</p>
-      </div>
-      <div class="bg-neutral-white-200 p-8 rounded-[0.75rem]">
-        <h3 class="text-2xl font-serif font-bold text-neutral-black-900 mb-4">Inclusive Community</h3>
-        <p class="text-neutral-black-600 leading-relaxed">Every voice matters. We strive to create platforms where all perspectives are heard and valued.</p>
-      </div>
-    </div>
-  </SectionWrapper>
+  <!-- Section FAQ -->
+  <FaqAccordion client:visible />
 
-  <SectionWrapper class="py-24 bg-brand-blue text-white" id="cta" isContainer={false}>
-    <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-fade">
-      <h2 class="text-4xl lg:text-5xl font-serif font-bold mb-8 leading-tight">Ready to make a difference?</h2>
-      <Button href="/contact" variant="primary" class="bg-white text-brand-blue hover:bg-neutral-white-200">Join us now</Button>
+  <!-- Section Blog -->
+  <div class="section-blog">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium padding-bottom-large">
+          <div class="blog-component">
+            <div class="blog-left-content-wrapper">
+              <div class="blog-left-top-content-wrapper">
+                <div class="headline _2nd"><div class="dot"></div><div>About us</div></div>
+                <div class="blog-left-top-content">
+                  <h2 class="heading-style-h2 text-color-white">Explore our blog for current political updates.</h2>
+                  <div class="text-size-regular text-color-white-200">Ut malesuada non in tristique at. Ut sit nec vitae ut. Sagittis ut eu aliquet sit vulputate</div>
+                </div>
+                <a class="button w-inline-block" href="/blog"><div>View more</div></a>
+              </div>
+            </div>
+            <div class="blog-right-content-wrapper">
+              <div class="blog-collection-list-wrapper w-dyn-list">
+                <div class="blog-collection-list w-dyn-items" role="list">
+                  {blogPosts.map((post) => (
+                    <div class="blog-collection-item w-dyn-item" role="listitem">
+                      <div class="blog-card">
+                        <div class="blog-image-wrapper">
+                          <img 
+                            alt={post.data.title} 
+                            class="blog-image" 
+                            loading="lazy" 
+                            sizes="100vw" 
+                            src={blogImages[post.slug as keyof typeof blogImages] || post.data.image} 
+                          />
+                        </div>
+                        <div class="blog-card-content-wrapper">
+                          <div class="text-size-small">
+                            {new Date(post.data.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                          </div>
+                          <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
+                            <h5 class="heading-style-h5">{post.data.title}</h5>
+                          </a>
+                          <div class="blog-card-content">
+                            <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
+                              <div>Read More</div>
+                              <img alt="" class="arrow" loading="lazy" src="/images/webflow/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </SectionWrapper>
-
+  </div>
 </ContentLayout>

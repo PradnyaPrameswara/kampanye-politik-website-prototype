@@ -332,15 +332,7 @@ const faqItems = [
   </div>
 
   <!-- FAQ Section -->
-  <SectionWrapper padding="medium">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-gap-lg reveal-fade">
-        <Headline label="FAQ" class="justify-center" />
-        <h2 class="mt-4">Frequently asked questions</h2>
-      </div>
-      <FaqAccordion client:visible items={faqItems} />
-    </div>
-  </SectionWrapper>
+  <FaqAccordion client:visible items={faqItems} />
 
   <!-- Blog Section -->
   <div class="section-blog">

@@ -1,6 +1,6 @@
 ---
-title: ""
-publishDate: 2024-09-15
+title: "Effective Advocacy Strategies for Success"
+publishDate: 2024-08-29
 readTime: "5 min read"
 category: advocacy
 image: ../../assets/images/blog/effective-advocacy-strategies-for-success.svg

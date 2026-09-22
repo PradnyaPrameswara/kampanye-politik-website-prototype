@@ -1,6 +1,6 @@
 ---
-title: ""
-publishDate: 2024-09-15
+title: "Building Strong Advocacy Coalitions"
+publishDate: 2024-08-29
 readTime: "5 min read"
 category: advocacy
 image: ../../assets/images/blog/building-strong-advocacy-coalitions.svg
