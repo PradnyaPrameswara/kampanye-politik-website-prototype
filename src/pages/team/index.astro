@@ -68,7 +68,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium is-header">
           <div class="team-component">
-            <div class="team-top-content-wrapper">
+            <div class="team-top-content-wrapper reveal-down">
               <div class="team-top-left-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Our team</div></div>
                 <h2 class="heading-style-h2">Building a stronger community together.</h2>
@@ -76,7 +76,7 @@ const teamMembers = [
               <div class="text-size-regular">Cras nulla diam quam sollicitudin bibendum nunc mattis felis pharetra. Faucibus sed hendrerit nisl lacus velit sem faucibus.</div>
             </div>
             <div class="padding-bottom padding-large"></div>
-            <div class="team-collection-list-wrapper w-dyn-list">
+            <div class="team-collection-list-wrapper w-dyn-list reveal-up">
               <div class="team-collection-list w-dyn-items" role="list">
                 {teamMembers.map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
@@ -117,7 +117,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium padding-bottom-large">
           <div class="blog-component">
-            <div class="blog-left-content-wrapper">
+            <div class="blog-left-content-wrapper reveal-scale">
               <div class="blog-left-top-content-wrapper">
                 <div class="headline _2nd"><div class="dot"></div><div>About us</div></div>
                 <div class="blog-left-top-content">
@@ -132,7 +132,7 @@ const teamMembers = [
                 <div class="blog-collection-list w-dyn-items" role="list">
                   {blogPosts.map((post) => (
                     <div class="blog-collection-item w-dyn-item" role="listitem">
-                      <div class="blog-card">
+                      <div class="blog-card reveal-scale">
                         <div class="blog-image-wrapper">
                           <img 
                             alt={post.data.title} 

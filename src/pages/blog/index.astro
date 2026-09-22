@@ -43,10 +43,10 @@ const sortedPosts = orderedSlugs.flatMap(slug => {
         <div class="padding-section-medium is-header">
           <div class="blog-component is-blog">
             <div class="blog-top-content-wrapper">
-              <div class="blog-top-content">
+              <div class="blog-top-content reveal-left">
                 <h2 class="heading-style-h2">Explore our blog for current political updates.</h2>
               </div>
-              <div class="blog-category-collection-list-wrapper w-dyn-list">
+              <div class="blog-category-collection-list-wrapper w-dyn-list reveal-right">
                 <div class="blog-category-collection-list w-dyn-items" role="list">
                   <div class="blog-category-collection-list-item w-dyn-item" role="listitem">
                     <a aria-current="page" class="blog-category-button w-inline-block w--current" href="/blog">
@@ -74,7 +74,7 @@ const sortedPosts = orderedSlugs.flatMap(slug => {
               <div class="blog-collection-list is-blog w-dyn-items" role="list">
                 {sortedPosts.map((post) => (
                   <div class="blog-collection-item w-dyn-item" role="listitem">
-                    <div class="blog-card">
+                    <div class="blog-card reveal-scale">
                       <div class="blog-image-wrapper">
                         <img 
                           alt={post.data.title} 
@@ -112,7 +112,7 @@ const sortedPosts = orderedSlugs.flatMap(slug => {
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium padding-bottom-large">
-          <div class="cta-component">
+          <div class="cta-component reveal-scale">
             <div class="cta-content-wrapper">
               <h2 class="heading-style-h2">Take action for change.</h2>
               <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>

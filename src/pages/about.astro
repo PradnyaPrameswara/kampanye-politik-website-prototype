@@ -1,6 +1,8 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FaqAccordion from '@/components/react/FaqAccordion';
+import ValuesInteractive from '@/components/react/ValuesInteractive';
+import MissionVisionCards from '@/components/react/MissionVisionCards';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
@@ -50,7 +52,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium is-header">
           <div class="about-component is-about">
-            <div class="about-top-content-wrapper">
+            <div class="about-top-content-wrapper reveal-up">
               <div class="about-top-left-content">
                 <h2 class="heading-style-h2">Committed to upholding democracy and citizen rights.</h2>
                 <p class="text-size-regular">Auctor vel arcu aliquet eros faucibus etiam tincidunt velit adipiscing. Et risque orci leo quam suspendisse viverra amet</p>
@@ -60,7 +62,7 @@ const teamMembers = [
               </div>
             </div>
             <div class="padding-bottom padding-large"></div>
-            <div class="about-bottom-content-wrapper">
+            <div class="about-bottom-content-wrapper reveal-up">
               <div class="about-image-wrapper _3rd">
                 <img alt="About Hero 4" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/webflow/66dc04da39706fc65e5ae289_About%20Hero%20Image%204.webp" />
               </div>
@@ -82,7 +84,7 @@ const teamMembers = [
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium">
-          <div class="community-component">
+          <div class="community-component reveal-scale">
             <div class="community-card">
               <h2 class="heading-style-h2">20000+</h2>
               <div class="text-size-regular">Donars</div>
@@ -111,45 +113,14 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="mission-component">
-            <div class="mission-top-content-wrapper">
+            <div class="mission-top-content-wrapper reveal-up">
               <div class="mission-top-left-content">
                 <div class="headline"><div class="dot"></div><div>Our mission and vision</div></div>
                 <h2 class="heading-style-h2">Discover our mission and vision for lasting impact.</h2>
               </div>
               <p class="text-size-regular">Habitant enim non accumsan fringilla id egestas arcu placerat ac. Fames odio aliquam blandit eleifend a nam tellus amet dignissim.</p>
             </div>
-            <div class="mission-bottom-content-wrapper">
-              <div class="mission-card">
-                <div class="mission-image-wraper">
-                  <img alt="Mission" class="mission-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px" src="/images/webflow/66dc04d9dd607b08dfac0c60_Mission%20Image%202.webp" />
-                </div>
-                <div class="mission-card-content-wrapper">
-                  <h4 class="heading-style-h4">Mission</h4>
-                  <div class="mission-card-content">
-                    <p class="text-size-regular">Our mission is to empower every citizen by fostering an inclusive, transparent, and accountable government that serves the people. We are committed to promoting justice, equality, and opportunity for all, ensuring that every voice is heard and every community is represented. By championing policies that prioritize the well-being of individuals and families, we strive to create a sustainable and prosperous future for our nation.</p>
-                  </div>
-                  <div class="mission-button">
-                    <div class="mission-button-text">See more....</div>
-                    <div class="mission-button-text" style="display:none">See less....</div>
-                  </div>
-                </div>
-              </div>
-              <div class="mission-card">
-                <div class="mission-image-wraper">
-                  <img alt="Vision" class="mission-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px" src="/images/webflow/66dc04db185f32d46eb9e05f_Mission%20Image%2001.webp" />
-                </div>
-                <div class="mission-card-content-wrapper">
-                  <h4 class="heading-style-h4">Vision</h4>
-                  <div class="mission-card-content">
-                    <p class="text-size-regular">Our vision is to build a fair and just society where every individual has the opportunity to thrive. We envision a future where government works for the people, guided by the principles of democracy, human rights, and social responsibility. We aim to create a community united by shared values, where diversity is celebrated, and every person has a role in shaping the future. Together, we will work towards a nation that is stronger, more resilient, and inclusive.</p>
-                  </div>
-                  <div class="mission-button">
-                    <div class="mission-button-text">See more....</div>
-                    <div class="mission-button-text" style="display:none">See less....</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <MissionVisionCards client:visible />
           </div>
         </div>
       </div>
@@ -161,57 +132,7 @@ const teamMembers = [
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium is-value">
-          <div class="value-component">
-            <div class="value-top-content-wrapper">
-              <div class="value-top-left-content">
-                <div class="headline"><div class="dot"></div><div>Our Value</div></div>
-                <h2 class="heading-style-h2">Discover our values that drive our mission forward.</h2>
-              </div>
-              <div class="value-top-right-content">
-                <div class="text-size-regular">Condimentum mi consequat quis et mauris. Bibendum semper enim volutpat donec nunc. Sit leo rutrum maecenas morbi</div>
-              </div>
-            </div>
-            <div class="value-card-list-wrapper">
-              <div class="value-card-left-card-wrapper">
-                <div class="value-card" style="background-color:rgb(255,255,255)">
-                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Transparency</h6>
-                  <div class="text-size-small" style="color:rgb(75,100,147)">Accumsan sit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo</div>
-                </div>
-                <div class="value-card" style="background-color:rgb(255,255,255)">
-                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Commitment</h6>
-                  <div class="text-size-small" style="color:rgb(75,100,147)">Lccumsan sit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo</div>
-                </div>
-              </div>
-              <div class="value-content-wrapper">
-                <div class="value-tab">
-                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">1</h2>
-                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
-                </div>
-                <div class="value-tab">
-                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">2</h2>
-                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
-                </div>
-                <div class="value-tab">
-                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">3</h2>
-                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
-                </div>
-                <div class="value-tab">
-                  <h2 class="heading-style-h2" style="color:rgb(0,36,102)">4</h2>
-                  <div class="value-bg" style="background-color:rgb(255,255,255)"></div>
-                </div>
-              </div>
-              <div class="value-card-right-card-wrapper">
-                <div class="value-card" style="background-color:rgb(255,255,255)">
-                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Integrity</h6>
-                  <div class="text-size-small" style="color:rgb(75,100,147)">Lisit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo</div>
-                </div>
-                <div class="value-card" style="background-color:rgb(255,255,255)">
-                  <h6 class="heading-style-h6" style="color:rgb(0,36,102)">Accountability</h6>
-                  <div class="text-size-small" style="color:rgb(75,100,147)">Bibendum leo Accumsan sit malesuada tellus ut in sed etiam lorem. Morbi</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ValuesInteractive client:visible />
         </div>
       </div>
     </div>
@@ -223,7 +144,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="team-component">
-            <div class="team-top-content-wrapper">
+            <div class="team-top-content-wrapper reveal-up">
               <div class="team-top-left-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Our team</div></div>
                 <h2 class="heading-style-h2">Building a stronger community together.</h2>
@@ -231,7 +152,7 @@ const teamMembers = [
               <div class="text-size-regular">Cras nulla diam quam sollicitudin bibendum nunc mattis felis pharetra. Faucibus sed hendrerit nisl lacus velit sem faucibus.</div>
             </div>
             <div class="padding-bottom padding-large"></div>
-            <div class="team-collection-list-wrapper w-dyn-list">
+            <div class="team-collection-list-wrapper w-dyn-list reveal-up">
               <div class="team-collection-list w-dyn-items" role="list">
                 {teamMembers.map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
@@ -262,7 +183,7 @@ const teamMembers = [
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium">
-          <div class="cta-component">
+          <div class="cta-component reveal-scale">
             <div class="cta-content-wrapper">
               <h2 class="heading-style-h2">Take action for change.</h2>
               <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
@@ -281,7 +202,7 @@ const teamMembers = [
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium padding-bottom-large">
-          <div class="blog-component">
+          <div class="blog-component reveal-up">
             <div class="blog-left-content-wrapper">
               <div class="blog-left-top-content-wrapper">
                 <div class="headline _2nd"><div class="dot"></div><div>About us</div></div>

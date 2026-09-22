@@ -21,6 +21,11 @@
   to   { opacity: 1; transform: translate3d(0, 0, 0) scale3d(1, 1, 1); }
 }
 
+@keyframes reveal-down {
+  from { opacity: 0; transform: translate3d(0, -100px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
 @keyframes fade-in {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -29,6 +34,7 @@
 /* CSS Scroll-Driven Animations (modern browsers) */
 @supports (animation-timeline: view()) {
   .reveal-up,
+  .reveal-down,
   .reveal-left,
   .reveal-right,
   .reveal-scale,
@@ -40,6 +46,7 @@
   }
 
   .reveal-up    { animation-name: reveal-up; }
+  .reveal-down  { animation-name: reveal-down; }
   .reveal-left  { animation-name: reveal-left; }
   .reveal-right { animation-name: reveal-right; }
   .reveal-scale { animation-name: reveal-scale; }
@@ -49,6 +56,7 @@
 /* Intersection Observer fallback (for browsers without animation-timeline) */
 @supports not (animation-timeline: view()) {
   .reveal-up,
+  .reveal-down,
   .reveal-left,
   .reveal-right,
   .reveal-scale,
@@ -58,12 +66,14 @@
   }
 
   .reveal-up    { transform: translate3d(0, 100px, 0); }
+  .reveal-down  { transform: translate3d(0, -100px, 0); }
   .reveal-left  { transform: translate3d(-90px, 0, 0); }
   .reveal-right { transform: translate3d(90px, 0, 0); }
   .reveal-scale { transform: translate3d(-90px, 0, 0) scale3d(0.8, 0.8, 1); }
   .reveal-fade  { transform: none; }
 
   .reveal-up.is-visible,
+  .reveal-down.is-visible,
   .reveal-left.is-visible,
   .reveal-right.is-visible,
   .reveal-scale.is-visible,
@@ -80,6 +90,133 @@
 
 .card-image-hover:hover img {
   transform: scale(1.05);
+}
+
+/* Button hovers */
+.button {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--brand--red);
+}
+
+.button.is-secondary:hover {
+  background-color: var(--neutral--black-500);
+}
+
+.button.is-secondary.is-normal:hover {
+  background-color: var(--brand--red);
+}
+
+.button.is-normal:hover {
+  background-color: var(--secendary--blue);
+}
+
+/* Team Card hover — Webflow IX2 (a-6 / a-21) */
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card .team-image {
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.04);
+}
+
+.team-card .team-card-content-wrapper {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+@media (hover: hover) {
+  .team-card .team-card-content-wrapper {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  .team-card:hover .team-card-content-wrapper,
+  .team-card:focus-within .team-card-content-wrapper {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.team-card .team-card-content img {
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card-content img {
+  transform: translate(2px, -2px);
+}
+
+/* Blog Card & Button arrow hover — Webflow IX2 (a-25 / a-26) */
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-card .blog-image {
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-image {
+  transform: scale(1.04);
+}
+
+.blog-button .arrow {
+  transition: transform 0.5s ease;
+}
+
+.blog-button:hover .arrow,
+.blog-card:hover .blog-button .arrow {
+  transform: translateX(-6px);
+}
+
+/* Blog category button hover */
+.blog-category-button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-category-button:hover:not(.w--current) {
+  background-color: var(--secendary--blue);
+}
+
+/* Category card on homepage */
+.category-card {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.category-card:hover {
+  background-color: var(--brand--red);
+  transform: translateY(-4px);
+}
+
+/* Footer social links */
+.footer-social-link {
+  transition: transform 0.3s ease;
+}
+
+.footer-social-link:hover {
+  transform: scale(1.2);
+}
+
+/* Cover and details images */
+.cover-image,
+.team-details-image {
+  transition: transform 0.4s ease;
+}
+
+.cover-image:hover,
+.team-details-image:hover {
+  transform: scale(1.06);
 }
 
 /* Reduced motion */
