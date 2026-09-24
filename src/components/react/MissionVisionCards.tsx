@@ -14,7 +14,7 @@ export default function MissionVisionCards() {
 
   return (
     <div className="mission-bottom-content-wrapper">
-      <div className="mission-card">
+      <div className="mission-card reveal-scale">
         <div className="mission-image-wraper">
           <img
             alt="Mission"
@@ -55,7 +55,7 @@ export default function MissionVisionCards() {
         </div>
       </div>
 
-      <div className="mission-card">
+      <div className="mission-card reveal-scale">
         <div className="mission-image-wraper">
           <img
             alt="Vision"

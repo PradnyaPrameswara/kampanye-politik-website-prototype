@@ -1,5 +1,5 @@
 ---
-import BlogLayout from '../../layouts/BlogLayout.astro';
+import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -15,49 +15,75 @@ const { entry } = Astro.props;
 
 const { Content } = await entry.render();
 
-const allPosts = await getCollection('blog');
+const slug = entry.slug || entry.id;
 
-const getCategoryId = (cat: { id: string } | string) => ('id' in Object(cat) ? Object(cat).id : String(cat || ''));
+const blogImages = {
+  'understanding-recent-policy-changes': '/images/webflow/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
+  'building-strong-advocacy-coalitions': '/images/webflow/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
+  'community-initiatives-making-a-difference': '/images/webflow/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
+  'impact-of-policy-on-local-communities': '/images/webflow/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
+  'effective-advocacy-strategies-for-success': '/images/webflow/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
+  'stories-of-community-impact-and-change': '/images/webflow/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
+} as const;
 
-const currentCat = getCategoryId(entry.data.category);
+type BlogSlug = keyof typeof blogImages;
 
-const currentId = entry.slug || entry.id;
+// SAFETY: slug is confirmed to be an existing key in blogImages
+const knownImage = slug in blogImages ? blogImages[slug as BlogSlug] : undefined;
 
-const relatedPosts = allPosts
-  .filter(post => getCategoryId(post.data.category) === currentCat && (post.slug || post.id) !== currentId)
-  .slice(0, 3);
+const postImageSrc = knownImage ?? (entry.data.image ? entry.data.image.src : `/images/blog/${slug}.jpg`);
+
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(entry.data.publishDate);
+
+const rawCat = 'id' in entry.data.category ? entry.data.category.id : String(entry.data.category || 'Policy');
+
+const categoryName = rawCat.charAt(0).toUpperCase() + rawCat.slice(1);
 ---
 
-<BlogLayout 
-  title={entry.data.title}
-  publishDate={entry.data.publishDate}
-  readTime={entry.data.readTime}
-  category={entry.data.category}
-  image={entry.data.image}
+<ContentLayout 
+  title={`${entry.data.title} - Blog details | CivicUnity`}
+  bannerTitle="Blog & resources"
+  bannerImage="/images/webflow/66dc04d841e23610d102b9e4_Blog%20Bg%20Image.webp"
+  currentPath="/blog"
 >
-  <div class="prose max-w-none text-neutral-black-700">
-    <Content />
-  </div>
-
-  <!-- Related Posts -->
-  {relatedPosts.length > 0 && (
-    <div class="mt-16 pt-12 border-t border-neutral-white-300">
-      <h3 class="text-2xl font-bold font-lora text-neutral-black-900 mb-8">Related Posts</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {relatedPosts.map((post) => (
-          <article class="rounded-[0.75rem] bg-neutral-white p-5 shadow-subtle flex flex-col">
-            <a href={`/post/${post.slug}`} class="block overflow-hidden rounded-lg mb-4">
-              <img src={post.data.image || '/images/default-blog.jpg'} alt={post.data.title} class="w-full h-40 object-cover" />
-            </a>
-            <h5 class="text-lg font-bold font-lora text-neutral-black-900 mb-2 line-clamp-2 hover:text-brand-blue">
-              <a href={`/post/${post.slug}`}>{post.data.title}</a>
-            </h5>
-            <div class="flex items-center text-sm text-neutral-black-500 mt-auto pt-2">
-              <span>{new Date(post.data.publishDate).toLocaleDateString()}</span>
+  <div class="section-blog-details">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-large is-header">
+          <div class="blog-details-component">
+            <div class="blog-details-top-content-wrapper">
+              <div class="blog-details-top-left-content-wrapper reveal-left">
+                <div class="blog-details-left-top-content">
+                  <div class="text-size-small">{formattedDate}</div>
+                  <div class="text-size-small">{entry.data.readTime}</div>
+                  <div class="text-size-small">{categoryName}</div>
+                </div>
+                <div class="blog-details-top-left-content">
+                  <h2 class="heading-style-h2">{entry.data.title}</h2>
+                  <p class="text-size-regular">{entry.data.excerpt}</p>
+                </div>
+              </div>
+              <div class="blog-details-image-wrapper reveal-right">
+                <img 
+                  alt={entry.data.title} 
+                  class="blog-details-image" 
+                  loading="lazy" 
+                  sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 593px" 
+                  src={postImageSrc} 
+                />
+              </div>
             </div>
-          </article>
-        ))}
+            <div class="padding-bottom padding-large"></div>
+            <div class="blog-details w-richtext reveal-up">
+              <Content />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  )}
-</BlogLayout>
+  </div>
+</ContentLayout>

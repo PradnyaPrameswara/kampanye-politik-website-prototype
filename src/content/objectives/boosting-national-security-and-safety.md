@@ -1,6 +1,6 @@
 ---
-title: ""
-description: "SummaryArcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus ..."
+title: "Boosting National Security and Safety"
+description: "Id consectetur nisi adipiscing eget tellus ut. Turpis tortor condimentum est facilisis"
 image: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 bgImage: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 ---

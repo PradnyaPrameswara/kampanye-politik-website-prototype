@@ -49,7 +49,7 @@ export default function ValuesInteractive() {
 
   return (
     <div className="value-component">
-      <div className="value-top-content-wrapper">
+      <div className="value-top-content-wrapper reveal-down">
         <div className="value-top-left-content">
           <div className="headline">
             <div className="dot"></div>
@@ -73,7 +73,7 @@ export default function ValuesInteractive() {
             return (
               <div
                 key={item.id}
-                className="value-card cursor-pointer transition-all duration-300"
+                className="value-card reveal-left cursor-pointer transition-all duration-300"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -103,7 +103,7 @@ export default function ValuesInteractive() {
         </div>
 
         {/* Center column numbered diamond tabs (1, 2, 3, 4) */}
-        <div className="value-content-wrapper">
+        <div className="value-content-wrapper reveal-up">
           {[1, 2, 3, 4].map((num) => {
             const isActive = activeTab === num;
 
@@ -142,7 +142,7 @@ export default function ValuesInteractive() {
             return (
               <div
                 key={item.id}
-                className="value-card cursor-pointer transition-all duration-300"
+                className="value-card reveal-right cursor-pointer transition-all duration-300"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}

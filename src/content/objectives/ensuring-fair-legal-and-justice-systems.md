@@ -1,6 +1,6 @@
 ---
-title: ""
-description: "SummaryArcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus ..."
+title: "Ensuring Fair Legal and Justice Systems"
+description: "Consectetur nisi adipiscing eget tellus ut. Turpis velit proin habitant nibh feugiat."
 image: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 bgImage: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 ---

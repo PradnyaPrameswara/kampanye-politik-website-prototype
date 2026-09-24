@@ -1,6 +1,6 @@
 ---
-title: ""
-description: "SummaryArcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus ..."
+title: "Protecting Human Rights and Freedoms"
+description: "Consectetur nisi adipiscing eget tellus ut. Turpis velit proin habitant nibh feugiat."
 image: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 bgImage: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 ---

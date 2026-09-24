@@ -219,6 +219,81 @@
   transform: scale(1.06);
 }
 
+/* Objective Card hover — Webflow IX2 (a-3 / a-4) */
+.objective-card .objective-image {
+  transition: transform 0.5s ease;
+}
+
+.objective-card:hover .objective-image,
+.objective-card:focus-visible .objective-image {
+  transform: scale(1.1);
+}
+
+.objective-card .objective-card-content-wrapper {
+  transition: background-color 0.5s ease;
+}
+
+.objective-card:hover .objective-card-content-wrapper,
+.objective-card:focus-visible .objective-card-content-wrapper {
+  background-color: var(--secendary--blue);
+}
+
+.objective-card .objective-card-content-wrapper .heading-style-h5,
+.objective-card .objective-card-content-wrapper .text-size-regular {
+  transition: color 0.5s ease;
+}
+
+.objective-card:hover .objective-card-content-wrapper .heading-style-h5,
+.objective-card:hover .objective-card-content-wrapper .text-size-regular,
+.objective-card:focus-visible .objective-card-content-wrapper .heading-style-h5,
+.objective-card:focus-visible .objective-card-content-wrapper .text-size-regular {
+  color: var(--neutral--white-200);
+}
+
+/* Hero Video Button Pulse — Webflow IX2 (a-35) */
+@keyframes hero-video-pulse {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+.hero-video {
+  animation: hero-video-pulse 2s ease-in-out infinite;
+}
+
+/* FAQ Accordion IX2 (a-10 / a-22) */
+.faq-accordion {
+  transition: background-color 0.5s ease;
+}
+
+.faq-accordion[data-state="open"] {
+  background-color: var(--secendary--blue) !important;
+}
+
+.faq-accordion[data-state="open"] .heading-style-h6.is-faq,
+.faq-accordion[data-state="open"] .text-size-regular.is-faq {
+  color: #ffffff !important;
+}
+
+.faq-icon-wrapper {
+  transition: transform 0.5s ease;
+}
+
+.faq-accordion[data-state="open"] .faq-icon-wrapper {
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition: background-color 0.5s ease;
+}
+
+.faq-accordion[data-state="open"] .faq-icon {
+  background-color: #ffffff !important;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal-up,
@@ -230,5 +305,9 @@
     transform: none !important;
     animation: none !important;
     transition: none !important;
+  }
+
+  .hero-video {
+    animation: none !important;
   }
 }

@@ -162,7 +162,7 @@ const faqItems = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="objective-component">
-            <div class="objective-top-content-wrapper reveal-fade">
+            <div class="objective-top-content-wrapper reveal-down">
               <div class="objective-top-left-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Our objectives</div></div>
                 <h2 class="heading-style-h2">Guiding our nation with purposeful strategic objectives.</h2>
@@ -174,7 +174,7 @@ const faqItems = [
               <div class="objective-collection-list w-dyn-items" role="list">
                 {objectives.slice(0, 3).map((obj) => (
                   <div class="objective-collection-item w-dyn-item" role="listitem">
-                    <a class="objective-card w-inline-block" href={`/objectives/${obj.slug}`}>
+                    <a class="objective-card w-inline-block reveal-up" href={`/objectives/${obj.slug}`}>
                       <div class="objective-image-wrapper">
                         <img alt={obj.data.title} class="objective-image" loading="lazy" src={`/images/objectives/${obj.slug}.jpg`} />
                       </div>
@@ -227,7 +227,7 @@ const faqItems = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="team-component">
-            <div class="team-top-content-wrapper reveal-fade">
+            <div class="team-top-content-wrapper reveal-down">
               <div class="team-top-left-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Our team</div></div>
                 <h2 class="heading-style-h2">Building a stronger community together.</h2>
@@ -239,7 +239,7 @@ const faqItems = [
               <div class="team-collection-list w-dyn-items" role="list">
                 {teamMembers.slice(0, 3).map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
-                    <a class="team-card w-inline-block" href={`/team/${member.id}`}>
+                    <a class="team-card w-inline-block reveal-up" href={`/member/${member.id}`}>
                       <div class="team-image-wrapper" style="background-image:url('/images/team/team-bg.jpg')">
                         <img alt={member.data.name} class="team-image" loading="lazy" src={`/images/team/${member.id}.webp`} />
                       </div>
@@ -267,7 +267,7 @@ const faqItems = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="event-component">
-            <div class="event-top-content-wrapper reveal-fade">
+            <div class="event-top-content-wrapper reveal-down">
               <div class="event-top-left-content">
                 <div class="headline"><div class="dot"></div><div>Our events</div></div>
                 <h2 class="heading-style-h2">Explore our upcoming events for community impact.</h2>
@@ -281,7 +281,7 @@ const faqItems = [
               {events.map((event, i) => {
                 const eventImg = i === 1 ? '/images/events/event-image-2.avif' : `/images/events/event-image-${i + 1}.jpg`;
                 return (
-                  <div class="event-card reveal-up">
+                  <div class="event-card reveal-scale">
                     <div class="event-image-wrapper">
                       <img alt={event.title} class="event-image" loading="lazy" src={eventImg} />
                     </div>
@@ -320,7 +320,7 @@ const faqItems = [
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium">
-          <div class="cta-component">
+          <div class="cta-component reveal-scale">
             <div class="cta-content-wrapper">
               <h2 class="heading-style-h2">Take action for change.</h2>
               <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
@@ -340,7 +340,7 @@ const faqItems = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="blog-component">
-            <div class="blog-top-content-wrapper reveal-fade">
+            <div class="blog-top-content-wrapper reveal-down">
               <div class="blog-top-left-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Latest blog</div></div>
                 <h2 class="heading-style-h2">Insights and updates from our community.</h2>
@@ -384,7 +384,7 @@ const faqItems = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="donation-component">
-            <div class="donation-left-content-wrapper">
+            <div class="donation-left-content-wrapper reveal-left">
               <div class="donation-left-top-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Contribute us</div></div>
                 <div class="donation-left-top-content">
@@ -404,7 +404,7 @@ const faqItems = [
                 </div>
               </div>
             </div>
-            <div class="donation-image-wrapper">
+            <div class="donation-image-wrapper reveal-right">
               <img alt="Donation mission" class="donation-image" loading="lazy" src="/images/donations/donation-image.webp" />
             </div>
           </div>

@@ -48,7 +48,7 @@ export function FaqAccordion({
         <div className="container-large">
           <div className="padding-section-medium">
             <div className="faq-component">
-              <div className="faq-top-content-wrapper">
+              <div className="faq-top-content-wrapper reveal-down">
                 <div className="headline">
                   <div className="dot"></div>
                   <div>Faq</div>
@@ -66,14 +66,14 @@ export function FaqAccordion({
                   <Accordion.Item 
                     key={index} 
                     value={`item-${index}`}
-                    className="faq-accordion"
+                    className="faq-accordion reveal-up"
                   >
                     <Accordion.Header>
                       <Accordion.Trigger className="faq-question-wrapper w-full text-left bg-transparent border-none p-0 cursor-pointer group">
                         <h6 className="heading-style-h6 is-faq">{item.question}</h6>
                         <div className="faq-icon-wrapper">
                           <div className="faq-icon _1st"></div>
-                          <div className="faq-icon _2nd transition-transform duration-300 group-data-[state=open]:rotate-90 group-data-[state=open]:opacity-0"></div>
+                          <div className="faq-icon _2nd"></div>
                         </div>
                       </Accordion.Trigger>
                     </Accordion.Header>

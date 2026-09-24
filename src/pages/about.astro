@@ -52,7 +52,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium is-header">
           <div class="about-component is-about">
-            <div class="about-top-content-wrapper reveal-up">
+            <div class="about-top-content-wrapper reveal-down">
               <div class="about-top-left-content">
                 <h2 class="heading-style-h2">Committed to upholding democracy and citizen rights.</h2>
                 <p class="text-size-regular">Auctor vel arcu aliquet eros faucibus etiam tincidunt velit adipiscing. Et risque orci leo quam suspendisse viverra amet</p>
@@ -113,7 +113,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="mission-component">
-            <div class="mission-top-content-wrapper reveal-up">
+            <div class="mission-top-content-wrapper reveal-down">
               <div class="mission-top-left-content">
                 <div class="headline"><div class="dot"></div><div>Our mission and vision</div></div>
                 <h2 class="heading-style-h2">Discover our mission and vision for lasting impact.</h2>
@@ -144,7 +144,7 @@ const teamMembers = [
       <div class="container-large">
         <div class="padding-section-medium">
           <div class="team-component">
-            <div class="team-top-content-wrapper reveal-up">
+            <div class="team-top-content-wrapper reveal-down">
               <div class="team-top-left-content-wrapper">
                 <div class="headline"><div class="dot"></div><div>Our team</div></div>
                 <h2 class="heading-style-h2">Building a stronger community together.</h2>
@@ -202,8 +202,8 @@ const teamMembers = [
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium padding-bottom-large">
-          <div class="blog-component reveal-up">
-            <div class="blog-left-content-wrapper">
+          <div class="blog-component">
+            <div class="blog-left-content-wrapper reveal-left">
               <div class="blog-left-top-content-wrapper">
                 <div class="headline _2nd"><div class="dot"></div><div>About us</div></div>
                 <div class="blog-left-top-content">
@@ -213,12 +213,12 @@ const teamMembers = [
                 <a class="button w-inline-block" href="/blog"><div>View more</div></a>
               </div>
             </div>
-            <div class="blog-right-content-wrapper">
+            <div class="blog-right-content-wrapper reveal-right">
               <div class="blog-collection-list-wrapper w-dyn-list">
                 <div class="blog-collection-list w-dyn-items" role="list">
                   {blogPosts.map((post) => (
                     <div class="blog-collection-item w-dyn-item" role="listitem">
-                      <div class="blog-card">
+                      <div class="blog-card reveal-scale">
                         <div class="blog-image-wrapper">
                           <img 
                             alt={post.data.title} 

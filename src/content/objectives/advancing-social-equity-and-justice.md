@@ -1,6 +1,6 @@
 ---
-title: ""
-description: "SummaryArcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus ..."
+title: "Advancing Social Equity and Justice"
+description: "Id consectetur nisi adipiscing eget tellus ut. Turpis tortor condimentum est facilisis"
 image: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 bgImage: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 ---

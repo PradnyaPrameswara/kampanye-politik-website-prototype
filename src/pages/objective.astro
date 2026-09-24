@@ -8,6 +8,15 @@ const allPosts = await getCollection('blog');
 
 const blogPosts = allPosts.slice(0, 2);
 
+const blogImages = {
+  'understanding-recent-policy-changes': '/images/webflow/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
+  'building-strong-advocacy-coalitions': '/images/webflow/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
+  'community-initiatives-making-a-difference': '/images/webflow/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
+  'impact-of-policy-on-local-communities': '/images/webflow/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
+  'effective-advocacy-strategies-for-success': '/images/webflow/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
+  'stories-of-community-impact-and-change': '/images/webflow/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
+} as const;
+
 const objectiveImages = {
   'advancing-social-equity-and-justice': '/images/webflow/66de86499b602e1b2f5cfbc1_Objectives%20Image%206.jpg',
   'protecting-human-rights-and-freedoms': '/images/webflow/66de8604cdbecf88f8bdcd34_Objectives%20Image%205.jpg',
@@ -46,7 +55,7 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
       <div class="container-large">
         <div class="padding-section-medium is-header">
           <div class="objective-component">
-            <div class="objective-top-content-wrapper">
+            <div class="objective-top-content-wrapper reveal-down">
               <div class="objective-top-left-content-wrapper">
                 <h2 class="heading-style-h2">Guiding our nation with purposeful strategic objectives.</h2>
               </div>
@@ -57,14 +66,14 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
               <div class="objective-collection-list w-dyn-items" role="list">
                 {sortedObjectives.map((item) => (
                   <div class="objective-collection-item w-dyn-item" role="listitem">
-                    <a class="objective-card w-inline-block" href={`/objectives/${item.slug}`}>
+                    <a class="objective-card w-inline-block reveal-up" href={`/objectives/${item.slug}`}>
                       <div class="objective-image-wrapper">
                         <img 
                           alt={item.data.title} 
                           class="objective-image" 
                           loading="lazy" 
                           sizes="(max-width: 767px) 95vw, (max-width: 991px) 47vw, 39vw" 
-                          src={objectiveImages[item.slug] || item.data.image} 
+                          src={objectiveImages[item.slug as keyof typeof objectiveImages] || (item.data.image ? item.data.image.src : `/images/objectives/${item.slug}.jpg`)} 
                         />
                       </div>
                       <div class="objective-card-content-wrapper">
@@ -87,7 +96,7 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
     <div class="padding-global">
       <div class="container-large">
         <div class="padding-section-medium">
-          <div class="cta-component">
+          <div class="cta-component reveal-scale">
             <div class="cta-content-wrapper">
               <h2 class="heading-style-h2">Take action for change.</h2>
               <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
@@ -104,7 +113,7 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
       <div class="container-large">
         <div class="padding-section-medium padding-bottom-large">
           <div class="blog-component">
-            <div class="blog-left-content-wrapper">
+            <div class="blog-left-content-wrapper reveal-left">
               <div class="blog-left-top-content-wrapper">
                 <div class="headline _2nd"><div class="dot"></div><div>About us</div></div>
                 <div class="blog-left-top-content">
@@ -114,14 +123,20 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
                 <a class="button w-inline-block" href="/blog"><div>View more</div></a>
               </div>
             </div>
-            <div class="blog-right-content-wrapper">
+            <div class="blog-right-content-wrapper reveal-right">
               <div class="blog-collection-list-wrapper w-dyn-list">
                 <div class="blog-collection-list w-dyn-items" role="list">
                   {blogPosts.map((post) => (
                     <div class="blog-collection-item w-dyn-item" role="listitem">
-                      <div class="blog-card">
+                      <div class="blog-card reveal-scale">
                         <div class="blog-image-wrapper">
-                          <img alt={post.data.title} class="blog-image" loading="lazy" sizes="100vw" src={post.data.image} />
+                          <img 
+                            alt={post.data.title} 
+                            class="blog-image" 
+                            loading="lazy" 
+                            sizes="100vw" 
+                            src={blogImages[post.slug as keyof typeof blogImages] || (post.data.image ? post.data.image.src : `/images/blog/${post.slug}.jpg`)} 
+                          />
                         </div>
                         <div class="blog-card-content-wrapper">
                           <div class="text-size-small">

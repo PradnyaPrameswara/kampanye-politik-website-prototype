@@ -1,6 +1,6 @@
 ---
-title: ""
-description: "SummaryArcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus ..."
+title: "Strengthening Economic Opportunity"
+description: "Turpis tortor condimentum est facilisis velit proin habitant nibh feugiat."
 image: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 bgImage: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 ---

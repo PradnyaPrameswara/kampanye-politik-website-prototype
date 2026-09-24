@@ -1,7 +1,5 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
-import Banner from '@/components/sections/Banner.astro';
-import SectionWrapper from '@/components/ui/SectionWrapper.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -14,47 +12,111 @@ export async function getStaticPaths() {
 }
 
 const { member } = Astro.props;
+
+const memberImages = {
+  'john-smith': '/images/webflow/66de885235a491ec7c9579d4_Team%20Image%206.webp',
+  'sarah-johnson': '/images/webflow/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
+  'michael-brown': '/images/webflow/66de8840477d16d8930afdba_Team%20Image%204.webp',
+  'david-wilson': '/images/webflow/66de88373555ab75c632122c_Team%20Image%203.webp',
+  'jessica-lee': '/images/webflow/66de882ef48421d2f55b6983_Team%20Image%202.webp',
+  'james-clark': '/images/webflow/66de882483ff8257a260072a_Team%20Image%201.webp',
+} as const;
+
+type MemberSlug = keyof typeof memberImages;
+
+// SAFETY: member.id is confirmed to be an existing key in memberImages
+const knownMemberImage = member.id in memberImages ? memberImages[member.id as MemberSlug] : undefined;
+
+const memberImageSrc = knownMemberImage ?? (member.data.image ? member.data.image.src : `/images/team/${member.id}.webp`);
 ---
 
-<ContentLayout title={`${member.data.name || member.id} | CivicUnity`}>
-  <Banner title={member.data.name || member.id} />
-
-  <SectionWrapper class="py-24" id="member-detail">
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
-      <div class="reveal-left relative rounded-[0.75rem] overflow-hidden bg-neutral-white-200 aspect-[3/4]">
-        <div class="absolute inset-0 z-0 bg-[url('/images/pattern-bg.svg')] bg-cover bg-center opacity-50"></div>
-        <img 
-          src={member.data.image ? (typeof member.data.image === 'string' ? member.data.image : member.data.image.src) : '/images/default-member.jpg'} 
-          alt={member.data.name || member.id} 
-          class="absolute bottom-0 left-1/2 -translate-x-1/2 h-[95%] w-auto object-cover object-bottom z-10" 
-        />
-      </div>
-      
-      <div class="reveal-right">
-        <h2 class="text-4xl lg:text-5xl font-serif font-bold text-neutral-black-900 mb-2 leading-tight">
-          {member.data.name || member.id}
-        </h2>
-        <p class="text-brand-blue text-xl font-medium mb-8">{member.data.title || 'Team Member'}</p>
-        
-        <div class="prose prose-lg text-neutral-black-600 max-w-none mb-10">
-          <p class="leading-relaxed">{member.data.bio}</p>
-        </div>
-        
-        {member.data.social && (
-          <div class="flex gap-4">
-            {member.data.social.twitter && (
-              <a href={member.data.social.twitter} class="w-10 h-10 rounded-full bg-neutral-white-200 flex items-center justify-center text-neutral-black-700 hover:bg-brand-blue hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-              </a>
-            )}
-            {member.data.social.linkedin && (
-              <a href={member.data.social.linkedin} class="w-10 h-10 rounded-full bg-neutral-white-200 flex items-center justify-center text-neutral-black-700 hover:bg-brand-blue hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </a>
-            )}
+<ContentLayout 
+  title={`${member.data.name} - Team details | CivicUnity`}
+  bannerTitle="Team details"
+  bannerImage="/images/webflow/66dc04d965d12dc1cc9b4247_Team%20Bg%20Image.webp"
+  currentPath="/team"
+>
+  <div class="section-team-details">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-large is-header">
+          <div class="team-details-component">
+            <div class="team-details-top-content-wrapper">
+              <div class="team-details-image-wrapper reveal-left" style="background-image:url('/images/webflow/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
+                <img 
+                  alt={member.data.name} 
+                  class="team-details-image" 
+                  loading="lazy" 
+                  sizes="(max-width: 479px) 93vw, 384px" 
+                  src={memberImageSrc} 
+                />
+              </div>
+              <div class="team-details-right-content-wrapper reveal-right">
+                <div class="team-details-right-content">
+                  <h3 class="heading-style-h3">{member.data.name}</h3>
+                  <div class="text-size-regular">{member.data.title}</div>
+                </div>
+                <div class="team-details w-richtext">
+                  <h5>About {member.data.name}</h5>
+                  <p>{member.data.bio}</p>
+                </div>
+                <div class="team-details-social-icon-wrapper">
+                  <a class="team-details-social-icon w-inline-block" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img alt="Instagram" loading="lazy" src="/images/webflow/66dc04d83c0dbe656ece183f_Instagram%20Icon.svg" />
+                  </a>
+                  <a class="team-details-social-icon w-inline-block" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <img alt="Twitter" loading="lazy" src="/images/webflow/66dc04d92d24625a20631f1d_Twitter%20Icon.svg" />
+                  </a>
+                  <a class="team-details-social-icon w-inline-block" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img alt="LinkedIn" loading="lazy" src="/images/webflow/66dc04d82f0c3749635de0f6_Linkedin%20Icon.svg" />
+                  </a>
+                  <a class="team-details-social-icon w-inline-block" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img alt="Facebook" loading="lazy" src="/images/webflow/66dc04d8185f32d46eb9df00_Facebook%20Icon.svg" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="team-details-bottom-content-wrapper">
+              <div class="team-details w-richtext reveal-up">
+                <h5>Personal Experience & Biography</h5>
+                <p>Nisl malesuada cursus faucibus viverra pharetra nisl vulputate. Ullamcorper amet dis tempor adipiscing nam egestas sem nisl morbi. Risus dapibus lacus nullam commodo ornare orci ac pharetra cursus. Pharetra justo orci phasellus tellus mattis feugiat at. Nisi integer sit viverra natoque volutpat quis eget. Metus vestibulum mauris viverra phasellus orci. Diam aliquam tellus sodales viverra vitae. Morbi elit non cursus vestibulum et sem magna. Eget id libero eget id nam dolor.</p>
+              </div>
+              <div class="w-layout-grid team-grid reveal-scale">
+                <div class="team-details-content">
+                  <h5 class="heading-style-h5">Director of Community</h5>
+                  <div class="text-size-regular">July 5 , 2016 to February 4, 2021</div>
+                </div>
+                <div class="team-details-content">
+                  <h5 class="heading-style-h5">Legislative Advisor</h5>
+                  <div class="text-size-regular">February 20, 2011 to March 1, 2014</div>
+                </div>
+                <div class="team-details-content">
+                  <h5 class="heading-style-h5">Executive Director</h5>
+                  <div class="text-size-regular">May 11, 2007 to April 1, 2019</div>
+                </div>
+                <div class="team-details-content">
+                  <h5 class="heading-style-h5">Senior Policy Analyst</h5>
+                  <div class="text-size-regular">September 6 , 2016 to February 4, 2019</div>
+                </div>
+                <div class="team-details-content">
+                  <h5 class="heading-style-h5">Community Organizer</h5>
+                  <div class="text-size-regular">February 3, 2014 to March 2, 2016</div>
+                </div>
+                <div class="team-details-content">
+                  <h5 class="heading-style-h5">Political Strategist</h5>
+                  <div class="text-size-regular">April 2, 2011 to January 25, 2013</div>
+                </div>
+              </div>
+              <div class="team-details _2nd w-richtext reveal-up">
+                <h5>Educational Experience</h5>
+                <p>Ullamcorper amet dis tempor adipiscing nam egest as sem nisl morbi. Risus dapibus lacus nullam commodo ornare orci ac pharetra cursus. Pharetra justo orci phasellus tellus mattis feugiat at. Nisi integer sit viverra natoque volutpat quis eget. Metus vestibulum mauris viverra phasellus orci. Diam aliquam tellus sodales viverra vitae. Morbi elit non cursus vestibulum et sem magna. Eget id libero eget id nam dolor.</p>
+                <p>Aorem ipsum dolor sit amet consectetur. Nisl malesuada cursus faucibus viverra pharetra nisl vulputate. Ullamcorper amet dis tempor adipiscing nam egestas sem nisl morbi. Risus dapibus lacus nullam commodo ornare orci ac pharetra cursus. Pharetra justo orci phasellus tellus mattis feugiat at. Nisi integer sit viverra natoque volutpat quis eget. Metus vestibulum mauris viverra phasellus orci. Diam aliquam tellus sodales viverra vitae. Morbi elit non cursus vestibulum et sem magna. Eget id libero eget id nam dolor.</p>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
-  </SectionWrapper>
+  </div>
 </ContentLayout>
