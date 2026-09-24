@@ -1,30 +1,27 @@
 ---
-title: "Strengthening Economic Opportunity"
-description: "Turpis tortor condimentum est facilisis velit proin habitant nibh feugiat."
+title: "Total Food & Energy Self-Sufficiency"
+description: "Achieving food independence (Swasembada Pangan) and renewable energy sovereignty through B50 biofuel and water security."
 image: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 bgImage: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+A sovereign nation must never depend on foreign imports for its staple food and energy reserves. Under President Prabowo Subianto's leadership, the Indonesian government is accelerating comprehensive self-sufficiency programs across agriculture, water management, and renewable energy. The administration has established a concrete target to achieve total self-sufficiency in rice, corn, and primary foodstuffs within three to four years, alongside advancing national biofuel production to B50 and bioethanol blends.
 
-##### Understanding Social Equity
+##### Strategic Pillars of Swasembada Pangan
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Indonesia possesses vast fertile land and abundant tropical water resources. The national food strategy focuses on modern, sustainable agricultural expansion:
 
-##### Current Initiatives and Policies
+*   **Intensification & Mechanization**: Equipping smallholder farmers with modern combine harvesters, automated seeders, and precision agricultural machinery to double crop yields per hectare.
+*   **Irrigation & Water Reservoirs**: Constructing tertiary canal systems and secondary distribution channels connected to dozens of newly completed national dams.
+*   **Direct Fertilizer Allocation**: Overhauling distribution regulations to ensure subsidized fertilizer reaches certified farmer accounts directly, cutting out middlemen.
+*   **Expansion of Regional Food Hubs**: Cultivating sustainable agricultural clusters across South Sumatra, Central Kalimantan, South Papua (Merauke), and East Nusa Tenggara.
 
-Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### Energy Sovereignty and Biofuel Leadership
 
-##### Key Areas of Focus
+To insulate Indonesia from global fossil fuel volatility and save billions of dollars in foreign exchange reserves, the government is executing a rapid bioenergy transition:
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
-
-*   Education: Addressing disparities in educational opportunities and outcomes.
-*   Healthcare: Ensuring accessible and affordable healthcare for all.
-*   Economic: Opportunities: Promoting fair wages and job opportunities across communities.
-*   Housing: Fighting for equal access to affordable, safe housing.
-*   Criminal Justice: Reforming systems to eliminate discrimination and bias.
-
-Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+*   **B50 and Beyond**: Transitioning domestic diesel consumption from B35 to B40 and progressively B50, leveraging Indonesia's leading palm oil production.
+*   **Geothermal & Hydro Power**: Accelerating baseline renewable power generation utilizing the archipelago's immense volcanic geothermal capacity and major river basins.
+*   **Rural Electrification & Microgrids**: Powering off-grid coastal and island communities through integrated solar-plus-storage mini-grids.

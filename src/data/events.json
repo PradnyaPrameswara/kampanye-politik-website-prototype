@@ -1,26 +1,26 @@
 [
   {
-    "title": "Community Action Forum",
-    "description": "Adipiscing massa aenean dictum in non. Lectus ut quisque non urna",
-    "location": "Central Library Auditorium",
-    "date": "September 15, 2024",
-    "time": "10:00 AM - 1:00 PM",
+    "title": "National Food Sovereignty Summit",
+    "description": "Coordination meeting on modernizing agricultural production, expanding regional food estates, and securing direct fertilizer distribution.",
+    "location": "Merdeka Palace & IKN Convention Hall",
+    "date": "November 10, 2024",
+    "time": "09:00 AM - 01:00 PM",
     "image": "event-image-1.jpg"
   },
   {
-    "title": "Advocacy Training Workshop",
-    "description": "Adipiscing massa aenean dictum in non. Lectus ut quisque non urna",
-    "location": "Downtown Community Center",
-    "date": "September 15, 2024",
-    "time": "9:00 AM - 12:00 PM",
+    "title": "Free Nutritious Meals Rollout Forum",
+    "description": "National Nutrition Agency (BGN) assembly deploying school lunch pilots and service kitchens across 38 Indonesian provinces.",
+    "location": "Jakarta International Expo",
+    "date": "November 25, 2024",
+    "time": "08:30 AM - 12:30 PM",
     "image": "event-image-2.avif"
   },
   {
-    "title": "Voter Registration Drive",
-    "description": "Adipiscing massa aenean dictum in non. Lectus ut quisque non urna",
-    "location": "City Park Pavilion",
-    "date": "October 12, 2024",
-    "time": "11:00 AM - 4:00 PM",
+    "title": "Resource Downstreaming & Energy Expo",
+    "description": "Strategic roadmap presentation for mineral processing, B50 biofuel transition, and national clean water infrastructure.",
+    "location": "Nusantara Capital City (IKN)",
+    "date": "December 05, 2024",
+    "time": "10:00 AM - 03:30 PM",
     "image": "event-image-3.jpg"
   }
 ]

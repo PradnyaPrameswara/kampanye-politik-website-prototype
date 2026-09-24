@@ -1,40 +1,32 @@
 ---
-title: "Stories of Community Impact and Change"
-publishDate: 2024-08-30
+title: "Modernizing Public Health: Free Annual Screenings & Regional Hospitals"
+publishDate: 2024-09-08
 readTime: "5 min read"
-category: community
+category: policy
 image: ../../assets/images/blog/stories-of-community-impact-and-change.svg
-excerpt: "Summary  Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliqu..."
+excerpt: "Equipping 514 regencies with cutting-edge medical facilities and providing proactive health screenings for every Indonesian citizen."
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+A healthy populace is the prerequisite for an advanced, competitive nation. President Prabowo Subianto's healthcare transformation marks a decisive shift in Indonesian public health policy: moving from passive, high-cost illness treatment to aggressive, nationwide preventative care. Anchored by universal free annual health screenings (Pemeriksaan Kesehatan Gratis) and comprehensive diagnostic hospital upgrades, the administration ensures equal access to modern medicine from urban centers to remote archipelago frontiers.
 
-##### Overview of Recent  Changes
+##### Universal Preventative Health Screenings
 
-Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque.
+Preventative care saves lives and preserves state healthcare funds. Beginning in 2025, every Indonesian citizen receives an annual gift of health on their birthday:
 
-Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+*   **Comprehensive Biomarker Panels**: Free screenings covering cardiovascular health, hypertension, diabetes mellitus, cholesterol, kidney function, and liver health.
+*   **Early Cancer Detection**: Deploying mammography, cervical cancer screening (HPV DNA/pap smear), and colorectal cancer diagnostic kits across community health centers (Puskesmas).
+*   **Targeted Pediatric Screenings**: Monitoring congenital heart defects, growth milestones, and neurological markers to protect child development.
 
-![](https://cdn.prod.website-files.com/66d846ba7c7de0b8222d6fd4/66de83c8141ec0957c801dbf_66de831aef7db9a4e773e376_Blog%2520Details%2520Image.jpeg)
+##### Upgrading 514 Regional General Hospitals (RSUD)
 
-##### Reasons for the Changes
+Historically, patients with complex heart, cancer, stroke, or kidney conditions were forced to travel to Jakarta or abroad for treatment. The government is equipping regional general hospitals across all 514 regencies and cities with complete diagnostic and treatment infrastructure:
 
-Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+*   **KJSU Priority Services**: Establishing specialized Cardiology (Kanker), Oncology (Jantung), Stroke (Stroke), and Nephrology (Uro-Nefrologi) wards equipped with advanced CT scans, cath labs, and dialysis machines.
+*   **Eliminating Tuberculosis (TBC)**: Deploying mobile X-ray vans and rapid molecular testing to eliminate tuberculosis transmission across vulnerable communities.
+*   **Doctor Specialist Distribution**: Providing fully funded medical specialist scholarships and incentives for doctors serving in outer islands and remote regions.
 
-*   Dignissim mattis nam turpis augue ultrices porta eu interdum potenti.
-*   Amet diam aliquam turpis non aenean mauris.
-*   Maecenas imperdiet vulputate elementum mattis.
-*   Neque vulputate metus convallis eros feugiat nam quisque nulla.
-*   Massa tempus eu ac viverra neque.
-*   Nunc scelerisque amet cras quis adipiscing in facilisis odio.
-*   Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+##### Sustainable Health Financing
 
-Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-###### Impact on user experience
-
-Aorem ipsum dolor sit amet consectetur. Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-> “Bedipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. “
+By identifying health risks early, preventative screenings dramatically reduce hospital bed occupancy and emergency interventions, safeguarding the long-term solvency of the national health insurance system (BPJS Kesehatan).

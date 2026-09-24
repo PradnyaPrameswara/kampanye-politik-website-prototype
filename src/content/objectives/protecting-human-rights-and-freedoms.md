@@ -1,30 +1,27 @@
 ---
-title: "Protecting Human Rights and Freedoms"
-description: "Consectetur nisi adipiscing eget tellus ut. Turpis velit proin habitant nibh feugiat."
+title: "Industrial Downstreaming & 3 Million Homes"
+description: "Processing 26 strategic natural commodities domestically and constructing 3 million affordable homes annually for families."
 image: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 bgImage: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+Sustainable prosperity requires shifting from exporting raw commodities to manufacturing high-value finished products at home, paired with universal access to decent, affordable housing. President Prabowo Subianto's industrial roadmap mandates aggressive downstreaming (Hilirisasi) across 26 strategic mineral, agricultural, and marine commodities. Concurrently, the administration has launched the historic 3 Million Homes Program (Program 3 Juta Rumah) to eradicate substandard living conditions and provide safe, affordable shelter for low-income and young Indonesian families.
 
-##### Understanding Social Equity
+##### Strategic Downstreaming Across 26 Commodities
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Raw export bans and domestic processing requirements transform Indonesia into an industrial manufacturing powerhouse:
 
-##### Current Initiatives and Policies
+*   **Critical Minerals**: Expanding domestic smelting and cathode manufacturing for nickel, bauxite, copper, and tin to anchor the global electric vehicle and electronics supply chain.
+*   **Agro-Industrial Downstreaming**: Elevating crude palm oil (CPO), cocoa, coffee, and coconut into advanced oleochemicals, cosmetics, and specialty food products.
+*   **Marine & Fisheries Value Addition**: Developing cold-chain industrial clusters and domestic processing plants for tuna, seaweed, shrimp, and marine biopharmaceuticals.
+*   **Job Creation for Youth**: Generating millions of high-skilled engineering, technical, and operational jobs for Indonesian vocational and university graduates.
 
-Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### The 3 Million Homes Program (Program 3 Juta Rumah)
 
-##### Key Areas of Focus
+Housing is a fundamental social right and a powerful engine for economic stimulus:
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
-
-*   Education: Addressing disparities in educational opportunities and outcomes.
-*   Healthcare: Ensuring accessible and affordable healthcare for all.
-*   Economic: Opportunities: Promoting fair wages and job opportunities across communities.
-*   Housing: Fighting for equal access to affordable, safe housing.
-*   Criminal Justice: Reforming systems to eliminate discrimination and bias.
-
-Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+*   **Urban High-Rise Living**: Constructing 1 million transit-oriented vertical apartments (Rusun) annually in urban centers for working-class commuters and young professionals.
+*   **Rural and Coastal Dwellings**: Building 2 million self-help and subsidized landed homes (BSPS/RTLH) annually across agricultural, coastal, and remote villages.
+*   **Affordable Financing**: Providing low-interest, long-tenor mortgage subsidies through state housing bank BTN and public housing savings programs.

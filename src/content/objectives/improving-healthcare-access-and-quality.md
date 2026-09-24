@@ -1,30 +1,23 @@
 ---
-title: "Improving Healthcare Access and Quality"
-description: "Turpis tortor condimentum est facilisis velit proin habitant nibh feugiat."
+title: "Universal Free Health Screenings & Regional Hospitals"
+description: "Equipping all 514 regencies with state-of-the-art hospitals, eradicating tuberculosis (TBC), and providing free annual check-ups."
 image: ../../assets/images/objectives/improving-healthcare-access-and-quality.svg
 bgImage: ../../assets/images/objectives/improving-healthcare-access-and-quality.svg
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+A productive and prosperous nation begins with a healthy populace. President Prabowo Subianto's healthcare agenda pivots national health policy from curative treatment to proactive prevention. Through the introduction of universal free annual health screenings (Pemeriksaan Kesehatan Gratis) for every citizen and the construction or upgrading of modern regional public hospitals (RSUD) across all 514 regencies and municipalities, the government ensures no citizen is denied life-saving medical care due to geographic or financial barriers.
 
-##### Understanding Social Equity
+##### Key Healthcare Flagship Priorities
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+The administration has mobilized national health resources toward four high-impact health programs:
 
-##### Current Initiatives and Policies
+*   **Free Annual Health Screenings**: Offering comprehensive preventative screenings—including blood pressure, blood glucose, cholesterol, liver function, and cancer biomarkers—conducted annually on every citizen's birthday.
+*   **National Campaign to Eradicate Tuberculosis (TBC)**: Deploying rapid molecular diagnostic tools (TCM) and mobile screening vans to track, isolate, and fully cure tuberculosis cases across urban and rural populations.
+*   **Hospital Upgrades Across 514 Regencies**: Equipping regional hospitals with advanced cardiology, oncology, stroke, and nephrology (KJSU) diagnostic equipment (CT scans, cath labs, mammography).
+*   **Expansion of Medical Doctor Scholarships**: Doubling specialist doctor scholarship quotas (LPDP & Kemenkes) and constructing medical faculties in under-resourced regional state universities.
 
-Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### Community-Level Primary Healthcare (Puskesmas & Posyandu)
 
-##### Key Areas of Focus
-
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
-
-*   Education: Addressing disparities in educational opportunities and outcomes.
-*   Healthcare: Ensuring accessible and affordable healthcare for all.
-*   Economic: Opportunities: Promoting fair wages and job opportunities across communities.
-*   Housing: Fighting for equal access to affordable, safe housing.
-*   Criminal Justice: Reforming systems to eliminate discrimination and bias.
-
-Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Strengthening primary healthcare facilities ensures early detection of infectious and chronic diseases. Posyandu and Puskesmas units are equipped with digital health diagnostic kits connected to the SatuSehat platform, providing continuous preventative tracking for mothers, infants, and the elderly.

@@ -14,31 +14,31 @@ export interface FaqAccordionProps {
 
 const defaultItems: FaqItem[] = [
   {
-    question: "What is your organization’s mission?",
-    answer: "Rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. Sed molestie nam ut at non facilisis fames nunc.",
+    question: "What is Makan Bergizi Gratis (MBG) and who is eligible?",
+    answer: "Makan Bergizi Gratis provides wholesome daily meals to 82.9 million preschool and school-age students, pregnant women, and breastfeeding mothers to eradicate childhood stunting and boost cognitive development across Indonesia.",
   },
   {
-    question: "How do I join your campaigns?",
-    answer: "Sed molestie nam ut at non facilisis fames nunc ut. Rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. ",
+    question: "How will Indonesia achieve 100% food and energy self-sufficiency?",
+    answer: "Through modern agricultural mechanization, expanding 3 million hectares of sustainable paddy fields, upgrading irrigation networks, and accelerating biodiesel transitions up to B50 to eliminate reliance on imported fuel and staples.",
   },
   {
-    question: "How do you ensure transparency?",
-    answer: "Sit est nunc proin tellus posuere egestas vitae morbi. Rorem ipsum dolor sit amet consectetur. Sed molestie nam ut at non facilisis fames nunc ut.",
+    question: "What are the key priorities under Asta Cita?",
+    answer: "Asta Cita encompasses 8 core missions including fortifying national defense, downstream processing of 26 natural commodities, building 3 million homes annually, delivering free annual health checks, and digitizing governance to fight corruption.",
   },
   {
-    question: "Who are your key team members?",
-    answer: "Ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere hksfkf egestas vitae morbi. Sed molestie nam ut at non facilisis fames.",
+    question: "How is the 3 Million Homes program implemented?",
+    answer: "The Ministry of Housing and Settlement coordinates the construction of 1 million urban high-rise apartments and 2 million rural/coastal houses every year, utilizing state land and subsidized financing for low-income families.",
   },
   {
-    question: "Where can I find annual reports?",
-    answer: "fames rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. Sed molestie nam ut at non facilisis.",
+    question: "How does GovTech INA Digital ensure transparency and accountability?",
+    answer: "INA Digital integrates public services into a single unified portal, eliminating administrative friction and enforcing real-time budget transparency with zero tolerance for corruption across all government tiers.",
   },
 ];
 
 export function FaqAccordion({ 
   items = defaultItems, 
-  title = "Frequently asked question",
-  subtitle = "Risus vitae penatibus consequat pellentesque consequat tempor."
+  title = "Frequently asked questions",
+  subtitle = "Clear answers on President Prabowo Subianto's national priorities, implementation milestones, and public oversight."
 }: FaqAccordionProps) {
   const faqList = items && items.length > 0 ? items : defaultItems;
 

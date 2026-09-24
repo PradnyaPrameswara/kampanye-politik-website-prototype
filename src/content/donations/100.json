@@ -1,7 +1,7 @@
 {
   "amount": 100,
-  "title": "Donate $100",
-  "description": "Support our mission with your generous donation.",
+  "title": "Contribute $100",
+  "description": "Support grassroots community participation and nutrition distribution initiatives across Indonesia.",
   "image": "../../assets/images/donations/donation-image.svg",
   "stripePriceId": "price_placeholder_100"
 }

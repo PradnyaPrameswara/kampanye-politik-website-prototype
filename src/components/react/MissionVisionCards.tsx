@@ -31,7 +31,7 @@ export default function MissionVisionCards() {
             style={{ maxHeight: missionOpen ? '400px' : '50px' }}
           >
             <p className="text-size-regular">
-              Our mission is to empower every citizen by fostering an inclusive, transparent, and accountable government that serves the people. We are committed to promoting justice, equality, and opportunity for all, ensuring that every voice is heard and every community is represented. By championing policies that prioritize the well-being of individuals and families, we strive to create a sustainable and prosperous future for our nation.
+              Our mission is anchored in Asta Cita: the 8 strategic pillars to fortify national defense, achieve total food and energy self-sufficiency, accelerate downstream industrialization across 26 commodities, eradicate childhood stunting through Makan Bergizi Gratis for 82 million beneficiaries, and establish clean, digital governance.
             </p>
           </div>
           <button
@@ -72,7 +72,7 @@ export default function MissionVisionCards() {
             style={{ maxHeight: visionOpen ? '400px' : '50px' }}
           >
             <p className="text-size-regular">
-              Our vision is to build a fair and just society where every individual has the opportunity to thrive. We envision a future where government works for the people, guided by the principles of democracy, human rights, and social responsibility. We aim to create a community united by shared values, where diversity is celebrated, and every person has a role in shaping the future. Together, we will work towards a nation that is stronger, more resilient, and inclusive.
+              Our vision is the realization of Indonesia Emas 2045: a sovereign, self-reliant, advanced, and equitable archipelagic power where every citizen enjoys food security, top-tier healthcare, quality education, 3 million new homes annually, and social justice from Sabang to Merauke.
             </p>
           </div>
           <button

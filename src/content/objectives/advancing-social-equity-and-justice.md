@@ -1,30 +1,27 @@
 ---
-title: "Advancing Social Equity and Justice"
-description: "Id consectetur nisi adipiscing eget tellus ut. Turpis tortor condimentum est facilisis"
+title: "Free Nutritious Meals for Schoolchildren & Mothers"
+description: "Delivering daily balanced nutrition to 82+ million children, toddlers, and expectant mothers to eliminate stunting nationwide."
 image: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 bgImage: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+The Free Nutritious Meals program (Makan Bergizi Gratis - MBG) is President Prabowo Subianto's foremost flagship initiative. Targeting over 82 million beneficiaries across Indonesia—including preschool, elementary, middle, and high school students, alongside toddlers and pregnant/lactating mothers—the program directly addresses childhood malnutrition, stunting, and cognitive development gaps. Managed by the National Nutrition Agency (Badan Gizi Nasional - BGN), the initiative operates decentralized central service kitchens (Satuan Pelayanan Pemenuhan Gizi) that source fresh produce directly from local farmers and agricultural cooperatives.
 
-##### Understanding Social Equity
+##### Strategic Objectives of Makan Bergizi Gratis
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Investing in early-life nutrition yields compounding long-term returns for human capital, school attendance, and national economic productivity. The program is systematically calibrated to achieve four overarching outcomes:
 
-##### Current Initiatives and Policies
+*   **Eradicating Stunting**: Drastically lowering national stunting prevalence below 10% through targeted protein and micronutrient delivery during critical developmental windows.
+*   **Boosting Educational Concentration**: Ensuring children arrive in classrooms energized and mentally equipped to absorb science, mathematics, and literacy curricula.
+*   **Empowering Local Agricultural Economies**: Sourcing eggs, meat, milk, vegetables, and rice exclusively from local farmers, livestock breeders, and village-owned enterprises (BUMDes).
+*   **Closing Regional Inequalities**: Standardizing nutritional quality across remote, frontier, and outermost regions (3T) from Sabang to Merauke.
 
-Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### Implementation Framework and Standards
 
-##### Key Areas of Focus
+Each service unit serves between 2,500 and 3,000 children daily, strictly adhering to dietary guidelines defined by certified nutritionists. Meals provide at least one-third of a child's daily caloric and macronutrient requirements, with continuous monitoring of food safety, hygiene, and supply chain transparency.
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### Socio-Economic Multiplier Effect
 
-*   Education: Addressing disparities in educational opportunities and outcomes.
-*   Healthcare: Ensuring accessible and affordable healthcare for all.
-*   Economic: Opportunities: Promoting fair wages and job opportunities across communities.
-*   Housing: Fighting for equal access to affordable, safe housing.
-*   Criminal Justice: Reforming systems to eliminate discrimination and bias.
-
-Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Beyond health indicators, the program injects billions of rupiah directly into rural and sub-district economies. Over 30,000 community kitchens create stable employment for local kitchen staff, logistics handlers, and food processors, demonstrating how direct public welfare expenditure stimulates grassroots domestic commerce.

@@ -24,15 +24,129 @@ const memberImages = {
 
 type MemberSlug = keyof typeof memberImages;
 
+interface LeaderRole {
+  readonly title: string;
+  readonly period: string;
+}
+
+interface LeaderProfile {
+  readonly biography: string;
+  readonly education: readonly string[];
+  readonly roles: readonly LeaderRole[];
+}
+
 // SAFETY: member.id is confirmed to be an existing key in memberImages
 const knownMemberImage = member.id in memberImages ? memberImages[member.id as MemberSlug] : undefined;
 
 const memberImageSrc = knownMemberImage ?? (member.data.image ? member.data.image.src : `/images/team/${member.id}.webp`);
+
+const leadershipProfiles: Record<MemberSlug, LeaderProfile> = {
+  'john-smith': {
+    biography: 'A career military commander, statesman, and entrepreneur, President Prabowo Subianto has devoted his life to safeguarding Indonesia\'s sovereignty and empowering farmers, fishermen, and workers. Under his presidency, the Asta Cita blueprint guides the nation toward strategic food and energy self-reliance, massive industrial downstreaming across 26 commodities, and universal child nutrition.',
+    education: [
+      'Indonesian Military Academy (AKABRI), Magelang — Graduated in 1974 with honors in Military Tactics and Leadership.',
+      'Advanced Special Warfare & Command Courses at the US Army John F. Kennedy Special Warfare Center (Fort Bragg, USA) and US Army Infantry School (Fort Benning, USA).'
+    ],
+    roles: [
+      { title: 'President of the Republic of Indonesia', period: 'October 2024 — Present' },
+      { title: 'Minister of Defense of Indonesia', period: 'October 2019 — October 2024' },
+      { title: 'General Chairman of Gerindra Party', period: 'September 2014 — Present' },
+      { title: 'Commander of Army Strategic Command (Kostrad)', period: 'March 1998 — May 1998' },
+      { title: 'Commander General of Kopassus Special Forces', period: 'December 1995 — March 1998' },
+      { title: 'Chairman of Indonesian Farmers Association (HKTI)', period: 'December 2004 — August 2015' }
+    ]
+  },
+  'sarah-johnson': {
+    biography: 'Vice President Gibran Rakabuming Raka represents Indonesia\'s dynamic new generation of governance. Focusing on youth empowerment, digital public infrastructure, and creative economy development, he oversees the nationwide rollout of smart city services, GovTech INA Digital, and entrepreneurship incubators across all 38 provinces.',
+    education: [
+      'Management Development Institute of Singapore (MDIS) — Bachelor of Science in Marketing.',
+      'University of Technology Sydney (UTS Insearch), Australia — Advanced Business Information Technology.'
+    ],
+    roles: [
+      { title: 'Vice President of the Republic of Indonesia', period: 'October 2024 — Present' },
+      { title: 'Mayor of Surakarta (Solo), Central Java', period: 'February 2021 — July 2024' },
+      { title: 'Chairman of Solo Techno Park Advisory Board', period: 'March 2021 — July 2024' },
+      { title: 'Chairman of Indonesian Creative Culinary Association', period: 'May 2018 — December 2020' },
+      { title: 'National Youth Entrepreneurship Ambassador', period: 'January 2018 — January 2021' },
+      { title: 'Digital MSME Modernization Pioneer', period: 'June 2015 — February 2021' }
+    ]
+  },
+  'michael-brown': {
+    biography: 'Prof. Dr. Dadan Hindayana leads the National Nutrition Agency (Badan Gizi Nasional - BGN). An esteemed entomologist and agricultural academic from IPB University, Prof. Dadan orchestrates the daily nationwide preparation and delivery of nutritious meals to 82.9 million schoolchildren, infants, and expectant mothers.',
+    education: [
+      'IPB University (Bogor Agricultural University) — Bachelor of Science in Plant Protection and Entomology.',
+      'University of Bonn & Leibniz University Hannover, Germany — Master of Science and Doctorate in Agricultural Sciences (Dr. sc. agr.).'
+    ],
+    roles: [
+      { title: 'Head of National Nutrition Agency (BGN)', period: 'August 2024 — Present' },
+      { title: 'Professor of Entomology & Agroecology, IPB', period: 'June 2015 — Present' },
+      { title: 'Director of Integrated Food Safety & Pest Control', period: 'March 2018 — August 2024' },
+      { title: 'National Food Security Scientific Advisor', period: 'January 2020 — August 2024' },
+      { title: 'Chair of Department of Plant Protection, IPB', period: 'April 2014 — May 2019' },
+      { title: 'Senior Research Fellow in Sustainable Food Chains', period: 'September 2008 — March 2014' }
+    ]
+  },
+  'david-wilson': {
+    biography: 'Dr. Ir. Andi Amran Sulaiman, M.P. serves as Minister of Agriculture, spearheading Indonesia\'s rapid drive toward 100% food sovereignty. With extensive agricultural, scientific, and business expertise, Minister Amran leads the 3-million-hectare paddy expansion, modern irrigation upgrades, and farmer mechanization initiatives.',
+    education: [
+      'Hasanuddin University (UNHAS), Makassar — Bachelor of Agriculture and Master of Agricultural Science.',
+      'Hasanuddin University (UNHAS) — Doctorate in Agricultural Science, graduating with highest academic distinction.'
+    ],
+    roles: [
+      { title: 'Minister of Agriculture of Indonesia', period: 'October 2023 — Present' },
+      { title: 'Head of National Food Sovereignty Taskforce', period: 'January 2024 — Present' },
+      { title: 'Minister of Agriculture of Indonesia (First Term)', period: 'October 2014 — October 2019' },
+      { title: 'Chairman of Indonesian Horticultural Society', period: 'July 2018 — October 2023' },
+      { title: 'Founder & Chairman of Tiran Group Corporation', period: 'February 1995 — October 2014' },
+      { title: 'Agricultural Technologist & Bio-Pesticide Inventor', period: 'June 1993 — Present' }
+    ]
+  },
+  'jessica-lee': {
+    biography: 'Bahlil Lahadalia serves as the Minister of Energy and Mineral Resources (ESDM). Having risen from grassroots beginnings in Maluku and Papua to leading national investment policy, Minister Bahlil drives the downstream processing of 26 natural commodities, solar grid development, and the mandatory B50 biofuel transition.',
+    education: [
+      'Port Numbay College of Economics (STIE Port Numbay), Jayapura — Bachelor of Science in Economics.',
+      'Cenderawasih University (UNCEN), Papua — Master of Science in Development Economics.'
+    ],
+    roles: [
+      { title: 'Minister of Energy and Mineral Resources', period: 'August 2024 — Present' },
+      { title: 'Minister of Investment / Head of BKPM', period: 'April 2021 — August 2024' },
+      { title: 'Head of Investment Coordinating Board (BKPM)', period: 'October 2019 — April 2021' },
+      { title: 'General Chairman of Indonesian Young Entrepreneurs (HIPMI)', period: 'February 2015 — September 2019' },
+      { title: 'Founder & Group Chairman of Rifa Capital', period: 'August 2003 — October 2019' },
+      { title: 'National Industrial Downstreaming Taskforce Leader', period: 'January 2020 — Present' }
+    ]
+  },
+  'james-clark': {
+    biography: 'Lieutenant General (Ret.) Sjafrie Sjamsoeddin serves as the Minister of Defense. With over four decades of distinguished military and defense policy leadership, Minister Sjafrie leads the modernization of the Indonesian National Armed Forces (TNI), domestic defense manufacturing under DEFEND ID, and maritime border security.',
+    education: [
+      'Indonesian Military Academy (AKABRI), Magelang — Graduated in 1974.',
+      'Army Command and General Staff College (SESKOAD) and International Defense Management Program at the US Naval Postgraduate School (Monterey, USA).'
+    ],
+    roles: [
+      { title: 'Minister of Defense of Indonesia', period: 'October 2024 — Present' },
+      { title: 'Special Advisor to the Minister of Defense', period: 'December 2019 — October 2024' },
+      { title: 'Vice Minister of Defense of Indonesia', period: 'January 2010 — October 2014' },
+      { title: 'Secretary General of the Ministry of Defense', period: 'April 2005 — January 2010' },
+      { title: 'Commander of Military Area Command Jaya (Pangdam Jaya)', period: 'September 1997 — December 1998' },
+      { title: 'Chief of TNI Information Center (Kapuspen TNI)', period: 'March 2002 — March 2005' }
+    ]
+  }
+};
+
+const profile = leadershipProfiles[member.id] || {
+  biography: member.data.bio,
+  education: [
+    'Extensive public service and strategic leadership credentials in Indonesian national governance.'
+  ],
+  roles: [
+    { title: member.data.title, period: '2024 — Present' }
+  ]
+};
 ---
 
 <ContentLayout 
-  title={`${member.data.name} - Team details | CivicUnity`}
-  bannerTitle="Team details"
+  title={`${member.data.name} - Leadership Profile | Asta Cita`}
+  bannerTitle="Leadership Profile"
   bannerImage="/images/webflow/66dc04d965d12dc1cc9b4247_Team%20Bg%20Image.webp"
   currentPath="/team"
 >
@@ -80,38 +194,21 @@ const memberImageSrc = knownMemberImage ?? (member.data.image ? member.data.imag
             <div class="team-details-bottom-content-wrapper">
               <div class="team-details w-richtext reveal-up">
                 <h5>Personal Experience & Biography</h5>
-                <p>Nisl malesuada cursus faucibus viverra pharetra nisl vulputate. Ullamcorper amet dis tempor adipiscing nam egestas sem nisl morbi. Risus dapibus lacus nullam commodo ornare orci ac pharetra cursus. Pharetra justo orci phasellus tellus mattis feugiat at. Nisi integer sit viverra natoque volutpat quis eget. Metus vestibulum mauris viverra phasellus orci. Diam aliquam tellus sodales viverra vitae. Morbi elit non cursus vestibulum et sem magna. Eget id libero eget id nam dolor.</p>
+                <p>{profile.biography}</p>
               </div>
               <div class="w-layout-grid team-grid reveal-scale">
-                <div class="team-details-content">
-                  <h5 class="heading-style-h5">Director of Community</h5>
-                  <div class="text-size-regular">July 5 , 2016 to February 4, 2021</div>
-                </div>
-                <div class="team-details-content">
-                  <h5 class="heading-style-h5">Legislative Advisor</h5>
-                  <div class="text-size-regular">February 20, 2011 to March 1, 2014</div>
-                </div>
-                <div class="team-details-content">
-                  <h5 class="heading-style-h5">Executive Director</h5>
-                  <div class="text-size-regular">May 11, 2007 to April 1, 2019</div>
-                </div>
-                <div class="team-details-content">
-                  <h5 class="heading-style-h5">Senior Policy Analyst</h5>
-                  <div class="text-size-regular">September 6 , 2016 to February 4, 2019</div>
-                </div>
-                <div class="team-details-content">
-                  <h5 class="heading-style-h5">Community Organizer</h5>
-                  <div class="text-size-regular">February 3, 2014 to March 2, 2016</div>
-                </div>
-                <div class="team-details-content">
-                  <h5 class="heading-style-h5">Political Strategist</h5>
-                  <div class="text-size-regular">April 2, 2011 to January 25, 2013</div>
-                </div>
+                {profile.roles.map((roleItem) => (
+                  <div class="team-details-content">
+                    <h5 class="heading-style-h5">{roleItem.title}</h5>
+                    <div class="text-size-regular">{roleItem.period}</div>
+                  </div>
+                ))}
               </div>
               <div class="team-details _2nd w-richtext reveal-up">
                 <h5>Educational Experience</h5>
-                <p>Ullamcorper amet dis tempor adipiscing nam egest as sem nisl morbi. Risus dapibus lacus nullam commodo ornare orci ac pharetra cursus. Pharetra justo orci phasellus tellus mattis feugiat at. Nisi integer sit viverra natoque volutpat quis eget. Metus vestibulum mauris viverra phasellus orci. Diam aliquam tellus sodales viverra vitae. Morbi elit non cursus vestibulum et sem magna. Eget id libero eget id nam dolor.</p>
-                <p>Aorem ipsum dolor sit amet consectetur. Nisl malesuada cursus faucibus viverra pharetra nisl vulputate. Ullamcorper amet dis tempor adipiscing nam egestas sem nisl morbi. Risus dapibus lacus nullam commodo ornare orci ac pharetra cursus. Pharetra justo orci phasellus tellus mattis feugiat at. Nisi integer sit viverra natoque volutpat quis eget. Metus vestibulum mauris viverra phasellus orci. Diam aliquam tellus sodales viverra vitae. Morbi elit non cursus vestibulum et sem magna. Eget id libero eget id nam dolor.</p>
+                {profile.education.map((edu) => (
+                  <p>{edu}</p>
+                ))}
               </div>
             </div>
           </div>

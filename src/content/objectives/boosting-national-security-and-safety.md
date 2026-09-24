@@ -1,30 +1,23 @@
 ---
-title: "Boosting National Security and Safety"
-description: "Id consectetur nisi adipiscing eget tellus ut. Turpis tortor condimentum est facilisis"
+title: "National Defense & Maritime Sovereignty"
+description: "Modernizing defense equipment (Alutsista), safeguarding maritime borders, and bolstering domestic defense industry self-reliance."
 image: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 bgImage: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+National prosperity cannot endure without a formidable, credible defense posture that deters aggression and protects sovereign territory. President Prabowo Subianto, drawing from decades of military and strategic leadership, has established an uncompromising mandate: Indonesia's territorial integrity—from airspace and exclusive economic zones (EEZ) to remote outer islands—must be defended with state-of-the-art capabilities, strong civil-military cohesion, and self-reliant domestic defense manufacturing.
 
-##### Understanding Social Equity
+##### Priorities in Defense Modernization
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Indonesia's geographic position straddling key international sea lanes demands a modern, agile tri-service armed force (TNI AD, TNI AL, TNI AU):
 
-##### Current Initiatives and Policies
+*   **Maritime Domain Awareness**: Enhancing radar coverage, coastal patrol fleets, long-range maritime surveillance aircraft, and submarine capabilities to safeguard the Natuna Sea and Indonesian straits (ALKI).
+*   **Air Superiority & Multi-Role Fleets**: Upgrading air defense interceptors, modern 4.5+ generation multi-role combat aircraft, and integrated surface-to-air missile umbrellas.
+*   **Territorial Army Readiness**: Equipping regional military commands (Kodam) and reserve components (Komcad) with modern infantry gear, tactical communications, and mobility vehicles.
+*   **Domestic Defense Industrial Base (DEFEND ID)**: Mandating technology transfer and domestic production quotas for state-owned enterprises (PT Pindad, PT PAL, PT Dirgantara Indonesia, PT Len Industri).
 
-Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### Strategic Non-Alignment and Active Diplomacy
 
-##### Key Areas of Focus
-
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
-
-*   Education: Addressing disparities in educational opportunities and outcomes.
-*   Healthcare: Ensuring accessible and affordable healthcare for all.
-*   Economic: Opportunities: Promoting fair wages and job opportunities across communities.
-*   Housing: Fighting for equal access to affordable, safe housing.
-*   Criminal Justice: Reforming systems to eliminate discrimination and bias.
-
-Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Indonesia's foreign policy adheres to the constitutional principle of *bebas-aktif* (independent and active). Indonesia maintains constructive defense partnerships and mutual respect with all major global powers while firmly refusing membership in military pacts. This independent defense posture guarantees that Indonesia remains a beacon of regional peace and strategic stability across Southeast Asia and the Indo-Pacific.

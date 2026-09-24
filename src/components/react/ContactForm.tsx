@@ -93,7 +93,7 @@ export const ContactForm = () => {
                 id="Subject" 
                 maxLength={256} 
                 name="Subject" 
-                placeholder="Ex. services" 
+                placeholder="Ex. Makan Bergizi Gratis / Food Sovereignty inquiry" 
                 required 
                 type="text" 
               />

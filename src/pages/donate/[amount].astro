@@ -19,10 +19,10 @@ const allDonations = await getCollection('donations');
 const relatedDonations = allDonations.filter(d => d.data.amount !== entry.data.amount);
 ---
 
-<ContentLayout title={`Donate $${entry.data.amount}`}>
+<ContentLayout title={`Contribute $${entry.data.amount} | Asta Cita`}>
   <div class="bg-neutral-white-200 py-16 text-center">
     <div class="max-w-container mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold font-lora text-neutral-black-900">Support Our Work</h1>
+      <h1 class="text-4xl md:text-5xl font-bold font-lora text-neutral-black-900">Support Grassroots Action</h1>
     </div>
   </div>
 
@@ -30,7 +30,7 @@ const relatedDonations = allDonations.filter(d => d.data.amount !== entry.data.a
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
       <div class="reveal-left">
-        <span class="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">Contribute us</span>
+        <span class="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">Public Participation</span>
         <h2 class="text-3xl md:text-4xl font-bold font-lora text-neutral-black-900 mb-6">{entry.data.title}</h2>
         <p class="text-neutral-black-600 mb-8 text-lg">{entry.data.description}</p>
         
@@ -49,7 +49,7 @@ const relatedDonations = allDonations.filter(d => d.data.amount !== entry.data.a
 
     <!-- Related Donations -->
     <div class="mt-24">
-      <h3 class="text-2xl font-bold font-lora text-neutral-black-900 mb-8 text-center">Other ways to give</h3>
+      <h3 class="text-2xl font-bold font-lora text-neutral-black-900 mb-8 text-center">Other participation amounts</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {relatedDonations.map(donation => (
           <a href={`/donate/${donation.data.amount}`} class="block rounded-[0.75rem] border border-neutral-white-300 p-6 text-center hover:shadow-subtle hover:border-brand-blue transition-all">

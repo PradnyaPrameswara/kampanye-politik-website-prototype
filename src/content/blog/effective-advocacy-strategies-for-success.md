@@ -1,40 +1,27 @@
 ---
-title: "Effective Advocacy Strategies for Success"
-publishDate: 2024-08-29
-readTime: "5 min read"
-category: advocacy
+title: "3 Million Affordable Homes: Housing Security for Urban and Rural Families"
+publishDate: 2024-09-05
+readTime: "6 min read"
+category: community
 image: ../../assets/images/blog/effective-advocacy-strategies-for-success.svg
-excerpt: "Summary  Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliqu..."
+excerpt: "A nationwide housing revolution delivering 1 million urban apartments and 2 million rural dwellings to eliminate poverty and stimulate domestic manufacturing."
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+Decent housing is the cornerstone of family stability, social dignity, and child development. Yet millions of Indonesian families continue to face acute housing deficits, overcrowded informal settlements, or exorbitant urban rental costs. President Prabowo Subianto's 3 Million Homes Program (Program 3 Juta Rumah) is an unprecedented social housing drive structured to build 3 million quality affordable homes every single year.
 
-##### Overview of Recent  Changes
+##### Dual-Track Execution: Urban and Rural Synergy
 
-Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque.
+Recognizing that spatial and economic challenges vary dramatically across regions, the Ministry of Housing and Settlement Areas operates along two specialized tracks:
 
-Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+*   **Urban Transit-Oriented Apartments (1 Million Units/Year)**: Constructing high-density, earthquake-resistant vertical apartment complexes (Rusun) situated directly adjacent to commuter train stations, bus rapid transit corridors, and city employment hubs.
+*   **Rural and Coastal Landed Homes (2 Million Units/Year)**: Upgrading uninhabitable dwellings (BSPS/RTLH) and building standardized, hygienic houses for farmers, fishermen, and village workers equipped with clean piped water and septic infrastructure.
 
-![](https://cdn.prod.website-files.com/66d846ba7c7de0b8222d6fd4/66de83c8141ec0957c801dbf_66de831aef7db9a4e773e376_Blog%2520Details%2520Image.jpeg)
+##### The Economic Multiplier of Home Construction
 
-##### Reasons for the Changes
+Housing construction is one of the most powerful domestic economic catalysts. The program stimulates more than 170 related industries—including domestic cement, steel, bricks, glass, ceramics, and plumbing manufacturing. Because building materials are mandated to be 100% sourced domestically, the program generates millions of jobs for local construction tradesmen and small-scale suppliers.
 
-Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+##### Financing Made Accessible
 
-*   Dignissim mattis nam turpis augue ultrices porta eu interdum potenti.
-*   Amet diam aliquam turpis non aenean mauris.
-*   Maecenas imperdiet vulputate elementum mattis.
-*   Neque vulputate metus convallis eros feugiat nam quisque nulla.
-*   Massa tempus eu ac viverra neque.
-*   Nunc scelerisque amet cras quis adipiscing in facilisis odio.
-*   Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-###### Impact on user experience
-
-Aorem ipsum dolor sit amet consectetur. Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-> “Bedipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. “
+In partnership with state mortgage bank PT Bank Tabungan Negara (Persero) Tbk (BTN) and regional development banks (BPD), the government provides long-tenor, subsidized interest rates with minimal down payments, enabling informal workers and young families to achieve homeownership.

@@ -1,40 +1,29 @@
 ---
-title: "Impact of Policy on Local Communities"
-publishDate: 2024-08-28
-readTime: "5 min read"
+title: "Hilirisasi 2.0: Maximizing Domestic Resource Value Across 26 Commodities"
+publishDate: 2024-09-02
+readTime: "7 min read"
 category: policy
 image: ../../assets/images/blog/impact-of-policy-on-local-communities.svg
-excerpt: "Summary  Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliqu..."
+excerpt: "Expanding downstream mineral, agricultural, and marine resource processing across 26 strategic commodities to power national industrialization."
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+For centuries, developing nations have been trapped in the low-value export of raw natural resources, only to re-import expensive finished goods manufactured abroad. President Prabowo Subianto's economic strategy fundamentally breaks this dynamic through Hilirisasi 2.0—a comprehensive industrial downstreaming roadmap spanning 26 strategic commodities.
 
-##### Overview of Recent  Changes
+##### The 26 Strategic Commodity Roadmap
 
-Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque.
+Hilirisasi extends far beyond nickel smelting to encompass the entirety of Indonesia's mineral, agricultural, forestry, and marine wealth:
 
-Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+*   **Critical Minerals**: Nickel, bauxite, copper, tin, silica sand, and cobalt processed into high-purity battery precursors, electrical components, and semi-conductors.
+*   **Agro-Industrial Commodities**: Palm oil, rubber, cocoa, coffee, coconut, and timber processed domestically into specialty chemicals, bio-lubricants, fine confectioneries, and precision wood engineering.
+*   **Marine and Aquaculture**: Tuna, shrimp, crab, and seaweed transformed into value-added food products, bioplastics, and medical-grade carrageenan.
+*   **Energy Minerals**: Coal gasification (DME) and domestic petroleum refining to replace imported LPG and refined fuel products.
 
-![](https://cdn.prod.website-files.com/66d846ba7c7de0b8222d6fd4/66de83c8141ec0957c801dbf_66de831aef7db9a4e773e376_Blog%2520Details%2520Image.jpeg)
+##### Domestic Value Creation and High-Wage Jobs
 
-##### Reasons for the Changes
+The economic returns from downstreaming are staggering. Domestic processing of nickel alone increased export revenue from approximately \$3 billion in raw ore to over \$33 billion in processed derivatives. Under Hilirisasi 2.0, this economic surplus is channeled into higher manufacturing wages, vocational training institutes, and state revenue to fund national healthcare and education.
 
-Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+##### Technology Transfer and Local Content Rules (TKDN)
 
-*   Dignissim mattis nam turpis augue ultrices porta eu interdum potenti.
-*   Amet diam aliquam turpis non aenean mauris.
-*   Maecenas imperdiet vulputate elementum mattis.
-*   Neque vulputate metus convallis eros feugiat nam quisque nulla.
-*   Massa tempus eu ac viverra neque.
-*   Nunc scelerisque amet cras quis adipiscing in facilisis odio.
-*   Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-###### Impact on user experience
-
-Aorem ipsum dolor sit amet consectetur. Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-> “Bedipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. “
+Foreign investors participating in Indonesia's industrial parks are required to partner with domestic firms, adhere to strict local content standards (TKDN), and establish accredited engineering training academies to upskill the domestic workforce.

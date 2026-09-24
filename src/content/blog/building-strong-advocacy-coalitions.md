@@ -1,40 +1,29 @@
 ---
-title: "Building Strong Advocacy Coalitions"
+title: "Makan Bergizi Gratis: Fueling 82 Million Children Across Indonesia"
 publishDate: 2024-08-29
-readTime: "5 min read"
-category: advocacy
+readTime: "6 min read"
+category: community
 image: ../../assets/images/blog/building-strong-advocacy-coalitions.svg
-excerpt: "Summary  Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliqu..."
+excerpt: "How the National Nutrition Agency (BGN) coordinates local farmers, schools, and communities to end childhood stunting nationwide."
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+The Free Nutritious Meals program (Makan Bergizi Gratis - MBG) represents Indonesia's most ambitious social investment in history. With an operational scale reaching over 82 million school students, toddlers, and expectant mothers, the program addresses the root cause of educational disparities and intergenerational poverty: childhood malnutrition and protein deficiency.
 
-##### Overview of Recent  Changes
+##### Operational Architecture of the National Nutrition Agency (BGN)
 
-Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque.
+Under the leadership of Prof. Dadan Hindayana, the National Nutrition Agency operates on a highly decentralized, village-level service model:
 
-Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+*   **Service Units (Satuan Pelayanan)**: Modern, sanitized kitchens serving 2,500 to 3,000 students daily, positioned within a 20-minute delivery radius of participating schools.
+*   **Direct Local Procurement**: Vegetables, chicken, beef, fish, eggs, and milk are procured directly from neighborhood farmer groups and village cooperatives, eliminating predatory middlemen.
+*   **Certified Nutritional Balance**: Menus are formulated by professional clinical nutritionists to fulfill 30–35% of daily micronutrient, iron, and caloric requirements tailored to age groups.
+*   **Traceability and Food Safety**: Rigorous lab-tested food safety inspections precede every delivery, tracked via a transparent digital monitoring system.
 
-![](https://cdn.prod.website-files.com/66d846ba7c7de0b8222d6fd4/66de83c8141ec0957c801dbf_66de831aef7db9a4e773e376_Blog%2520Details%2520Image.jpeg)
+##### Transforming Rural and Local Economies
 
-##### Reasons for the Changes
+The economic impact of the program extends far beyond the cafeteria. Every operational kitchen creates 45 to 50 permanent jobs—from local cooks and food prep specialists to delivery personnel. Smallholder dairy farmers and poultry breeders across Java, Sumatra, Sulawesi, and Eastern Indonesia are experiencing predictable, guaranteed domestic demand, rejuvenating the rural agricultural ecosystem.
 
-Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
+##### Ending the Cycle of Stunting
 
-*   Dignissim mattis nam turpis augue ultrices porta eu interdum potenti.
-*   Amet diam aliquam turpis non aenean mauris.
-*   Maecenas imperdiet vulputate elementum mattis.
-*   Neque vulputate metus convallis eros feugiat nam quisque nulla.
-*   Massa tempus eu ac viverra neque.
-*   Nunc scelerisque amet cras quis adipiscing in facilisis odio.
-*   Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-###### Impact on user experience
-
-Aorem ipsum dolor sit amet consectetur. Quam ut fermentum leo risus penatibus lobortis proin. Aenean ullamcorper quis tellus eget habitant. Dignissim mattis nam turpis augue ultrices porta eu interdum potenti. Amet diam aliquam turpis non aenean mauris. Maecenas imperdiet vulputate elementum mattis. Neque vulputate metus convallis eros feugiat nam quisque nulla. Massa tempus eu ac viverra neque. Nunc scelerisque amet cras quis adipiscing in facilisis odio. Eu viverra eget vel pharetra lectus etiam mauris ultricies volutpat.
-
-> “Bedipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. “
+Indonesia's future as a global economic leader depends directly on the cognitive potential of its young generation. By guaranteeing balanced nutrition during crucial brain development stages, Makan Bergizi Gratis provides the biological foundation needed to excel in science, technology, engineering, and mathematics.

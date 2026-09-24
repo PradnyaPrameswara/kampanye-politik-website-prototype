@@ -54,16 +54,28 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
 });
 
 const faqItems = [
-  { question: 'What is CivicUnity?', answer: 'CivicUnity is a platform dedicated to empowering communities through advocacy, policy change, and collective action for a stronger nation.' },
-  { question: 'How can I get involved?', answer: 'You can join us by volunteering, donating, or attending our community events. Visit our contact page to learn more about opportunities.' },
-  { question: 'Where does my donation go?', answer: 'Your donations directly support community programs, advocacy campaigns, and policy research that drive real change in communities across the nation.' },
-  { question: 'How do I contact the team?', answer: 'You can reach us through our contact form, by email, or by attending one of our community events. We are always happy to hear from supporters.' },
+  { 
+    question: 'What is the vision of President Prabowo Subianto’s administration?', 
+    answer: 'The administration is guided by Asta Cita — eight strategic missions to safeguard sovereignty, guarantee food and energy self-reliance, drive industrial downstreaming, and achieve Indonesia Emas 2045.' 
+  },
+  { 
+    question: 'How does Makan Bergizi Gratis benefit the nation?', 
+    answer: 'By providing daily nutritious meals to 82.9 million students and vulnerable mothers, the program eradicates childhood stunting, enhances cognitive readiness, and creates hundreds of thousands of local supply chain jobs.' 
+  },
+  { 
+    question: 'What is the plan for complete food and energy sovereignty?', 
+    answer: 'Indonesia is modernizing agricultural infrastructure, expanding 3 million hectares of sustainable farmland, and rolling out B50 biodiesel to end foreign dependency on staple foods and fossil fuels.' 
+  },
+  { 
+    question: 'How can citizens participate and monitor progress?', 
+    answer: 'Citizens can track milestones, participate in local development initiatives, and submit inquiries through digital governance portals like INA Digital and regional service centers.' 
+  },
 ];
 ---
 
 <BaseLayout 
-  title="CivicUnity — Inspiring Change Together" 
-  description="CivicUnity empowers communities through advocacy, policy change, and collective action."
+  title="Asta Cita — Indonesia Emas 2045 | President Prabowo Subianto Flagship Programs" 
+  description="Official overview of President Prabowo Subianto's strategic national missions: Makan Bergizi Gratis, Swasembada Pangan & Energi, Hilirisasi, and Indonesia Emas 2045."
   hideNav={true}
 >
   <!-- Hero Section & Floating Category Header -->
@@ -79,9 +91,9 @@ const faqItems = [
                 <div class="hero-left-content">
                   <div class="hero-left-top-content">
                     <div class="dot"></div>
-                    <div>Together, We Can Make a Difference</div>
+                    <div>Asta Cita: Strategic National Blueprint</div>
                   </div>
-                  <h1 class="heading-style-h1 text-color-white">Inspiring change together we shape our nation.</h1>
+                  <h1 class="heading-style-h1 text-color-white">Building a sovereign, advanced, and self-reliant Indonesia.</h1>
                 </div>
                 <a class="button w-inline-block" href="/contact">
                   <div>Join us now</div>
@@ -90,8 +102,8 @@ const faqItems = [
               
               <div class="hero-right-content-wrapper reveal-right">
                 <div class="hero-right-content">
-                  <h5 class="heading-style-h5 text-color-white">Farret ipsum dolor sit amet consectetur.</h5>
-                  <div class="text-size-regular text-color-white-300">Nulla arcu nec turpis quis vulputate sit arcu amet. Pellentesque elit metus sed malesuada eros et odio duis</div>
+                  <h5 class="heading-style-h5 text-color-white">Realizing Indonesia Emas 2045 through decisive national action.</h5>
+                  <div class="text-size-regular text-color-white-300">Empowering 82.9 million children with daily nutritious meals, achieving 100% food and energy sovereignty, and accelerating industrial downstreaming across the archipelago.</div>
                 </div>
                 <VideoLightbox
                   client:visible
@@ -119,8 +131,8 @@ const faqItems = [
         <div class="container-large">
           <div class="category-component">
             <div class="category-left-content-wrapper">
-              <h3 class="heading-style-h3 text-color-white">Contribute</h3>
-              <div class="text-size-small text-color-white-200">Help us reach our goal</div>
+              <h3 class="heading-style-h3 text-color-white">Support the Programs</h3>
+              <div class="text-size-small text-color-white-200">Public participation & community initiatives</div>
             </div>
             <div class="category-collection-list-wrapper w-dyn-list">
               <div class="category-collection-list w-dyn-items" role="list">
@@ -152,8 +164,8 @@ const faqItems = [
                   <div>About us</div>
                 </div>
                 <div class="about-left-top-content">
-                  <h2 class="heading-style-h2">Learn about our commitment to political impact</h2>
-                  <p class="text-size-regular">Nulla morbi donec nulla tempor scelerisque nisi enim amet. Metus sed vitae nec dignissim id morbi egestas. Odio porta enim cras vitae.</p>
+                  <h2 class="heading-style-h2">A decisive mandate for sovereign national leadership</h2>
+                  <p class="text-size-regular">Guided by the 8 pillars of Asta Cita, the administration is executing rapid structural transformations to eradicate poverty, secure strategic resources, and safeguard our archipelagic sovereignty.</p>
                 </div>
               </div>
               <div class="padding-bottom padding-large"></div>
@@ -161,30 +173,30 @@ const faqItems = [
                 <div class="about-card">
                   <img alt="" loading="lazy" src="/icons/about-logo-4.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Director of the Developing Communities</h6>
+                    <h6 class="heading-style-h6">National Nutrition Agency (BGN)</h6>
                   </div>
                 </div>
                 <div class="about-card">
                   <img alt="" loading="lazy" src="/icons/about-logo-3.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Majored in Political Science</h6>
+                    <h6 class="heading-style-h6">Food & Energy Self-Sufficiency Taskforce</h6>
                   </div>
                 </div>
                 <div class="about-card">
                   <img alt="" loading="lazy" src="/icons/about-logo-2.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Law School and Civil Rights Attorney</h6>
+                    <h6 class="heading-style-h6">Defense & Maritime Sovereignty</h6>
                   </div>
                 </div>
                 <div class="about-card">
                   <img alt="" loading="lazy" src="/icons/about-logo-4.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Deputy Attorney General Media Project</h6>
+                    <h6 class="heading-style-h6">INA Digital GovTech Integration</h6>
                   </div>
                 </div>
               </div>
               <div class="padding-bottom padding-medium"></div>
-              <a class="button w-inline-block" href="/about"><div>More about us</div></a>
+              <a class="button w-inline-block" href="/about"><div>Explore National Missions</div></a>
             </div>
             <div class="about-image-wrapper is-about reveal-right">
               <img alt="About CivicUnity" class="about-image" loading="lazy" src="/images/shared/about-image.webp"/>
@@ -203,10 +215,10 @@ const faqItems = [
           <div class="objective-component">
             <div class="objective-top-content-wrapper reveal-down">
               <div class="objective-top-left-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Our objectives</div></div>
-                <h2 class="heading-style-h2">Guiding our nation with purposeful strategic objectives.</h2>
+                <div class="headline"><div class="dot"></div><div>Asta Cita Priorities</div></div>
+                <h2 class="heading-style-h2">Strategic pillars driving transformation across Indonesia.</h2>
               </div>
-              <p class="text-size-regular">Arcu duis in venenatis turpis phasellus morbi nulla eu purus. Viverra enim arcu magna adipiscing suscipit eu viverra mollis vitae.</p>
+              <p class="text-size-regular">From nationwide nutritional security to complete resource self-reliance, our national objectives form a comprehensive roadmap for lasting prosperity.</p>
             </div>
             <div class="padding-bottom padding-large"></div>
             <div class="objective-collection-list-wrapper w-dyn-list">
@@ -239,20 +251,20 @@ const faqItems = [
         <div class="padding-section-medium">
           <div class="community-component reveal-up">
             <div class="community-card">
-              <h2 class="heading-style-h2">20000+</h2>
-              <div class="text-size-regular">Donars</div>
+              <h2 class="heading-style-h2">82.9M+</h2>
+              <div class="text-size-regular">Students & Mothers Fed Daily</div>
             </div>
             <div class="community-card">
-              <h2 class="heading-style-h2">15000+</h2>
-              <div class="text-size-regular">Volunteers</div>
+              <h2 class="heading-style-h2">3M</h2>
+              <div class="text-size-regular">Affordable Homes Annually</div>
             </div>
             <div class="community-card">
-              <h2 class="heading-style-h2">90+</h2>
-              <div class="text-size-regular">Days in campaign</div>
+              <h2 class="heading-style-h2">100%</h2>
+              <div class="text-size-regular">Food & Energy Sovereignty Target</div>
             </div>
             <div class="community-card _2nd">
-              <h2 class="heading-style-h2">$40000+</h2>
-              <div class="text-size-regular">Active voters</div>
+              <h2 class="heading-style-h2">26</h2>
+              <div class="text-size-regular">Strategic Commodities Downstreamed</div>
             </div>
           </div>
         </div>
@@ -268,10 +280,10 @@ const faqItems = [
           <div class="team-component">
             <div class="team-top-content-wrapper reveal-down">
               <div class="team-top-left-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Our team</div></div>
-                <h2 class="heading-style-h2">Building a stronger community together.</h2>
+                <div class="headline"><div class="dot"></div><div>Cabinet Leadership</div></div>
+                <h2 class="heading-style-h2">Stewarding Indonesia's flagship national programs.</h2>
               </div>
-              <div class="text-size-regular">Cras nulla diam quam sollicitudin bibendum nunc mattis felis pharetra. Faucibus sed hendrerit nisl lacus velit sem faucibus.</div>
+              <div class="text-size-regular">Led by President Prabowo Subianto and key ministerial leaders dedicated to transparent governance, national security, and public welfare.</div>
             </div>
             <div class="padding-bottom padding-large"></div>
             <div class="team-collection-list-wrapper w-dyn-list">
@@ -314,11 +326,11 @@ const faqItems = [
           <div class="event-component">
             <div class="event-top-content-wrapper reveal-down">
               <div class="event-top-left-content">
-                <div class="headline"><div class="dot"></div><div>Our events</div></div>
-                <h2 class="heading-style-h2">Explore our upcoming events for community impact.</h2>
+                <div class="headline"><div class="dot"></div><div>National Summits</div></div>
+                <h2 class="heading-style-h2">Key forums and milestone briefings shaping national policy.</h2>
               </div>
               <div class="event-top-right-content-wrapper">
-                <div class="text-size-regular">Tristique aliquet aliquet venenatis sem nullam. Augue risus commodo ultrices amet quisque.</div>
+                <div class="text-size-regular">Engage with ministers, public officials, and industry pioneers driving agricultural self-reliance, child nutrition, and resource downstreaming.</div>
               </div>
             </div>
             <div class="padding-bottom padding-large"></div>
@@ -371,8 +383,8 @@ const faqItems = [
         <div class="padding-section-medium">
           <div class="cta-component reveal-scale">
             <div class="cta-content-wrapper">
-              <h2 class="heading-style-h2">Take action for change.</h2>
-              <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+              <h2 class="heading-style-h2">United for Indonesia Emas 2045.</h2>
+              <a class="button w-inline-block" href="/contact"><div>Partner with the Programs</div></a>
             </div>
           </div>
         </div>
@@ -391,8 +403,8 @@ const faqItems = [
           <div class="blog-component">
             <div class="blog-top-content-wrapper reveal-down">
               <div class="blog-top-left-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Latest blog</div></div>
-                <h2 class="heading-style-h2">Insights and updates from our community.</h2>
+                <div class="headline"><div class="dot"></div><div>Policy Insights</div></div>
+                <h2 class="heading-style-h2">Updates and in-depth analyses on flagship national initiatives.</h2>
               </div>
             </div>
             <div class="padding-bottom padding-large"></div>
@@ -441,10 +453,10 @@ const faqItems = [
           <div class="donation-component">
             <div class="donation-left-content-wrapper reveal-left">
               <div class="donation-left-top-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Contribute us</div></div>
+                <div class="headline"><div class="dot"></div><div>Community Action</div></div>
                 <div class="donation-left-top-content">
-                  <h2 class="heading-style-h2">Support our mission with your generous donation today.</h2>
-                  <p class="text-size-regular">Egestas purus fermentum vel scelerisque aliquam. Ipsum pellentesque at sagittis varius commodo sed integer mattis sed.</p>
+                  <h2 class="heading-style-h2">Empower grassroots community participation across the nation.</h2>
+                  <p class="text-size-regular">Join public outreach, local nutrition distribution networks, and community development programs supporting Indonesia's self-reliance.</p>
                 </div>
               </div>
               <div class="donation-collection-list-wrapper w-dyn-list">

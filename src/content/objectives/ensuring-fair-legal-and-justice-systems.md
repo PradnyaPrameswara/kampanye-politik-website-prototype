@@ -1,30 +1,23 @@
 ---
-title: "Ensuring Fair Legal and Justice Systems"
-description: "Consectetur nisi adipiscing eget tellus ut. Turpis velit proin habitant nibh feugiat."
+title: "Anti-Corruption & Digital Governance"
+description: "Zero tolerance for corruption, systemic state revenue enforcement, and deploying GovTech INA Digital across public services."
 image: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 bgImage: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 ---
 
 #### Summary
 
-Arcu amet bibendum ut urna. Rutrum urna tempus praesent etiam gravida tristique diam. Tellus nam sit diam sem. Ut lacinia egestas amet aliquet. Eleifend fringilla at convallis nibh ultrices. Quis sit libero tincidunt adipiscing pharetra bibendum quis malesuada sed. Venenatis sed nulla bibendum laoreet at malesuada mauris fermentum integer. Sed eu odio semper risus lobortis. Amet id sit orci lobortis orci. Condimentum venenatis turpis vulputate elit eu nulla lectus nec quam. Interdum ultricies congue quisque in tincidunt. Amet placerat in consectetur vitae nascetur consectetur.
+Corruption drains the economic lifeblood of the nation, steals opportunities from the poor, and weakens sovereign institutions. President Prabowo Subianto has declared an unyielding, zero-tolerance war on corruption across all branches of government. By modernizing law enforcement, empowering anti-graft bodies, sealing state revenue leakages in customs, taxation, and natural resources, and implementing unified digital public infrastructure (GovTech INA Digital), the administration guarantees that every rupiah of state budget directly benefits the people.
 
-##### Understanding Social Equity
+##### Pillars of the Clean Governance Strategy
 
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Achieving transparent, accountable public administration requires institutional willpower and modern technological safeguards:
 
-##### Current Initiatives and Policies
+*   **Zero Tolerance for Graft**: Empowering the Corruption Eradication Commission (KPK), Attorney General's Office (Kejaksaan Agung), and National Police (Polri) to investigate and prosecute financial crimes without political favoritism.
+*   **Preventing State Revenue Leakages**: Enforcing strict audits on illegal mining, illegal logging, and unauthorized marine resource exploitation, recovering trillions in unpaid state taxes and non-tax revenues (PNBP).
+*   **National GovTech Integration (INA Digital)**: Transitioning fragmented government software into a single unified public service portal, eliminating bureaucratic friction and administrative bribery.
+*   **Civil Service Professionalization**: Linking civil servant (ASN) performance metrics and remuneration directly to transparent service delivery and anti-corruption standards.
 
-Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+##### Legal Certainty and Investment Security
 
-##### Key Areas of Focus
-
-Aorem ipsum dolor sit amet consectetur. Urna erat phasellus id egestas proin mauris auctor bibendum. Augue sed a eu urna vitae venenatis. Nulla et arcu sagittis massa orci elementum malesuada. Massa sed pellentesque quisque diam pulvinar iaculis enim varius cras. Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
-
-*   Education: Addressing disparities in educational opportunities and outcomes.
-*   Healthcare: Ensuring accessible and affordable healthcare for all.
-*   Economic: Opportunities: Promoting fair wages and job opportunities across communities.
-*   Housing: Fighting for equal access to affordable, safe housing.
-*   Criminal Justice: Reforming systems to eliminate discrimination and bias.
-
-Faucibus lacus tempus pretium amet. Viverra lectus quis varius diam in netus at elementum habitant. Nec hendrerit cursus sit elit dui. Non ultrices senectus est lectus nunc senectus gravida aenean. Odio semper nisi sollicitudin sed cursus.
+Clean governance directly stimulates domestic entrepreneurship and foreign direct investment. By ensuring swift contract enforcement, transparent licensing procedures, and an impartial judiciary, Indonesia provides an attractive, secure economic environment for job-creating private capital.

@@ -9,26 +9,26 @@ interface ValueItem {
 const leftValues: readonly ValueItem[] = [
   {
     id: 1,
-    title: 'Transparency',
-    description: 'Accumsan sit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo',
+    title: 'National Sovereignty',
+    description: 'Safeguarding territorial integrity, constitutional democracy, and national pride with steadfast patriotism.',
   },
   {
     id: 3,
-    title: 'Commitment',
-    description: 'Lccumsan sit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo',
+    title: 'Clean Governance',
+    description: 'Zero tolerance for corruption, transparent state budgets, and integrated digital public administration.',
   },
 ] as const;
 
 const rightValues: readonly ValueItem[] = [
   {
     id: 2,
-    title: 'Integrity',
-    description: 'Lisit malesuada tellus ut in sed etiam lorem. Morbi bibendum leo',
+    title: 'Public Welfare',
+    description: 'Eradicating poverty and stunting through free nutritious meals, universal health screenings, and affordable housing.',
   },
   {
     id: 4,
-    title: 'Accountability',
-    description: 'Bibendum leo Accumsan sit malesuada tellus ut in sed etiam lorem. Morbi',
+    title: 'Self-Sufficiency',
+    description: 'Achieving complete food, energy, and water independence through domestic innovation and industrial downstreaming.',
   },
 ] as const;
 
@@ -53,13 +53,13 @@ export default function ValuesInteractive() {
         <div className="value-top-left-content">
           <div className="headline">
             <div className="dot"></div>
-            <div>Our Value</div>
+            <div>Our Core Values</div>
           </div>
-          <h2 className="heading-style-h2">Discover our values that drive our mission forward.</h2>
+          <h2 className="heading-style-h2">Guiding principles anchoring Indonesia's march toward 2045.</h2>
         </div>
         <div className="value-top-right-content">
           <div className="text-size-regular">
-            Condimentum mi consequat quis et mauris. Bibendum semper enim volutpat donec nunc. Sit leo rutrum maecenas morbi
+            Rooted in Pancasila, constitutional justice, and an uncompromising commitment to the prosperity of every Indonesian family.
           </div>
         </div>
       </div>
