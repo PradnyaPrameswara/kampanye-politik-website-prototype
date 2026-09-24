@@ -13,15 +13,15 @@ const objectives = await getCollection('objectives');
 const allTeamMembers = await getCollection('team');
 
 const teamImages = {
-  'john-smith': '/images/webflow/66de885235a491ec7c9579d4_Team%20Image%206.webp',
-  'sarah-johnson': '/images/webflow/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
-  'michael-brown': '/images/webflow/66de8840477d16d8930afdba_Team%20Image%204.webp',
-  'david-wilson': '/images/webflow/66de88373555ab75c632122c_Team%20Image%203.webp',
-  'jessica-lee': '/images/webflow/66de882ef48421d2f55b6983_Team%20Image%202.webp',
-  'james-clark': '/images/webflow/66de882483ff8257a260072a_Team%20Image%201.webp',
+  'john-smith': '/images/assets/66de885235a491ec7c9579d4_Team%20Image%206.webp',
+  'sarah-johnson': '/images/assets/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
+  'michael-brown': '/images/assets/66de8840477d16d8930afdba_Team%20Image%204.webp',
+  'david-wilson': '/images/assets/66de88373555ab75c632122c_Team%20Image%203.webp',
+  'jessica-lee': '/images/assets/66de882ef48421d2f55b6983_Team%20Image%202.webp',
+  'james-clark': '/images/assets/66de882483ff8257a260072a_Team%20Image%201.webp',
 } as const;
 
-// Preserve exact Webflow homepage order: John Smith, Sarah Johnson, Michael Brown
+// Preserve featured team member order: John Smith, Sarah Johnson, Michael Brown
 const featuredTeamSlugs = ['john-smith', 'sarah-johnson', 'michael-brown'] as const;
 
 const teamMembers = featuredTeamSlugs.flatMap((slug) => {
@@ -33,15 +33,15 @@ const teamMembers = featuredTeamSlugs.flatMap((slug) => {
 const allPosts = await getCollection('blog');
 
 const blogImages = {
-  'understanding-recent-policy-changes': '/images/webflow/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
-  'building-strong-advocacy-coalitions': '/images/webflow/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
-  'community-initiatives-making-a-difference': '/images/webflow/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
-  'impact-of-policy-on-local-communities': '/images/webflow/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
-  'effective-advocacy-strategies-for-success': '/images/webflow/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
-  'stories-of-community-impact-and-change': '/images/webflow/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
+  'understanding-recent-policy-changes': '/images/assets/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
+  'building-strong-advocacy-coalitions': '/images/assets/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
+  'community-initiatives-making-a-difference': '/images/assets/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
+  'impact-of-policy-on-local-communities': '/images/assets/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
+  'effective-advocacy-strategies-for-success': '/images/assets/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
+  'stories-of-community-impact-and-change': '/images/assets/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
 } as const;
 
-// Preserve exact Webflow homepage order: 2 featured posts
+// Preserve featured blog post order
 const featuredBlogSlugs = [
   'understanding-recent-policy-changes',
   'building-strong-advocacy-coalitions',
@@ -291,7 +291,7 @@ const faqItems = [
                 {teamMembers.map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
                     <a class="team-card w-inline-block reveal-up" href={`/member/${member.id}`}>
-                      <div class="team-image-wrapper" style="background-image:url('/images/webflow/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
+                      <div class="team-image-wrapper" style="background-image:url('/images/assets/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
                         <img 
                           alt={member.data.name} 
                           class="team-image" 
@@ -303,7 +303,7 @@ const faqItems = [
                       <div class="team-card-content-wrapper">
                         <div class="team-card-content">
                           <h5 class="heading-style-h5 text-color-white">{member.data.name}</h5>
-                          <img alt="" loading="lazy" src="/images/webflow/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
+                          <img alt="" loading="lazy" src="/images/assets/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
                         </div>
                         <div class="text-size-regular text-color-white">{member.data.title}</div>
                       </div>
@@ -337,10 +337,10 @@ const faqItems = [
             <div class="event-bottom-content-wrapper">
               {events.map((event, i) => {
                 const eventImg = i === 1 
-                  ? '/images/webflow/66ead80bd0b2f867500887cb_Event%20Image%202.avif' 
+                  ? '/images/assets/66ead80bd0b2f867500887cb_Event%20Image%202.avif' 
                   : i === 2 
-                    ? '/images/webflow/66ead80b5be6571f08a1a5d7_Event%20Image%203.jpg'
-                    : '/images/webflow/66ead80b851d571cc8c25ed8_Event%20Image%201.jpg';
+                    ? '/images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203.jpg'
+                    : '/images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201.jpg';
                 return (
                   <div class="event-card reveal-scale">
                     <div class="event-image-wrapper">
@@ -353,15 +353,15 @@ const faqItems = [
                       </div>
                       <div class="event-card-bottom-content-wrapper">
                         <div class="event-card-bottom-content">
-                          <img alt="" class="event-icon" loading="lazy" src="/images/webflow/66ead5b74b00c6857ddf134d_11.png" />
+                          <img alt="" class="event-icon" loading="lazy" src="/images/assets/66ead5b74b00c6857ddf134d_11.png" />
                           <div class="text-size-small">{event.location}</div>
                         </div>
                         <div class="event-card-bottom-content">
-                          <img alt="" class="event-icon" loading="lazy" src="/images/webflow/66ead5b74b00c6857ddf131d_12.png" />
+                          <img alt="" class="event-icon" loading="lazy" src="/images/assets/66ead5b74b00c6857ddf131d_12.png" />
                           <div class="text-size-small">{event.date}</div>
                         </div>
                         <div class="event-card-bottom-content">
-                          <img alt="" class="event-icon" loading="lazy" src="/images/webflow/66ead5b74b00c6857ddf12d9_13.png" />
+                          <img alt="" class="event-icon" loading="lazy" src="/images/assets/66ead5b74b00c6857ddf12d9_13.png" />
                           <div class="text-size-small">{event.time}</div>
                         </div>
                       </div>
@@ -430,7 +430,7 @@ const faqItems = [
                         <div class="blog-card-content">
                           <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
                             <div>Read More</div>
-                            <img alt="" class="arrow" loading="lazy" src="/images/webflow/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
+                            <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                           </a>
                         </div>
                       </div>

@@ -14,12 +14,12 @@ export async function getStaticPaths() {
 const { member } = Astro.props;
 
 const memberImages = {
-  'john-smith': '/images/webflow/66de885235a491ec7c9579d4_Team%20Image%206.webp',
-  'sarah-johnson': '/images/webflow/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
-  'michael-brown': '/images/webflow/66de8840477d16d8930afdba_Team%20Image%204.webp',
-  'david-wilson': '/images/webflow/66de88373555ab75c632122c_Team%20Image%203.webp',
-  'jessica-lee': '/images/webflow/66de882ef48421d2f55b6983_Team%20Image%202.webp',
-  'james-clark': '/images/webflow/66de882483ff8257a260072a_Team%20Image%201.webp',
+  'john-smith': '/images/assets/66de885235a491ec7c9579d4_Team%20Image%206.webp',
+  'sarah-johnson': '/images/assets/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
+  'michael-brown': '/images/assets/66de8840477d16d8930afdba_Team%20Image%204.webp',
+  'david-wilson': '/images/assets/66de88373555ab75c632122c_Team%20Image%203.webp',
+  'jessica-lee': '/images/assets/66de882ef48421d2f55b6983_Team%20Image%202.webp',
+  'james-clark': '/images/assets/66de882483ff8257a260072a_Team%20Image%201.webp',
 } as const;
 
 type MemberSlug = keyof typeof memberImages;
@@ -147,7 +147,7 @@ const profile = leadershipProfiles[member.id] || {
 <ContentLayout 
   title={`${member.data.name} - Leadership Profile | Asta Cita`}
   bannerTitle="Leadership Profile"
-  bannerImage="/images/webflow/66dc04d965d12dc1cc9b4247_Team%20Bg%20Image.webp"
+  bannerImage="/images/assets/66dc04d965d12dc1cc9b4247_Team%20Bg%20Image.webp"
   currentPath="/team"
 >
   <div class="section-team-details">
@@ -156,7 +156,7 @@ const profile = leadershipProfiles[member.id] || {
         <div class="padding-section-large is-header">
           <div class="team-details-component">
             <div class="team-details-top-content-wrapper">
-              <div class="team-details-image-wrapper reveal-left" style="background-image:url('/images/webflow/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
+              <div class="team-details-image-wrapper reveal-left" style="background-image:url('/images/assets/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
                 <img 
                   alt={member.data.name} 
                   class="team-details-image" 
@@ -176,16 +176,16 @@ const profile = leadershipProfiles[member.id] || {
                 </div>
                 <div class="team-details-social-icon-wrapper">
                   <a class="team-details-social-icon w-inline-block" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <img alt="Instagram" loading="lazy" src="/images/webflow/66dc04d83c0dbe656ece183f_Instagram%20Icon.svg" />
+                    <img alt="Instagram" loading="lazy" src="/images/assets/66dc04d83c0dbe656ece183f_Instagram%20Icon.svg" />
                   </a>
                   <a class="team-details-social-icon w-inline-block" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                    <img alt="Twitter" loading="lazy" src="/images/webflow/66dc04d92d24625a20631f1d_Twitter%20Icon.svg" />
+                    <img alt="Twitter" loading="lazy" src="/images/assets/66dc04d92d24625a20631f1d_Twitter%20Icon.svg" />
                   </a>
                   <a class="team-details-social-icon w-inline-block" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <img alt="LinkedIn" loading="lazy" src="/images/webflow/66dc04d82f0c3749635de0f6_Linkedin%20Icon.svg" />
+                    <img alt="LinkedIn" loading="lazy" src="/images/assets/66dc04d82f0c3749635de0f6_Linkedin%20Icon.svg" />
                   </a>
                   <a class="team-details-social-icon w-inline-block" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <img alt="Facebook" loading="lazy" src="/images/webflow/66dc04d8185f32d46eb9df00_Facebook%20Icon.svg" />
+                    <img alt="Facebook" loading="lazy" src="/images/assets/66dc04d8185f32d46eb9df00_Facebook%20Icon.svg" />
                   </a>
                 </div>
               </div>

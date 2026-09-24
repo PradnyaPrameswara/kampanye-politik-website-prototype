@@ -18,12 +18,12 @@ const { Content } = await objective.render();
 const slug = objective.slug || objective.id;
 
 const objectiveImages = {
-  'advancing-social-equity-and-justice': '/images/webflow/66de86499b602e1b2f5cfbc1_Objectives%20Image%206.jpg',
-  'protecting-human-rights-and-freedoms': '/images/webflow/66de8604cdbecf88f8bdcd34_Objectives%20Image%205.jpg',
-  'improving-healthcare-access-and-quality': '/images/webflow/66de85ebcdae96c41a0e5b3f_Objectives%20Image%204.jpg',
-  'boosting-national-security-and-safety': '/images/webflow/66de85c7f4911980aa633be9_Objectives%20Image%203.jpg',
-  'ensuring-fair-legal-and-justice-systems': '/images/webflow/66de859d80ec78184905d9b3_Objectives%20Image%202.jpg',
-  'strengthening-economic-opportunity': '/images/webflow/66de850f20911f1251f963e9_Objectives%20Image%201.jpg',
+  'advancing-social-equity-and-justice': '/images/assets/66de86499b602e1b2f5cfbc1_Objectives%20Image%206.jpg',
+  'protecting-human-rights-and-freedoms': '/images/assets/66de8604cdbecf88f8bdcd34_Objectives%20Image%205.jpg',
+  'improving-healthcare-access-and-quality': '/images/assets/66de85ebcdae96c41a0e5b3f_Objectives%20Image%204.jpg',
+  'boosting-national-security-and-safety': '/images/assets/66de85c7f4911980aa633be9_Objectives%20Image%203.jpg',
+  'ensuring-fair-legal-and-justice-systems': '/images/assets/66de859d80ec78184905d9b3_Objectives%20Image%202.jpg',
+  'strengthening-economic-opportunity': '/images/assets/66de850f20911f1251f963e9_Objectives%20Image%201.jpg',
 } as const;
 
 type ObjectiveSlug = keyof typeof objectiveImages;
@@ -37,7 +37,7 @@ const imageSrc = knownImage ?? (objective.data.image ? objective.data.image.src 
 <ContentLayout 
   title={`${objective.data.title} - Strategic Objectives | Asta Cita`}
   bannerTitle="National Objectives"
-  bannerImage="/images/webflow/66dc04da39706fc65e5ae286_Objectives%20Bg%20Image.webp"
+  bannerImage="/images/assets/66dc04da39706fc65e5ae286_Objectives%20Bg%20Image.webp"
   currentPath="/objective"
 >
   <div class="section-objective-details">

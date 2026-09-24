@@ -10,12 +10,12 @@ const allPosts = await getCollection('blog');
 const blogPosts = allPosts.slice(0, 2);
 
 const blogImages = {
-  'understanding-recent-policy-changes': '/images/webflow/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
-  'building-strong-advocacy-coalitions': '/images/webflow/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
-  'community-initiatives-making-a-difference': '/images/webflow/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
-  'impact-of-policy-on-local-communities': '/images/webflow/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
-  'effective-advocacy-strategies-for-success': '/images/webflow/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
-  'stories-of-community-impact-and-change': '/images/webflow/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
+  'understanding-recent-policy-changes': '/images/assets/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
+  'building-strong-advocacy-coalitions': '/images/assets/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
+  'community-initiatives-making-a-difference': '/images/assets/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
+  'impact-of-policy-on-local-communities': '/images/assets/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
+  'effective-advocacy-strategies-for-success': '/images/assets/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
+  'stories-of-community-impact-and-change': '/images/assets/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
 } as const;
 
 const teamMembers = [
@@ -23,19 +23,19 @@ const teamMembers = [
     name: 'Prabowo Subianto',
     role: 'President of the Republic of Indonesia',
     slug: 'john-smith',
-    image: '/images/webflow/66de885235a491ec7c9579d4_Team%20Image%206.webp',
+    image: '/images/assets/66de885235a491ec7c9579d4_Team%20Image%206.webp',
   },
   {
     name: 'Gibran Rakabuming Raka',
     role: 'Vice President of the Republic of Indonesia',
     slug: 'sarah-johnson',
-    image: '/images/webflow/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
+    image: '/images/assets/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
   },
   {
     name: 'Prof. Dadan Hindayana',
     role: 'Head of National Nutrition Agency (BGN)',
     slug: 'michael-brown',
-    image: '/images/webflow/66de8840477d16d8930afdba_Team%20Image%204.webp',
+    image: '/images/assets/66de8840477d16d8930afdba_Team%20Image%204.webp',
   },
 ];
 ---
@@ -43,7 +43,7 @@ const teamMembers = [
 <ContentLayout 
   title="Asta Cita - About the Mission | President Prabowo Subianto Flagship Programs" 
   bannerTitle="About the Mission" 
-  bannerImage="/images/webflow/66dc04d833d0f035179dae54_About%20Hero%20Image.webp"
+  bannerImage="/images/assets/66dc04d833d0f035179dae54_About%20Hero%20Image.webp"
   currentPath="/about"
 >
   <!-- Section About -->
@@ -58,19 +58,19 @@ const teamMembers = [
                 <p class="text-size-regular">Under President Prabowo Subianto’s leadership, Indonesia is embarking on historic structural reforms to secure domestic food supplies, empower youth nutrition, and build a self-reliant economy.</p>
               </div>
               <div class="about-image-wrapper _2nd">
-                <img alt="About Hero" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 484px" src="/images/webflow/66eb100ae5b4a9769e10e8d1_About%20Hero%20Image.jpg" />
+                <img alt="About Hero" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 484px" src="/images/assets/66eb100ae5b4a9769e10e8d1_About%20Hero%20Image.jpg" />
               </div>
             </div>
             <div class="padding-bottom padding-large"></div>
             <div class="about-bottom-content-wrapper reveal-up">
               <div class="about-image-wrapper _3rd">
-                <img alt="About Hero 4" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/webflow/66dc04da39706fc65e5ae289_About%20Hero%20Image%204.webp" />
+                <img alt="About Hero 4" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/assets/66dc04da39706fc65e5ae289_About%20Hero%20Image%204.webp" />
               </div>
               <div class="about-image-wrapper _02">
-                <img alt="About Hero 3" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/webflow/66dc04daf0ccb5209771b2c5_About%20Hero%20Image%203.webp" />
+                <img alt="About Hero 3" class="about-image" loading="lazy" sizes="(max-width: 991px) 100vw, 384px" src="/images/assets/66dc04daf0ccb5209771b2c5_About%20Hero%20Image%203.webp" />
               </div>
               <div class="about-image-wrapper">
-                <img alt="About Hero 2" class="about-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 384px" src="/images/webflow/66dc04db22177f0428b4ccdf_About%20Hero%20Image%202.webp" />
+                <img alt="About Hero 2" class="about-image" loading="lazy" sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 384px" src="/images/assets/66dc04db22177f0428b4ccdf_About%20Hero%20Image%202.webp" />
               </div>
             </div>
           </div>
@@ -157,13 +157,13 @@ const teamMembers = [
                 {teamMembers.map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
                     <a class="team-card w-inline-block" href={`/member/${member.slug}`}>
-                      <div class="team-image-wrapper" style="background-image:url('/images/webflow/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
+                      <div class="team-image-wrapper" style="background-image:url('/images/assets/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
                         <img alt={member.name} class="team-image" loading="lazy" sizes="100vw" src={member.image} />
                       </div>
                       <div class="team-card-content-wrapper">
                         <div class="team-card-content">
                           <h5 class="heading-style-h5 text-color-white">{member.name}</h5>
-                          <img alt="" loading="lazy" src="/images/webflow/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
+                          <img alt="" loading="lazy" src="/images/assets/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
                         </div>
                         <div class="text-size-regular text-color-white">{member.role}</div>
                       </div>
@@ -238,7 +238,7 @@ const teamMembers = [
                           <div class="blog-card-content">
                             <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
                               <div>Read More</div>
-                              <img alt="" class="arrow" loading="lazy" src="/images/webflow/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
+                              <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                             </a>
                           </div>
                         </div>

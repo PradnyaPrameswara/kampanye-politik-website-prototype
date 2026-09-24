@@ -113,7 +113,7 @@
   background-color: var(--secendary--blue);
 }
 
-/* Team Card hover — Webflow IX2 (a-6 / a-21) */
+/* Team Card hover */
 .team-card {
   position: relative;
   overflow: hidden;
@@ -154,7 +154,7 @@
   transform: translate(2px, -2px);
 }
 
-/* Blog Card & Button arrow hover — Webflow IX2 (a-25 / a-26) */
+/* Blog Card & Button arrow hover */
 .blog-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -219,7 +219,7 @@
   transform: scale(1.06);
 }
 
-/* Objective Card hover — Webflow IX2 (a-3 / a-4) */
+/* Objective Card hover */
 .objective-card .objective-image {
   transition: transform 0.5s ease;
 }
@@ -250,7 +250,7 @@
   color: var(--neutral--white-200);
 }
 
-/* Hero Video Button Pulse — Webflow IX2 (a-35) */
+/* Hero Video Button Pulse */
 @keyframes hero-video-pulse {
   0%, 100% {
     transform: scale3d(1, 1, 1);
@@ -264,7 +264,7 @@
   animation: hero-video-pulse 2s ease-in-out infinite;
 }
 
-/* FAQ Accordion IX2 (a-10 / a-22) */
+/* FAQ Accordion */
 .faq-accordion {
   transition: background-color 0.4s ease;
 }

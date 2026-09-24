@@ -21,7 +21,7 @@ export default function MissionVisionCards() {
             className="mission-image"
             loading="lazy"
             sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px"
-            src="/images/webflow/66dc04d9dd607b08dfac0c60_Mission%20Image%202.webp"
+            src="/images/assets/66dc04d9dd607b08dfac0c60_Mission%20Image%202.webp"
           />
         </div>
         <div className="mission-card-content-wrapper">
@@ -62,7 +62,7 @@ export default function MissionVisionCards() {
             className="mission-image"
             loading="lazy"
             sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px"
-            src="/images/webflow/66dc04db185f32d46eb9e05f_Mission%20Image%2001.webp"
+            src="/images/assets/66dc04db185f32d46eb9e05f_Mission%20Image%2001.webp"
           />
         </div>
         <div className="mission-card-content-wrapper">

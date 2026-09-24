@@ -57,7 +57,7 @@
   h1 { font-size: 2.2rem; }
 }
 
-/* Utility classes matching Webflow patterns */
+/* Custom color utility classes */
 @layer utilities {
   .text-color-white { color: theme('colors.neutral.white'); }
   .text-color-white-200 { color: theme('colors.neutral.white-200'); }
