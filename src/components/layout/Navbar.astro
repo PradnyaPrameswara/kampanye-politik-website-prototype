@@ -40,7 +40,7 @@ const isCurrent = (path: string) => {
         </a>
       ))}
       <div class="nav-bottom-content hide-dekstop">
-        <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+        <a aria-current={currentPath === '/contact' ? 'page' : undefined} class={`button w-inline-block ${currentPath === '/contact' ? 'w--current' : ''}`.trim()} href="/contact"><div>Join us now</div></a>
       </div>
     </nav>
     <div class="nav-left-content">
@@ -53,7 +53,7 @@ const isCurrent = (path: string) => {
         <div class="text-block w-inline-block">Donate</div>
       </a>
       <div class="nav-bottom-content hide-tablet">
-        <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+        <a aria-current={currentPath === '/contact' ? 'page' : undefined} class={`button w-inline-block ${currentPath === '/contact' ? 'w--current' : ''}`.trim()} href="/contact"><div>Join us now</div></a>
       </div>
       <div class="laptop:hidden flex items-center">
         <MobileNavMenu client:media="(max-width: 991px)" currentPath={currentPath} />

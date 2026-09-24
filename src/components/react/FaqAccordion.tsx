@@ -15,23 +15,23 @@ export interface FaqAccordionProps {
 const defaultItems: FaqItem[] = [
   {
     question: "What is your organization’s mission?",
-    answer: "Sed molestie nam ut at non facilisis fames nunc ut. Rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi.",
+    answer: "Rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. Sed molestie nam ut at non facilisis fames nunc.",
   },
   {
     question: "How do I join your campaigns?",
-    answer: "Sit est nunc proin tellus posuere egestas vitae morbi. Rorem ipsum dolor sit amet consectetur. Sed molestie nam ut at non facilisis fames nunc ut.",
+    answer: "Sed molestie nam ut at non facilisis fames nunc ut. Rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. ",
   },
   {
     question: "How do you ensure transparency?",
-    answer: "Molestie ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. Sed nam ut at non facilisis fames nunc ut.",
+    answer: "Sit est nunc proin tellus posuere egestas vitae morbi. Rorem ipsum dolor sit amet consectetur. Sed molestie nam ut at non facilisis fames nunc ut.",
   },
   {
     question: "Who are your key team members?",
-    answer: "Consectetur rorem ipsum dolor sit amet. Sit est nunc proin tellus posuere egestas vitae morbi. Sed molestie nam ut at non facilisis fames nunc ut.",
+    answer: "Ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere hksfkf egestas vitae morbi. Sed molestie nam ut at non facilisis fames.",
   },
   {
     question: "Where can I find annual reports?",
-    answer: "Rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. Sed molestie nam ut at non facilisis fames nunc ut.",
+    answer: "fames rorem ipsum dolor sit amet consectetur. Sit est nunc proin tellus posuere egestas vitae morbi. Sed molestie nam ut at non facilisis.",
   },
 ];
 
@@ -46,7 +46,7 @@ export function FaqAccordion({
     <div className="section-faq">
       <div className="padding-global">
         <div className="container-large">
-          <div className="padding-section-medium">
+          <div className="padding-section-medium padding-bottom-large">
             <div className="faq-component">
               <div className="faq-top-content-wrapper reveal-down">
                 <div className="headline">
@@ -70,16 +70,16 @@ export function FaqAccordion({
                   >
                     <Accordion.Header>
                       <Accordion.Trigger className="faq-question-wrapper w-full text-left bg-transparent border-none p-0 cursor-pointer group">
-                        <h6 className="heading-style-h6 is-faq">{item.question}</h6>
+                        <h6 className="heading-style-h6">{item.question}</h6>
                         <div className="faq-icon-wrapper">
                           <div className="faq-icon _1st"></div>
                           <div className="faq-icon _2nd"></div>
                         </div>
                       </Accordion.Trigger>
                     </Accordion.Header>
-                    <Accordion.Content className="faq-answer-wrapper overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+                    <Accordion.Content className="faq-answer-wrapper overflow-hidden">
                       <div className="margin-top">
-                        <p className="text-size-regular is-faq">{item.answer}</p>
+                        <p className="text-size-regular">{item.answer}</p>
                       </div>
                     </Accordion.Content>
                   </Accordion.Item>

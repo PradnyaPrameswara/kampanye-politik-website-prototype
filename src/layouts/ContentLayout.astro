@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   bannerTitle?: string;
   bannerImage?: string;
+  bannerSrcset?: string;
   bannerClass?: string;
   currentPath?: string;
 }
@@ -16,6 +17,7 @@ const {
   description, 
   bannerTitle, 
   bannerImage = '/images/webflow/66dc04d833d0f035179dae54_About%20Hero%20Image.webp',
+  bannerSrcset,
   bannerClass = '',
   currentPath
 } = Astro.props;
@@ -33,7 +35,14 @@ const {
           </div>
           <div class="banner-overly"></div>
           <div class="banner-image-wrapper">
-            <img alt="" class="banner-image" loading="lazy" sizes="100vw" src={bannerImage} />
+            <img 
+              alt="" 
+              class="banner-image" 
+              loading="lazy" 
+              sizes="100vw" 
+              src={bannerImage} 
+              srcset={bannerSrcset}
+            />
           </div>
         </div>
       </div>
