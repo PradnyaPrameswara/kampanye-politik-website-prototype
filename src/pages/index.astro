@@ -10,9 +10,48 @@ import events from '@/data/events.json';
 
 const objectives = await getCollection('objectives');
 
-const teamMembers = await getCollection('team');
+const allTeamMembers = await getCollection('team');
 
-const blogPosts = await getCollection('blog');
+const teamImages = {
+  'john-smith': '/images/webflow/66de885235a491ec7c9579d4_Team%20Image%206.webp',
+  'sarah-johnson': '/images/webflow/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
+  'michael-brown': '/images/webflow/66de8840477d16d8930afdba_Team%20Image%204.webp',
+  'david-wilson': '/images/webflow/66de88373555ab75c632122c_Team%20Image%203.webp',
+  'jessica-lee': '/images/webflow/66de882ef48421d2f55b6983_Team%20Image%202.webp',
+  'james-clark': '/images/webflow/66de882483ff8257a260072a_Team%20Image%201.webp',
+} as const;
+
+// Preserve exact Webflow homepage order: John Smith, Sarah Johnson, Michael Brown
+const featuredTeamSlugs = ['john-smith', 'sarah-johnson', 'michael-brown'] as const;
+
+const teamMembers = featuredTeamSlugs.flatMap((slug) => {
+  const member = allTeamMembers.find((m) => m.id === slug);
+
+  return member ? [member] : [];
+});
+
+const allPosts = await getCollection('blog');
+
+const blogImages = {
+  'understanding-recent-policy-changes': '/images/webflow/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',
+  'building-strong-advocacy-coalitions': '/images/webflow/66de844253d3899d0b7ea2ae_Blog%20Image%205.jpg',
+  'community-initiatives-making-a-difference': '/images/webflow/66de84243555ab75c62dcfa4_Blog%20Image%204.jpg',
+  'impact-of-policy-on-local-communities': '/images/webflow/66de840153d3899d0b7e7164_Blog%20Image%203.jpg',
+  'effective-advocacy-strategies-for-success': '/images/webflow/66de83db9b602e1b2f5a8425_Blog%20Image%202.jpg',
+  'stories-of-community-impact-and-change': '/images/webflow/66de82a68945e61eaf28d812_Blog%20Image%201.jpg',
+} as const;
+
+// Preserve exact Webflow homepage order: 2 featured posts
+const featuredBlogSlugs = [
+  'understanding-recent-policy-changes',
+  'building-strong-advocacy-coalitions',
+] as const;
+
+const blogPosts = featuredBlogSlugs.flatMap((slug) => {
+  const post = allPosts.find((p) => p.slug === slug);
+
+  return post ? [post] : [];
+});
 
 const faqItems = [
   { question: 'What is CivicUnity?', answer: 'CivicUnity is a platform dedicated to empowering communities through advocacy, policy change, and collective action for a stronger nation.' },
@@ -237,16 +276,22 @@ const faqItems = [
             <div class="padding-bottom padding-large"></div>
             <div class="team-collection-list-wrapper w-dyn-list">
               <div class="team-collection-list w-dyn-items" role="list">
-                {teamMembers.slice(0, 3).map((member) => (
+                {teamMembers.map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
                     <a class="team-card w-inline-block reveal-up" href={`/member/${member.id}`}>
-                      <div class="team-image-wrapper" style="background-image:url('/images/team/team-bg.jpg')">
-                        <img alt={member.data.name} class="team-image" loading="lazy" src={`/images/team/${member.id}.webp`} />
+                      <div class="team-image-wrapper" style="background-image:url('/images/webflow/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
+                        <img 
+                          alt={member.data.name} 
+                          class="team-image" 
+                          loading="lazy" 
+                          sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, 30vw" 
+                          src={teamImages[member.id as keyof typeof teamImages] || (member.data.image ? member.data.image.src : `/images/team/${member.id}.webp`)} 
+                        />
                       </div>
                       <div class="team-card-content-wrapper">
                         <div class="team-card-content">
                           <h5 class="heading-style-h5 text-color-white">{member.data.name}</h5>
-                          <img alt="" loading="lazy" src="/icons/team-arrow.svg"/>
+                          <img alt="" loading="lazy" src="/images/webflow/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
                         </div>
                         <div class="text-size-regular text-color-white">{member.data.title}</div>
                       </div>
@@ -279,11 +324,15 @@ const faqItems = [
             <div class="padding-bottom padding-large"></div>
             <div class="event-bottom-content-wrapper">
               {events.map((event, i) => {
-                const eventImg = i === 1 ? '/images/events/event-image-2.avif' : `/images/events/event-image-${i + 1}.jpg`;
+                const eventImg = i === 1 
+                  ? '/images/webflow/66ead80bd0b2f867500887cb_Event%20Image%202.avif' 
+                  : i === 2 
+                    ? '/images/webflow/66ead80b5be6571f08a1a5d7_Event%20Image%203.jpg'
+                    : '/images/webflow/66ead80b851d571cc8c25ed8_Event%20Image%201.jpg';
                 return (
                   <div class="event-card reveal-scale">
                     <div class="event-image-wrapper">
-                      <img alt={event.title} class="event-image" loading="lazy" src={eventImg} />
+                      <img alt={event.title} class="event-image" loading="lazy" sizes="100vw" src={eventImg} />
                     </div>
                     <div class="event-card-content-wrapper">
                       <div class="event-card-top-content">
@@ -292,15 +341,15 @@ const faqItems = [
                       </div>
                       <div class="event-card-bottom-content-wrapper">
                         <div class="event-card-bottom-content">
-                          <img alt="" class="event-icon" loading="lazy" src="/icons/event-location.png" />
+                          <img alt="" class="event-icon" loading="lazy" src="/images/webflow/66ead5b74b00c6857ddf134d_11.png" />
                           <div class="text-size-small">{event.location}</div>
                         </div>
                         <div class="event-card-bottom-content">
-                          <img alt="" class="event-icon" loading="lazy" src="/icons/event-date.png" />
+                          <img alt="" class="event-icon" loading="lazy" src="/images/webflow/66ead5b74b00c6857ddf131d_12.png" />
                           <div class="text-size-small">{event.date}</div>
                         </div>
                         <div class="event-card-bottom-content">
-                          <img alt="" class="event-icon" loading="lazy" src="/icons/event-time.png" />
+                          <img alt="" class="event-icon" loading="lazy" src="/images/webflow/66ead5b74b00c6857ddf12d9_13.png" />
                           <div class="text-size-small">{event.time}</div>
                         </div>
                       </div>
@@ -349,21 +398,27 @@ const faqItems = [
             <div class="padding-bottom padding-large"></div>
             <div class="blog-collection-list-wrapper w-dyn-list">
               <div class="blog-collection-list w-dyn-items" role="list">
-                {blogPosts.slice(0, 3).map((post) => (
+                {blogPosts.map((post) => (
                   <div class="blog-collection-list-item w-dyn-item" role="listitem">
                     <div class="blog-card reveal-up">
                       <div class="blog-image-wrapper">
-                        <img alt={post.data.title} class="blog-image" loading="lazy" src={`/images/blog/${post.slug}.jpg`} />
+                        <img 
+                          alt={post.data.title} 
+                          class="blog-image" 
+                          loading="lazy" 
+                          sizes="100vw"
+                          src={blogImages[post.slug as keyof typeof blogImages] || (post.data.image ? post.data.image.src : `/images/blog/${post.slug}.jpg`)} 
+                        />
                       </div>
                       <div class="blog-card-content-wrapper">
-                        <div class="text-size-small">{post.data.publishDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+                        <div class="text-size-small">{new Date(post.data.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                         <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
                           <h5 class="heading-style-h5">{post.data.title}</h5>
                         </a>
                         <div class="blog-card-content">
                           <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
                             <div>Read More</div>
-                            <img alt="" class="arrow" loading="lazy" src="/icons/team-arrow.svg" />
+                            <img alt="" class="arrow" loading="lazy" src="/images/webflow/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                           </a>
                         </div>
                       </div>
