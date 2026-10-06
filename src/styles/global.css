@@ -33,6 +33,7 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -44,6 +45,7 @@
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   a {
@@ -215,6 +217,12 @@ h6 {
 }
 
 /* Layout */
+.page-wrapper {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .w-layout-grid {
   grid-row-gap: 16px;
   grid-column-gap: 16px;
@@ -2270,7 +2278,10 @@ blockquote {
   padding: 1.5rem;
 }
 
-.navbar {
+.navbar,
+.w-nav {
+  position: relative;
+  z-index: 1000;
   background-color: #0000;
   padding: 1.1875rem 1.5rem;
 }
@@ -3218,6 +3229,7 @@ blockquote {
 .banner-wrapper {
   height: 18.75rem;
   position: relative;
+  background-color: #081a3e;
 }
 
 .banner {

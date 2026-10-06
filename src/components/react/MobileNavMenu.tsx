@@ -5,6 +5,10 @@ interface MobileNavMenuProps {
   currentPath?: string;
 }
 
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+
+const toHref = (path: string) => path === '/' ? (base ? `${base}/` : '/') : `${base}${path}`;
+
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
@@ -13,8 +17,38 @@ const navLinks = [
   { name: 'Blog', path: '/blog' },
 ];
 
+const getActiveKey = (p: string): string => {
+  const pathWithoutBase = base && p.startsWith(base) ? p.slice(base.length) : p;
+
+  const cleanPath = pathWithoutBase.replace(/\/+$/, '') || '/';
+
+  if (cleanPath === '/') {
+    return 'Home';
+  }
+
+  if (cleanPath === '/about' || cleanPath.startsWith('/about/')) {
+    return 'About';
+  }
+
+  if (cleanPath === '/contact' || cleanPath.startsWith('/contact/')) {
+    return 'Contact';
+  }
+
+  if (cleanPath === '/team' || cleanPath.startsWith('/team/') || cleanPath.startsWith('/member/')) {
+    return 'Team';
+  }
+
+  if (cleanPath === '/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/post/')) {
+    return 'Blog';
+  }
+
+  return '';
+};
+
 export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps) {
   const [open, setOpen] = useState(false);
+
+  const activeKey = getActiveKey(currentPath);
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
@@ -46,8 +80,8 @@ export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps)
             {navLinks.map((link) => (
               <a
                 key={link.path}
-                href={link.path}
-                className={`text-h5 text-neutral-black-900 py-4 border-b border-neutral-black-500/20 transition-colors hover:text-brand-blue ${currentPath === link.path ? 'font-bold' : ''}`}
+                href={toHref(link.path)}
+                className={`text-h5 text-neutral-black-900 py-4 border-b border-neutral-black-500/20 transition-colors hover:text-brand-blue ${link.name === activeKey ? 'font-bold text-brand-blue' : ''}`}
                 onClick={() => setOpen(false)}
               >
                 {link.name}
@@ -56,13 +90,13 @@ export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps)
           </nav>
           
           <div className="mt-auto flex flex-col gap-4">
-            <a href="/donate" className="flex items-center justify-center gap-2 py-3 text-neutral-black-900 font-medium border border-neutral-black-500 rounded-[0.75rem]">
+            <a href={toHref('/donate')} className="flex items-center justify-center gap-2 py-3 text-neutral-black-900 font-medium border border-neutral-black-500 rounded-[0.75rem]">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
               </svg>
               Donate
             </a>
-            <a href="/contact" className="bg-brand-blue text-neutral-white py-4 rounded-[0.75rem] font-medium text-center transition-colors hover:bg-brand-red" onClick={() => setOpen(false)}>
+            <a href={toHref('/contact')} className="bg-brand-blue text-neutral-white py-4 rounded-[0.75rem] font-medium text-center transition-colors hover:bg-brand-red" onClick={() => setOpen(false)}>
               Join us now
             </a>
           </div>

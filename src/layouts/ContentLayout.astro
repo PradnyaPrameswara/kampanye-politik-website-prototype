@@ -23,7 +23,7 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} hideNav={true}>
+<BaseLayout title={title} description={description} hideNav={true} currentPath={currentPath}>
   <div class="banner-wrapper">
     <Navbar currentPath={currentPath} />
     {bannerTitle && (
