@@ -1,5 +1,5 @@
 ---
-title: "Modernizing Public Health: Free Annual Screenings & Regional Hospitals"
+title: "Stories of Community Impact and Change"
 publishDate: 2024-09-08
 readTime: "5 min read"
 category: policy

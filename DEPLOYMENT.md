@@ -22,6 +22,13 @@ No required environment variables for basic static deployment. Optional override
 - Edge redirects are managed by `public/_redirects` (compiled to `dist/_redirects`).
 - Cache-control and security headers are managed by `public/_headers` (compiled to `dist/_headers`).
 
+### Cloudflare Workers Static Assets (via Wrangler)
+This repository also includes a minimal `wrangler.jsonc` file enabling deployment to Cloudflare Workers Static Assets without requiring runtime SSR adapters:
+- **Configuration file**: `wrangler.jsonc`
+- **Assets binding**: `"assets": { "directory": "./dist" }`
+- **Validation command**: `npx wrangler deploy --dry-run`
+- **Local development server**: `npx wrangler dev`
+
 ---
 
 ## 2. GitHub Pages

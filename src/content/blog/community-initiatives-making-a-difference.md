@@ -1,5 +1,5 @@
 ---
-title: "Food & Energy Sovereignty: Building Indonesia's Strategic Reserves"
+title: "Community Initiatives Making a Difference"
 publishDate: 2024-08-30
 readTime: "5 min read"
 category: policy

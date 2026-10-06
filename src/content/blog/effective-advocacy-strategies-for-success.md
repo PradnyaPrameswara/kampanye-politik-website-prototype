@@ -1,5 +1,5 @@
 ---
-title: "3 Million Affordable Homes: Housing Security for Urban and Rural Families"
+title: "Effective Advocacy Strategies for Success"
 publishDate: 2024-09-05
 readTime: "6 min read"
 category: community
