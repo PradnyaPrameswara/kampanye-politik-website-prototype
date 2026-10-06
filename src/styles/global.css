@@ -1545,6 +1545,7 @@ blockquote {
   font-weight: 500;
   line-height: 1rem;
   text-decoration: none;
+  display: inline-block;
   transition: transform .4s, color .3s, border-color .4s, background-color .4s;
 }
 
@@ -4024,6 +4025,11 @@ blockquote {
   .text-color-white-300 { color: theme('colors.neutral.white-300'); }
   .text-color-grey { color: theme('colors.neutral.black-600'); }
 }
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
 
 .style-guide-menu-link-item.w--current {
   background-color: var(--secendary--blue);

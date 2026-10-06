@@ -416,6 +416,40 @@ const faqItems = [
     </div>
   </div>
 
+  <!-- Donation Mission Section -->
+  <div class="section-donation">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="donation-component">
+            <div class="donation-left-content-wrapper reveal-left">
+              <div class="donation-left-top-content-wrapper">
+                <div class="headline"><div class="dot"></div><div>Contribute us</div></div>
+                <div class="donation-left-top-content">
+                  <h2 class="heading-style-h2">Support our national mission with your participation today.</h2>
+                  <p class="text-size-regular">Support public outreach, local nutrition distribution networks, and community development programs for self-reliance.</p>
+                </div>
+              </div>
+              <div class="donation-collection-list-wrapper w-dyn-list">
+                <div class="donation-collection-list w-dyn-items" role="list">
+                  {[100, 50, 25, 10, 5].map((amount) => (
+                    <div class="donation-collection-list-item w-dyn-item" role="listitem">
+                      <a class="donation-card w-inline-block" href={`/donate/${amount}`}>
+                        <div>${amount}</div>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div class="donation-image-wrapper reveal-right">
+              <img alt="Donation mission" class="donation-image" loading="lazy" src="/images/donations/donation-image.webp" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- FAQ Section -->
   <FaqAccordion client:visible items={faqItems} />
 
@@ -474,38 +508,4 @@ const faqItems = [
     </div>
   </div>
 
-  <!-- Donation Mission Section -->
-  <div class="section-donation">
-    <div class="padding-global">
-      <div class="container-large">
-        <div class="padding-section-medium">
-          <div class="donation-component">
-            <div class="donation-left-content-wrapper reveal-left">
-              <div class="donation-left-top-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Contribute us</div></div>
-                <div class="donation-left-top-content">
-                  <h2 class="heading-style-h2">Support our national mission with your participation today.</h2>
-                  <p class="text-size-regular">Support public outreach, local nutrition distribution networks, and community development programs for self-reliance.</p>
-                </div>
-              </div>
-              <div class="donation-collection-list-wrapper w-dyn-list">
-                <div class="donation-collection-list w-dyn-items" role="list">
-                  {[100, 50, 25, 10, 5].map((amount) => (
-                    <div class="donation-collection-list-item w-dyn-item" role="listitem">
-                      <a class="donation-card w-inline-block" href={`/donate/${amount}`}>
-                        <div>${amount}</div>
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div class="donation-image-wrapper reveal-right">
-              <img alt="Donation mission" class="donation-image" loading="lazy" src="/images/donations/donation-image.webp" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </BaseLayout>
