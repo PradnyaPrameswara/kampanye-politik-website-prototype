@@ -1,6 +1,6 @@
 ---
-title: "Anti-Corruption & Digital Governance"
-description: "Zero tolerance for corruption, systemic state revenue enforcement, and deploying GovTech INA Digital across public services."
+title: "Ensuring Fair Legal and Justice Systems"
+description: "Enforcing clean governance, combating corruption, and deploying integrated public services."
 image: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 bgImage: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 ---

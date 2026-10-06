@@ -1,6 +1,6 @@
 ---
-title: "Total Food & Energy Self-Sufficiency"
-description: "Achieving food independence (Swasembada Pangan) and renewable energy sovereignty through B50 biofuel and water security."
+title: "Strengthening Economic Opportunity"
+description: "Achieving complete food self-sufficiency and sustainable clean energy independence."
 image: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 bgImage: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 ---

@@ -62,7 +62,7 @@ export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps)
               </svg>
               Donate
             </a>
-            <a href="/join" className="bg-brand-blue text-neutral-white py-4 rounded-[0.75rem] font-medium text-center transition-colors hover:bg-brand-red" onClick={() => setOpen(false)}>
+            <a href="/contact" className="bg-brand-blue text-neutral-white py-4 rounded-[0.75rem] font-medium text-center transition-colors hover:bg-brand-red" onClick={() => setOpen(false)}>
               Join us now
             </a>
           </div>

@@ -1,6 +1,6 @@
 ---
-title: "Free Nutritious Meals for Schoolchildren & Mothers"
-description: "Delivering daily balanced nutrition to 82+ million children, toddlers, and expectant mothers to eliminate stunting nationwide."
+title: "Advancing Social Equity and Justice"
+description: "Delivering daily nutritious meals for schoolchildren to eliminate stunting nationwide."
 image: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 bgImage: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 ---

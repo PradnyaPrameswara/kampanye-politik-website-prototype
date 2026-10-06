@@ -1,6 +1,6 @@
 ---
-title: "National Defense & Maritime Sovereignty"
-description: "Modernizing defense equipment (Alutsista), safeguarding maritime borders, and bolstering domestic defense industry self-reliance."
+title: "Boosting National Security and Safety"
+description: "Modernizing defense capabilities and securing sovereign maritime borders nationwide."
 image: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 bgImage: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 ---

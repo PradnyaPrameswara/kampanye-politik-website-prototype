@@ -9,13 +9,13 @@ interface ValueItem {
 const leftValues: readonly ValueItem[] = [
   {
     id: 1,
-    title: 'National Sovereignty',
-    description: 'Safeguarding territorial integrity, constitutional democracy, and national pride with steadfast patriotism.',
+    title: 'Sovereignty',
+    description: 'Safeguarding our archipelagic integrity and national dignity with unwavering resolve.',
   },
   {
     id: 3,
     title: 'Clean Governance',
-    description: 'Zero tolerance for corruption, transparent state budgets, and integrated digital public administration.',
+    description: 'Upholding transparent administration and zero tolerance for corruption across services.',
   },
 ] as const;
 
@@ -23,12 +23,12 @@ const rightValues: readonly ValueItem[] = [
   {
     id: 2,
     title: 'Public Welfare',
-    description: 'Eradicating poverty and stunting through free nutritious meals, universal health screenings, and affordable housing.',
+    description: 'Delivering daily nutrition and healthcare to ensure every citizen can thrive.',
   },
   {
     id: 4,
-    title: 'Self-Sufficiency',
-    description: 'Achieving complete food, energy, and water independence through domestic innovation and industrial downstreaming.',
+    title: 'Self-Reliance',
+    description: 'Advancing domestic food, energy, and industrial capacity for future generations.',
   },
 ] as const;
 
@@ -53,14 +53,9 @@ export default function ValuesInteractive() {
         <div className="value-top-left-content">
           <div className="headline">
             <div className="dot"></div>
-            <div>Our Core Values</div>
+            <div>Our Value</div>
           </div>
-          <h2 className="heading-style-h2">Guiding principles anchoring Indonesia's march toward 2045.</h2>
-        </div>
-        <div className="value-top-right-content">
-          <div className="text-size-regular">
-            Rooted in Pancasila, constitutional justice, and an uncompromising commitment to the prosperity of every Indonesian family.
-          </div>
+          <h2 className="heading-style-h2">Discover our values that drive our mission forward.</h2>
         </div>
       </div>
 

@@ -14,31 +14,31 @@ export interface FaqAccordionProps {
 
 const defaultItems: FaqItem[] = [
   {
-    question: "What is Makan Bergizi Gratis (MBG) and who is eligible?",
-    answer: "Makan Bergizi Gratis provides wholesome daily meals to 82.9 million preschool and school-age students, pregnant women, and breastfeeding mothers to eradicate childhood stunting and boost cognitive development across Indonesia.",
+    question: "What is the core vision of Asta Cita?",
+    answer: "Asta Cita sets eight strategic missions to safeguard national sovereignty, guarantee food self-sufficiency, and achieve Indonesia Emas 2045.",
   },
   {
-    question: "How will Indonesia achieve 100% food and energy self-sufficiency?",
-    answer: "Through modern agricultural mechanization, expanding 3 million hectares of sustainable paddy fields, upgrading irrigation networks, and accelerating biodiesel transitions up to B50 to eliminate reliance on imported fuel and staples.",
+    question: "How does Makan Bergizi Gratis work?",
+    answer: "The program provides daily nutritious meals to schoolchildren and mothers to end stunting and support local agricultural supply chains.",
   },
   {
-    question: "What are the key priorities under Asta Cita?",
-    answer: "Asta Cita encompasses 8 core missions including fortifying national defense, downstream processing of 26 natural commodities, building 3 million homes annually, delivering free annual health checks, and digitizing governance to fight corruption.",
+    question: "How is food self-reliance achieved?",
+    answer: "Indonesia modernizes agricultural infrastructure, expands farmland, and supports local farmers to eliminate reliance on basic food imports.",
   },
   {
-    question: "How is the 3 Million Homes program implemented?",
-    answer: "The Ministry of Housing and Settlement coordinates the construction of 1 million urban high-rise apartments and 2 million rural/coastal houses every year, utilizing state land and subsidized financing for low-income families.",
+    question: "How are strategic resources managed?",
+    answer: "Domestic processing of minerals, agriculture, and maritime commodities adds local economic value and accelerates industrial growth.",
   },
   {
-    question: "How does GovTech INA Digital ensure transparency and accountability?",
-    answer: "INA Digital integrates public services into a single unified portal, eliminating administrative friction and enforcing real-time budget transparency with zero tolerance for corruption across all government tiers.",
+    question: "How can citizens follow progress?",
+    answer: "Citizens can track implementation updates through unified digital governance portals and regional public communication centers.",
   },
 ];
 
 export function FaqAccordion({ 
   items = defaultItems, 
-  title = "Frequently asked questions",
-  subtitle = "Clear answers on President Prabowo Subianto's national priorities, implementation milestones, and public oversight."
+  title = "Frequently asked question",
+  subtitle = "Key insights on national priorities and strategic implementation."
 }: FaqAccordionProps) {
   const faqList = items && items.length > 0 ? items : defaultItems;
 

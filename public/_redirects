@@ -1,0 +1,9 @@
+/product/5   /donate/5   301
+/product/10  /donate/10  301
+/product/25  /donate/25  301
+/product/50  /donate/50  301
+/product/100 /donate/100 301
+/blogcategory/advocacy   /blog/category/advocacy   301
+/blogcategory/community  /blog/category/community  301
+/blogcategory/policy     /blog/category/policy     301
+/checkout    /donate/50  301

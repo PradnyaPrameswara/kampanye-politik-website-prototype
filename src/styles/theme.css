@@ -1923,7 +1923,7 @@ textarea.w-input, textarea.w-select {
 
 :root {
   --neutral--white-200: #fafafb;
-  --font--gobal-font: Lora, sans-serif;
+  --font--gobal-font: 'Lora Variable', Lora, Georgia, serif;
   --neutral--black-800: #4b6493;
   --neutral--black-900: #002466;
   --neutral--white: white;
