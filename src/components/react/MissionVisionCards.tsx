@@ -31,7 +31,7 @@ export default function MissionVisionCards() {
             style={{ maxHeight: missionOpen ? '400px' : '50px' }}
           >
             <p className="text-size-regular">
-              Our mission is anchored in Asta Cita: the 8 strategic pillars to fortify national defense, achieve total food and energy self-sufficiency, accelerate downstream industrialization across 26 commodities, eradicate childhood stunting through Makan Bergizi Gratis for 82 million beneficiaries, and establish clean, digital governance.
+              Our mission is to safeguard national sovereignty by executing strategic priorities under Asta Cita that serve all Indonesian citizens. We are committed to eradicating childhood stunting through daily nutritious meals, securing domestic food and energy self-sufficiency, and expanding downstream processing across strategic resources. By establishing transparent, accountable governance, we build an enduring foundation for national prosperity.
             </p>
           </div>
           <button
@@ -72,7 +72,7 @@ export default function MissionVisionCards() {
             style={{ maxHeight: visionOpen ? '400px' : '50px' }}
           >
             <p className="text-size-regular">
-              Our vision is the realization of Indonesia Emas 2045: a sovereign, self-reliant, advanced, and equitable archipelagic power where every citizen enjoys food security, top-tier healthcare, quality education, 3 million new homes annually, and social justice from Sabang to Merauke.
+              Our vision is the realization of Indonesia Emas 2045: an advanced, equitable, and sovereign archipelagic nation where every family can thrive. We envision a self-reliant economy where domestic resources power domestic industry, and public services operate with integrity and digital efficiency. We aim to build a society where quality healthcare, modern education, and decent housing are accessible to every citizen from Sabang to Merauke. Together, we forge a stronger and united future.
             </p>
           </div>
           <button

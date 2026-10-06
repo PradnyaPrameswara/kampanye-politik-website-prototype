@@ -1,6 +1,6 @@
 ---
-title: "Universal Free Health Screenings & Regional Hospitals"
-description: "Equipping all 514 regencies with state-of-the-art hospitals, eradicating tuberculosis (TBC), and providing free annual check-ups."
+title: "Improving Healthcare Access and Quality"
+description: "Equipping regional hospitals and delivering free annual check-ups for all citizens."
 image: ../../assets/images/objectives/improving-healthcare-access-and-quality.svg
 bgImage: ../../assets/images/objectives/improving-healthcare-access-and-quality.svg
 ---

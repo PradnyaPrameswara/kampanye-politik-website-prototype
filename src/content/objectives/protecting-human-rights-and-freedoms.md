@@ -1,6 +1,6 @@
 ---
-title: "Industrial Downstreaming & 3 Million Homes"
-description: "Processing 26 strategic natural commodities domestically and constructing 3 million affordable homes annually for families."
+title: "Protecting Human Rights and Freedoms"
+description: "Processing natural resources domestically and building affordable homes for working families."
 image: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 bgImage: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 ---

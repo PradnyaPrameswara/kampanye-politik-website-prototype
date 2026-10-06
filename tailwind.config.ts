@@ -12,7 +12,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Lora Variable', 'Lora', 'serif'],
+        sans: ['Lora Variable', 'Lora', 'Georgia', 'serif'],
+        serif: ['Lora Variable', 'Lora', 'Georgia', 'serif'],
       },
       colors: {
         neutral: {
