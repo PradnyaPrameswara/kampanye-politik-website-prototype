@@ -1,5 +1,5 @@
 ---
-title: "Hilirisasi 2.0: Maximizing Domestic Resource Value Across 26 Commodities"
+title: "Impact of Policy on Local Communities"
 publishDate: 2024-09-02
 readTime: "7 min read"
 category: policy

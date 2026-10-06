@@ -7,8 +7,8 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 // Environment-aware deployment configuration
-const isCloudflare = Boolean(process.env.CF_PAGES);
-const isGitHubPages = process.env.GITHUB_PAGES === 'true' || (Boolean(process.env.GITHUB_ACTIONS) && !isCloudflare);
+const isCloudflare = Boolean(process.env.CF_PAGES) || Boolean(process.env.CLOUDFLARE) || Boolean(process.env.CF_WORKER) || process.env.DEPLOY_TARGET === 'cloudflare';
+const isGitHubPages = process.env.GITHUB_PAGES === 'true' || process.env.DEPLOY_TARGET === 'github-pages';
 
 const defaultRepoOwner = 'PradnyaPrameswara';
 const defaultRepoName = 'kampanye-politik-website-prototype';

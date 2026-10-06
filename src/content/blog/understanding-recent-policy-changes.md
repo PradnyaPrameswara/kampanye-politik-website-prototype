@@ -1,5 +1,5 @@
 ---
-title: "Asta Cita: The 8 Strategic Missions Transforming Indonesia"
+title: "Understanding Recent Policy Changes"
 publishDate: 2024-08-28
 readTime: "5 min read"
 category: policy

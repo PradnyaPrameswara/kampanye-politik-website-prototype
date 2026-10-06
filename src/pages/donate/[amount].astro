@@ -19,44 +19,54 @@ const allDonations = await getCollection('donations');
 const relatedDonations = allDonations.filter(d => d.data.amount !== entry.data.amount);
 ---
 
-<ContentLayout title={`Contribute $${entry.data.amount} | Asta Cita`}>
-  <div class="bg-neutral-white-200 py-16 text-center">
-    <div class="max-w-container mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold font-lora text-neutral-black-900">Support Grassroots Action</h1>
-    </div>
-  </div>
-
-  <div class="max-w-container mx-auto px-4 py-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <!-- Left Content -->
-      <div class="reveal-left">
-        <span class="text-brand-blue font-bold uppercase tracking-wider text-sm mb-4 block">Public Participation</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-lora text-neutral-black-900 mb-6">{entry.data.title}</h2>
-        <p class="text-neutral-black-600 mb-8 text-lg">{entry.data.description}</p>
-        
-        <DonateButton 
-          client:visible
-          stripePriceId={entry.data.stripePriceId}
-          amount={entry.data.amount}
-        />
-      </div>
-
-      <!-- Right Image -->
-      <div>
-        <img src={entry.data.image || '/images/donate-default.jpg'} alt="Donation" class="w-full h-auto rounded-[0.75rem] shadow-subtle object-cover" />
-      </div>
-    </div>
-
-    <!-- Related Donations -->
-    <div class="mt-24">
-      <h3 class="text-2xl font-bold font-lora text-neutral-black-900 mb-8 text-center">Other participation amounts</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {relatedDonations.map(donation => (
-          <a href={`/donate/${donation.data.amount}`} class="block rounded-[0.75rem] border border-neutral-white-300 p-6 text-center hover:shadow-subtle hover:border-brand-blue transition-all">
-            <h4 class="text-2xl font-bold text-neutral-black-900 mb-2">${donation.data.amount}</h4>
-            <p class="text-neutral-black-600 text-sm">{donation.data.title}</p>
-          </a>
-        ))}
+<ContentLayout 
+  title={`CivicUnity - Donate $${entry.data.amount} | Empowering Our Nation`}
+  bannerTitle="Donate details"
+  bannerImage="/images/assets/66dc04dad61c93d48ea99d92_Donate%20Bg%20Image.webp"
+  currentPath="/donate"
+>
+  <div class="donation-details">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-large is-header">
+          <div class="donation-details-component">
+            <div class="donation-details-left-content-wrapper">
+              <div class="donation-details-left-top-content">
+                <h2 class="heading-style-h2">{entry.data.title}</h2>
+                <p class="text-size-regular">{entry.data.description}</p>
+              </div>
+              <div class="padding-bottom padding-medium"></div>
+              <h3 class="heading-style-h3">${entry.data.amount}</h3>
+              <div class="padding-bottom padding-medium"></div>
+              <div class="donation-collection-list-wrapper w-dyn-list">
+                <div class="donation-collection-list w-dyn-items" role="list">
+                  {[100, 50, 25, 10, 5].map((amount) => (
+                    <div class="donation-collection-list-item w-dyn-item" role="listitem">
+                      <a href={`/donate/${amount}`} class={`donation-card w-inline-block ${amount === entry.data.amount ? 'w--current' : ''}`}>
+                        <h6 class="heading-style-h6 is-white">${amount}</h6>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div class="padding-bottom padding-medium"></div>
+              <DonateButton 
+                client:visible
+                stripePriceId={entry.data.stripePriceId}
+                amount={entry.data.amount}
+              />
+            </div>
+            <div class="donation-details-image-wrapper">
+              <img 
+                src="/images/assets/66dc04da185f32d46eb9e04a_Donation%20Image.webp" 
+                loading="lazy" 
+                sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 532px" 
+                alt="Donation" 
+                class="donation-details-image" 
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

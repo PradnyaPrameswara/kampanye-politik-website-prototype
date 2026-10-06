@@ -1,5 +1,5 @@
 ---
-title: "Makan Bergizi Gratis: Fueling 82 Million Children Across Indonesia"
+title: "Building Strong Advocacy Coalitions"
 publishDate: 2024-08-29
 readTime: "6 min read"
 category: community
