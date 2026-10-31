@@ -1,5 +1,10 @@
 import React from 'react';
-import * as Accordion from '@radix-ui/react-accordion';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/ui/accordion';
 
 export interface FaqItem {
   question: string;
@@ -61,30 +66,28 @@ export function FaqAccordion({
 
               <div className="padding-bottom padding-large"></div>
 
-              <Accordion.Root type="single" collapsible className="faq-list">
+              <Accordion className="faq-list">
                 {faqList.map((item, index) => (
-                  <Accordion.Item 
+                  <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="faq-accordion reveal-up"
+                    className="faq-accordion reveal-up border-b-0"
                   >
-                    <Accordion.Header>
-                      <Accordion.Trigger className="faq-question-wrapper w-full text-left bg-transparent border-none p-0 cursor-pointer group">
-                        <h6 className="heading-style-h6">{item.question}</h6>
-                        <div className="faq-icon-wrapper">
-                          <div className="faq-icon _1st"></div>
-                          <div className="faq-icon _2nd"></div>
-                        </div>
-                      </Accordion.Trigger>
-                    </Accordion.Header>
-                    <Accordion.Content className="faq-answer-wrapper overflow-hidden">
+                    <AccordionTrigger className="faq-question-wrapper w-full text-left bg-transparent border-none p-0 cursor-pointer group hover:no-underline [&>svg]:hidden">
+                      <h6 className="heading-style-h6">{item.question}</h6>
+                      <div className="faq-icon-wrapper">
+                        <div className="faq-icon _1st"></div>
+                        <div className="faq-icon _2nd"></div>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="faq-answer-wrapper overflow-hidden">
                       <div className="margin-top">
                         <p className="text-size-regular">{item.answer}</p>
                       </div>
-                    </Accordion.Content>
-                  </Accordion.Item>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </Accordion.Root>
+              </Accordion>
             </div>
           </div>
         </div>

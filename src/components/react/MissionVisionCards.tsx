@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 export default function MissionVisionCards() {
   const [missionOpen, setMissionOpen] = useState(false);
@@ -14,7 +16,7 @@ export default function MissionVisionCards() {
 
   return (
     <div className="mission-bottom-content-wrapper">
-      <div className="mission-card reveal-scale">
+      <Card className="mission-card reveal-scale border-0 bg-transparent shadow-none p-0">
         <div className="mission-image-wraper">
           <img
             alt="Mission"
@@ -24,7 +26,7 @@ export default function MissionVisionCards() {
             src="/images/assets/66dc04d9dd607b08dfac0c60_Mission%20Image%202.webp"
           />
         </div>
-        <div className="mission-card-content-wrapper">
+        <CardContent className="mission-card-content-wrapper p-0">
           <h4 className="heading-style-h4">Mission</h4>
           <div
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
@@ -34,9 +36,10 @@ export default function MissionVisionCards() {
               Our mission is to safeguard national sovereignty by executing strategic priorities under Asta Cita that serve all Indonesian citizens. We are committed to eradicating childhood stunting through daily nutritious meals, securing domestic food and energy self-sufficiency, and expanding downstream processing across strategic resources. By establishing transparent, accountable governance, we build an enduring foundation for national prosperity.
             </p>
           </div>
-          <button
+          <Button
             type="button"
-            className="mission-button bg-transparent border-none p-0 cursor-pointer text-left"
+            variant="ghost"
+            className="mission-button bg-transparent border-none p-0 h-auto font-normal cursor-pointer text-left hover:bg-transparent"
             onClick={toggleMission}
           >
             <div
@@ -51,11 +54,11 @@ export default function MissionVisionCards() {
             >
               See less....
             </div>
-          </button>
-        </div>
-      </div>
+          </Button>
+        </CardContent>
+      </Card>
 
-      <div className="mission-card reveal-scale">
+      <Card className="mission-card reveal-scale border-0 bg-transparent shadow-none p-0">
         <div className="mission-image-wraper">
           <img
             alt="Vision"
@@ -65,7 +68,7 @@ export default function MissionVisionCards() {
             src="/images/assets/66dc04db185f32d46eb9e05f_Mission%20Image%2001.webp"
           />
         </div>
-        <div className="mission-card-content-wrapper">
+        <CardContent className="mission-card-content-wrapper p-0">
           <h4 className="heading-style-h4">Vision</h4>
           <div
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
@@ -75,9 +78,10 @@ export default function MissionVisionCards() {
               Our vision is the realization of Indonesia Emas 2045: an advanced, equitable, and sovereign archipelagic nation where every family can thrive. We envision a self-reliant economy where domestic resources power domestic industry, and public services operate with integrity and digital efficiency. We aim to build a society where quality healthcare, modern education, and decent housing are accessible to every citizen from Sabang to Merauke. Together, we forge a stronger and united future.
             </p>
           </div>
-          <button
+          <Button
             type="button"
-            className="mission-button bg-transparent border-none p-0 cursor-pointer text-left"
+            variant="ghost"
+            className="mission-button bg-transparent border-none p-0 h-auto font-normal cursor-pointer text-left hover:bg-transparent"
             onClick={toggleVision}
           >
             <div
@@ -92,9 +96,9 @@ export default function MissionVisionCards() {
             >
               See less....
             </div>
-          </button>
-        </div>
-      </div>
+          </Button>
+        </CardContent>
+      </Card>
     </div>
   );
 }

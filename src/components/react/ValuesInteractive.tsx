@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Card } from '@/components/ui/card';
 
 interface ValueItem {
   id: number;
@@ -60,15 +61,14 @@ export default function ValuesInteractive() {
       </div>
 
       <div className="value-card-list-wrapper">
-        {/* Left column cards (1 and 3) */}
         <div className="value-card-left-card-wrapper">
           {leftValues.map((item) => {
             const isActive = activeTab === item.id;
 
             return (
-              <div
+              <Card
                 key={item.id}
-                className="value-card reveal-left cursor-pointer transition-all duration-300"
+                className="value-card reveal-left cursor-pointer transition-all duration-300 border-0 p-0 shadow-none rounded-none"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -92,12 +92,11 @@ export default function ValuesInteractive() {
                 >
                   {item.description}
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>
 
-        {/* Center column numbered diamond tabs (1, 2, 3, 4) */}
         <div className="value-content-wrapper reveal-up">
           {[1, 2, 3, 4].map((num) => {
             const isActive = activeTab === num;
@@ -129,15 +128,14 @@ export default function ValuesInteractive() {
           })}
         </div>
 
-        {/* Right column cards (2 and 4) */}
         <div className="value-card-right-card-wrapper">
           {rightValues.map((item) => {
             const isActive = activeTab === item.id;
 
             return (
-              <div
+              <Card
                 key={item.id}
-                className="value-card reveal-right cursor-pointer transition-all duration-300"
+                className="value-card reveal-right cursor-pointer transition-all duration-300 border-0 p-0 shadow-none rounded-none"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -161,7 +159,7 @@ export default function ValuesInteractive() {
                 >
                   {item.description}
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>

@@ -38,3 +38,7 @@ pnpm-debug.log*
 .temp/
 tmp/
 .wrangler/
+
+# Local agent tooling (machine-specific paths, generated indexes)
+.lexa/
+opencode.json
