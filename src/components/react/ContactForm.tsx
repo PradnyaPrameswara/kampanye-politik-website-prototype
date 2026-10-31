@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
 
 export const ContactForm = () => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -19,7 +22,6 @@ export const ContactForm = () => {
         setStatus('success');
         e.currentTarget.reset();
       } else {
-        // Fallback for static mock
         setStatus('success');
       }
     } catch {
@@ -45,7 +47,7 @@ export const ContactForm = () => {
           >
             <div className="contact-form-field-wrapper">
               <label htmlFor="name">Name</label>
-              <input 
+              <Input 
                 className="input w-input" 
                 data-name="Name" 
                 id="name" 
@@ -59,7 +61,7 @@ export const ContactForm = () => {
 
             <div className="contact-form-field-wrapper">
               <label htmlFor="Email">E-mail</label>
-              <input 
+              <Input 
                 className="input w-input" 
                 data-name="Email" 
                 id="Email" 
@@ -73,7 +75,7 @@ export const ContactForm = () => {
 
             <div className="contact-form-field-wrapper">
               <label htmlFor="Phone">Phone number</label>
-              <input 
+              <Input 
                 className="input w-input" 
                 data-name="Phone" 
                 id="Phone" 
@@ -87,7 +89,7 @@ export const ContactForm = () => {
 
             <div className="contact-form-field-wrapper">
               <label htmlFor="Subject">Subject</label>
-              <input 
+              <Input 
                 className="input w-input" 
                 data-name="Subject" 
                 id="Subject" 
@@ -105,7 +107,7 @@ export const ContactForm = () => {
               style={{ gridArea: 'span 1 / span 2 / span 1 / span 2' }}
             >
               <label htmlFor="Massage">How can we help you ?</label>
-              <textarea 
+              <Textarea 
                 className="input is-massage w-input" 
                 data-name="Massage" 
                 id="Massage" 
@@ -116,15 +118,15 @@ export const ContactForm = () => {
               />
             </div>
 
-            <input 
+            <Button 
               className="button is-normal w-button" 
-              data-wait="Please wait..." 
               disabled={status === 'loading'} 
               id="w-node-d1c3d64f-8917-cc52-5f1d-e11fa8182ea9-222d6faf"
               style={{ gridArea: 'span 1 / span 2 / span 1 / span 2' }}
               type="submit" 
-              value={status === 'loading' ? 'Please wait...' : 'Join us now'} 
-            />
+            >
+              {status === 'loading' ? 'Please wait...' : 'Join us now'}
+            </Button>
           </form>
 
           {status === 'error' && (

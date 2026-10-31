@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 interface DonateButtonProps {
   stripePriceId: string;
@@ -9,25 +10,18 @@ export function DonateButton({ stripePriceId: _stripePriceId, amount }: DonateBu
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleDonate = async () => {
+  const handleDonate = () => {
     setLoading(true);
     setError(null);
 
-    try {
-      // If deployed with an API route or direct Stripe payment link
-      // For static deployment, redirect to success confirmation
-      setTimeout(() => {
-        window.location.href = `/donate/success?amount=${amount}`;
-      }, 500);
-    } catch {
-      setError('An unexpected error occurred.');
-      setLoading(false);
-    }
+    setTimeout(() => {
+      window.location.href = `/donate/success?amount=${amount}`;
+    }, 500);
   };
 
   return (
     <div className="flex flex-col items-start">
-      <button
+      <Button
         onClick={handleDonate}
         disabled={loading}
         className="bg-brand-blue hover:bg-brand-red text-white rounded-[0.75rem] px-6 py-[0.8125rem] font-medium transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center min-w-[150px] cursor-pointer"
@@ -40,7 +34,7 @@ export function DonateButton({ stripePriceId: _stripePriceId, amount }: DonateBu
         ) : (
           `Donate $${amount}`
         )}
-      </button>
+      </Button>
       {error && <p className="text-brand-red mt-2 text-sm">{error}</p>}
     </div>
   );
