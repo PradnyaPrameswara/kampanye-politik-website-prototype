@@ -1,0 +1,95 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const credits = [
+  {
+    title: 'Makan Bergizi Gratis',
+    file: 'makan-bergizi-gratis.webp',
+    author: 'Meniirtjakarintan',
+    source: 'https://commons.wikimedia.org/wiki/File:Makan_Bergizi_Gratis_di_salah_satu_SMP_di_Kota_Yogyakarta_II.jpg',
+    license: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    changes: 'Diubah ukurannya menjadi lebar 1280px dan dikonversi ke WebP.',
+  },
+  {
+    title: 'Swasembada Pangan',
+    file: 'swasembada-pangan.webp',
+    author: 'Kuncoro Widyo Rumpoko',
+    source: 'https://commons.wikimedia.org/wiki/File:Petani_Padi_Desa_Walahar.jpg',
+    license: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    changes: 'Diubah ukurannya menjadi lebar 1280px dan dikonversi ke WebP.',
+  },
+  {
+    title: 'Hilirisasi Industri',
+    file: 'hilirisasi-industri.webp',
+    author: 'Kementerian Pekerjaan Umum dan Perumahan Rakyat RI',
+    source: 'https://commons.wikimedia.org/wiki/File:Morowali_Industrial_Park.jpg',
+    license: 'Domain publik',
+    licenseUrl: '',
+    changes: 'Diubah ukurannya menjadi lebar 1280px dan dikonversi ke WebP.',
+  },
+  {
+    title: 'Ketahanan Energi',
+    file: 'ketahanan-energi.webp',
+    author: 'Selisik',
+    source: 'https://commons.wikimedia.org/wiki/File:Pembangkit_Listrik_Tenaga_Panas_Bumi_(PLTP)_di_Sokoria,_Ende,_NTT.jpg',
+    license: 'CC BY-SA 4.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    changes: 'Diubah ukurannya menjadi lebar 1280px dan dikonversi ke WebP.',
+  },
+  {
+    title: 'Pendidikan Unggul',
+    file: 'pendidikan-unggul.webp',
+    author: 'Fitrah 9131',
+    source: 'https://commons.wikimedia.org/wiki/File:The_atmosphere_of_a_junior_high_school_classroom_in_Indonesia.jpg',
+    license: 'CC BY 3.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by/3.0',
+    changes: 'Diubah ukurannya menjadi lebar 1280px dan dikonversi ke WebP.',
+  },
+  {
+    title: 'Kesehatan Rakyat',
+    file: 'kesehatan-rakyat.webp',
+    author: 'USAID Indonesia',
+    source: 'https://commons.wikimedia.org/wiki/File:At_a_health_center_in_Aceh_(4326818146).jpg',
+    license: 'Domain publik',
+    licenseUrl: '',
+    changes: 'Diubah ukurannya menjadi lebar 1280px dan dikonversi ke WebP.',
+  },
+  {
+    title: 'Gambar pembuka (Open Graph)',
+    file: 'og-image.jpg',
+    author: 'Kementerian Sekretariat Negara Republik Indonesia',
+    source: 'https://commons.wikimedia.org/wiki/File:Prabowo_Subianto_delivers_first_speech_as_President_of_Indonesia_04.jpg',
+    license: 'Domain publik',
+    licenseUrl: '',
+    changes: 'Dipotong menjadi 1200x630 dan dikonversi ke JPEG.',
+  },
+];
+---
+
+<BaseLayout title="Kabinet Merah Putih — Kredit Gambar" description="Atribusi dan lisensi gambar yang digunakan pada situs ini.">
+  <div class="section-padding padding-global">
+    <div class="container-large">
+      <h1 class="heading-style-h2">Kredit Gambar</h1>
+      <p class="text-size-regular">
+        Gambar-gambar pada situs ini bersumber dari Wikimedia Commons dan lembaga pemerintah Indonesia.
+        Berikut atribusi, lisensi, dan perubahan yang dilakukan.
+      </p>
+      <ul class="w-richtext">
+        {credits.map((credit) => (
+          <li>
+            <strong>{credit.title}</strong> — {credit.author}.
+            {' '}<a href={credit.source} rel="noopener noreferrer" target="_blank">Sumber</a>.
+            {credit.licenseUrl ? (
+              <> Lisensi <a href={credit.licenseUrl} rel="noopener noreferrer" target="_blank">{credit.license}</a>.</>
+            ) : (
+              <> Lisensi {credit.license}.</>
+            )}
+            {' '}{credit.changes}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

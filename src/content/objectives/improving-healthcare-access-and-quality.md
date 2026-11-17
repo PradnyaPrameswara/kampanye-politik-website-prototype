@@ -1,23 +1,23 @@
 ---
-title: "Improving Healthcare Access and Quality"
-description: "Equipping regional hospitals and delivering free annual check-ups for all citizens."
+title: "Peningkatan Akses dan Mutu Kesehatan"
+description: "Melengkapi rumah sakit daerah dan menyelenggarakan pemeriksaan kesehatan gratis tahunan bagi seluruh warga."
 image: ../../assets/images/objectives/improving-healthcare-access-and-quality.svg
 bgImage: ../../assets/images/objectives/improving-healthcare-access-and-quality.svg
 ---
 
-#### Summary
+#### Ringkasan
 
-A productive and prosperous nation begins with a healthy populace. President Prabowo Subianto's healthcare agenda pivots national health policy from curative treatment to proactive prevention. Through the introduction of universal free annual health screenings (Pemeriksaan Kesehatan Gratis) for every citizen and the construction or upgrading of modern regional public hospitals (RSUD) across all 514 regencies and municipalities, the government ensures no citizen is denied life-saving medical care due to geographic or financial barriers.
+Bangsa yang produktif dan sejahtera dimulai dari masyarakat yang sehat. Agenda kesehatan Presiden Prabowo Subianto menggeser kebijakan kesehatan nasional dari pengobatan kuratif menjadi pencegahan proaktif. Melalui penerapan pemeriksaan kesehatan gratis tahunan universal (Pemeriksaan Kesehatan Gratis) bagi setiap warga negara serta pembangunan atau peningkatan rumah sakit umum daerah (RSUD) modern di seluruh 514 kabupaten dan kota, pemerintah memastikan tidak ada warga yang tertolak mendapatkan perawatan medis penyelamat nyawa karena hambatan geografis maupun finansial.
 
-##### Key Healthcare Flagship Priorities
+##### Prioritas Unggulan Kesehatan
 
-The administration has mobilized national health resources toward four high-impact health programs:
+Pemerintah telah mengerahkan sumber daya kesehatan nasional menuju empat program kesehatan berdampak tinggi:
 
-*   **Free Annual Health Screenings**: Offering comprehensive preventative screenings—including blood pressure, blood glucose, cholesterol, liver function, and cancer biomarkers—conducted annually on every citizen's birthday.
-*   **National Campaign to Eradicate Tuberculosis (TBC)**: Deploying rapid molecular diagnostic tools (TCM) and mobile screening vans to track, isolate, and fully cure tuberculosis cases across urban and rural populations.
-*   **Hospital Upgrades Across 514 Regencies**: Equipping regional hospitals with advanced cardiology, oncology, stroke, and nephrology (KJSU) diagnostic equipment (CT scans, cath labs, mammography).
-*   **Expansion of Medical Doctor Scholarships**: Doubling specialist doctor scholarship quotas (LPDP & Kemenkes) and constructing medical faculties in under-resourced regional state universities.
+*   **Pemeriksaan Kesehatan Gratis Tahunan**: Menawarkan skrining pencegahan komprehensif—termasuk tekanan darah, glukosa darah, kolesterol, fungsi hati, dan biomarker kanker—yang dilakukan setiap tahun pada ulang tahun setiap warga.
+*   **Kampanye Nasional Penuntasan Tuberkulosis (TBC)**: Mengerahkan alat diagnostik molekuler cepat (TCM) dan mobil skrining keliling untuk melacak, mengisolasi, dan menyembuhkan kasus tuberkulosis secara tuntas di wilayah perkotaan maupun pedesaan.
+*   **Peningkatan Rumah Sakit di 514 Kabupaten**: Membekali rumah sakit daerah dengan peralatan diagnostik canggih kardiologi, onkologi, stroke, dan nefrologi (KJSU) seperti CT scan, cath lab, dan mamografi.
+*   **Perluasan Beasiswa Dokter Spesialis**: Menggandakan kuota beasiswa dokter spesialis (LPDP dan Kemenkes) serta membangun fakultas kedokteran di perguruan tinggi negeri daerah yang belum memadai.
 
-##### Community-Level Primary Healthcare (Puskesmas & Posyandu)
+##### Pelayanan Kesehatan Primer di Tingkat Masyarakat (Puskesmas dan Posyandu)
 
-Strengthening primary healthcare facilities ensures early detection of infectious and chronic diseases. Posyandu and Puskesmas units are equipped with digital health diagnostic kits connected to the SatuSehat platform, providing continuous preventative tracking for mothers, infants, and the elderly.
+Penguatan fasilitas kesehatan primer memastikan deteksi dini penyakit menular dan kronis. Unit Posyandu dan Puskesmas dibekali perangkat diagnostik kesehatan digital yang terhubung dengan platform SatuSehat, memberikan pemantauan pencegahan berkelanjutan bagi ibu, bayi, dan lansia.

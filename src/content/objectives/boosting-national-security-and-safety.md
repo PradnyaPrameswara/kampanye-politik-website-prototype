@@ -1,23 +1,23 @@
 ---
-title: "Boosting National Security and Safety"
-description: "Modernizing defense capabilities and securing sovereign maritime borders nationwide."
+title: "Penguatan Pertahanan dan Keamanan Nasional"
+description: "Memodernisasi kemampuan pertahanan dan mengamankan perbatasan laut kedaulatan di seluruh Indonesia."
 image: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 bgImage: ../../assets/images/objectives/boosting-national-security-and-safety.svg
 ---
 
-#### Summary
+#### Ringkasan
 
-National prosperity cannot endure without a formidable, credible defense posture that deters aggression and protects sovereign territory. President Prabowo Subianto, drawing from decades of military and strategic leadership, has established an uncompromising mandate: Indonesia's territorial integrity—from airspace and exclusive economic zones (EEZ) to remote outer islands—must be defended with state-of-the-art capabilities, strong civil-military cohesion, and self-reliant domestic defense manufacturing.
+Kemakmuran bangsa tidak bertahan tanpa postur pertahanan yang tangguh dan kredibel untuk mencegah agresi serta melindungi wilayah kedaulatan. Presiden Prabowo Subianto, dengan pengalaman selama berdekade dalam kepemimpinan militer dan strategis, menetapkan mandat yang tak kompromi: integritas wilayah Indonesia—dari ruang udara dan zona ekonomi eksklusif (ZEE) hingga pulau-pulau terluar—harus dipertahankan dengan kemampuan mutakhir, kepaduan sipil-militer yang kuat, dan kemandirian industri pertahanan dalam negeri.
 
-##### Priorities in Defense Modernization
+##### Prioritas Modernisasi Pertahanan
 
-Indonesia's geographic position straddling key international sea lanes demands a modern, agile tri-service armed force (TNI AD, TNI AL, TNI AU):
+Posisi geografis Indonesia yang membentang di jalur laut internasional utama menuntut angkatan bersenjata tri-matra (TNI AD, TNI AL, TNI AU) yang modern dan tangkas:
 
-*   **Maritime Domain Awareness**: Enhancing radar coverage, coastal patrol fleets, long-range maritime surveillance aircraft, and submarine capabilities to safeguard the Natuna Sea and Indonesian straits (ALKI).
-*   **Air Superiority & Multi-Role Fleets**: Upgrading air defense interceptors, modern 4.5+ generation multi-role combat aircraft, and integrated surface-to-air missile umbrellas.
-*   **Territorial Army Readiness**: Equipping regional military commands (Kodam) and reserve components (Komcad) with modern infantry gear, tactical communications, and mobility vehicles.
-*   **Domestic Defense Industrial Base (DEFEND ID)**: Mandating technology transfer and domestic production quotas for state-owned enterprises (PT Pindad, PT PAL, PT Dirgantara Indonesia, PT Len Industri).
+*   **Kesadaran Domain Maritim**: Meningkatkan cakupan radar, armada patroli pesisir, pesawat pengawas laut jarak jauh, dan kemampuan kapal selam untuk menjaga Laut Natuna dan selat-selat Indonesia (ALKI).
+*   **Superioritas Udara dan Armada Multi-Peran**: Memutakhirkan pesawat pencegat pertahanan udara, pesawat tempur multi-peran generasi 4.5+ modern, dan sistem pertahanan udara terintegrasi berbasis rudal permukaan-ke-udara.
+*   **Kesiapan TNI Angkatan Darat Wilayah**: Membekali komando daerah militer (Kodam) dan komponen cadangan (Komcad) dengan perlengkapan infanteri modern, komunikasi taktis, dan kendaraan mobilitas.
+*   **Basis Industri Pertahanan Dalam Negeri (DEFEND ID)**: Menetapkan transfer teknologi dan kuota produksi dalam negeri bagi badan usaha milik negara (PT Pindad, PT PAL, PT Dirgantara Indonesia, PT Len Industri).
 
-##### Strategic Non-Alignment and Active Diplomacy
+##### Strategi Non-Blok dan Diplomasi Aktif
 
-Indonesia's foreign policy adheres to the constitutional principle of *bebas-aktif* (independent and active). Indonesia maintains constructive defense partnerships and mutual respect with all major global powers while firmly refusing membership in military pacts. This independent defense posture guarantees that Indonesia remains a beacon of regional peace and strategic stability across Southeast Asia and the Indo-Pacific.
+Kebijakan luar negeri Indonesia menganut prinsip konstitusional *bebas-aktif* (bebas dan aktif). Indonesia menjalin kemitraan pertahanan konstruktif dan saling menghormati dengan semua kekuatan global utama sambil dengan tegas menolak keanggotaan dalam pakta militer. Postur pertahanan mandiri ini menjamin Indonesia tetap menjadi mercusuar perdamaian regional dan stabilitas strategis di Asia Tenggara dan Indo-Pasifik.

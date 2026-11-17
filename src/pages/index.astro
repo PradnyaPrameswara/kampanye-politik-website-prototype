@@ -7,6 +7,16 @@ import FaqAccordion from '@/components/react/FaqAccordion.tsx';
 import VideoLightbox from '@/components/react/VideoLightbox.tsx';
 import { getCollection } from 'astro:content';
 import events from '@/data/events.json';
+import { faqItems, faqTitle, faqSubtitle } from '@/components/sections/faq';
+
+const programLinks = [
+  { slug: 'makan-bergizi-gratis', label: 'Makan Bergizi Gratis' },
+  { slug: 'swasembada-pangan', label: 'Swasembada Pangan' },
+  { slug: 'hilirisasi-industri', label: 'Hilirisasi Industri' },
+  { slug: 'ketahanan-energi', label: 'Ketahanan Energi' },
+  { slug: 'pendidikan-unggul', label: 'Pendidikan Unggul' },
+  { slug: 'kesehatan-rakyat', label: 'Kesehatan Rakyat' },
+] as const;
 
 const allObjectives = await getCollection('objectives');
 
@@ -42,7 +52,12 @@ const teamImages = {
   'james-clark': '/images/assets/66de882483ff8257a260072a_Team%20Image%201.webp',
 } as const;
 
-// Preserve featured team member order: John Smith, Sarah Johnson, Michael Brown
+const teamSrcsets = {
+  'john-smith': '/images/assets/66de885235a491ec7c9579d4_Team%20Image%206-p-500.webp 500w, /images/assets/66de885235a491ec7c9579d4_Team%20Image%206-p-800.webp 800w, /images/assets/66de885235a491ec7c9579d4_Team%20Image%206-p-1080.webp 1080w, /images/assets/66de885235a491ec7c9579d4_Team%20Image%206.webp 1152w',
+  'sarah-johnson': '/images/assets/66de8849ae04b9432a83ed16_Team%20Image%205-p-500.webp 500w, /images/assets/66de8849ae04b9432a83ed16_Team%20Image%205-p-800.webp 800w, /images/assets/66de8849ae04b9432a83ed16_Team%20Image%205-p-1080.webp 1080w, /images/assets/66de8849ae04b9432a83ed16_Team%20Image%205.webp 1152w',
+  'michael-brown': '/images/assets/66de8840477d16d8930afdba_Team%20Image%204-p-500.webp 500w, /images/assets/66de8840477d16d8930afdba_Team%20Image%204-p-800.webp 800w, /images/assets/66de8840477d16d8930afdba_Team%20Image%204-p-1080.webp 1080w, /images/assets/66de8840477d16d8930afdba_Team%20Image%204.webp 1152w',
+} as const;
+
 const featuredTeamSlugs = ['john-smith', 'sarah-johnson', 'michael-brown'] as const;
 
 const teamMembers = featuredTeamSlugs.flatMap((slug) => {
@@ -74,34 +89,12 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
   return post ? [post] : [];
 });
 
-const faqItems = [
-  { 
-    question: 'What is the core vision of Asta Cita?', 
-    answer: 'Asta Cita sets eight strategic missions to safeguard national sovereignty, guarantee food self-sufficiency, and achieve Indonesia Emas 2045.' 
-  },
-  { 
-    question: 'How does Makan Bergizi Gratis work?', 
-    answer: 'The program provides daily nutritious meals to schoolchildren and mothers to end stunting and support local agricultural supply chains.' 
-  },
-  { 
-    question: 'How is food self-reliance achieved?', 
-    answer: 'Indonesia modernizes agricultural infrastructure, expands farmland, and supports local farmers to eliminate reliance on basic food imports.' 
-  },
-  { 
-    question: 'How are strategic resources managed?', 
-    answer: 'Domestic processing of minerals, agriculture, and maritime commodities adds local economic value and accelerates industrial growth.' 
-  },
-  { 
-    question: 'How can citizens follow progress?', 
-    answer: 'Citizens can track implementation updates through unified digital governance portals and regional public communication centers.' 
-  },
-];
 ---
 
 <BaseLayout 
-  title="CivicUnity - Inspiring Change Together We Shape Our Nation" 
-  description="Official overview of President Prabowo Subianto's national missions: food sovereignty, nutrition programs, and industrial progress."
-  hideNav={true}
+  title="Kabinet Merah Putih — Menuju Indonesia Emas 2045" 
+  description="Portal resmi informasi program prioritas Asta Cita Kabinet Merah Putih di bawah kepemimpinan Presiden Republik Indonesia Prabowo Subianto." 
+  hideNav={true} 
   currentPath="/"
 >
   <!-- Hero Section & Floating Category Header -->
@@ -117,34 +110,34 @@ const faqItems = [
                 <div class="hero-left-content">
                   <div class="hero-left-top-content">
                     <div class="dot"></div>
-                    <div>Together, We Build a Strong Nation</div>
+                    <div>Asta Cita: Menuju Indonesia Emas 2045</div>
                   </div>
-                  <h1 class="heading-style-h1 text-color-white">Inspiring progress together we shape our nation.</h1>
+                  <h1 class="heading-style-h1 text-color-white">Bersatu Membangun<br />Bangsa Berdaulat<br />&amp; Mandiri.</h1>
                 </div>
-                <a class="button w-inline-block" href="/contact">
-                  <div>Join us now</div>
+                <a class="button w-inline-block" href="/objective">
+                  <div>Program Prioritas</div>
                 </a>
               </div>
               
+              <img
+                alt="Presiden Republik Indonesia Prabowo Subianto"
+                class="hero-bg-image"
+                loading="eager"
+                src="/images/shared/hero-image-prabowo.webp"
+              />
+
               <div class="hero-right-content-wrapper reveal-right">
                 <div class="hero-right-content">
-                  <h5 class="heading-style-h5 text-color-white">Advancing our national vision toward 2045.</h5>
-                  <div class="text-size-regular text-color-white-300">Delivering daily nutrition for youth, advancing energy independence, and expanding strategic national industry.</div>
+                  <h5 class="heading-style-h5 text-color-white">Asta Cita &amp; Kedaulatan Nasional.</h5>
+                  <div class="text-size-regular text-color-white-300">Swasembada pangan dan energi, makan bergizi gratis bagi pemuda, hilirisasi 26 komoditas strategis, serta pemantapan pertahanan semesta.</div>
                 </div>
                 <VideoLightbox
                   client:visible
                   thumbnailSrc="/images/shared/hero-video-thumb.jpg"
                   videoUrl="https://www.youtube.com/watch?v=EMcS_sUYeqU"
-                  triggerLabel="Watch"
+                  triggerLabel="Saksikan"
                 />
               </div>
-              
-              <img 
-                alt="Civic Leader" 
-                class="hero-bg-image" 
-                loading="eager" 
-                src="/images/shared/hero-image-1.webp"
-              />
             </div>
           </div>
         </div>
@@ -157,15 +150,15 @@ const faqItems = [
         <div class="container-large">
           <div class="category-component">
             <div class="category-left-content-wrapper">
-              <h3 class="heading-style-h3 text-color-white">Contribute</h3>
-              <div class="text-size-small text-color-white-200">Help us reach our goal</div>
+              <h3 class="heading-style-h3 text-color-white">Partisipasi</h3>
+              <div class="text-size-small text-color-white-200">Gotong royong untuk kemakmuran bersama</div>
             </div>
             <div class="category-collection-list-wrapper w-dyn-list">
               <div class="category-collection-list w-dyn-items" role="list">
-                {[100, 50, 25, 10, 5].map((amount) => (
+                {programLinks.map((program) => (
                   <div class="category-collection-list-item w-dyn-item" role="listitem">
-                    <a class="category-card w-inline-block" href={`/donate/${amount}`}>
-                      <div>${amount}</div>
+                    <a class="category-card w-inline-block" href={`/program/${program.slug}`}>
+                      <div>{program.label}</div>
                     </a>
                   </div>
                 ))}
@@ -187,45 +180,45 @@ const faqItems = [
               <div class="about-left-top-content-wrapper">
                 <div class="headline">
                   <div class="dot"></div>
-                  <div>About us</div>
+                  <div>Tentang Kabinet</div>
                 </div>
                 <div class="about-left-top-content">
-                  <h2 class="heading-style-h2">Learn about our commitment to national progress</h2>
-                  <p class="text-size-regular">Guided by Asta Cita, we advance key structural programs to reduce poverty. Strategic priorities secure domestic food and energy self-reliance.</p>
+                  <h2 class="heading-style-h2">Komitmen Nyata Demi Kedaulatan &amp; Kemakmuran Rakyat</h2>
+                  <p class="text-size-regular">Berlandaskan 8 Misi Asta Cita, Kabinet Merah Putih mengonsolidasikan seluruh kekuatan kementerian dan lembaga negara demi tercapainya kedaulatan pangan, kemandirian energi, dan keadilan sosial bagi seluruh rakyat Indonesia.</p>
                 </div>
               </div>
               <div class="padding-bottom padding-large"></div>
               <div class="w-layout-grid about-grid">
                 <div class="about-card">
-                  <img alt="" loading="lazy" src="/icons/about-logo-4.svg"/>
+                  <img alt="Badan Gizi Nasional" class="size-8 object-contain" loading="lazy" src="/images/ministries/bgn.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">National Nutrition Agency (BGN)</h6>
+                    <h6 class="heading-style-h6">Badan Gizi Nasional (BGN)</h6>
                   </div>
                 </div>
                 <div class="about-card">
-                  <img alt="" loading="lazy" src="/icons/about-logo-3.svg"/>
+                  <img alt="Kementerian Pertanian" class="size-8 object-contain" loading="lazy" src="/images/ministries/kementan.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Food & Energy Security Taskforce</h6>
+                    <h6 class="heading-style-h6">Kementerian Pertanian RI</h6>
                   </div>
                 </div>
                 <div class="about-card">
-                  <img alt="" loading="lazy" src="/icons/about-logo-2.svg"/>
+                  <img alt="Kementerian Pertahanan" class="size-8 object-contain" loading="lazy" src="/images/ministries/kemhan.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Defense & Maritime Sovereignty</h6>
+                    <h6 class="heading-style-h6">Kementerian Pertahanan RI</h6>
                   </div>
                 </div>
                 <div class="about-card">
-                  <img alt="" loading="lazy" src="/icons/about-logo-4.svg"/>
+                  <img alt="Kementerian Komunikasi dan Digital" class="size-8 object-contain" loading="lazy" src="/images/ministries/komdigi.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">INA Digital Public Services</h6>
+                    <h6 class="heading-style-h6">Kementerian Komunikasi &amp; Digital</h6>
                   </div>
                 </div>
               </div>
               <div class="padding-bottom padding-medium"></div>
-              <a class="button w-inline-block" href="/about"><div>More about us</div></a>
+              <a class="button w-inline-block" href="/about"><div>Selengkapnya</div></a>
             </div>
             <div class="about-image-wrapper is-about reveal-right">
-              <img alt="About CivicUnity" class="about-image" loading="lazy" src="/images/shared/about-image.webp"/>
+              <img alt="Bhinneka Tunggal Ika - Garuda Pancasila" class="about-image" loading="lazy" src="/images/shared/about-image.webp"/>
             </div>
           </div>
         </div>
@@ -241,10 +234,10 @@ const faqItems = [
           <div class="objective-component">
             <div class="objective-top-content-wrapper reveal-down">
               <div class="objective-top-left-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Our objectives</div></div>
-                <h2 class="heading-style-h2">Guiding our nation with purposeful strategic objectives.</h2>
+                <div class="headline"><div class="dot"></div><div>Misi Strategis</div></div>
+                <h2 class="heading-style-h2">Mengarahkan Bangsa melalui Misi Strategis yang Berdampak.</h2>
               </div>
-              <p class="text-size-regular">From youth nutrition to resource self-reliance, our strategic objectives establish a clear path toward enduring national prosperity.</p>
+              <p class="text-size-regular">Dari gizi generasi muda hingga kemandirian sumber daya, misi strategis kami menetapkan jalan yang jelas menuju kemakmuran nasional yang berkelanjutan.</p>
             </div>
             <div class="objective-collection-list-wrapper w-dyn-list">
               <div class="objective-collection-list w-dyn-items" role="list">
@@ -276,20 +269,20 @@ const faqItems = [
         <div class="padding-section-medium">
           <div class="community-component reveal-up">
             <div class="community-card">
-              <h2 class="heading-style-h2">82.9M+</h2>
-              <div class="text-size-regular">Meals target</div>
+              <h2 class="heading-style-h2">82,9 Jt+</h2>
+              <div class="text-size-regular">Target Penerima Makan Bergizi</div>
             </div>
             <div class="community-card">
-              <h2 class="heading-style-h2">3M</h2>
-              <div class="text-size-regular">Homes target</div>
+              <h2 class="heading-style-h2">3 Jt</h2>
+              <div class="text-size-regular">Target Rumah</div>
             </div>
             <div class="community-card">
               <h2 class="heading-style-h2">100%</h2>
-              <div class="text-size-regular">Energy security</div>
+              <div class="text-size-regular">Ketahanan Energi</div>
             </div>
             <div class="community-card _2nd">
               <h2 class="heading-style-h2">26</h2>
-              <div class="text-size-regular">Commodities</div>
+              <div class="text-size-regular">Komoditas Strategis</div>
             </div>
           </div>
         </div>
@@ -305,10 +298,10 @@ const faqItems = [
           <div class="team-component">
             <div class="team-top-content-wrapper reveal-down">
               <div class="team-top-left-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Our team</div></div>
-                <h2 class="heading-style-h2">Building a stronger nation together.</h2>
+                <div class="headline"><div class="dot"></div><div>Program Prioritas</div></div>
+                <h2 class="heading-style-h2">Sinergi Lembaga Menuju Indonesia Emas 2045.</h2>
               </div>
-              <div class="text-size-regular">Dedicated public leadership coordinating ministries and communities to advance national welfare, security, and shared progress.</div>
+              <div class="text-size-regular">Sinergi kementerian dan lembaga negara di bawah kepemimpinan Presiden Prabowo Subianto dalam mengawal agenda Asta Cita demi kemakmuran rakyat.</div>
             </div>
             <div class="padding-bottom padding-large"></div>
             <div class="team-collection-list-wrapper w-dyn-list">
@@ -321,8 +314,9 @@ const faqItems = [
                           alt={member.data.name} 
                           class="team-image" 
                           loading="lazy" 
-                          sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, 30vw" 
+                          sizes="(max-width: 479px) 93vw, (max-width: 767px) 94vw, (max-width: 991px) 46vw, 384px" 
                           src={teamImages[member.id as keyof typeof teamImages] || (member.data.image ? member.data.image.src : `/images/team/${member.id}.webp`)} 
+                          srcset={teamSrcsets[member.id as keyof typeof teamSrcsets]}
                         />
                       </div>
                       <div class="team-card-content-wrapper">
@@ -351,11 +345,11 @@ const faqItems = [
           <div class="event-component">
             <div class="event-top-content-wrapper reveal-down">
               <div class="event-top-left-content">
-                <div class="headline"><div class="dot"></div><div>Our events</div></div>
-                <h2 class="heading-style-h2">Explore key upcoming events for national impact.</h2>
+                <div class="headline"><div class="dot"></div><div>Agenda Nasional</div></div>
+                <h2 class="heading-style-h2">Agenda &amp; Musyawarah Kerja Nasional.</h2>
               </div>
               <div class="event-top-right-content-wrapper">
-                <div class="text-size-regular">Engage with public leaders and community partners driving national self-reliance and progress.</div>
+                <div class="text-size-regular">Rangkaian agenda konsolidasi kementerian, lembaga, dan perwakilan masyarakat dalam pengawalan program strategis nasional.</div>
               </div>
             </div>
             <div class="padding-bottom padding-large"></div>
@@ -408,8 +402,8 @@ const faqItems = [
         <div class="padding-section-medium">
           <div class="cta-component reveal-scale">
             <div class="cta-content-wrapper">
-              <h2 class="heading-style-h2">Take action for change.</h2>
-              <a class="button w-inline-block" href="/contact"><div>Join us now</div></a>
+              <h2 class="heading-style-h2">Bersatu Untuk<br />Indonesia Maju.</h2>
+              <a class="button w-inline-block" href="/objective"><div>Jelajahi Program</div></a>
             </div>
           </div>
         </div>
@@ -425,18 +419,18 @@ const faqItems = [
           <div class="donation-component">
             <div class="donation-left-content-wrapper reveal-left">
               <div class="donation-left-top-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Contribute us</div></div>
+                <div class="headline"><div class="dot"></div><div>Partisipasi Publik</div></div>
                 <div class="donation-left-top-content">
-                  <h2 class="heading-style-h2">Support our national mission with your participation today.</h2>
-                  <p class="text-size-regular">Support public outreach, local nutrition distribution networks, and community development programs for self-reliance.</p>
+                  <h2 class="heading-style-h2">Gotong Royong Kebangsaan Mengawal Asta Cita.</h2>
+                  <p class="text-size-regular">Dukungan partisipasi publik memperkuat keterlibatan masyarakat dalam pengawasan dan pendampingan program Makan Bergizi Gratis serta swasembada pangan di daerah.</p>
                 </div>
               </div>
               <div class="donation-collection-list-wrapper w-dyn-list">
                 <div class="donation-collection-list w-dyn-items" role="list">
-                  {[100, 50, 25, 10, 5].map((amount) => (
+                  {programLinks.map((program) => (
                     <div class="donation-collection-list-item w-dyn-item" role="listitem">
-                      <a class="donation-card w-inline-block" href={`/donate/${amount}`}>
-                        <div>${amount}</div>
+                      <a class="donation-card w-inline-block" href={`/program/${program.slug}`}>
+                        <div>{program.label}</div>
                       </a>
                     </div>
                   ))}
@@ -444,7 +438,7 @@ const faqItems = [
               </div>
             </div>
             <div class="donation-image-wrapper reveal-right">
-              <img alt="Donation mission" class="donation-image" loading="lazy" src="/images/donations/donation-image.webp" />
+              <img alt="Partisipasi Publik dalam Program Strategis Nasional" class="donation-image" loading="lazy" src="/images/donations/donation-image.webp" />
             </div>
           </div>
         </div>
@@ -452,7 +446,7 @@ const faqItems = [
     </div>
   </div>
   <!-- FAQ Section -->
-  <FaqAccordion client:visible items={faqItems} />
+  <FaqAccordion client:visible items={faqItems} title={faqTitle} subtitle={faqSubtitle} />
 
   <!-- Blog Section -->
   <div class="section-blog">
@@ -462,12 +456,12 @@ const faqItems = [
           <div class="blog-component">
             <div class="blog-left-content-wrapper reveal-left">
               <div class="blog-left-top-content-wrapper">
-                <div class="headline _2nd"><div class="dot"></div><div>Policy updates</div></div>
+                <div class="headline _2nd"><div class="dot"></div><div>Warta Kebijakan</div></div>
                 <div class="blog-left-top-content">
-                  <h2 class="heading-style-h2 text-color-white">Explore our updates for national policy insights.</h2>
-                  <div class="text-size-regular text-color-white-200">Read timely summaries on flagship initiatives, regional development, and economic self-reliance.</div>
+                  <h2 class="heading-style-h2 text-color-white">Warta &amp; Informasi Strategis Kabinet.</h2>
+                  <div class="text-size-regular text-color-white-200">Kilas informasi terkini pelaksanaan Asta Cita, pembangunan daerah, dan capaian kemandirian nasional.</div>
                 </div>
-                <a class="button w-inline-block" href="/blog"><div>View more</div></a>
+                <a class="button w-inline-block" href="/blog"><div>Lihat Warta</div></a>
               </div>
             </div>
             <div class="blog-right-content-wrapper reveal-right">
@@ -486,13 +480,13 @@ const faqItems = [
                           />
                         </div>
                         <div class="blog-card-content-wrapper">
-                          <div class="text-size-small">{new Date(post.data.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+                          <div class="text-size-small">{new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                           <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
                             <h5 class="heading-style-h5">{post.data.title}</h5>
                           </a>
                           <div class="blog-card-content">
                             <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
-                              <div>Read More</div>
+                              <div>Baca Selengkapnya</div>
                               <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                             </a>
                           </div>

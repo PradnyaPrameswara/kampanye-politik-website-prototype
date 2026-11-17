@@ -1,27 +1,27 @@
 ---
-title: "Protecting Human Rights and Freedoms"
-description: "Processing natural resources domestically and building affordable homes for working families."
+title: "Hilirisasi dan Program 3 Juta Rumah"
+description: "Mengolah sumber daya alam di dalam negeri dan membangun rumah terjangkau bagi keluarga pekerja."
 image: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 bgImage: ../../assets/images/objectives/protecting-human-rights-and-freedoms.svg
 ---
 
-#### Summary
+#### Ringkasan
 
-Sustainable prosperity requires shifting from exporting raw commodities to manufacturing high-value finished products at home, paired with universal access to decent, affordable housing. President Prabowo Subianto's industrial roadmap mandates aggressive downstreaming (Hilirisasi) across 26 strategic mineral, agricultural, and marine commodities. Concurrently, the administration has launched the historic 3 Million Homes Program (Program 3 Juta Rumah) to eradicate substandard living conditions and provide safe, affordable shelter for low-income and young Indonesian families.
+Kemakmuran berkelanjutan mensyaratkan peralihan dari ekspor bahan mentah menjadi produksi barang jadi bernilai tinggi di dalam negeri, dipasangkan dengan akses universal terhadap perumahan yang layak dan terjangkau. Peta jalan industri Presiden Prabowo Subianto menetapkan hilirisasi yang agresif pada 26 komoditas strategis mineral, pertanian, dan kelautan. Secara paralel, pemerintah meluncurkan Program 3 Juta Rumah yang bersejarah untuk memberantas hunian tidak layak serta menyediakan tempat tinggal yang aman dan terjangkau bagi keluarga Indonesia berpenghasilan rendah dan muda.
 
-##### Strategic Downstreaming Across 26 Commodities
+##### Hilirisasi Strategis 26 Komoditas
 
-Raw export bans and domestic processing requirements transform Indonesia into an industrial manufacturing powerhouse:
+Larangan ekspor bahan mentah dan kewajiban pengolahan dalam negeri mengubah Indonesia menjadi pusat industri manufaktur:
 
-*   **Critical Minerals**: Expanding domestic smelting and cathode manufacturing for nickel, bauxite, copper, and tin to anchor the global electric vehicle and electronics supply chain.
-*   **Agro-Industrial Downstreaming**: Elevating crude palm oil (CPO), cocoa, coffee, and coconut into advanced oleochemicals, cosmetics, and specialty food products.
-*   **Marine & Fisheries Value Addition**: Developing cold-chain industrial clusters and domestic processing plants for tuna, seaweed, shrimp, and marine biopharmaceuticals.
-*   **Job Creation for Youth**: Generating millions of high-skilled engineering, technical, and operational jobs for Indonesian vocational and university graduates.
+*   **Mineral Kritis**: Memperluas peleburan dan produksi katoda dalam negeri untuk nikel, bauksit, tembaga, dan timah sebagai penopang rantai pasok global kendaraan listrik dan elektronik.
+*   **Hilirisasi Agro-Industri**: Mengangkat minyak sawit mentah (CPO), kakao, kopi, dan kelapa menjadi oleokimia canggih, kosmetik, dan produk pangan khusus.
+*   **Peningkatan Nilai Kelautan dan Perikanan**: Mengembangkan klaster industri rantai dingin dan pabrik pengolahan dalam negeri untuk tuna, rumput laut, udang, dan biofarmaseutik laut.
+*   **Penciptaan Lapangan Kerja Pemuda**: Menghasilkan jutaan lapangan kerja rekayasa, teknis, dan operasional berketerampilan tinggi bagi lulusan vokasi dan universitas Indonesia.
 
-##### The 3 Million Homes Program (Program 3 Juta Rumah)
+##### Program 3 Juta Rumah
 
-Housing is a fundamental social right and a powerful engine for economic stimulus:
+Perumahan merupakan hak sosial dasar dan mesin stimulus ekonomi yang kuat:
 
-*   **Urban High-Rise Living**: Constructing 1 million transit-oriented vertical apartments (Rusun) annually in urban centers for working-class commuters and young professionals.
-*   **Rural and Coastal Dwellings**: Building 2 million self-help and subsidized landed homes (BSPS/RTLH) annually across agricultural, coastal, and remote villages.
-*   **Affordable Financing**: Providing low-interest, long-tenor mortgage subsidies through state housing bank BTN and public housing savings programs.
+*   **Hunian Vertikal Perkotaan**: Membangun 1 juta apartemen vertikal berorientasi transit (Rusun) per tahun di pusat kota untuk komuter kelas pekerja dan profesional muda.
+*   **Rumah Pedesaan dan Pesisir**: Membangun 2 juta rumah tapak swadaya dan bersubsidi (BSPS/RTLH) per tahun di desa pertanian, pesisir, dan terpencil.
+*   **Pembiayaan Terjangkau**: Memberikan subsidi kredit perumahan berbunga rendah dan tenor panjang melalui bank perumahan negara BTN serta program tabungan perumahan rakyat.

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Card } from '@/components/ui/card';
 
 interface ValueItem {
   id: number;
@@ -9,26 +10,26 @@ interface ValueItem {
 const leftValues: readonly ValueItem[] = [
   {
     id: 1,
-    title: 'Sovereignty',
-    description: 'Safeguarding our archipelagic integrity and national dignity with unwavering resolve.',
+    title: 'Kedaulatan',
+    description: 'Menjaga keutuhan kepulauan dan martabat bangsa dengan tekad yang tak goyah.',
   },
   {
     id: 3,
-    title: 'Clean Governance',
-    description: 'Upholding transparent administration and zero tolerance for corruption across services.',
+    title: 'Tata Kelola Bersih',
+    description: 'Menegakkan administrasi yang transparan dan tidak toleransi terhadap korupsi di seluruh layanan.',
   },
 ] as const;
 
 const rightValues: readonly ValueItem[] = [
   {
     id: 2,
-    title: 'Public Welfare',
-    description: 'Delivering daily nutrition and healthcare to ensure every citizen can thrive.',
+    title: 'Kesejahteraan Rakyat',
+    description: 'Menyediakan gizi dan layanan kesehatan harian agar setiap warga dapat berkembang.',
   },
   {
     id: 4,
-    title: 'Self-Reliance',
-    description: 'Advancing domestic food, energy, and industrial capacity for future generations.',
+    title: 'Kemandirian',
+    description: 'Membangun kapasitas pangan, energi, dan industri dalam negeri untuk generasi mendatang.',
   },
 ] as const;
 
@@ -53,22 +54,21 @@ export default function ValuesInteractive() {
         <div className="value-top-left-content">
           <div className="headline">
             <div className="dot"></div>
-            <div>Our Value</div>
+            <div>Nilai Kami</div>
           </div>
-          <h2 className="heading-style-h2">Discover our values that drive our mission forward.</h2>
+          <h2 className="heading-style-h2">Kenali nilai yang menggerakkan misi kami.</h2>
         </div>
       </div>
 
       <div className="value-card-list-wrapper">
-        {/* Left column cards (1 and 3) */}
         <div className="value-card-left-card-wrapper">
           {leftValues.map((item) => {
             const isActive = activeTab === item.id;
 
             return (
-              <div
+              <Card
                 key={item.id}
-                className="value-card reveal-left cursor-pointer transition-all duration-300"
+                className="value-card reveal-left cursor-pointer transition-all duration-300 border-0 p-0 shadow-none rounded-none"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -92,12 +92,11 @@ export default function ValuesInteractive() {
                 >
                   {item.description}
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>
 
-        {/* Center column numbered diamond tabs (1, 2, 3, 4) */}
         <div className="value-content-wrapper reveal-up">
           {[1, 2, 3, 4].map((num) => {
             const isActive = activeTab === num;
@@ -129,15 +128,14 @@ export default function ValuesInteractive() {
           })}
         </div>
 
-        {/* Right column cards (2 and 4) */}
         <div className="value-card-right-card-wrapper">
           {rightValues.map((item) => {
             const isActive = activeTab === item.id;
 
             return (
-              <div
+              <Card
                 key={item.id}
-                className="value-card reveal-right cursor-pointer transition-all duration-300"
+                className="value-card reveal-right cursor-pointer transition-all duration-300 border-0 p-0 shadow-none rounded-none"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -161,7 +159,7 @@ export default function ValuesInteractive() {
                 >
                   {item.description}
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>

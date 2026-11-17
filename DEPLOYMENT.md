@@ -1,6 +1,6 @@
 # Deployment Guide: Cloudflare Pages & GitHub Pages
 
-This project is configured for static output deployment on both **Cloudflare Pages** and **GitHub Pages** without requiring separate adapters or code rewrites.
+This project is configured for static output deployment on both **Cloudflare Pages** and **GitHub Pages** without requiring separate adapters or code rewrites. The site brand is **Kabinet Merah Putih**; the repository name is `kampanye-politik-website-prototype`.
 
 ---
 
@@ -10,17 +10,18 @@ This project is configured for static output deployment on both **Cloudflare Pag
 - **Framework preset**: `None` / `Astro`
 - **Build command**: `npm run build`
 - **Build output directory**: `dist`
-- **Node.js version**: `20` (automatically picked up via `.nvmrc`)
+- **Node.js version**: `20` (pinned via `actions/setup-node` in the GitHub Actions workflow)
 
 ### Environment Variables
 No required environment variables for basic static deployment. Optional overrides:
 - `CF_PAGES_URL`: Automatically populated by Cloudflare Pages.
-- `SITE`: Optional custom canonical URL (e.g., `https://civicunity.org`).
+- `SITE` / `ASTRO_SITE`: Optional canonical URL override. Defaults to `https://kabinet-merah-putih.pages.dev` when no deployment target is detected.
 
 ### Static Routing, Redirects & Headers
 - Cloudflare Pages serves clean URLs directly from `dist/<page>/index.html`.
 - Edge redirects are managed by `public/_redirects` (compiled to `dist/_redirects`).
-- Cache-control and security headers are managed by `public/_headers` (compiled to `dist/_headers`).
+- Cache-control and security headers are managed by `public/_headers` (compiled to `dist/_headers`). The global rule also sets `Content-Security-Policy`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, and `Referrer-Policy: strict-origin-when-cross-origin`.
+- Both `dist/_headers` and `dist/_redirects` are read by Cloudflare Pages and by Cloudflare Workers Static Assets.
 
 ### Cloudflare Workers Static Assets (via Wrangler)
 This repository also includes a minimal `wrangler.jsonc` file enabling deployment to Cloudflare Workers Static Assets without requiring runtime SSR adapters:
@@ -46,7 +47,9 @@ The workflow at `.github/workflows/deploy.yml`:
 3. Runs `npm ci` for clean dependency resolution.
 4. Uses `actions/configure-pages@v5` to determine the environment's base path:
    - For default project pages (`https://<owner>.github.io/<repo>/`), it sets `ASTRO_BASE` to `/<repo>`.
-   - If a custom domain is configured in repository settings, `ASTRO_BASE` resolves to `/`.
+   - If a custom domain or a user/organization page is configured, `ASTRO_BASE` resolves to `/`.
+   - The workflow fails fast if `actions/configure-pages@v5` cannot determine the Pages environment.
+   - The deployed canonical URL for this repository is `https://pradnyaprameswara.github.io/kampanye-politik-website-prototype/`.
 5. Executes `npm run build`, producing static files in `dist`.
    - Astro prefixing and post-build integration ensure internal links, assets, redirects, and meta tags point to the subpath.
    - `public/.nojekyll` prevents GitHub Pages from running Jekyll, ensuring `dist/_astro/` assets are served correctly.
@@ -82,4 +85,15 @@ Verify:
 - Navigation works at `http://localhost:4321/kampanye-politik-website-prototype/`
 - All internal links stay within `/kampanye-politik-website-prototype/`
 - Images, icons, and fonts load correctly under the subpath
-- Sitemap at `dist/sitemap-0.xml` prefixes URLs with the subpath
+- Sitemap files `dist/sitemap-index.xml` and `dist/sitemap-0.xml` prefix URLs with the canonical GitHub Pages URL
+
+---
+
+## 4. Sitemap and robots.txt
+
+`@astrojs/sitemap` writes `dist/sitemap-index.xml` and `dist/sitemap-0.xml`. The generated URLs use Astro's `site` plus `base`, so they must match the active deployment:
+
+- Cloudflare Pages: `https://kabinet-merah-putih.pages.dev/sitemap-index.xml`
+- GitHub Pages: `https://pradnyaprameswara.github.io/kampanye-politik-website-prototype/sitemap-index.xml`
+
+`public/robots.txt` is copied verbatim to `dist/robots.txt`; its `Sitemap:` directive must be updated to the canonical URL of the target deployment.

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const homeHref = base ? `${base}/` : '/';
+---
+
+<BaseLayout
+  title="Halaman Tidak Ditemukan | Kabinet Merah Putih"
+  description="Halaman yang Anda cari tidak ditemukan."
+  ogImage="/images/og/og-image.jpg"
+>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-medium padding-bottom-large">
+        <h1>404 — Halaman Tidak Ditemukan</h1>
+        <p>Halaman yang Anda cari tidak tersedia atau telah dipindahkan.</p>
+        <a class="button w-inline-block" href={homeHref}>Kembali ke Beranda</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

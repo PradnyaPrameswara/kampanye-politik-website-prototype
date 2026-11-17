@@ -60,16 +60,14 @@ const categories = defineCollection({
   }),
 });
 
-const donations = defineCollection({
+const programs = defineCollection({
   type: 'data',
-  schema: ({ image }) =>
-    z.object({
-      amount: z.number(),
-      title: z.string(),
-      description: z.string(),
-      image: image(),
-      stripePriceId: z.string(),
-    }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    description: z.string(),
+    image: z.string(),
+  }),
 });
 
-export const collections = { team, objectives, blog, categories, donations };
+export const collections = { team, objectives, blog, categories, programs };

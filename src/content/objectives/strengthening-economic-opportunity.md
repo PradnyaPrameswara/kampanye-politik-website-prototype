@@ -1,27 +1,27 @@
 ---
-title: "Strengthening Economic Opportunity"
-description: "Achieving complete food self-sufficiency and sustainable clean energy independence."
+title: "Swasembada Pangan dan Energi"
+description: "Mencapai swasembada pangan menyeluruh dan kemandirian energi bersih yang berkelanjutan."
 image: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 bgImage: ../../assets/images/objectives/strengthening-economic-opportunity.svg
 ---
 
-#### Summary
+#### Ringkasan
 
-A sovereign nation must never depend on foreign imports for its staple food and energy reserves. Under President Prabowo Subianto's leadership, the Indonesian government is accelerating comprehensive self-sufficiency programs across agriculture, water management, and renewable energy. The administration has established a concrete target to achieve total self-sufficiency in rice, corn, and primary foodstuffs within three to four years, alongside advancing national biofuel production to B50 and bioethanol blends.
+Sebuah bangsa yang berdaulat tidak boleh bergantung pada impor asing untuk cadangan pangan dan energi pokoknya. Di bawah kepemimpinan Presiden Prabowo Subianto, pemerintah Indonesia mempercepat program swasembada menyeluruh di bidang pertanian, pengelolaan air, dan energi terbarukan. Pemerintah telah menetapkan target konkret untuk mencapai swasembada penuh beras, jagung, dan pangan utama dalam tiga hingga empat tahun, sekaligus memajukan produksi biofuel nasional menuju B50 dan campuran bioetanol.
 
-##### Strategic Pillars of Swasembada Pangan
+##### Pilar Strategis Swasembada Pangan
 
-Indonesia possesses vast fertile land and abundant tropical water resources. The national food strategy focuses on modern, sustainable agricultural expansion:
+Indonesia memiliki lahan subur yang luas dan sumber daya air tropis yang melimpah. Strategi pangan nasional berfokus pada perluasan pertanian modern dan berkelanjutan:
 
-*   **Intensification & Mechanization**: Equipping smallholder farmers with modern combine harvesters, automated seeders, and precision agricultural machinery to double crop yields per hectare.
-*   **Irrigation & Water Reservoirs**: Constructing tertiary canal systems and secondary distribution channels connected to dozens of newly completed national dams.
-*   **Direct Fertilizer Allocation**: Overhauling distribution regulations to ensure subsidized fertilizer reaches certified farmer accounts directly, cutting out middlemen.
-*   **Expansion of Regional Food Hubs**: Cultivating sustainable agricultural clusters across South Sumatra, Central Kalimantan, South Papua (Merauke), and East Nusa Tenggara.
+*   **Intensifikasi dan Mekanisasi**: Membekali petani kecil dengan mesin pemanen gabung, alat tanam otomatis, dan mesin pertanian presisi untuk menggandakan hasil panen per hektare.
+*   **Irigasi dan Waduk**: Membangun sistem kanal tersier dan saluran distribusi sekunder yang terhubung dengan puluhan bendungan nasional yang baru selesai dibangun.
+*   **Penyaluran Pupuk Langsung**: Memperbarui regulasi distribusi agar pupuk bersubsidi sampai langsung ke rekening petani bersertifikat, memotong perantara.
+*   **Perluasan Pusat Pangan Daerah**: Mengembangkan klaster pertanian berkelanjutan di Sumatra Selatan, Kalimantan Tengah, Papua Selatan (Merauke), dan Nusa Tenggara Timur.
 
-##### Energy Sovereignty and Biofuel Leadership
+##### Kedaulatan Energi dan Kepemimpinan Biofuel
 
-To insulate Indonesia from global fossil fuel volatility and save billions of dollars in foreign exchange reserves, the government is executing a rapid bioenergy transition:
+Untuk melindungi Indonesia dari volatilitas bahan bakar fosil global dan menghemat miliaran dolar devisa, pemerintah menjalankan transisi bioenergi yang cepat:
 
-*   **B50 and Beyond**: Transitioning domestic diesel consumption from B35 to B40 and progressively B50, leveraging Indonesia's leading palm oil production.
-*   **Geothermal & Hydro Power**: Accelerating baseline renewable power generation utilizing the archipelago's immense volcanic geothermal capacity and major river basins.
-*   **Rural Electrification & Microgrids**: Powering off-grid coastal and island communities through integrated solar-plus-storage mini-grids.
+*   **B50 dan Setelahnya**: Mengalihkan konsumsi solar domestik dari B35 ke B40 dan secara bertahap ke B50, memanfaatkan produksi minyak sawit unggulan Indonesia.
+*   **Panas Bumi dan Hidroelektrik**: Mempercepat pembangkit listrik dasar terbarukan memanfaatkan kapasitas panas bumi vulkanik kepulauan dan daerah aliran sungai utama.
+*   **Elektrifikasi Pedesaan dan Jaringan Mikro**: Menyalurkan listrik ke komunitas pesisir dan pulau terpencil melalui jaringan mini surya-plus-penyimpanan terintegrasi.

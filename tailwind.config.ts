@@ -12,10 +12,44 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Lora Variable', 'Lora', 'Georgia', 'serif'],
-        serif: ['Lora Variable', 'Lora', 'Georgia', 'serif'],
+        sans: ['Geist Serif', 'Georgia', 'serif'],
+        serif: ['Geist Serif', 'Georgia', 'serif'],
+        lora: ['Geist Serif', 'Georgia', 'serif'],
       },
       colors: {
+        border: 'var(--border)',
+        input: 'var(--input)',
+        ring: 'var(--ring)',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'var(--secondary-foreground)',
+        },
+        destructive: {
+          DEFAULT: 'var(--destructive)',
+          foreground: 'var(--destructive-foreground)',
+        },
+        muted: {
+          DEFAULT: 'var(--muted)',
+          foreground: 'var(--muted-foreground)',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          foreground: 'var(--accent-foreground)',
+        },
+        popover: {
+          DEFAULT: 'var(--popover)',
+          foreground: 'var(--popover-foreground)',
+        },
+        card: {
+          DEFAULT: 'var(--card)',
+          foreground: 'var(--card-foreground)',
+        },
         neutral: {
           white: '#ffffff',
           'white-200': '#fafafb',
@@ -61,7 +95,7 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            fontFamily: 'Lora Variable, Lora, serif',
+            fontFamily: 'Geist Serif, Georgia, serif',
             color: 'var(--tw-prose-body)',
             maxWidth: 'none',
             h4: {

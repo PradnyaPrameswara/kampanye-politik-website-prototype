@@ -1,9 +1,12 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface Props extends HTMLAttributes<'button'>, HTMLAttributes<'a'> {
   href?: string;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'default' | 'primary' | 'secondary' | 'outline' | 'ghost' | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
   class?: string;
   type?: 'button' | 'submit' | 'reset';
 }
@@ -11,20 +14,13 @@ interface Props extends HTMLAttributes<'button'>, HTMLAttributes<'a'> {
 const {
   href,
   variant = 'primary',
+  size = 'default',
   class: className = '',
   type = 'button',
   ...rest
 } = Astro.props;
 
-const baseStyles = 'inline-flex items-center justify-center font-medium rounded-[0.75rem] px-6 py-[0.8125rem] text-base transition-colors duration-200 cursor-pointer';
-
-const variants = {
-  primary: 'bg-brand-blue hover:bg-brand-red text-neutral-white',
-  secondary: 'bg-brand-red hover:bg-neutral-black-500 text-neutral-white',
-  outline: 'border border-neutral-white-300 text-neutral-black-900 hover:bg-neutral-white-200',
-};
-
-const combinedClass = `${baseStyles} ${variants[variant] || variants.primary} ${className}`;
+const combinedClass = cn(buttonVariants({ variant: variant === 'primary' ? 'primary' : variant, size }), className);
 ---
 
 {

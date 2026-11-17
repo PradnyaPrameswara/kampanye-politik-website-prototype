@@ -1,0 +1,188 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const programs = await getCollection('programs');
+
+  return programs.map(entry => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+const slug = entry.data.slug;
+
+const programDetails = [
+  {
+    slug: 'makan-bergizi-gratis',
+    lead: 'Makan Bergizi Gratis merupakan program unggulan yang menangani gizi sejak usia dini. Melalui Badan Gizi Nasional, satuan pelayanan pemenuhan gizi didirikan di berbagai daerah untuk menyajikan makanan yang memenuhi kebutuhan harian anak.',
+    sections: [
+      {
+        heading: 'Gizi sebagai fondasi pertumbuhan',
+        body: 'Makanan disusun oleh ahli gizi dengan memperhatikan kandungan protein dan mikronutrien. Sasaran program mencakup siswa prasekolah hingga sekolah menengah, balita, serta ibu hamil dan menyusui.',
+      },
+      {
+        heading: 'Kemandirian pangan lokal',
+        body: 'Bahan pangan seperti telur, daging, susu, sayur, dan beras bersumber dari petani serta peternak sekitar. Dengan demikian, program ini sekaligus membuka lapangan kerja dan memperkuat ekonomi desa melalui badan usaha milik desa.',
+      },
+      {
+        heading: 'Pemerataan antarwilayah',
+        body: 'Standar gizi yang sama diterapkan di wilayah perkotaan maupun daerah tertinggal, terdepan, dan terluar, agar setiap anak mendapatkan kesempatan tumbuh yang setara.',
+      },
+    ],
+  },
+  {
+    slug: 'swasembada-pangan',
+    lead: 'Swasembada pangan menempatkan ketersediaan pangan dalam negeri sebagai prioritas strategis. Indonesia memiliki lahan subur dan sumber daya air yang melimpah; keduanya dikelola secara berkelanjutan untuk memenuhi kebutuhan beras, jagung, dan komoditas pokok lainnya.',
+    sections: [
+      {
+        heading: 'Modernisasi budidaya',
+        body: 'Petani didukung dengan alat panen, mesin tanam, dan teknologi pertanian presisi agar hasil panen per hektare meningkat. Pendampingan dan akses terhadap peralatan menjadi bagian dari upaya meningkatkan kesejahteraan petani.',
+      },
+      {
+        heading: 'Irigasi dan pengelolaan air',
+        body: 'Jaringan kanal tersier dan saluran distribusi dibangun terhubung dengan bendungan nasional, sehingga lahan pertanian mendapatkan pasokan air yang andal sepanjang musim tanam.',
+      },
+      {
+        heading: 'Sentra produksi daerah',
+        body: 'Klaster pertanian dikembangkan di Sumatera Selatan, Kalimantan Tengah, Papua Selatan, dan Nusa Tenggara Timur sebagai penopang cadangan pangan nasional.',
+      },
+    ],
+  },
+  {
+    slug: 'hilirisasi-industri',
+    lead: 'Hilirisasi industri diarahkan agar hasil bumi Indonesia diolah di dalam negeri sebelum dipasarkan. Pendekatan ini bertujuan membangun rantai nilai yang lebih panjang, membuka lapangan kerja, dan mengurangi ketergantungan pada ekspor bahan mentah.',
+    sections: [
+      {
+        heading: 'Nilai tambah di dalam negeri',
+        body: 'Pengolahan hasil pertanian, perkebunan, dan pertambangan diperluas agar manfaat ekonominya tetap tinggal di daerah penghasil. Kebijakan ini mendorong tumbuhnya industri pengolahan di dekat sentra produksi.',
+      },
+      {
+        heading: 'Kemandirian industri strategis',
+        body: 'Pengembangan kemampuan produksi dalam negeri, termasuk melalui transfer teknologi dan kerja sama dengan badan usaha milik negara, diperkuat untuk mendukung kebutuhan industri nasional.',
+      },
+      {
+        heading: 'Daya saing tenaga kerja',
+        body: 'Peningkatan keterampilan dan pendidikan vokasi disiapkan agar tenaga kerja lokal mampu mengisi kebutuhan industri yang terus berkembang.',
+      },
+    ],
+  },
+  {
+    slug: 'ketahanan-energi',
+    lead: 'Ketahanan energi bertujuan melindungi Indonesia dari gejolak harga bahan bakar global. Diversifikasi sumber energi dan pemanfaatan potensi dalam negeri menjadi landasan untuk menjaga pasokan energi yang terjangkau dan berkelanjutan.',
+    sections: [
+      {
+        heading: 'Biofuel dan bahan bakar nabati',
+        body: 'Penggunaan minyak sawit untuk campuran diesel ditingkatkan secara bertahap, dari B35 menuju B40 dan B50. Kebijakan ini memanfaatkan produksi dalam negeri sekaligus menekan pengeluaran devisa.',
+      },
+      {
+        heading: 'Sumber energi terbarukan',
+        body: 'Potensi panas bumi dan tenaga air terus dikembangkan sebagai penopang pembangkitan listrik yang stabil dan rendah karbon.',
+      },
+      {
+        heading: 'Listrik untuk semua',
+        body: 'Wilayah pesisir dan kepulauan yang belum terjangkau jaringan mendapatkan dukungan mikrogrid surya yang dilengkapi penyimpanan energi, agar aktivitas masyarakat dan layanan dasar tetap berjalan.',
+      },
+    ],
+  },
+  {
+    slug: 'pendidikan-unggul',
+    lead: 'Pendidikan unggul berfokus pada peningkatan kualitas pembelajaran dari jenjang dasar hingga perguruan tinggi. Perbaikan gizi, ketersediaan sarana, dan dukungan beasiswa menjadi bagian dari upaya menciptakan generasi yang siap menghadapi tantangan masa depan.',
+    sections: [
+      {
+        heading: 'Kualitas pembelajaran',
+        body: 'Anak yang datang ke sekolah dalam keadaan cukup gizi memiliki konsentrasi lebih baik. Program gizi dan pendidikan dirancang saling mendukung agar hasil belajar meningkat.',
+      },
+      {
+        heading: 'Akses dan beasiswa',
+        body: 'Kuota beasiswa bagi calon tenaga profesional, termasuk dokter spesialis, diperluas. Pembukaan fakultas kedokteran di perguruan tinggi negeri daerah juga menjadi bagian dari upaya pemerataan akses pendidikan.',
+      },
+      {
+        heading: 'Keterampilan untuk masa depan',
+        body: 'Pendidikan vokasi dan penguasaan teknologi terus diperkuat agar lulusan memiliki keterampilan yang relevan dengan kebutuhan dunia kerja.',
+      },
+    ],
+  },
+  {
+    slug: 'kesehatan-rakyat',
+    lead: 'Kesehatan rakyat menjadi fondasi produktivitas nasional. Kebijakan difokuskan pada upaya pencegahan dan pemerataan akses, sehingga setiap warga dapat memperoleh layanan kesehatan tanpa hambatan geografis maupun finansial.',
+    sections: [
+      {
+        heading: 'Pemeriksaan kesehatan gratis',
+        body: 'Skrining rutin meliputi tekanan darah, gula darah, kolesterol, dan penanda kesehatan lainnya diberikan kepada seluruh warga, dengan fokus pada deteksi dini penyakit.',
+      },
+      {
+        heading: 'Rumah sakit daerah',
+        body: 'Rumah sakit umum daerah dilengkapi dengan peralatan diagnostik modern, termasuk layanan jantung, kanker, stroke, dan ginjal, agar pasien tidak perlu pergi ke luar daerah untuk mendapatkan perawatan.',
+      },
+      {
+        heading: 'Pengendalian penyakit menular',
+        body: 'Alat diagnostik molekuler dan kendaraan skrining keliling digunakan untuk menemukan, mengisolasi, dan mengobati kasus tuberkulosis di wilayah perkotaan maupun pedesaan.',
+      },
+      {
+        heading: 'Layanan dasar di masyarakat',
+        body: 'Puskesmas dan posyandu diperkuat dengan perangkat diagnostik digital yang terhubung ke platform kesehatan nasional, guna mendukung pemantauan kesehatan ibu, bayi, dan lansia.',
+      },
+    ],
+  },
+] as const;
+
+const detail = programDetails.find(item => item.slug === slug);
+---
+
+<ContentLayout
+  title={`Kabinet Merah Putih — ${entry.data.title}`}
+  description={entry.data.description}
+  bannerTitle="Program Strategis"
+  bannerImage="/images/assets/66dc04da39706fc65e5ae286_Objectives%20Bg%20Image.webp"
+  currentPath="/program"
+>
+  <div class="section-objective-details">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-large is-header">
+          <div class="objective-details-component">
+            <div class="objective-details-top-content-wrapper reveal-down">
+              <div class="objective-details-top-content">
+                <h2 class="heading-style-h2">{entry.data.title}</h2>
+              </div>
+              <div class="objective-details-top-content">
+                <p class="text-size-regular">{entry.data.description}</p>
+              </div>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="objective-details-image-wrapper reveal-scale">
+              <img
+                alt={entry.data.title}
+                class="objective-details-image"
+                loading="lazy"
+                sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 1200px"
+                src={`/images/programs/${slug}.webp`}
+                onerror={`this.onerror = null; this.src = '${entry.data.image}'`}
+              />
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="objective-details w-richtext reveal-up">
+              {detail && (
+                <>
+                  <p>{detail.lead}</p>
+                  {detail.sections.map((section) => (
+                    <>
+                      <h4>{section.heading}</h4>
+                      <p>{section.body}</p>
+                    </>
+                  ))}
+                </>
+              )}
+            </div>
+            <div class="padding-bottom padding-medium"></div>
+            <a class="button w-inline-block" href="/program"><div>Jelajahi program lain</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ContentLayout>

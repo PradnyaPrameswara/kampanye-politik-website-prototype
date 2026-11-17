@@ -2,6 +2,7 @@
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FaqAccordion from '@/components/react/FaqAccordion';
 import { getCollection } from 'astro:content';
+import { faqItems, faqTitle, faqSubtitle } from '@/components/sections/faq';
 
 const allPosts = await getCollection('blog');
 
@@ -18,38 +19,38 @@ const blogImages = {
 
 const teamMembers = [
   {
-    name: 'Prabowo Subianto',
-    role: 'President of the Republic of Indonesia',
+    name: 'Presiden Prabowo Subianto',
+    role: 'Presiden Republik Indonesia',
     slug: 'john-smith',
     image: '/images/assets/66de885235a491ec7c9579d4_Team%20Image%206.webp',
   },
   {
-    name: 'Gibran Rakabuming Raka',
-    role: 'Vice President of the Republic of Indonesia',
+    name: 'Kementerian Komunikasi & Digital',
+    role: 'Transformasi Digital & GovTech INA Digital',
     slug: 'sarah-johnson',
     image: '/images/assets/66de8849ae04b9432a83ed16_Team%20Image%205.webp',
   },
   {
-    name: 'Prof. Dadan Hindayana',
-    role: 'Head of National Nutrition Agency (BGN)',
+    name: 'Badan Gizi Nasional',
+    role: 'Program Makan Bergizi Gratis (MBG)',
     slug: 'michael-brown',
     image: '/images/assets/66de8840477d16d8930afdba_Team%20Image%204.webp',
   },
   {
-    name: 'Dr. Andi Amran Sulaiman',
-    role: 'Minister of Agriculture',
+    name: 'Kementerian Pertanian',
+    role: 'Kemandirian Pangan & Swasembada',
     slug: 'david-wilson',
     image: '/images/assets/66de88373555ab75c632122c_Team%20Image%203.webp',
   },
   {
-    name: 'Bahlil Lahadalia',
-    role: 'Minister of Energy and Mineral Resources',
+    name: 'Kementerian Energi & Sumber Daya Mineral',
+    role: 'Hilirisasi Komoditas & Ketahanan Energi',
     slug: 'jessica-lee',
     image: '/images/assets/66de882ef48421d2f55b6983_Team%20Image%202.webp',
   },
   {
-    name: 'Lt. Gen. (Ret.) Sjafrie Sjamsoeddin',
-    role: 'Minister of Defense',
+    name: 'Kementerian Pertahanan',
+    role: 'Kedaulatan Wilayah & Pertahanan Semesta',
     slug: 'james-clark',
     image: '/images/assets/66de882483ff8257a260072a_Team%20Image%201.webp',
   },
@@ -57,8 +58,8 @@ const teamMembers = [
 ---
 
 <ContentLayout 
-  title="CivicUnity - Team | Empowering Our Nation" 
-  bannerTitle="Team" 
+  title="Kabinet Merah Putih — Lembaga & Program Prioritas" 
+  bannerTitle="Lembaga & Program" 
   bannerImage="/images/assets/66dc04d965d12dc1cc9b4247_Team%20Bg%20Image.webp"
   currentPath="/team"
 >
@@ -70,10 +71,10 @@ const teamMembers = [
           <div class="team-component">
             <div class="team-top-content-wrapper reveal-down">
               <div class="team-top-left-content-wrapper">
-                <div class="headline"><div class="dot"></div><div>Our team</div></div>
-                <h2 class="heading-style-h2">Building a stronger nation together.</h2>
+                <div class="headline"><div class="dot"></div><div>Kementerian & Lembaga</div></div>
+                <h2 class="heading-style-h2">Sinergi Menuju Indonesia Emas 2045.</h2>
               </div>
-              <div class="text-size-regular">Dedicated public leadership coordinating ministries and communities to advance national welfare, security, and shared progress.</div>
+              <div class="text-size-regular">Sinergi terpadu kementerian dan lembaga di bawah kepemimpinan Presiden Prabowo Subianto demi mewujudkan kedaulatan, ketahanan pangan, dan kemakmuran rakyat.</div>
             </div>
             <div class="padding-bottom padding-large"></div>
             <div class="team-collection-list-wrapper w-dyn-list reveal-up">
@@ -109,7 +110,7 @@ const teamMembers = [
   </div>
 
   <!-- Section FAQ -->
-  <FaqAccordion client:visible />
+  <FaqAccordion client:visible items={faqItems} title={faqTitle} subtitle={faqSubtitle} />
 
   <!-- Section Blog -->
   <div class="section-blog">
@@ -119,12 +120,12 @@ const teamMembers = [
           <div class="blog-component">
             <div class="blog-left-content-wrapper reveal-scale">
               <div class="blog-left-top-content-wrapper">
-                <div class="headline _2nd"><div class="dot"></div><div>Policy updates</div></div>
+                <div class="headline _2nd"><div class="dot"></div><div>Berita & Kebijakan</div></div>
                 <div class="blog-left-top-content">
-                  <h2 class="heading-style-h2 text-color-white">Explore our updates for national policy insights.</h2>
-                  <div class="text-size-regular text-color-white-200">Read timely summaries on flagship initiatives, regional development, and economic self-reliance.</div>
+                  <h2 class="heading-style-h2 text-color-white">Warta Terkini untuk Memahami Kebijakan Nasional.</h2>
+                  <div class="text-size-regular text-color-white-200">Baca ringkasan terkini tentang program unggulan, pembangunan daerah, dan kemandirian ekonomi.</div>
                 </div>
-                <a class="button w-inline-block" href="/blog"><div>View more</div></a>
+                <a class="button w-inline-block" href="/blog"><div>Lihat Lainnya</div></a>
               </div>
             </div>
             <div class="blog-right-content-wrapper">
@@ -144,14 +145,14 @@ const teamMembers = [
                         </div>
                         <div class="blog-card-content-wrapper">
                           <div class="text-size-small">
-                            {new Date(post.data.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                            {new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}
                           </div>
                           <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
                             <h5 class="heading-style-h5">{post.data.title}</h5>
                           </a>
                           <div class="blog-card-content">
                             <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
-                              <div>Read More</div>
+                              <div>Baca Selengkapnya</div>
                               <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                             </a>
                           </div>

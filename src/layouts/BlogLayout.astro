@@ -13,8 +13,7 @@ interface Props {
 
 const { title, description, publishDate, readTime, category, image } = Astro.props;
 
-// Formatting date
-const formattedDate = new Intl.DateTimeFormat('en-US', {
+const formattedDate = new Intl.DateTimeFormat('id-ID', {
   year: 'numeric',
   month: 'long',
   day: 'numeric'
@@ -23,7 +22,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 const categoryLabel = 'id' in Object(category) ? Object(category).id : String(category || 'Policy');
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogType="article">
   <article class="blog-detail px-[1.5rem] laptop:px-[1.875rem] tablet:px-[1.5rem] mobile:px-[1rem] mx-auto w-full max-w-container py-section-lg">
     
     <header class="blog-header flex flex-col laptop:flex-row gap-8 mb-12">

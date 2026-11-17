@@ -1,27 +1,27 @@
 ---
-title: "Effective Advocacy Strategies for Success"
+title: "Program 3 Juta Rumah untuk Kesejahteraan Masyarakat"
 publishDate: 2024-09-05
-readTime: "6 min read"
+readTime: "6 menit baca"
 category: community
 image: ../../assets/images/blog/effective-advocacy-strategies-for-success.svg
-excerpt: "A nationwide housing revolution delivering 1 million urban apartments and 2 million rural dwellings to eliminate poverty and stimulate domestic manufacturing."
+excerpt: "Revolusi perumahan nasional yang menghadirkan 1 juta apartemen perkotaan dan 2 juta rumah pedesaan untuk memberantas kemiskinan dan merangsang manufaktur domestik."
 ---
 
-#### Summary
+#### Ringkasan
 
-Decent housing is the cornerstone of family stability, social dignity, and child development. Yet millions of Indonesian families continue to face acute housing deficits, overcrowded informal settlements, or exorbitant urban rental costs. President Prabowo Subianto's 3 Million Homes Program (Program 3 Juta Rumah) is an unprecedented social housing drive structured to build 3 million quality affordable homes every single year.
+Perumahan yang layak adalah fondasi stabilitas keluarga, martabat sosial, dan perkembangan anak. Namun jutaan keluarga Indonesia masih menghadapi defisit perumahan akut, permukiman informal yang padat, atau biaya sewa perkotaan yang sangat tinggi. Program 3 Juta Rumah Presiden Prabowo Subianto adalah dorongan perumahan sosial yang belum pernah terjadi sebelumnya, dibangun untuk membangun 3 juta rumah berkualitas dan terjangkau setiap tahunnya.
 
-##### Dual-Track Execution: Urban and Rural Synergy
+##### Pelaksanaan Ganda: Sinergi Perkotaan dan Pedesaan
 
-Recognizing that spatial and economic challenges vary dramatically across regions, the Ministry of Housing and Settlement Areas operates along two specialized tracks:
+Dengan menyadari bahwa tantangan ruang dan ekonomi sangat berbeda antarwilayah, Kementerian Perumahan dan Kawasan Permukiman beroperasi melalui dua jalur khusus:
 
-*   **Urban Transit-Oriented Apartments (1 Million Units/Year)**: Constructing high-density, earthquake-resistant vertical apartment complexes (Rusun) situated directly adjacent to commuter train stations, bus rapid transit corridors, and city employment hubs.
-*   **Rural and Coastal Landed Homes (2 Million Units/Year)**: Upgrading uninhabitable dwellings (BSPS/RTLH) and building standardized, hygienic houses for farmers, fishermen, and village workers equipped with clean piped water and septic infrastructure.
+*   **Apartemen Perkotaan Berorientasi Transit (1 Juta Unit per Tahun)**: Membangun kompleks apartemen vertikal berkepadatan tinggi dan tahan gempa (Rusun) yang terletak tepat di dekat stasiun kereta komuter, koridor bus rapid transit, dan pusat lapangan kerja kota.
+*   **Rumah Tapak Pedesaan dan Pesisir (2 Juta Unit per Tahun)**: Meningkatkan hunian yang tidak layak (BSPS/RTLH) dan membangun rumah standar yang higienis bagi petani, nelayan, dan pekerja desa yang dilengkapi air bersih pipa serta infrastruktur septik.
 
-##### The Economic Multiplier of Home Construction
+##### Efek Pengganda Ekonomi dari Pembangunan Rumah
 
-Housing construction is one of the most powerful domestic economic catalysts. The program stimulates more than 170 related industries—including domestic cement, steel, bricks, glass, ceramics, and plumbing manufacturing. Because building materials are mandated to be 100% sourced domestically, the program generates millions of jobs for local construction tradesmen and small-scale suppliers.
+Konstruksi perumahan merupakan salah satu katalis ekonomi domestik paling kuat. Program ini merangsang lebih dari 170 industri terkait—termasuk manufaktur semen, baja, batu bata, kaca, keramik, dan pipa dalam negeri. Karena bahan bangunan diwajibkan 100% bersumber dari dalam negeri, program ini menciptakan jutaan lapangan kerja bagi tukang bangunan lokal dan pemasok skala kecil.
 
-##### Financing Made Accessible
+##### Pembiayaan yang Terjangkau
 
-In partnership with state mortgage bank PT Bank Tabungan Negara (Persero) Tbk (BTN) and regional development banks (BPD), the government provides long-tenor, subsidized interest rates with minimal down payments, enabling informal workers and young families to achieve homeownership.
+Bermitra dengan bank kredit perumahan negara PT Bank Tabungan Negara (Persero) Tbk (BTN) serta bank pembangunan daerah (BPD), pemerintah menyediakan suku bunga bersubsidi dengan tenor panjang dan uang muka minimal, memungkinkan pekerja informal dan keluarga muda memiliki rumah.

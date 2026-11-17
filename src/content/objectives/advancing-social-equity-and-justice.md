@@ -1,27 +1,27 @@
 ---
-title: "Advancing Social Equity and Justice"
-description: "Delivering daily nutritious meals for schoolchildren to eliminate stunting nationwide."
+title: "Makan Bergizi Gratis (MBG)"
+description: "Menyediakan makanan bergizi harian bagi anak sekolah untuk menuntaskan stunting di seluruh Indonesia."
 image: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 bgImage: ../../assets/images/objectives/advancing-social-equity-and-justice.svg
 ---
 
-#### Summary
+#### Ringkasan
 
-The Free Nutritious Meals program (Makan Bergizi Gratis - MBG) is President Prabowo Subianto's foremost flagship initiative. Targeting over 82 million beneficiaries across Indonesia—including preschool, elementary, middle, and high school students, alongside toddlers and pregnant/lactating mothers—the program directly addresses childhood malnutrition, stunting, and cognitive development gaps. Managed by the National Nutrition Agency (Badan Gizi Nasional - BGN), the initiative operates decentralized central service kitchens (Satuan Pelayanan Pemenuhan Gizi) that source fresh produce directly from local farmers and agricultural cooperatives.
+Makan Bergizi Gratis (MBG) merupakan program unggulan utama Presiden Prabowo Subianto. Menjangkau lebih dari 82 juta penerima manfaat di seluruh Indonesia—mulai dari siswa prasekolah, sekolah dasar, sekolah menengah, hingga sekolah menengah atas, serta balita dan ibu hamil atau menyusui—program ini secara langsung menangani malnutrisi anak, stunting, dan kesenjangan perkembangan kognitif. Dikelola oleh Badan Gizi Nasional (BGN), program ini beroperasi melalui dapur Satuan Pelayanan Pemenuhan Gizi yang terdesentralisasi dan memasok hasil pertanian segar langsung dari petani serta koperasi pertanian lokal.
 
-##### Strategic Objectives of Makan Bergizi Gratis
+##### Tujuan Strategis Makan Bergizi Gratis
 
-Investing in early-life nutrition yields compounding long-term returns for human capital, school attendance, and national economic productivity. The program is systematically calibrated to achieve four overarching outcomes:
+Investasi pada gizi sejak usia dini memberikan manfaat jangka panjang yang berlipat ganda bagi modal manusia, kehadiran sekolah, dan produktivitas ekonomi nasional. Program ini secara sistematis dirancang untuk mencapai empat hasil utama:
 
-*   **Eradicating Stunting**: Drastically lowering national stunting prevalence below 10% through targeted protein and micronutrient delivery during critical developmental windows.
-*   **Boosting Educational Concentration**: Ensuring children arrive in classrooms energized and mentally equipped to absorb science, mathematics, and literacy curricula.
-*   **Empowering Local Agricultural Economies**: Sourcing eggs, meat, milk, vegetables, and rice exclusively from local farmers, livestock breeders, and village-owned enterprises (BUMDes).
-*   **Closing Regional Inequalities**: Standardizing nutritional quality across remote, frontier, and outermost regions (3T) from Sabang to Merauke.
+*   **Menuntaskan Stunting**: Menurunkan secara drastis prevalensi stunting nasional di bawah 10% melalui pemberian protein dan mikronutrien yang terarah pada masa pertumbuhan kritis.
+*   **Meningkatkan Konsentrasi Belajar**: Memastikan anak tiba di kelas dengan energi dan kesiapan mental untuk menyerap pelajaran sains, matematika, dan literasi.
+*   **Memberdayakan Ekonomi Pertanian Lokal**: Memasok telur, daging, susu, sayur, dan beras secara eksklusif dari petani lokal, peternak, dan badan usaha milik desa (BUMDes).
+*   **Menutup Kesenjangan Wilayah**: Menstandarkan mutu gizi di wilayah terpencil, perbatasan, dan terluar (3T) dari Sabang hingga Merauke.
 
-##### Implementation Framework and Standards
+##### Kerangka Pelaksanaan dan Standar
 
-Each service unit serves between 2,500 and 3,000 children daily, strictly adhering to dietary guidelines defined by certified nutritionists. Meals provide at least one-third of a child's daily caloric and macronutrient requirements, with continuous monitoring of food safety, hygiene, and supply chain transparency.
+Setiap satuan pelayanan melayani antara 2.500 hingga 3.000 anak per hari dengan mengikuti secara ketat pedoman gizi yang ditetapkan oleh ahli gizi bersertifikat. Makanan menyediakan minimal sepertiga dari kebutuhan kalori dan makronutrien harian anak, dengan pemantauan berkelanjutan atas keamanan pangan, higiene, dan transparansi rantai pasok.
 
-##### Socio-Economic Multiplier Effect
+##### Efek Pengganda Sosial-Ekonomi
 
-Beyond health indicators, the program injects billions of rupiah directly into rural and sub-district economies. Over 30,000 community kitchens create stable employment for local kitchen staff, logistics handlers, and food processors, demonstrating how direct public welfare expenditure stimulates grassroots domestic commerce.
+Selain indikator kesehatan, program ini menyuntikkan miliaran rupiah langsung ke ekonomi pedesaan dan kecamatan. Lebih dari 30.000 dapur masyarakat menciptakan lapangan kerja stabil bagi staf dapur lokal, pengelola logistik, dan pengolah makanan, menunjukkan bagaimana belanja kesejahteraan publik langsung merangsang perdagangan domestik akar rumput.

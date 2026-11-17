@@ -1,26 +1,26 @@
 [
   {
-    "title": "National Food Security Forum",
-    "description": "Coordinating regional agriculture and securing direct fertilizer distribution.",
-    "location": "Jakarta Convention Center",
-    "date": "November 10, 2024",
-    "time": "09:00 AM - 01:00 PM",
+    "title": "Musyawarah Kerja Swasembada Pangan",
+    "description": "Konsolidasi intensifikasi lahan pertanian, pompanisasi, serta penyaluran pupuk bersubsidi langsung kepada petani.",
+    "location": "Jakarta Convention Center (JCC)",
+    "date": "10 November 2024",
+    "time": "09:00 - 13:00 WIB",
     "image": "event-image-1.jpg"
   },
   {
-    "title": "Nutritious Meals Rollout Assembly",
-    "description": "Deploying service kitchens and school lunch programs across regional regencies.",
-    "location": "JIExpo Kemayoran Jakarta",
-    "date": "November 25, 2024",
-    "time": "08:30 AM - 12:30 PM",
+    "title": "Rapat Koordinasi Makan Bergizi Gratis",
+    "description": "Penyelarasan operasional Satuan Pelayanan Pemenuhan Gizi dan rantai pasok pangan lokal di seluruh daerah.",
+    "location": "JIExpo Kemayoran, Jakarta",
+    "date": "25 November 2024",
+    "time": "08:30 - 12:30 WIB",
     "image": "event-image-2.avif"
   },
   {
-    "title": "Resource Downstreaming Briefing",
-    "description": "Strategic roadmap presentation for mineral processing and clean energy transition.",
-    "location": "Nusantara Meeting Hall",
-    "date": "December 05, 2024",
-    "time": "10:00 AM - 03:30 PM",
+    "title": "Sosialisasi Hilirisasi 26 Komoditas dan Energi",
+    "description": "Pemaparan peta jalan hilirisasi mineral bernilai tambah tinggi dan penerapan mandat bioenergi B50.",
+    "location": "Ruang Pertemuan Nusantara, Jakarta",
+    "date": "5 Desember 2024",
+    "time": "10:00 - 15:30 WIB",
     "image": "event-image-3.jpg"
   }
 ]

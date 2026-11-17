@@ -1,23 +1,23 @@
 ---
-title: "Ensuring Fair Legal and Justice Systems"
-description: "Enforcing clean governance, combating corruption, and deploying integrated public services."
+title: "Tata Kelola Bersih dan Sistem Hukum yang Adil"
+description: "Menegakkan tata kelola yang bersih, memberantas korupsi, dan menghadirkan layanan publik terintegrasi."
 image: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 bgImage: ../../assets/images/objectives/ensuring-fair-legal-and-justice-systems.svg
 ---
 
-#### Summary
+#### Ringkasan
 
-Corruption drains the economic lifeblood of the nation, steals opportunities from the poor, and weakens sovereign institutions. President Prabowo Subianto has declared an unyielding, zero-tolerance war on corruption across all branches of government. By modernizing law enforcement, empowering anti-graft bodies, sealing state revenue leakages in customs, taxation, and natural resources, and implementing unified digital public infrastructure (GovTech INA Digital), the administration guarantees that every rupiah of state budget directly benefits the people.
+Korupsi menguras denyut ekonomi bangsa, mencuri peluang dari rakyat miskin, dan melemahkan lembaga kedaulatan. Presiden Prabowo Subianto telah mendeklarasikan perang tanpa kompromi terhadap korupsi di semua cabang pemerintahan. Dengan memodernisasi penegakan hukum, memberdayakan lembaga antikorupsi, menutup kebocoran pendapatan negara di bidang kepabeanan, perpajakan, dan sumber daya alam, serta menerapkan infrastruktur digital publik terpadu (GovTech INA Digital), pemerintah menjamin bahwa setiap rupiah anggaran negara langsung bermanfaat bagi rakyat.
 
-##### Pillars of the Clean Governance Strategy
+##### Pilar Strategi Tata Kelola Bersih
 
-Achieving transparent, accountable public administration requires institutional willpower and modern technological safeguards:
+Mewujudkan administrasi publik yang transparan dan akuntabel membutuhkan kemauan institusional dan perlindungan teknologi modern:
 
-*   **Zero Tolerance for Graft**: Empowering the Corruption Eradication Commission (KPK), Attorney General's Office (Kejaksaan Agung), and National Police (Polri) to investigate and prosecute financial crimes without political favoritism.
-*   **Preventing State Revenue Leakages**: Enforcing strict audits on illegal mining, illegal logging, and unauthorized marine resource exploitation, recovering trillions in unpaid state taxes and non-tax revenues (PNBP).
-*   **National GovTech Integration (INA Digital)**: Transitioning fragmented government software into a single unified public service portal, eliminating bureaucratic friction and administrative bribery.
-*   **Civil Service Professionalization**: Linking civil servant (ASN) performance metrics and remuneration directly to transparent service delivery and anti-corruption standards.
+*   **Tanpa Toleransi terhadap Korupsi**: Memberdayakan Komisi Pemberantasan Korupsi (KPK), Kejaksaan Agung, dan Kepolisian Negara (Polri) untuk menyidik dan menuntut kejahatan keuangan tanpa favoritisme politik.
+*   **Mencegah Kebocoran Pendapatan Negara**: Menegakkan audit ketat terhadap penambangan ilegal, penebangan liar, dan eksploitasi sumber daya laut tanpa izin, memulihkan triliunan rupiah pajak dan penerimaan negara bukan pajak (PNBP) yang belum dibayar.
+*   **Integrasi GovTech Nasional (INA Digital)**: Mengalihkan perangkat lunak pemerintah yang terfragmentasi menjadi satu portal layanan publik terpadu, menghilangkan hambatan birokrasi dan suap administratif.
+*   **Profesionalisme Aparatur Sipil**: Mengaitkan kinerja dan remunerasi aparatur sipil negara (ASN) secara langsung dengan penyaluran layanan yang transparan dan standar antikorupsi.
 
-##### Legal Certainty and Investment Security
+##### Kepastian Hukum dan Keamanan Investasi
 
-Clean governance directly stimulates domestic entrepreneurship and foreign direct investment. By ensuring swift contract enforcement, transparent licensing procedures, and an impartial judiciary, Indonesia provides an attractive, secure economic environment for job-creating private capital.
+Tata kelola yang bersih secara langsung merangsang kewirausahaan dalam negeri dan investasi asing langsung. Dengan memastikan penegakan kontrak yang cepat, prosedur perizinan yang transparan, dan peradilan yang imparsial, Indonesia menyediakan lingkungan ekonomi yang menarik dan aman bagi modal swasta pencipta lapangan kerja.

@@ -1,5 +1,9 @@
 ---
 import NewsletterForm from '../react/NewsletterForm';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const toHref = (path: string) => path === '/' ? (base ? `${base}/` : '/') : `${base}${path}`;
 ---
 
 <div class="section-footer">
@@ -9,11 +13,11 @@ import NewsletterForm from '../react/NewsletterForm';
         <div class="w-layout-grid footer-grid">
           <div class="footer-left-content-wrapper">
             <div class="footer-left-top-content">
-              <a aria-current="page" class="footer-brand-logo-wrapper w-inline-block w--current" href="/">
-                <img alt="CivicUnity Logo" class="footer-logo" loading="lazy" src="/images/nav-logo.svg" />
+              <a aria-current="page" class="footer-brand-logo-wrapper w-inline-block w--current" href={toHref('/')}>
+                <img alt="Kabinet Merah Putih" class="footer-logo" loading="lazy" src="/images/nav-logo.svg" />
               </a>
               <div class="text-size-regular text-color-white-200">
-                United under Asta Cita. Driving sovereignty and national prosperity together.
+                Asta Cita: Bersatu membangun kedaulatan, ketahanan pangan, dan kemakmuran rakyat Indonesia.
               </div>
             </div>
             <div class="padding-bottom padding-medium"></div>
@@ -38,54 +42,43 @@ import NewsletterForm from '../react/NewsletterForm';
           </div>
           <div class="footer-link-list-wrapper">
             <div class="footer-content">
-              <h6 class="heading-style-h6 text-color-white-200">Pages</h6>
+              <h6 class="heading-style-h6 text-color-white-200">Halaman</h6>
             </div>
             <div class="footer-link-list">
-              <a class="footer-link" href="/">Home</a>
-              <a class="footer-link" href="/about">About</a>
-              <a class="footer-link" href="/contact">Contact</a>
+              <a class="footer-link" href={toHref('/')}>Beranda</a>
+              <a class="footer-link" href={toHref('/about')}>Tentang Kami</a>
+              <a class="footer-link" href={toHref('/contact')}>Hubungi Kami</a>
             </div>
           </div>
           <div class="footer-link-list-wrapper">
             <div class="footer-content">
-              <h6 class="heading-style-h6 text-color-white-200">Inner page</h6>
+              <h6 class="heading-style-h6 text-color-white-200">Jelajahi</h6>
             </div>
             <div class="footer-link-list">
-              <a class="footer-link" href="/objective">Objectives</a>
-              <a class="footer-link" href="/team">Team</a>
-              <a class="footer-link" href="/blog">Blog</a>
+              <a class="footer-link" href={toHref('/objective')}>Tujuan</a>
+              <a class="footer-link" href={toHref('/team')}>Tim</a>
+              <a class="footer-link" href={toHref('/blog')}>Berita</a>
             </div>
           </div>
           <div class="footer-link-list-wrapper">
             <div class="footer-content">
-              <h6 class="heading-style-h6 text-color-white-200">Inner page</h6>
+              <h6 class="heading-style-h6 text-color-white-200">Detail Halaman</h6>
             </div>
             <div class="footer-link-list">
-              <a class="footer-link" href="/donate">Donate details</a>
-              <a class="footer-link" href="/objectives/advancing-social-equity-and-justice">Objective details</a>
-              <a class="footer-link" href="/team/john-smith">Team details</a>
-              <a class="footer-link" href="/blog/understanding-recent-policy-changes">Blog details</a>
-            </div>
-          </div>
-          <div class="footer-link-list-wrapper">
-            <div class="footer-content">
-              <h6 class="heading-style-h6 text-color-white-200">Utility page</h6>
-            </div>
-            <div class="footer-link-list">
-              <a class="footer-link" href="/style-guide">Style guide</a>
-              <a class="footer-link" href="/license">Licenses</a>
-              <a class="footer-link" href="/404">404 not found</a>
-              <a class="footer-link" href="/change-log">Change log</a>
+              <a class="footer-link" href={toHref('/program')}>Program Nasional</a>
+              <a class="footer-link" href={toHref('/objectives/advancing-social-equity-and-justice')}>Detail Tujuan</a>
+              <a class="footer-link" href={toHref('/member/john-smith')}>Detail Tim</a>
+              <a class="footer-link" href={toHref('/post/understanding-recent-policy-changes')}>Detail Berita</a>
             </div>
           </div>
         </div>
         <div class="padding-bottom padding-small"></div>
         <div class="footer-bottom-content-wrapper">
           <div class="text-size-small text-color-white-300">
-            Powered by Astro | CivicUnity Indonesia
+            Kabinet Merah Putih — Republik Indonesia
           </div>
-          <div class="text-size-regular">
-            <a class="footer-link _2nd" href="#">Privacy Policy</a> | <a class="footer-link _2nd" href="#">Terms of Service</a>
+          <div class="text-size-small text-color-white-300">
+            <a class="footer-link _2nd" href={toHref('/kredit')}>Kredit Gambar</a>
           </div>
         </div>
       </div>
