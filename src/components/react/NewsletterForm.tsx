@@ -44,7 +44,7 @@ export default function NewsletterForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-          <div className="flex gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row">
             <label className="sr-only" htmlFor="newsletter-email">
               Alamat e-mail Anda
             </label>
@@ -54,13 +54,13 @@ export default function NewsletterForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Masukkan alamat e-mail Anda"
-              className="flex-1 bg-white text-neutral-black-900 border-none rounded-[0.75rem] h-10 px-5 py-3 focus-visible:ring-2 focus-visible:ring-brand-blue"
+              className="w-full bg-white text-neutral-black-900 border-none rounded-[0.75rem] h-10 px-5 py-3 focus-visible:ring-2 focus-visible:ring-brand-blue sm:w-auto sm:flex-1 sm:min-w-0"
               required
             />
             <Button
               type="submit"
               variant="default"
-              className="bg-brand-blue hover:bg-brand-red text-white rounded-[0.75rem] px-4 font-medium transition-colors h-10 flex items-center justify-center"
+              className="bg-brand-blue hover:bg-brand-red text-white rounded-[0.75rem] px-4 font-medium transition-colors h-10 w-full flex items-center justify-center sm:w-auto sm:shrink-0"
             >
               Berlangganan
             </Button>
