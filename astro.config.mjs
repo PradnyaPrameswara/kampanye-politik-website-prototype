@@ -40,8 +40,9 @@ const site = getSite();
 const base = getBase();
 
 // Integration to ensure internal links, static assets, and redirects work under subpaths
-function basePathRewriter(basePath) {
+function basePathRewriter(basePath, siteUrl) {
   const cleanBase = basePath ? basePath.replace(/\/+$/, '') : '';
+  const siteOrigin = siteUrl ? new URL(siteUrl).origin : '';
 
   return {
     name: 'base-path-rewriter',
@@ -88,6 +89,18 @@ function basePathRewriter(basePath) {
         }
 
         function processHtml(content) {
+          if (siteOrigin) {
+            content = content.replace(
+              /<link rel="canonical" href="([^"]+)"/g,
+              (match, url) => {
+                if (!url.startsWith(siteOrigin + '/')) return match;
+                const relative = url.slice(siteOrigin.length);
+                if (relative.startsWith(cleanBase + '/') || relative === cleanBase) return match;
+                return `<link rel="canonical" href="${siteOrigin}${cleanBase}${relative}"`;
+              },
+            );
+          }
+
           content = content.replace(/\bhref="([^"]+)"/g, (match, u) => `href="${prefixUrl(u)}"`);
           content = content.replace(/\bhref='([^']+)'/g, (match, u) => `href='${prefixUrl(u)}'`);
 
@@ -151,7 +164,7 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap(),
-    basePathRewriter(base),
+    basePathRewriter(base, site),
   ],
   vite: {
     build: {
