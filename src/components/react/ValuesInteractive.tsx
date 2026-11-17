@@ -48,6 +48,13 @@ export default function ValuesInteractive() {
     setActiveTab((prev) => (prev === id ? null : id));
   };
 
+  const handleKeyDown = (id: number) => (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleClick(id);
+    }
+  };
+
   return (
     <div className="value-component">
       <div className="value-top-content-wrapper reveal-down">
@@ -72,9 +79,13 @@ export default function ValuesInteractive() {
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
+                role="button"
+                tabIndex={0}
+                aria-pressed={isActive}
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick(item.id)}
+                onKeyDown={handleKeyDown(item.id)}
               >
                 <h6
                   className="heading-style-h6 transition-colors duration-300"
@@ -105,9 +116,14 @@ export default function ValuesInteractive() {
               <div
                 key={num}
                 className="value-tab cursor-pointer"
+                role="button"
+                tabIndex={0}
+                aria-pressed={isActive}
+                aria-label={`Nilai ${num}`}
                 onMouseEnter={() => handleMouseEnter(num)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick(num)}
+                onKeyDown={handleKeyDown(num)}
               >
                 <h2
                   className="heading-style-h2 transition-colors duration-300"
@@ -139,9 +155,13 @@ export default function ValuesInteractive() {
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
+                role="button"
+                tabIndex={0}
+                aria-pressed={isActive}
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={handleMouseLeave}
                 onClick={() => handleClick(item.id)}
+                onKeyDown={handleKeyDown(item.id)}
               >
                 <h6
                   className="heading-style-h6 transition-colors duration-300"

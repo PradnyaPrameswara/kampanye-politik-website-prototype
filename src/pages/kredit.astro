@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContentLayout from '@/layouts/ContentLayout.astro';
 
 const credits = [
   {
@@ -68,10 +68,9 @@ const credits = [
 ];
 ---
 
-<BaseLayout title="Kabinet Merah Putih — Kredit Gambar" description="Atribusi dan lisensi gambar yang digunakan pada situs ini.">
+<ContentLayout title="Kabinet Merah Putih — Kredit Gambar" description="Atribusi dan lisensi gambar yang digunakan pada situs ini." bannerTitle="Kredit Gambar" currentPath="/kredit">
   <div class="section-padding padding-global">
     <div class="container-large">
-      <h1 class="heading-style-h2">Kredit Gambar</h1>
       <p class="text-size-regular">
         Gambar-gambar pada situs ini bersumber dari Wikimedia Commons dan lembaga pemerintah Indonesia.
         Berikut atribusi, lisensi, dan perubahan yang dilakukan.
@@ -92,4 +91,4 @@ const credits = [
       </ul>
     </div>
   </div>
-</BaseLayout>
+</ContentLayout>

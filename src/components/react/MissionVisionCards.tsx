@@ -29,6 +29,7 @@ export default function MissionVisionCards() {
         <CardContent className="mission-card-content-wrapper p-0">
           <h4 className="heading-style-h4">Misi</h4>
           <div
+            id="mission-card-content"
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
             style={{ maxHeight: missionOpen ? '400px' : '50px' }}
           >
@@ -41,6 +42,8 @@ export default function MissionVisionCards() {
             variant="ghost"
             className="mission-button bg-transparent border-none p-0 h-auto font-normal cursor-pointer text-left hover:bg-transparent"
             onClick={toggleMission}
+            aria-expanded={missionOpen}
+            aria-controls="mission-card-content"
           >
             <div
               className="mission-button-text"
@@ -71,6 +74,7 @@ export default function MissionVisionCards() {
         <CardContent className="mission-card-content-wrapper p-0">
           <h4 className="heading-style-h4">Visi</h4>
           <div
+            id="vision-card-content"
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
             style={{ maxHeight: visionOpen ? '400px' : '50px' }}
           >
@@ -83,6 +87,8 @@ export default function MissionVisionCards() {
             variant="ghost"
             className="mission-button bg-transparent border-none p-0 h-auto font-normal cursor-pointer text-left hover:bg-transparent"
             onClick={toggleVision}
+            aria-expanded={visionOpen}
+            aria-controls="vision-card-content"
           >
             <div
               className="mission-button-text"

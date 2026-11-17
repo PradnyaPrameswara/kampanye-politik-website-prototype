@@ -13,7 +13,6 @@ const pathWithoutBase = base && rawPath.startsWith(base) ? rawPath.slice(base.le
 
 const cleanPath = pathWithoutBase.replace(/\/+$/, '') || '/';
 
-// Dual-deployment link helper (Cloudflare: /..., GitHub Pages: /<repo>/...)
 const toHref = (path: string) => path === '/' ? (base ? `${base}/` : '/') : `${base}${path}`;
 
 const navLinks = [
