@@ -41,4 +41,8 @@ tmp/
 
 # Local agent tooling (machine-specific paths, generated indexes)
 .lexa/
+.codegraph/
 opencode.json
+
+# Original Webflow reference archive (not part of the site build)
+original_webflow_assets/

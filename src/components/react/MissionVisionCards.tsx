@@ -19,7 +19,7 @@ export default function MissionVisionCards() {
       <Card className="mission-card reveal-scale border-0 bg-transparent shadow-none p-0">
         <div className="mission-image-wraper">
           <img
-            alt="Mission"
+            alt="Misi Kabinet Merah Putih"
             className="mission-image"
             loading="lazy"
             sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px"
@@ -27,13 +27,13 @@ export default function MissionVisionCards() {
           />
         </div>
         <CardContent className="mission-card-content-wrapper p-0">
-          <h4 className="heading-style-h4">Mission</h4>
+          <h4 className="heading-style-h4">Misi</h4>
           <div
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
             style={{ maxHeight: missionOpen ? '400px' : '50px' }}
           >
             <p className="text-size-regular">
-              Our mission is to safeguard national sovereignty by executing strategic priorities under Asta Cita that serve all Indonesian citizens. We are committed to eradicating childhood stunting through daily nutritious meals, securing domestic food and energy self-sufficiency, and expanding downstream processing across strategic resources. By establishing transparent, accountable governance, we build an enduring foundation for national prosperity.
+              Misi kami adalah menjaga kedaulatan nasional melalui pelaksanaan prioritas strategis Asta Cita untuk seluruh warga Indonesia. Kami berkomitmen menuntaskan stunting anak melalui makanan bergizi harian, mewujudkan swasembada pangan dan energi dalam negeri, serta memperluas hilirisasi sumber daya strategis. Dengan tata kelola yang transparan dan akuntabel, kami membangun fondasi kokoh bagi kemakmuran nasional.
             </p>
           </div>
           <Button
@@ -46,13 +46,13 @@ export default function MissionVisionCards() {
               className="mission-button-text"
               style={{ display: missionOpen ? 'none' : 'block' }}
             >
-              See more....
+              Lihat selengkapnya....
             </div>
             <div
               className="mission-button-text"
               style={{ display: missionOpen ? 'block' : 'none' }}
             >
-              See less....
+              Lihat lebih sedikit....
             </div>
           </Button>
         </CardContent>
@@ -61,7 +61,7 @@ export default function MissionVisionCards() {
       <Card className="mission-card reveal-scale border-0 bg-transparent shadow-none p-0">
         <div className="mission-image-wraper">
           <img
-            alt="Vision"
+            alt="Visi Indonesia Emas 2045"
             className="mission-image"
             loading="lazy"
             sizes="(max-width: 479px) 93vw, (max-width: 991px) 94vw, 588px"
@@ -69,13 +69,13 @@ export default function MissionVisionCards() {
           />
         </div>
         <CardContent className="mission-card-content-wrapper p-0">
-          <h4 className="heading-style-h4">Vision</h4>
+          <h4 className="heading-style-h4">Visi</h4>
           <div
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
             style={{ maxHeight: visionOpen ? '400px' : '50px' }}
           >
             <p className="text-size-regular">
-              Our vision is the realization of Indonesia Emas 2045: an advanced, equitable, and sovereign archipelagic nation where every family can thrive. We envision a self-reliant economy where domestic resources power domestic industry, and public services operate with integrity and digital efficiency. We aim to build a society where quality healthcare, modern education, and decent housing are accessible to every citizen from Sabang to Merauke. Together, we forge a stronger and united future.
+              Visi kami adalah terwujudnya Indonesia Emas 2045: bangsa kepulauan yang maju, adil, dan berdaulat, di mana setiap keluarga dapat berkembang. Kami membayangkan ekonomi mandiri yang sumber daya dalam negerinya menggerakkan industri dalam negeri, serta layanan publik yang dijalankan dengan integritas dan efisiensi digital. Kami menuju masyarakat dengan layanan kesehatan berkualitas, pendidikan modern, dan hunian layak yang terjangkau bagi setiap warga dari Sabang sampai Merauke. Bersama, kita bangun masa depan yang lebih kuat dan bersatu.
             </p>
           </div>
           <Button
@@ -88,13 +88,13 @@ export default function MissionVisionCards() {
               className="mission-button-text"
               style={{ display: visionOpen ? 'none' : 'block' }}
             >
-              See more....
+              Lihat selengkapnya....
             </div>
             <div
               className="mission-button-text"
               style={{ display: visionOpen ? 'block' : 'none' }}
             >
-              See less....
+              Lihat lebih sedikit....
             </div>
           </Button>
         </CardContent>

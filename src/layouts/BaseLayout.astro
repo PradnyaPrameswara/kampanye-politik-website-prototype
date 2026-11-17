@@ -1,6 +1,5 @@
 ---
 import '@/styles/global.css';
-import '@/styles/animations.css';
 import Navbar from '@/components/layout/Navbar.astro';
 import Footer from '@/components/layout/Footer.astro';
 
@@ -8,40 +7,66 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
   hideNav?: boolean;
   currentPath?: string;
 }
 
-const { title, description = 'CivicUnity - Empowering communities through action', ogImage = '/images/og-image.jpg', hideNav = false, currentPath } = Astro.props;
+const {
+  title,
+  description = 'Kabinet Merah Putih — Menuju Indonesia Emas 2045',
+  ogImage = '/images/og/og-image.jpg',
+  ogType = 'website',
+  hideNav = false,
+  currentPath
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+
+const baseWithSlash = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const ogImageURL = ogImage.startsWith('http')
+  ? ogImage
+  : new URL(ogImage.replace(/^\//, ''), new URL(baseWithSlash, Astro.site)).href;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  <meta property="og:url" content={canonicalURL} />
   
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={ogImage} />
-  <meta property="og:type" content="website" />
+  <meta property="og:image" content={ogImageURL} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:locale" content="id_ID" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageURL} />
   
+  <meta name="theme-color" content="#d3383f" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </head>
 <body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-blue focus:shadow-lg">Lewati ke konten utama</a>
   <div class="page-wrapper flex flex-col min-h-screen">
     {!hideNav && <Navbar currentPath={currentPath} />}
-    <main class="main-wrapper flex-grow">
+    <main id="main" tabindex="-1" class="main-wrapper flex-grow">
       <slot />
     </main>
     <Footer />
   </div>
 
   <script>
-    // Intersection Observer fallback for reveal animations
     document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

@@ -1,29 +1,29 @@
 ---
-title: "Building Strong Advocacy Coalitions"
+title: "Makan Bergizi Gratis (MBG): Menuntaskan Stunting Anak"
 publishDate: 2024-08-29
-readTime: "6 min read"
+readTime: "6 menit baca"
 category: community
 image: ../../assets/images/blog/building-strong-advocacy-coalitions.svg
-excerpt: "How the National Nutrition Agency (BGN) coordinates local farmers, schools, and communities to end childhood stunting nationwide."
+excerpt: "Bagaimana Badan Gizi Nasional (BGN) mengoordinasikan petani lokal, sekolah, dan masyarakat untuk mengentaskan stunting anak di seluruh negeri."
 ---
 
-#### Summary
+#### Ringkasan
 
-The Free Nutritious Meals program (Makan Bergizi Gratis - MBG) represents Indonesia's most ambitious social investment in history. With an operational scale reaching over 82 million school students, toddlers, and expectant mothers, the program addresses the root cause of educational disparities and intergenerational poverty: childhood malnutrition and protein deficiency.
+Program Makan Bergizi Gratis (MBG) merupakan investasi sosial paling ambisius dalam sejarah Indonesia. Dengan skala operasional menjangkau lebih dari 82 juta siswa sekolah, balita, dan ibu hamil, program ini mengatasi akar kesenjangan pendidikan dan kemiskinan antargenerasi: malnutrisi dan kekurangan protein pada anak.
 
-##### Operational Architecture of the National Nutrition Agency (BGN)
+##### Arsitektur Operasional Badan Gizi Nasional (BGN)
 
-Under the leadership of Prof. Dadan Hindayana, the National Nutrition Agency operates on a highly decentralized, village-level service model:
+Di bawah kepemimpinan Prof. Dadan Hindayana, Badan Gizi Nasional beroperasi dengan model layanan yang sangat terdesentralisasi di tingkat desa:
 
-*   **Service Units (Satuan Pelayanan)**: Modern, sanitized kitchens serving 2,500 to 3,000 students daily, positioned within a 20-minute delivery radius of participating schools.
-*   **Direct Local Procurement**: Vegetables, chicken, beef, fish, eggs, and milk are procured directly from neighborhood farmer groups and village cooperatives, eliminating predatory middlemen.
-*   **Certified Nutritional Balance**: Menus are formulated by professional clinical nutritionists to fulfill 30–35% of daily micronutrient, iron, and caloric requirements tailored to age groups.
-*   **Traceability and Food Safety**: Rigorous lab-tested food safety inspections precede every delivery, tracked via a transparent digital monitoring system.
+*   **Satuan Pelayanan**: Dapur modern dan sanitasi yang melayani 2.500 hingga 3.000 siswa per hari, ditempatkan dalam radius pengiriman 20 menit dari sekolah mitra.
+*   **Pengadaan Lokal Langsung**: Sayur, ayam, daging sapi, ikan, telur, dan susu dibeli langsung dari kelompok tani lingkungan dan koperasi desa, menghilangkan perantara yang merugikan.
+*   **Keseimbangan Gizi Bersertifikat**: Menu dirumuskan oleh ahli gizi klinis profesional untuk memenuhi 30–35% kebutuhan mikronutrien, zat besi, dan kalori harian sesuai kelompok usia.
+*   **Keterlacakan dan Keamanan Pangan**: Pemeriksaan keamanan pangan di laboratorium yang ketat dilakukan sebelum setiap pengiriman, dilacak melalui sistem pemantauan digital yang transparan.
 
-##### Transforming Rural and Local Economies
+##### Mengubah Ekonomi Pedesaan dan Lokal
 
-The economic impact of the program extends far beyond the cafeteria. Every operational kitchen creates 45 to 50 permanent jobs—from local cooks and food prep specialists to delivery personnel. Smallholder dairy farmers and poultry breeders across Java, Sumatra, Sulawesi, and Eastern Indonesia are experiencing predictable, guaranteed domestic demand, rejuvenating the rural agricultural ecosystem.
+Dampak ekonomi program ini jauh melampaui kantin sekolah. Setiap dapur operasional menciptakan 45 hingga 50 lapangan kerja tetap—mulai dari juru masak lokal, spesialis pengolahan makanan, hingga petugas pengiriman. Peternak sapi perah dan unggas kecil di Jawa, Sumatra, Sulawesi, dan Indonesia Timur mengalami permintaan domestik yang pasti dan terjamin, menghidupkan kembali ekosistem pertanian pedesaan.
 
-##### Ending the Cycle of Stunting
+##### Menghentikan Lingkaran Stunting
 
-Indonesia's future as a global economic leader depends directly on the cognitive potential of its young generation. By guaranteeing balanced nutrition during crucial brain development stages, Makan Bergizi Gratis provides the biological foundation needed to excel in science, technology, engineering, and mathematics.
+Masa depan Indonesia sebagai pemimpin ekonomi global bergantung langsung pada potensi kognitif generasi mudanya. Dengan menjamin gizi seimbang pada tahap perkembangan otak yang krusial, Makan Bergizi Gratis menyediakan fondasi biologis yang dibutuhkan untuk unggul dalam sains, teknologi, rekayasa, dan matematika.

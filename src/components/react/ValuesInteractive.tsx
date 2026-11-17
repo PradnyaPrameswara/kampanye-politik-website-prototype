@@ -10,26 +10,26 @@ interface ValueItem {
 const leftValues: readonly ValueItem[] = [
   {
     id: 1,
-    title: 'Sovereignty',
-    description: 'Safeguarding our archipelagic integrity and national dignity with unwavering resolve.',
+    title: 'Kedaulatan',
+    description: 'Menjaga keutuhan kepulauan dan martabat bangsa dengan tekad yang tak goyah.',
   },
   {
     id: 3,
-    title: 'Clean Governance',
-    description: 'Upholding transparent administration and zero tolerance for corruption across services.',
+    title: 'Tata Kelola Bersih',
+    description: 'Menegakkan administrasi yang transparan dan tidak toleransi terhadap korupsi di seluruh layanan.',
   },
 ] as const;
 
 const rightValues: readonly ValueItem[] = [
   {
     id: 2,
-    title: 'Public Welfare',
-    description: 'Delivering daily nutrition and healthcare to ensure every citizen can thrive.',
+    title: 'Kesejahteraan Rakyat',
+    description: 'Menyediakan gizi dan layanan kesehatan harian agar setiap warga dapat berkembang.',
   },
   {
     id: 4,
-    title: 'Self-Reliance',
-    description: 'Advancing domestic food, energy, and industrial capacity for future generations.',
+    title: 'Kemandirian',
+    description: 'Membangun kapasitas pangan, energi, dan industri dalam negeri untuk generasi mendatang.',
   },
 ] as const;
 
@@ -54,9 +54,9 @@ export default function ValuesInteractive() {
         <div className="value-top-left-content">
           <div className="headline">
             <div className="dot"></div>
-            <div>Our Value</div>
+            <div>Nilai Kami</div>
           </div>
-          <h2 className="heading-style-h2">Discover our values that drive our mission forward.</h2>
+          <h2 className="heading-style-h2">Kenali nilai yang menggerakkan misi kami.</h2>
         </div>
       </div>
 

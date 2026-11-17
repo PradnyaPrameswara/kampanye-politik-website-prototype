@@ -12,8 +12,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Lora Variable', 'Lora', 'Georgia', 'serif'],
-        serif: ['Lora Variable', 'Lora', 'Georgia', 'serif'],
+        sans: ['Geist Serif', 'Georgia', 'serif'],
+        serif: ['Geist Serif', 'Georgia', 'serif'],
+        lora: ['Geist Serif', 'Georgia', 'serif'],
       },
       colors: {
         border: 'var(--border)',
@@ -94,7 +95,7 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            fontFamily: 'Lora Variable, Lora, serif',
+            fontFamily: 'Geist Serif, Georgia, serif',
             color: 'var(--tw-prose-body)',
             maxWidth: 'none',
             h4: {

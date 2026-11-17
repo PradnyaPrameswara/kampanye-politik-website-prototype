@@ -1,0 +1,90 @@
+---
+import ContentLayout from '@/layouts/ContentLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPrograms = await getCollection('programs');
+
+const orderedSlugs = [
+  'makan-bergizi-gratis',
+  'swasembada-pangan',
+  'hilirisasi-industri',
+  'ketahanan-energi',
+  'pendidikan-unggul',
+  'kesehatan-rakyat',
+] as const;
+
+const programs = orderedSlugs.flatMap(slug => {
+  const program = allPrograms.find(entry => entry.data.slug === slug);
+
+  return program ? [program] : [];
+});
+---
+
+<ContentLayout
+  title="Kabinet Merah Putih — Program Nasional"
+  description="Jelajahi program nasional Kabinet Merah Putih untuk kemakmuran dan kemandirian bangsa."
+  bannerTitle="Program Nasional"
+  bannerImage="/images/assets/66dc04da39706fc65e5ae286_Objectives%20Bg%20Image.webp"
+  currentPath="/program"
+>
+  <div class="section-objective">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium is-header">
+          <div class="objective-component">
+            <div class="objective-top-content-wrapper reveal-down">
+              <div class="objective-top-left-content-wrapper">
+                <h2 class="heading-style-h2">Program strategis untuk kemakmuran bangsa.</h2>
+              </div>
+              <p class="text-size-regular">Jelajahi program nasional yang dijalankan untuk memperkuat gizi, ketahanan pangan, hilirisasi industri, energi, pendidikan, dan kesehatan masyarakat di seluruh Indonesia.</p>
+            </div>
+            <div class="padding-bottom padding-large"></div>
+            <div class="objective-collection-list-wrapper w-dyn-list">
+              <div class="objective-collection-list w-dyn-items" role="list">
+                {programs.map((program) => {
+                  const slug = program.data.slug;
+
+                  return (
+                    <div class="objective-collection-item w-dyn-item" role="listitem">
+                      <a class="objective-card w-inline-block reveal-up" href={`/program/${slug}`}>
+                        <div class="objective-image-wrapper">
+                          <img
+                            alt={program.data.title}
+                            class="objective-image"
+                            loading="lazy"
+                            sizes="(max-width: 767px) 95vw, (max-width: 991px) 47vw, 39vw"
+                            src={`/images/programs/${slug}.webp`}
+                            onerror={`this.onerror = null; this.src = '${program.data.image}'`}
+                          />
+                        </div>
+                        <div class="objective-card-content-wrapper">
+                          <h5 class="heading-style-h5">{program.data.title}</h5>
+                          <p class="text-size-regular">{program.data.description}</p>
+                        </div>
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-cta">
+    <div class="padding-global">
+      <div class="container-large">
+        <div class="padding-section-medium">
+          <div class="cta-component reveal-scale">
+            <div class="cta-content-wrapper">
+              <h2 class="heading-style-h2">Bersama wujudkan program ini.</h2>
+              <a class="button w-inline-block" href="/contact"><div>Hubungi kami</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ContentLayout>

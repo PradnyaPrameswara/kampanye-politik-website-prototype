@@ -33,20 +33,22 @@ const knownImage = slug in blogImages ? blogImages[slug as BlogSlug] : undefined
 
 const postImageSrc = knownImage ?? (entry.data.image ? entry.data.image.src : `/images/blog/${slug}.jpg`);
 
-const formattedDate = new Intl.DateTimeFormat('en-US', {
+const formattedDate = new Intl.DateTimeFormat('id-ID', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 }).format(entry.data.publishDate);
 
-const rawCat = 'id' in entry.data.category ? entry.data.category.id : String(entry.data.category || 'Policy');
+const allCategories = await getCollection('categories');
 
-const categoryName = rawCat.charAt(0).toUpperCase() + rawCat.slice(1);
+const rawCat = 'id' in entry.data.category ? entry.data.category.id : String(entry.data.category || 'policy');
+
+const categoryName = allCategories.find((category) => category.id === rawCat || category.data.slug === rawCat)?.data.name ?? 'Kebijakan';
 ---
 
 <ContentLayout 
-  title={`CivicUnity - ${entry.data.title} | Blog & resources`}
-  bannerTitle="Blog & resources"
+  title={`Kabinet Merah Putih — ${entry.data.title}`}
+  bannerTitle="Berita & Kebijakan"
   bannerImage="/images/assets/66dc04d841e23610d102b9e4_Blog%20Bg%20Image.webp"
   currentPath="/blog"
 >

@@ -23,7 +23,7 @@ const getSite = () => {
   if (process.env.SITE) return process.env.SITE;
   if (isCloudflare && process.env.CF_PAGES_URL) return process.env.CF_PAGES_URL;
   if (isGitHubPages) return `https://${repoOwner.toLowerCase()}.github.io`;
-  return 'https://civicunity.org';
+  return 'https://kabinet-merah-putih.pages.dev';
 };
 
 // Determine base path
@@ -108,7 +108,7 @@ function basePathRewriter(basePath) {
 
         function processJs(content) {
           content = content.replace(/(["'])\/(images|icons|favicon\.png|apple-touch-icon\.png)/g, (m, q, p) => `${q}${cleanBase}/${p}`);
-          content = content.replace(/(["'])\/(about|contact|team|blog|donate|join|objectives|member|post)(["'/?#])/g, (m, q, r, end) => `${q}${cleanBase}/${r}${end}`);
+          content = content.replace(/(["'])\/(about|contact|team|blog|donate|join|objectives|member|post|program)(["'/?#])/g, (m, q, r, end) => `${q}${cleanBase}/${r}${end}`);
           return content;
         }
 
@@ -151,14 +151,22 @@ export default defineConfig({
     basePathRewriter(base),
   ],
   redirects: {
-    '/product/5':   '/donate/5',
-    '/product/10':  '/donate/10',
-    '/product/25':  '/donate/25',
-    '/product/50':  '/donate/50',
-    '/product/100': '/donate/100',
+    '/donate':           '/program',
+    '/donate/success':   '/program',
+    '/donate/cancel':    '/program',
+    '/donate/5':         '/program',
+    '/donate/10':        '/program',
+    '/donate/25':        '/program',
+    '/donate/50':        '/program',
+    '/donate/100':       '/program',
+    '/checkout':         '/program',
+    '/product/5':        '/program',
+    '/product/10':       '/program',
+    '/product/25':       '/program',
+    '/product/50':       '/program',
+    '/product/100':      '/program',
     '/blogcategory/advocacy':  '/blog/category/advocacy',
     '/blogcategory/community': '/blog/category/community',
     '/blogcategory/policy':    '/blog/category/policy',
-    '/checkout':               '/donate/50',
   },
 });

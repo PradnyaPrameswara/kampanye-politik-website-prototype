@@ -7,16 +7,19 @@ Read and adhere to this file on every turn. All responses, docs, and code must b
 ## 1. Mandatory Skills & Global MCP
 
 ### Active Skills (Always Apply)
+- **`using-superpowers`**: Invoke relevant skills before any action; process skills first, implementation skills second.
 - **`using-agent-skills`**: Discover and route task workflows by development phase.
 - **`ask-matt`**: Select skill flows, architectural maps, and routing across tasks.
+- **`wayfinder`**: Map large, foggy efforts as decision tickets when the path forward is unclear.
+- **`caveman`**: Terse communication style; keep technical substance, drop filler.
+- **`emil-design-eng`**: UI polish, animation decisions, interaction craft, and Before/After review format.
 - **`karpathy-guidelines`**: Simplicity first, surgical edits, verify assumptions, no overcomplication.
 - **`ui-ux-pro-max`**: Design intelligence, accessibility (WCAG AA), responsive layout, and UX standards.
 - **`antislop`**: Enforce anti-slop filters, liveliness dials, and design purpose across UI and copy.
 
 ### Global MCP Servers
-- **`codedb`**: Deep AST indexing, symbol lookups, call paths, and task context.
-- **`lexa`**: Code graphs, symbol searches, dependency tracing, and task briefs.
-Both MCP servers are globally enabled for this project. Use them before modifying code.
+- **`codegraph`**: Always use first. Call `codegraph_explore` before reading, answering, or editing indexed code. Returns verbatim source, call paths, and blast radius.
+- **`codedb`** and **`lexa`**: Available, but use only when explicitly authorized in the current chat.
 
 ---
 

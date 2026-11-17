@@ -19,31 +19,31 @@ export interface FaqAccordionProps {
 
 const defaultItems: FaqItem[] = [
   {
-    question: "What is the core vision of Asta Cita?",
-    answer: "Asta Cita sets eight strategic missions to safeguard national sovereignty, guarantee food self-sufficiency, and achieve Indonesia Emas 2045.",
+    question: "Apa visi utama Asta Cita?",
+    answer: "Asta Cita menetapkan delapan misi strategis untuk menjaga kedaulatan nasional, memastikan swasembada pangan, dan mewujudkan Indonesia Emas 2045.",
   },
   {
-    question: "How does Makan Bergizi Gratis work?",
-    answer: "The program provides daily nutritious meals to schoolchildren and mothers to end stunting and support local agricultural supply chains.",
+    question: "Bagaimana cara kerja Makan Bergizi Gratis?",
+    answer: "Program ini menyediakan makanan bergizi harian bagi anak sekolah dan ibu untuk menuntaskan stunting serta memperkuat rantai pasok pertanian lokal.",
   },
   {
-    question: "How is food self-reliance achieved?",
-    answer: "Indonesia modernizes agricultural infrastructure, expands farmland, and supports local farmers to eliminate reliance on basic food imports.",
+    question: "Bagaimana swasembada pangan dicapai?",
+    answer: "Indonesia memodernisasi infrastruktur pertanian, memperluas lahan garapan, dan mendukung petani lokal untuk mengurangi ketergantungan pada impor pangan pokok.",
   },
   {
-    question: "How are strategic resources managed?",
-    answer: "Domestic processing of minerals, agriculture, and maritime commodities adds local economic value and accelerates industrial growth.",
+    question: "Bagaimana sumber daya strategis dikelola?",
+    answer: "Pengolahan mineral, hasil pertanian, dan komoditas kelautan di dalam negeri meningkatkan nilai ekonomi lokal serta mempercepat pertumbuhan industri.",
   },
   {
-    question: "How can citizens follow progress?",
-    answer: "Citizens can track implementation updates through unified digital governance portals and regional public communication centers.",
+    question: "Bagaimana masyarakat dapat memantau progres?",
+    answer: "Masyarakat dapat memantau perkembangan pelaksanaan melalui portal tata kelola digital terpadu dan pusat komunikasi publik daerah.",
   },
 ];
 
 export function FaqAccordion({ 
   items = defaultItems, 
-  title = "Frequently asked question",
-  subtitle = "Key insights on national priorities and strategic implementation."
+  title = "Pertanyaan yang sering diajukan",
+  subtitle = "Wawasan utama mengenai prioritas nasional dan pelaksanaannya."
 }: FaqAccordionProps) {
   const faqList = items && items.length > 0 ? items : defaultItems;
 
@@ -56,7 +56,7 @@ export function FaqAccordion({
               <div className="faq-top-content-wrapper reveal-down">
                 <div className="headline">
                   <div className="dot"></div>
-                  <div>Faq</div>
+                  <div>Tanya Jawab</div>
                 </div>
                 <div className="faq-top-content">
                   <h2 className="heading-style-h2">{title}</h2>

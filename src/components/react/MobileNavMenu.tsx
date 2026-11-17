@@ -16,11 +16,11 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 const toHref = (path: string) => path === '/' ? (base ? `${base}/` : '/') : `${base}${path}`;
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Contact', path: '/contact' },
-  { name: 'Team', path: '/team' },
-  { name: 'Blog', path: '/blog' },
+  { name: 'Beranda', path: '/' },
+  { name: 'Tentang Kami', path: '/about' },
+  { name: 'Hubungi Kami', path: '/contact' },
+  { name: 'Tim', path: '/team' },
+  { name: 'Berita', path: '/blog' },
 ];
 
 const getActiveKey = (p: string): string => {
@@ -29,23 +29,27 @@ const getActiveKey = (p: string): string => {
   const cleanPath = pathWithoutBase.replace(/\/+$/, '') || '/';
 
   if (cleanPath === '/') {
-    return 'Home';
+    return 'Beranda';
   }
 
   if (cleanPath === '/about' || cleanPath.startsWith('/about/')) {
-    return 'About';
+    return 'Tentang Kami';
   }
 
   if (cleanPath === '/contact' || cleanPath.startsWith('/contact/')) {
-    return 'Contact';
+    return 'Hubungi Kami';
   }
 
   if (cleanPath === '/team' || cleanPath.startsWith('/team/') || cleanPath.startsWith('/member/')) {
-    return 'Team';
+    return 'Tim';
   }
 
   if (cleanPath === '/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/post/')) {
-    return 'Blog';
+    return 'Berita';
+  }
+
+  if (cleanPath === '/program' || cleanPath.startsWith('/program/')) {
+    return 'Program Nasional';
   }
 
   return '';
@@ -58,7 +62,7 @@ export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps)
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger render={<button className="text-neutral-white p-2" aria-label="Open menu" />}>
+      <SheetTrigger render={<button className="text-neutral-white p-2" aria-label="Buka menu" />}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="4" x2="20" y1="12" y2="12" />
           <line x1="4" x2="20" y1="6" y2="6" />
@@ -67,9 +71,9 @@ export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps)
       </SheetTrigger>
       
       <SheetContent side="right" showCloseButton={false} className="w-3/4 max-w-sm bg-neutral-white-200 p-6 flex flex-col overflow-y-auto border-l border-neutral-black-500/20">
-        <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
+        <SheetTitle className="sr-only">Menu Navigasi Seluler</SheetTitle>
         <div className="flex justify-end mb-8">
-          <SheetClose render={<button className="text-neutral-black-900 p-2" aria-label="Close menu" />}>
+          <SheetClose render={<button className="text-neutral-black-900 p-2" aria-label="Tutup menu" />}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 6 6 18" />
               <path d="m6 6 12 12" />
@@ -91,14 +95,17 @@ export default function MobileNavMenu({ currentPath = '/' }: MobileNavMenuProps)
         </nav>
         
         <div className="mt-auto flex flex-col gap-4">
-          <a href={toHref('/donate')} className="flex items-center justify-center gap-2 py-3 text-neutral-black-900 font-medium border border-neutral-black-500 rounded-[0.75rem]">
+          <a href={toHref('/program')} className={`flex items-center justify-center gap-2 py-3 text-neutral-black-900 font-medium border border-neutral-black-500 rounded-[0.75rem] ${activeKey === 'Program Nasional' ? 'font-bold' : ''}`} onClick={() => setOpen(false)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
             </svg>
-            Donate
+            Program Nasional
           </a>
-          <a href={toHref('/contact')} className="bg-brand-blue text-neutral-white py-4 rounded-[0.75rem] font-medium text-center transition-colors hover:bg-brand-red" onClick={() => setOpen(false)}>
-            Join us now
+          <a href={toHref('/program')} className={`bg-brand-blue text-neutral-white py-4 rounded-[0.75rem] font-medium text-center transition-colors hover:bg-brand-red ${activeKey === 'Program Nasional' ? 'font-bold' : ''}`} onClick={() => setOpen(false)}>
+            Jelajahi Program
           </a>
         </div>
       </SheetContent>

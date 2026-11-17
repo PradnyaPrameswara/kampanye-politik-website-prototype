@@ -2,56 +2,71 @@ import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
+const NEWSLETTER_EMAIL = 'newsletter@example.com';
+
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<'idle' | 'prepared'>('idle');
+  const [mailtoLink, setMailtoLink] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!email) return;
+    const subject = 'Permintaan berlangganan newsletter Kabinet Merah Putih';
+    const body = `E-mail: ${email}\n\nSaya ingin berlangganan newsletter Kabinet Merah Putih.`;
+    const link = `mailto:${NEWSLETTER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    setStatus('loading');
-
-    try {
-      const { promise, resolve } = Promise.withResolvers<void>();
-      setTimeout(resolve, 1000);
-      await promise;
-      setStatus('success');
-      setMessage('Thanks for subscribing!');
-      setEmail('');
-    } catch {
-      setStatus('error');
-      setMessage('Something went wrong. Please try again.');
-    }
+    setMailtoLink(link);
+    setStatus('prepared');
+    window.location.href = link;
   };
 
   return (
     <div className="w-full max-w-sm mt-4">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <div className="flex gap-2">
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            className="flex-1 bg-white text-neutral-black-900 border-none rounded-[0.75rem] h-10 px-5 py-3 focus-visible:ring-2 focus-visible:ring-brand-blue"
-            required
-            disabled={status === 'loading'}
-          />
-          <Button
-            type="submit"
-            variant="default"
-            className="bg-brand-blue hover:bg-brand-red text-white rounded-[0.75rem] px-4 font-medium transition-colors h-10 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
-            disabled={status === 'loading'}
+      <p className="text-sm text-color-white-200 mb-2">
+        Demo prototipe — langganan tidak diproses, hanya simulasi tampilan.
+      </p>
+      {status === 'prepared' ? (
+        <div className="flex flex-col gap-2" role="status">
+          <p className="text-sm text-white">
+            Aplikasi email akan terbuka dengan pesan contoh. Ini demo — jangan kirim ke alamat tersebut.
+          </p>
+          <a className="text-sm text-white underline self-start" href={mailtoLink}>
+            Buka aplikasi email
+          </a>
+          <button
+            className="text-sm text-white underline self-start"
+            onClick={() => setStatus('idle')}
+            type="button"
           >
-            {status === 'loading' ? '...' : 'Subscribe'}
-          </Button>
+            Kembali ke formulir
+          </button>
         </div>
-        {status === 'success' && <p className="text-sm text-green-400">{message}</p>}
-        {status === 'error' && <p className="text-sm text-brand-red">{message}</p>}
-      </form>
+      ) : (
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+          <div className="flex gap-2">
+            <label className="sr-only" htmlFor="newsletter-email">
+              Alamat e-mail Anda
+            </label>
+            <Input
+              id="newsletter-email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Masukkan alamat e-mail Anda"
+              className="flex-1 bg-white text-neutral-black-900 border-none rounded-[0.75rem] h-10 px-5 py-3 focus-visible:ring-2 focus-visible:ring-brand-blue"
+              required
+            />
+            <Button
+              type="submit"
+              variant="default"
+              className="bg-brand-blue hover:bg-brand-red text-white rounded-[0.75rem] px-4 font-medium transition-colors h-10 flex items-center justify-center"
+            >
+              Berlangganan
+            </Button>
+          </div>
+        </form>
+      )}
     </div>
   );
 }
