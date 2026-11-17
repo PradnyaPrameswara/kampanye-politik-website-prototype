@@ -6,6 +6,7 @@ import SectionWrapper from '@/components/layout/SectionWrapper.astro';
 import FaqAccordion from '@/components/react/FaqAccordion.tsx';
 import VideoLightbox from '@/components/react/VideoLightbox.tsx';
 import { getCollection } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 import events from '@/data/events.json';
 import { faqItems, faqTitle, faqSubtitle } from '@/components/sections/faq';
 
@@ -27,7 +28,7 @@ const orderedObjectiveSlugs = [
 ] as const;
 
 const objectives = orderedObjectiveSlugs.flatMap((slug) => {
-  const obj = allObjectives.find((o) => o.slug === slug);
+  const obj = allObjectives.find((o) => entrySlug(o) === slug);
 
   return obj ? [obj] : [];
 });
@@ -84,7 +85,7 @@ const featuredBlogSlugs = [
 ] as const;
 
 const blogPosts = featuredBlogSlugs.flatMap((slug) => {
-  const post = allPosts.find((p) => p.slug === slug);
+  const post = allPosts.find((p) => entrySlug(p) === slug);
 
   return post ? [post] : [];
 });
@@ -243,9 +244,9 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
               <div class="objective-collection-list w-dyn-items" role="list">
                 {objectives.slice(0, 3).map((obj) => (
                   <div class="objective-collection-item w-dyn-item" role="listitem">
-                    <a class="objective-card w-inline-block reveal-up" href={`/objectives/${obj.slug}`}>
+                    <a class="objective-card w-inline-block reveal-up" href={`/objectives/${entrySlug(obj)}`}>
                       <div class="objective-image-wrapper">
-                        <img alt={obj.data.title} class="objective-image" loading="lazy" src={objectiveImages[obj.slug as keyof typeof objectiveImages] || `/images/objectives/${obj.slug}.jpg`} />
+                        <img alt={obj.data.title} class="objective-image" loading="lazy" src={objectiveImages[entrySlug(obj) as keyof typeof objectiveImages] || `/images/objectives/${entrySlug(obj)}.jpg`} />
                       </div>
                       <div class="objective-card-content-wrapper">
                         <h5 class="heading-style-h5">{obj.data.title}</h5>
@@ -476,16 +477,16 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
                             class="blog-image" 
                             loading="lazy" 
                             sizes="100vw" 
-                            src={blogImages[post.slug as keyof typeof blogImages] || (post.data.image ? post.data.image.src : `/images/blog/${post.slug}.jpg`)} 
+                            src={blogImages[entrySlug(post) as keyof typeof blogImages] || (post.data.image ? post.data.image.src : `/images/blog/${entrySlug(post)}.jpg`)} 
                           />
                         </div>
                         <div class="blog-card-content-wrapper">
                           <div class="text-size-small">{new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-                          <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
+                          <a class="blog-text-link w-inline-block" href={`/post/${entrySlug(post)}`}>
                             <h5 class="heading-style-h5">{post.data.title}</h5>
                           </a>
                           <div class="blog-card-content">
-                            <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
+                            <a class="blog-button w-inline-block" href={`/post/${entrySlug(post)}`}>
                               <div>Baca Selengkapnya</div>
                               <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                             </a>

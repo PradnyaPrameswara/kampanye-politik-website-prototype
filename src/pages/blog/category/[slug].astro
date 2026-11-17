@@ -1,6 +1,7 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 
 export async function getStaticPaths() {
   const categories = await getCollection('categories');
@@ -86,7 +87,7 @@ const filteredPosts = allPosts
                           class="blog-image" 
                           loading="lazy" 
                           sizes="(max-width: 479px) 88vw, (max-width: 767px) 41vw, (max-width: 991px) 37vw, 18vw" 
-                          src={blogImages[post.slug] || post.data.image} 
+                          src={blogImages[entrySlug(post)] || post.data.image} 
                         />
                       </div>
                       <div class="blog-card-content-wrapper">
@@ -95,7 +96,7 @@ const filteredPosts = allPosts
                         </div>
                         <h5 class="heading-style-h5">{post.data.title}</h5>
                         <div class="blog-card-content">
-                          <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
+                          <a class="blog-button w-inline-block" href={`/post/${entrySlug(post)}`}>
                             <div>Baca Selengkapnya</div>
                             <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                           </a>

@@ -1,21 +1,22 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 
 export async function getStaticPaths() {
   const objectives = await getCollection('objectives');
 
   return objectives.map(objective => ({
-    params: { slug: objective.slug || objective.id },
+    params: { slug: entrySlug(objective) },
     props: { objective },
   }));
 }
 
 const { objective } = Astro.props;
 
-const { Content } = await objective.render();
+const { Content } = await render(objective);
 
-const slug = objective.slug || objective.id;
+const slug = entrySlug(objective);
 
 const objectiveImages = {
   'advancing-social-equity-and-justice': '/images/assets/66de86499b602e1b2f5cfbc1_Objectives%20Image%206.jpg',
