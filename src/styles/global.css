@@ -2972,6 +2972,7 @@ blockquote {
 .donation-component {
   justify-content: space-between;
   align-items: center;
+  column-gap: 1.875rem;
   display: flex;
 }
 
@@ -2980,6 +2981,7 @@ blockquote {
   grid-row-gap: 1rem;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   display: flex;
 }
 
@@ -2987,10 +2989,12 @@ blockquote {
   grid-column-gap: 1.25rem;
   grid-row-gap: 1.25rem;
   flex-flow: column;
-  flex: none;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  flex: 1 1 38.3125rem;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 38.3125rem;
   display: flex;
 }
 
@@ -3025,7 +3029,9 @@ blockquote {
   border-radius: .75rem;
   flex: none;
   width: 27.1875rem;
-  height: 27.1875rem;
+  max-width: 27.1875rem;
+  aspect-ratio: 1 / 1;
+  height: auto;
   overflow: hidden;
 }
 
@@ -4487,6 +4493,7 @@ blockquote {
       animation: none !important;
       transition: none !important;
     }
+
   }
 }
 .w-inline-block {
@@ -4963,7 +4970,8 @@ blockquote {
   }
 
   .donation-left-content-wrapper {
-    width: auto;
+    width: 100%;
+    flex: 0 1 auto;
   }
 
   .donation-left-top-content-wrapper {
@@ -4972,7 +4980,9 @@ blockquote {
   }
 
   .donation-image-wrapper {
-    width: auto;
+    width: 100%;
+    max-width: 27.1875rem;
+    aspect-ratio: 1;
     height: auto;
   }
 
@@ -6279,5 +6289,74 @@ blockquote {
 
   #w-node-_6e63ca34-08eb-2d2e-d34f-38af7296084e-222d6fbe {
     justify-self: start;
+  }
+}
+
+.button:focus-visible,
+.category-card:focus-visible,
+.donation-card:focus-visible {
+  outline: 2px solid var(--secendary--blue);
+  outline-offset: 2px;
+}
+
+.button:focus-visible {
+  background-color: var(--brand--red);
+}
+
+.button.is-secondary:focus-visible {
+  background-color: var(--neutral--black-500);
+}
+
+.button.is-secondary.is-normal:focus-visible {
+  background-color: var(--brand--red);
+}
+
+.button.is-normal:focus-visible {
+  background-color: var(--secendary--blue);
+}
+
+.category-card:focus-visible {
+  background-color: var(--brand--red);
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-up,
+  .reveal-down,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero-video,
+  .card-image-hover img,
+  .card-image-hover:hover img,
+  .faq-accordion,
+  .faq-icon-wrapper,
+  .faq-icon,
+  .faq-answer-wrapper[data-state="open"],
+  .faq-answer-wrapper[data-state="closed"],
+  .button,
+  .category-card,
+  .donation-card,
+  .team-image,
+  .event-image,
+  .donation-image,
+  .objective-card,
+  .blog-card,
+  .cover-image,
+  .team-details-image {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

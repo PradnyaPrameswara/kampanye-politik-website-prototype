@@ -1,17 +1,20 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 
 export async function getStaticPaths() {
   const team = await getCollection('team');
 
   return team.map(member => ({
-    params: { slug: member.id },
+    params: { slug: entrySlug(member) },
     props: { member },
   }));
 }
 
 const { member } = Astro.props;
+
+const memberSlug = entrySlug(member);
 
 const memberImages = {
   'john-smith': '/images/assets/66de885235a491ec7c9579d4_Team%20Image%206.webp',
@@ -24,6 +27,10 @@ const memberImages = {
 
 type MemberSlug = keyof typeof memberImages;
 
+function isMemberSlug(value: string): value is MemberSlug {
+  return value in memberImages;
+}
+
 interface LeaderRole {
   readonly title: string;
   readonly period: string;
@@ -35,10 +42,9 @@ interface LeaderProfile {
   readonly roles: readonly LeaderRole[];
 }
 
-// SAFETY: member.id is confirmed to be an existing key in memberImages
-const knownMemberImage = member.id in memberImages ? memberImages[member.id as MemberSlug] : undefined;
+const knownMemberImage = isMemberSlug(memberSlug) ? memberImages[memberSlug] : undefined;
 
-const memberImageSrc = knownMemberImage ?? (member.data.image ? member.data.image.src : `/images/team/${member.id}.webp`);
+const memberImageSrc = knownMemberImage ?? (member.data.image ? member.data.image.src : `/images/team/${memberSlug}.webp`);
 
 const leadershipProfiles: Record<MemberSlug, LeaderProfile> = {
   'john-smith': {
@@ -128,7 +134,7 @@ const leadershipProfiles: Record<MemberSlug, LeaderProfile> = {
   }
 };
 
-const profile = leadershipProfiles[member.id] || {
+const profile = leadershipProfiles[memberSlug] || {
   biography: member.data.bio,
   education: [
     'Pilar 1: Pelaksanaan tata kelola program strategis nasional secara transparan dan berintegritas.',
@@ -189,7 +195,7 @@ const profile = leadershipProfiles[member.id] || {
             <div class="padding-bottom padding-large"></div>
             <div class="team-details-bottom-content-wrapper">
               <div class="team-details w-richtext reveal-up">
-                <h5>{member.id === 'john-smith' ? 'Profil & Dedikasi Kepemimpinan' : 'Mandat & Gambaran Strategis'}</h5>
+                <h5>{memberSlug === 'john-smith' ? 'Profil & Dedikasi Kepemimpinan' : 'Mandat & Gambaran Strategis'}</h5>
                 <p>{profile.biography}</p>
               </div>
               <div class="w-layout-grid team-grid reveal-scale">
@@ -201,7 +207,7 @@ const profile = leadershipProfiles[member.id] || {
                 ))}
               </div>
               <div class="team-details _2nd w-richtext reveal-up">
-                <h5>{member.id === 'john-smith' ? 'Visi & Landasan Kepemimpinan' : 'Fokus Program & Indikator Keberhasilan'}</h5>
+                <h5>{memberSlug === 'john-smith' ? 'Visi & Landasan Kepemimpinan' : 'Fokus Program & Indikator Keberhasilan'}</h5>
                 {profile.education.map((edu) => (
                   <p>{edu}</p>
                 ))}
