@@ -1,6 +1,7 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import { getCollection } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 
 const allObjectives = await getCollection('objectives');
 
@@ -37,7 +38,7 @@ const orderedSlugs = [
 ] as const;
 
 const sortedObjectives = orderedSlugs.flatMap(slug => {
-  const objective = allObjectives.find(o => o.slug === slug);
+  const objective = allObjectives.find(o => entrySlug(o) === slug);
 
   return objective ? [objective] : [];
 });
@@ -66,14 +67,14 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
               <div class="objective-collection-list w-dyn-items" role="list">
                 {sortedObjectives.map((item) => (
                   <div class="objective-collection-item w-dyn-item" role="listitem">
-                    <a class="objective-card w-inline-block reveal-up" href={`/objectives/${item.slug}`}>
+                    <a class="objective-card w-inline-block reveal-up" href={`/objectives/${entrySlug(item)}`}>
                       <div class="objective-image-wrapper">
                         <img 
                           alt={item.data.title} 
                           class="objective-image" 
                           loading="lazy" 
                           sizes="(max-width: 767px) 95vw, (max-width: 991px) 47vw, 39vw" 
-                          src={objectiveImages[item.slug as keyof typeof objectiveImages] || (item.data.image ? item.data.image.src : `/images/objectives/${item.slug}.jpg`)} 
+                          src={objectiveImages[entrySlug(item) as keyof typeof objectiveImages] || (item.data.image ? item.data.image.src : `/images/objectives/${entrySlug(item)}.jpg`)} 
                         />
                       </div>
                       <div class="objective-card-content-wrapper">
@@ -135,18 +136,18 @@ const sortedObjectives = orderedSlugs.flatMap(slug => {
                             class="blog-image" 
                             loading="lazy" 
                             sizes="100vw" 
-                            src={blogImages[post.slug as keyof typeof blogImages] || (post.data.image ? post.data.image.src : `/images/blog/${post.slug}.jpg`)} 
+                            src={blogImages[entrySlug(post) as keyof typeof blogImages] || (post.data.image ? post.data.image.src : `/images/blog/${entrySlug(post)}.jpg`)} 
                           />
                         </div>
                         <div class="blog-card-content-wrapper">
                           <div class="text-size-small">
                             {new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}
                           </div>
-                          <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
+                          <a class="blog-text-link w-inline-block" href={`/post/${entrySlug(post)}`}>
                             <h5 class="heading-style-h5">{post.data.title}</h5>
                           </a>
                           <div class="blog-card-content">
-                            <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
+                            <a class="blog-button w-inline-block" href={`/post/${entrySlug(post)}`}>
                               <div>Baca Selengkapnya</div>
                               <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                             </a>

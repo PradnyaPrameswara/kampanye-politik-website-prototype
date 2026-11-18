@@ -1,21 +1,22 @@
 ---
 import ContentLayout from '@/layouts/ContentLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
 
   return posts.map(entry => ({
-    params: { slug: entry.slug || entry.id },
+    params: { slug: entrySlug(entry) },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
-const slug = entry.slug || entry.id;
+const slug = entrySlug(entry);
 
 const blogImages = {
   'understanding-recent-policy-changes': '/images/assets/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg',

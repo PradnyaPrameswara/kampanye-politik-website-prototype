@@ -2,6 +2,7 @@
 import ContentLayout from '@/layouts/ContentLayout.astro';
 import FaqAccordion from '@/components/react/FaqAccordion';
 import { getCollection } from 'astro:content';
+import { entrySlug } from '@/lib/entry';
 import { faqItems, faqTitle, faqSubtitle } from '@/components/sections/faq';
 
 const allPosts = await getCollection('blog');
@@ -81,7 +82,7 @@ const teamMembers = [
               <div class="team-collection-list w-dyn-items" role="list">
                 {teamMembers.map((member) => (
                   <div class="team-collection-list-item w-dyn-item" role="listitem">
-                    <a class="team-card w-inline-block" href={`/member/${member.slug}`}>
+                    <a class="team-card w-inline-block" href={`/member/${entrySlug(member)}`}>
                       <div class="team-image-wrapper" style="background-image:url('/images/assets/66dc1336a0bd34b5411c0bb8_Team%20Bg%20Image.jpg')">
                         <img 
                           alt={member.name} 
@@ -140,18 +141,18 @@ const teamMembers = [
                             class="blog-image" 
                             loading="lazy" 
                             sizes="100vw" 
-                            src={blogImages[post.slug as keyof typeof blogImages] || '/images/assets/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg'} 
+                            src={blogImages[entrySlug(post) as keyof typeof blogImages] || '/images/assets/66de845af00d0586abb5ff9f_Blog%20Image%206.jpg'} 
                           />
                         </div>
                         <div class="blog-card-content-wrapper">
                           <div class="text-size-small">
                             {new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}
                           </div>
-                          <a class="blog-text-link w-inline-block" href={`/post/${post.slug}`}>
+                          <a class="blog-text-link w-inline-block" href={`/post/${entrySlug(post)}`}>
                             <h5 class="heading-style-h5">{post.data.title}</h5>
                           </a>
                           <div class="blog-card-content">
-                            <a class="blog-button w-inline-block" href={`/post/${post.slug}`}>
+                            <a class="blog-button w-inline-block" href={`/post/${entrySlug(post)}`}>
                               <div>Baca Selengkapnya</div>
                               <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d84a2c1e5e023ff6fd_Blog%20Arrow.svg" />
                             </a>
