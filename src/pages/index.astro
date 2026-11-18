@@ -356,16 +356,9 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
             <div class="padding-bottom padding-large"></div>
             <div class="event-bottom-content-wrapper">
               {events.map((event, i) => {
-                const eventImg = i === 1 
-                  ? '/images/assets/66ead80bd0b2f867500887cb_Event%20Image%202.avif' 
-                  : i === 2 
-                    ? '/images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203.jpg'
-                    : '/images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201.jpg';
-                const eventSrcset = i === 1
-                  ? '/images/assets/66ead80bd0b2f867500887cb_Event%20Image%202-p-500.avif 500w, /images/assets/66ead80bd0b2f867500887cb_Event%20Image%202.avif 1152w'
-                  : i === 2
-                    ? '/images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203-p-500.jpg 500w, /images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203-p-800.jpg 800w, /images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203-p-1080.jpg 1080w, /images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203.jpg 1152w'
-                    : '/images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201-p-500.jpg 500w, /images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201-p-800.jpg 800w, /images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201-p-1080.jpg 1080w, /images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201.jpg 1152w';
+                const eventNumber = i + 1;
+                const eventImg = `/images/events/localized/event-${eventNumber}.webp`;
+                const eventSrcset = `/images/events/localized/event-${eventNumber}-500.webp 500w, /images/events/localized/event-${eventNumber}-800.webp 800w, /images/events/localized/event-${eventNumber}-1080.webp 1080w, /images/events/localized/event-${eventNumber}.webp 1152w`;
                 return (
                   <div class="event-card reveal-scale">
                     <div class="event-image-wrapper">
