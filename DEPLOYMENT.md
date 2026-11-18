@@ -10,7 +10,7 @@ This project is configured for static output deployment on both **Cloudflare Pag
 - **Framework preset**: `None` / `Astro`
 - **Build command**: `npm run build`
 - **Build output directory**: `dist`
-- **Node.js version**: `20` (pinned via `actions/setup-node` in the GitHub Actions workflow)
+- **Node.js version**: `22.23.4` (pinned via `actions/setup-node` in the GitHub Actions workflow; Astro 7 requires Node `>=22.23.4`)
 
 ### Environment Variables
 No required environment variables for basic static deployment. Optional overrides:
@@ -43,7 +43,7 @@ To enable GitHub Pages deployment via GitHub Actions:
 ### Workflow Behavior
 The workflow at `.github/workflows/deploy.yml`:
 1. Triggers on pushes to `main` and supports manual execution via `workflow_dispatch`.
-2. Checks out code and provisions Node.js 20 with npm caching.
+2. Checks out code and provisions Node.js 22.23.4 with npm caching.
 3. Runs `npm ci` for clean dependency resolution.
 4. Uses `actions/configure-pages@v5` to determine the environment's base path:
    - For default project pages (`https://<owner>.github.io/<repo>/`), it sets `ASTRO_BASE` to `/<repo>`.
