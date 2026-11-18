@@ -5,7 +5,7 @@
     "location": "Jakarta Convention Center (JCC)",
     "date": "10 November 2024",
     "time": "09:00 - 13:00 WIB",
-    "image": "event-image-1.jpg"
+    "image": "/images/assets/66ead80b851d571cc8c25ed8_Event%20Image%201.jpg"
   },
   {
     "title": "Rapat Koordinasi Makan Bergizi Gratis",
@@ -13,7 +13,7 @@
     "location": "JIExpo Kemayoran, Jakarta",
     "date": "25 November 2024",
     "time": "08:30 - 12:30 WIB",
-    "image": "event-image-2.avif"
+    "image": "/images/assets/66ead80bd0b2f867500887cb_Event%20Image%202.avif"
   },
   {
     "title": "Sosialisasi Hilirisasi 26 Komoditas dan Energi",
@@ -21,6 +21,6 @@
     "location": "Ruang Pertemuan Nusantara, Jakarta",
     "date": "5 Desember 2024",
     "time": "10:00 - 15:30 WIB",
-    "image": "event-image-3.jpg"
+    "image": "/images/assets/66ead80b5be6571f08a1a5d7_Event%20Image%203.jpg"
   }
 ]
