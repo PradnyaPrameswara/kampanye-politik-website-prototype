@@ -35,7 +35,6 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "10.6.1",
-    "jsdom": "^28.1.0",
     "oxlint": "1.85.0",
     "typescript": "^5.7.0"
   }
