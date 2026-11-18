@@ -31,6 +31,7 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const sha = process.env.HEAD_SHA;
+            const shortSha = sha.slice(0, 7);
             const branch = process.env.BRANCH;
             const prNumber = Number(process.env.PR_NUMBER);
             const action = process.env.ACTION;
@@ -81,15 +82,19 @@ jobs:
             function urlFromComment(body) {
               const rows = body.split('</tr>');
               for (const row of rows) {
-                if (!row.includes(sha)) continue;
-                const match = row.match(/https:\/\/[a-z0-9-]+\.agungpradnya7\.workers\.dev/);
-                if (match) return match[0];
+                if (!row.includes(shortSha)) continue;
+                const matches = Array.from(
+                  row.matchAll(/https:\/\/([a-z0-9-]+)\.agungpradnya7\.workers\.dev/g),
+                );
+                const immutable = matches.find((match) => /^[0-9a-f]{8}-/.test(match[1]));
+                if (immutable) return immutable[0];
+                if (matches[0]) return matches[0][0];
               }
               return null;
             }
 
             let previewUrl = null;
-            for (let attempt = 0; attempt < 40; attempt += 1) {
+            for (let attempt = 0; attempt < 8; attempt += 1) {
               const { data: comments } = await github.rest.issues.listComments({
                 owner,
                 repo,
