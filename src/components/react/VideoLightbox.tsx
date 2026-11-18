@@ -36,7 +36,7 @@ export function VideoLightbox({ thumbnailSrc, videoUrl, triggerLabel = 'Saksikan
           src={thumbnailSrc} 
         />
         <div className="hero-lightbox-content-wrapper pointer-events-none">
-          <div>Special massege</div>
+          <div>Special message</div>
           <div className="hero-lightbox-content">
             <div className="heading-style-h6 is-white">{triggerLabel}</div>
             <div className="hero-video">
@@ -58,7 +58,7 @@ export function VideoLightbox({ thumbnailSrc, videoUrl, triggerLabel = 'Saksikan
             allowFullScreen
           />
         </div>
-        <DialogClose render={<button className="absolute top-4 right-4 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-brand-red transition-colors focus:outline-none" aria-label="Tutup" />}>
+        <DialogClose render={<button className="absolute top-4 right-4 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-brand-red transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black" aria-label="Tutup" />}>
           <XIcon className="w-6 h-6" />
         </DialogClose>
       </DialogContent>
