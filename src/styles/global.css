@@ -2291,8 +2291,18 @@ blockquote {
 .brand-logo-wrapper {
   float: left;
   max-width: 100%;
+  background-color: transparent;
   display: inline-block;
   flex-shrink: 0;
+}
+
+.brand-logo-wrapper:hover {
+  opacity: .8;
+}
+
+.brand-logo-wrapper:focus-visible {
+  outline: 2px solid var(--secendary--blue);
+  outline-offset: 4px;
 }
 
 .header-bg {
@@ -5820,6 +5830,10 @@ blockquote {
 
   .navbar {
     padding: 1rem;
+  }
+
+  .nav-cart-button .text-block {
+    display: none;
   }
 
   .nav-cart-item {
