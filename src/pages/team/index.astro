@@ -94,7 +94,7 @@ const teamMembers = [
                       </div>
                       <div class="team-card-content-wrapper">
                         <div class="team-card-content">
-                          <h5 class="heading-style-h5 text-color-white">{member.name}</h5>
+                          <h3 class="heading-style-h5 text-color-white">{member.name}</h3>
                           <img alt="" loading="lazy" src="/images/assets/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
                         </div>
                         <div class="text-size-regular text-color-white">{member.role}</div>
@@ -149,7 +149,7 @@ const teamMembers = [
                             {new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}
                           </div>
                           <a class="blog-text-link w-inline-block" href={`/post/${entrySlug(post)}`}>
-                            <h5 class="heading-style-h5">{post.data.title}</h5>
+                            <h3 class="heading-style-h5">{post.data.title}</h3>
                           </a>
                           <div class="blog-card-content">
                             <a class="blog-button w-inline-block" href={`/post/${entrySlug(post)}`}>

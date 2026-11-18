@@ -27,7 +27,7 @@ export default function MissionVisionCards() {
           />
         </div>
         <CardContent className="mission-card-content-wrapper p-0">
-          <h4 className="heading-style-h4">Misi</h4>
+          <h3 className="heading-style-h4">Misi</h3>
           <div
             id="mission-card-content"
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"
@@ -72,7 +72,7 @@ export default function MissionVisionCards() {
           />
         </div>
         <CardContent className="mission-card-content-wrapper p-0">
-          <h4 className="heading-style-h4">Visi</h4>
+          <h3 className="heading-style-h4">Visi</h3>
           <div
             id="vision-card-content"
             className="mission-card-content overflow-hidden transition-all duration-500 ease-in-out"

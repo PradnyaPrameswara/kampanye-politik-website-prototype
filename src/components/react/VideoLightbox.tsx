@@ -38,7 +38,7 @@ export function VideoLightbox({ thumbnailSrc, videoUrl, triggerLabel = 'Saksikan
         <div className="hero-lightbox-content-wrapper pointer-events-none">
           <div>Special massege</div>
           <div className="hero-lightbox-content">
-            <h6 className="heading-style-h6 is-white">{triggerLabel}</h6>
+            <div className="heading-style-h6 is-white">{triggerLabel}</div>
             <div className="hero-video">
               <img alt="" className="hero-video-image" loading="lazy" src="/icons/play-button.svg" />
             </div>
