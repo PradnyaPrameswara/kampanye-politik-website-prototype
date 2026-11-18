@@ -13,6 +13,7 @@ const isGitHubPages = process.env.GITHUB_PAGES === 'true' || process.env.DEPLOY_
 
 const defaultRepoOwner = 'PradnyaPrameswara';
 const defaultRepoName = 'kampanye-politik-website-prototype';
+const defaultCloudflareSite = 'https://kampanye-politik-website-prototype.agungpradnya7.workers.dev';
 
 const repoOwner = process.env.GITHUB_REPOSITORY_OWNER ||
   (process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[0] : defaultRepoOwner);
@@ -24,7 +25,7 @@ const getSite = () => {
   if (process.env.SITE) return process.env.SITE;
   if (isCloudflare && process.env.CF_PAGES_URL) return process.env.CF_PAGES_URL;
   if (isGitHubPages) return `https://${repoOwner.toLowerCase()}.github.io`;
-  return 'https://kabinet-merah-putih.pages.dev';
+  return defaultCloudflareSite;
 };
 
 // Determine base path
