@@ -74,7 +74,7 @@ export function FaqAccordion({
                     className="faq-accordion reveal-up border-b-0"
                   >
                     <AccordionTrigger className="faq-question-wrapper w-full text-left bg-transparent border-none p-0 cursor-pointer group hover:no-underline [&>svg]:hidden">
-                      <h6 className="heading-style-h6">{item.question}</h6>
+                      <div className="heading-style-h6">{item.question}</div>
                       <div className="faq-icon-wrapper">
                         <div className="faq-icon _1st"></div>
                         <div className="faq-icon _2nd"></div>

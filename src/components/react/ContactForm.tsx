@@ -51,6 +51,7 @@ export const ContactForm = () => {
           </div>
           <div className="contact-form-field-wrapper">
             <Button
+              variant="ghost"
               className="button is-normal w-button"
               onClick={() => setStatus('idle')}
               type="button"
@@ -71,7 +72,7 @@ export const ContactForm = () => {
           <div className="contact-form-field-wrapper">
             <label htmlFor="name">Nama</label>
             <Input
-              className="input w-input"
+              className="input w-input !bg-neutral-white-200 !rounded-[0.75rem] !border-0"
               data-name="Name"
               id="name"
               maxLength={256}
@@ -85,7 +86,7 @@ export const ContactForm = () => {
           <div className="contact-form-field-wrapper">
             <label htmlFor="Email">E-mail</label>
             <Input
-              className="input w-input"
+              className="input w-input !bg-neutral-white-200 !rounded-[0.75rem] !border-0"
               data-name="Email"
               id="Email"
               maxLength={256}
@@ -99,7 +100,7 @@ export const ContactForm = () => {
           <div className="contact-form-field-wrapper">
             <label htmlFor="Phone">Nomor telepon</label>
             <Input
-              className="input w-input"
+              className="input w-input !bg-neutral-white-200 !rounded-[0.75rem] !border-0"
               data-name="Phone"
               id="Phone"
               maxLength={256}
@@ -113,7 +114,7 @@ export const ContactForm = () => {
           <div className="contact-form-field-wrapper">
             <label htmlFor="Subject">Subjek</label>
             <Input
-              className="input w-input"
+              className="input w-input !bg-neutral-white-200 !rounded-[0.75rem] !border-0"
               data-name="Subject"
               id="Subject"
               maxLength={256}
@@ -131,7 +132,7 @@ export const ContactForm = () => {
           >
             <label htmlFor="Massage">Bagaimana kami dapat membantu Anda?</label>
             <Textarea
-              className="input is-massage w-input"
+              className="input is-massage w-input !bg-neutral-white-200 !rounded-[0.75rem] !border-0"
               data-name="Massage"
               id="Massage"
               maxLength={5000}
@@ -142,6 +143,7 @@ export const ContactForm = () => {
           </div>
 
           <Button
+            variant="ghost"
             className="button is-normal w-button"
             id="w-node-d1c3d64f-8917-cc52-5f1d-e11fa8182ea9-222d6faf"
             style={{ gridArea: 'span 1 / span 2 / span 1 / span 2' }}

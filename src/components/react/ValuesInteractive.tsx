@@ -87,14 +87,14 @@ export default function ValuesInteractive() {
                 onClick={() => handleClick(item.id)}
                 onKeyDown={handleKeyDown(item.id)}
               >
-                <h6
+                <h3
                   className="heading-style-h6 transition-colors duration-300"
                   style={{
                     color: isActive ? 'rgb(255, 255, 255)' : 'rgb(0, 36, 102)',
                   }}
                 >
                   {item.title}
-                </h6>
+                </h3>
                 <div
                   className="text-size-small transition-colors duration-300"
                   style={{
@@ -125,14 +125,14 @@ export default function ValuesInteractive() {
                 onClick={() => handleClick(num)}
                 onKeyDown={handleKeyDown(num)}
               >
-                <h2
+                <div
                   className="heading-style-h2 transition-colors duration-300"
                   style={{
                     color: isActive ? 'rgb(255, 255, 255)' : 'rgb(0, 36, 102)',
                   }}
                 >
                   {num}
-                </h2>
+                </div>
                 <div
                   className="value-bg transition-colors duration-300"
                   style={{
@@ -163,14 +163,14 @@ export default function ValuesInteractive() {
                 onClick={() => handleClick(item.id)}
                 onKeyDown={handleKeyDown(item.id)}
               >
-                <h6
+                <h3
                   className="heading-style-h6 transition-colors duration-300"
                   style={{
                     color: isActive ? 'rgb(255, 255, 255)' : 'rgb(0, 36, 102)',
                   }}
                 >
                   {item.title}
-                </h6>
+                </h3>
                 <div
                   className="text-size-small transition-colors duration-300"
                   style={{

@@ -129,7 +129,7 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
 
               <div class="hero-right-content-wrapper reveal-right">
                 <div class="hero-right-content">
-                  <h5 class="heading-style-h5 text-color-white">Asta Cita &amp; Kedaulatan Nasional.</h5>
+                  <h2 class="heading-style-h5 text-color-white">Asta Cita &amp; Kedaulatan Nasional.</h2>
                   <div class="text-size-regular text-color-white-300">Swasembada pangan dan energi, makan bergizi gratis bagi pemuda, hilirisasi 26 komoditas strategis, serta pemantapan pertahanan semesta.</div>
                 </div>
                 <VideoLightbox
@@ -151,7 +151,7 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
         <div class="container-large">
           <div class="category-component">
             <div class="category-left-content-wrapper">
-              <h3 class="heading-style-h3 text-color-white">Partisipasi</h3>
+              <h2 class="heading-style-h3 text-color-white">Partisipasi</h2>
               <div class="text-size-small text-color-white-200">Gotong royong untuk kemakmuran bersama</div>
             </div>
             <div class="category-collection-list-wrapper w-dyn-list">
@@ -193,25 +193,25 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
                 <div class="about-card">
                   <img alt="Badan Gizi Nasional" class="size-8 object-contain" loading="lazy" src="/images/ministries/bgn.webp"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Badan Gizi Nasional (BGN)</h6>
+                    <h3 class="heading-style-h6">Badan Gizi Nasional (BGN)</h3>
                   </div>
                 </div>
                 <div class="about-card">
                   <img alt="Kementerian Pertanian" class="size-8 object-contain" loading="lazy" src="/images/ministries/kementan.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Kementerian Pertanian RI</h6>
+                    <h3 class="heading-style-h6">Kementerian Pertanian RI</h3>
                   </div>
                 </div>
                 <div class="about-card">
                   <img alt="Kementerian Pertahanan" class="size-8 object-contain" loading="lazy" src="/images/ministries/kemhan.webp"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Kementerian Pertahanan RI</h6>
+                    <h3 class="heading-style-h6">Kementerian Pertahanan RI</h3>
                   </div>
                 </div>
                 <div class="about-card">
                   <img alt="Kementerian Komunikasi dan Digital" class="size-8 object-contain" loading="lazy" src="/images/ministries/komdigi.svg"/>
                   <div class="about-card-content">
-                    <h6 class="heading-style-h6">Kementerian Komunikasi &amp; Digital</h6>
+                    <h3 class="heading-style-h6">Kementerian Komunikasi &amp; Digital</h3>
                   </div>
                 </div>
               </div>
@@ -249,7 +249,7 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
                         <img alt={obj.data.title} class="objective-image" loading="lazy" src={objectiveImages[entrySlug(obj) as keyof typeof objectiveImages] || `/images/objectives/${entrySlug(obj)}.jpg`} />
                       </div>
                       <div class="objective-card-content-wrapper">
-                        <h5 class="heading-style-h5">{obj.data.title}</h5>
+                        <h3 class="heading-style-h5">{obj.data.title}</h3>
                         <p class="text-size-regular">{obj.data.description}</p>
                       </div>
                     </a>
@@ -322,7 +322,7 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
                       </div>
                       <div class="team-card-content-wrapper">
                         <div class="team-card-content">
-                          <h5 class="heading-style-h5 text-color-white">{member.data.name}</h5>
+                          <h3 class="heading-style-h5 text-color-white">{member.data.name}</h3>
                           <img alt="" class="arrow" loading="lazy" src="/images/assets/66dc04d922177f0428b4cc55_Team%20Arrow.svg" />
                         </div>
                         <div class="text-size-regular text-color-white">{member.data.title}</div>
@@ -366,7 +366,7 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
                     </div>
                     <div class="event-card-content-wrapper">
                       <div class="event-card-top-content">
-                        <h5 class="heading-style-h5">{event.title}</h5>
+                        <h3 class="heading-style-h5">{event.title}</h3>
                         <div class="text-size-regular">{event.description}</div>
                       </div>
                       <div class="event-card-bottom-content-wrapper">
@@ -481,7 +481,7 @@ const blogPosts = featuredBlogSlugs.flatMap((slug) => {
                         <div class="blog-card-content-wrapper">
                           <div class="text-size-small">{new Date(post.data.publishDate).toLocaleDateString('id-ID', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                           <a class="blog-text-link w-inline-block" href={`/post/${entrySlug(post)}`}>
-                            <h5 class="heading-style-h5">{post.data.title}</h5>
+                            <h3 class="heading-style-h5">{post.data.title}</h3>
                           </a>
                           <div class="blog-card-content">
                             <a class="blog-button w-inline-block" href={`/post/${entrySlug(post)}`}>
