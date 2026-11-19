@@ -1,4 +1,5 @@
 ---
+import { LayoutGrid } from 'lucide-react';
 import MobileNavMenu from '../react/MobileNavMenu';
 
 interface Props {
@@ -77,13 +78,8 @@ const activeKey = getActiveKey(cleanPath);
       </div>
     </nav>
     <div class="nav-left-content">
-      <a class="w-commerce-commercecartopenlink nav-cart-button w-inline-block" href={toHref('/program')} role="button" aria-label="Program Nasional">
-        <svg class="w-commerce-commercecartopenlinkicon" height="17px" viewBox="0 0 17 17" width="17px" fill="none" stroke="currentColor" stroke-width="1.5">
-          <rect x="1" y="1" width="6" height="6" rx="1" />
-          <rect x="10" y="1" width="6" height="6" rx="1" />
-          <rect x="1" y="10" width="6" height="6" rx="1" />
-          <rect x="10" y="10" width="6" height="6" rx="1" />
-        </svg>
+      <a class="w-commerce-commercecartopenlink nav-cart-button flex items-center" href={toHref('/program')} aria-label="Program Nasional" aria-current={activeKey === 'Program Nasional' ? 'page' : undefined}>
+        <LayoutGrid className="w-commerce-commercecartopenlinkicon" size={17} strokeWidth={1.5} aria-hidden="true" />
         <div class="text-block w-inline-block">Program Nasional</div>
       </a>
       <div class="nav-bottom-content hide-tablet">
