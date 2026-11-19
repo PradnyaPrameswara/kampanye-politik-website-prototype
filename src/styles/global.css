@@ -6366,3 +6366,15 @@ blockquote {
 [data-slot="drawer-viewport"] {
   z-index: 50;
 }
+
+@media screen and (max-width: 767px) {
+  .header-bg {
+    background-image: linear-gradient(#081a3ecc, #081a3ecc), url("/images/shared/hero-bg-image-960.webp");
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header-bg {
+    background-image: linear-gradient(#081a3ecc, #081a3ecc), url("/images/shared/hero-bg-image-480.webp");
+  }
+}
