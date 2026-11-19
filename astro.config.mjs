@@ -169,7 +169,7 @@ export default defineConfig({
   ],
   vite: {
     build: {
-      cssMinify: false,
+      cssMinify: true,
     },
     css: {
       postcss: {
