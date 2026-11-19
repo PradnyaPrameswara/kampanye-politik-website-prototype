@@ -67,7 +67,7 @@ export function FaqAccordion({
 
               <div className="padding-bottom padding-large"></div>
 
-              <Accordion className="faq-list w-full">
+              <Accordion className="faq-list">
                 {faqList.map((item, index) => (
                   <AccordionItem
                     key={index}
