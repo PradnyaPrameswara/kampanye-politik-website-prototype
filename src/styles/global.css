@@ -4422,34 +4422,24 @@ blockquote {
   }
 
   .faq-accordion {
-    transition: background-color 0.4s ease;
+    transition: background-color 0.3s ease;
   }
 
-  .faq-accordion[data-state="open"] {
-    background-color: var(--secendary--blue) !important;
+  .faq-accordion[data-open] {
+    background-color: var(--secendary--blue);
   }
 
-  .faq-accordion[data-state="open"] .heading-style-h6,
-  .faq-accordion[data-state="open"] .text-size-regular,
-  .faq-accordion[data-state="open"] .heading-style-h6.is-faq,
-  .faq-accordion[data-state="open"] .text-size-regular.is-faq {
-    color: #ffffff !important;
-  }
-
-  .faq-icon-wrapper {
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
-  .faq-accordion[data-state="open"] .faq-icon-wrapper {
-    transform: rotate(45deg);
+  .faq-accordion[data-open] .heading-style-h6,
+  .faq-accordion[data-open] .text-size-regular {
+    color: #ffffff;
   }
 
   .faq-icon {
-    transition: background-color 0.4s ease;
+    transition: background-color 0.3s ease;
   }
 
-  .faq-accordion[data-state="open"] .faq-icon {
-    background-color: #ffffff !important;
+  .faq-accordion[data-open] .faq-icon {
+    background-color: #ffffff;
   }
 
   @media (prefers-reduced-motion: reduce) {

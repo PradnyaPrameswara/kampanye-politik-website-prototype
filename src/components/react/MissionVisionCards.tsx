@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 export default function MissionVisionCards() {
@@ -16,7 +15,7 @@ export default function MissionVisionCards() {
 
   return (
     <div className="mission-bottom-content-wrapper">
-      <Card className="mission-card reveal-scale border-0 bg-transparent shadow-none p-0">
+      <div className="mission-card reveal-scale laptop:w-1/2 laptop:min-w-0">
         <div className="mission-image-wraper">
           <img
             alt="Misi Kabinet Merah Putih"
@@ -26,7 +25,7 @@ export default function MissionVisionCards() {
             src="/images/assets/66dc04d9dd607b08dfac0c60_Mission%20Image%202.webp"
           />
         </div>
-        <CardContent className="mission-card-content-wrapper p-0">
+        <div className="mission-card-content-wrapper">
           <h3 className="heading-style-h4">Misi</h3>
           <div
             id="mission-card-content"
@@ -58,10 +57,10 @@ export default function MissionVisionCards() {
               Lihat lebih sedikit....
             </div>
           </Button>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
-      <Card className="mission-card reveal-scale border-0 bg-transparent shadow-none p-0">
+      <div className="mission-card reveal-scale laptop:w-1/2 laptop:min-w-0">
         <div className="mission-image-wraper">
           <img
             alt="Visi Indonesia Emas 2045"
@@ -71,7 +70,7 @@ export default function MissionVisionCards() {
             src="/images/assets/66dc04db185f32d46eb9e05f_Mission%20Image%2001.webp"
           />
         </div>
-        <CardContent className="mission-card-content-wrapper p-0">
+        <div className="mission-card-content-wrapper">
           <h3 className="heading-style-h4">Visi</h3>
           <div
             id="vision-card-content"
@@ -103,8 +102,8 @@ export default function MissionVisionCards() {
               Lihat lebih sedikit....
             </div>
           </Button>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }

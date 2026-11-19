@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Card } from '@/components/ui/card';
 
 interface ValueItem {
   id: number;
@@ -73,9 +72,9 @@ export default function ValuesInteractive() {
             const isActive = activeTab === item.id;
 
             return (
-              <Card
+              <div
                 key={item.id}
-                className="value-card reveal-left cursor-pointer transition-all duration-300 border-0 p-0 shadow-none rounded-none"
+                className="value-card reveal-left cursor-pointer transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -103,7 +102,7 @@ export default function ValuesInteractive() {
                 >
                   {item.description}
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
@@ -115,7 +114,7 @@ export default function ValuesInteractive() {
             return (
               <div
                 key={num}
-                className="value-tab cursor-pointer"
+                className="value-tab cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
                 role="button"
                 tabIndex={0}
                 aria-pressed={isActive}
@@ -149,9 +148,9 @@ export default function ValuesInteractive() {
             const isActive = activeTab === item.id;
 
             return (
-              <Card
+              <div
                 key={item.id}
-                className="value-card reveal-right cursor-pointer transition-all duration-300 border-0 p-0 shadow-none rounded-none"
+                className="value-card reveal-right cursor-pointer transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
                 style={{
                   backgroundColor: isActive ? 'rgb(2, 103, 255)' : 'rgb(255, 255, 255)',
                 }}
@@ -179,7 +178,7 @@ export default function ValuesInteractive() {
                 >
                   {item.description}
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
