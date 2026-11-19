@@ -3117,6 +3117,13 @@ blockquote {
 .faq-answer-wrapper {
   width: 34.625rem;
   overflow: hidden;
+  height: var(--accordion-panel-height);
+  transition: height .35s cubic-bezier(.25, 1, .5, 1);
+}
+
+.faq-answer-wrapper[data-starting-style],
+.faq-answer-wrapper[data-ending-style] {
+  height: 0;
 }
 
 .blog-component {
@@ -4445,36 +4452,6 @@ blockquote {
     background-color: #ffffff !important;
   }
 
-  @keyframes faqSlideDown {
-    from {
-      height: 0;
-      opacity: 0;
-    }
-    to {
-      height: var(--accordion-content-height, max-content);
-      opacity: 1;
-    }
-  }
-
-  @keyframes faqSlideUp {
-    from {
-      height: var(--accordion-content-height, max-content);
-      opacity: 1;
-    }
-    to {
-      height: 0;
-      opacity: 0;
-    }
-  }
-
-  .faq-answer-wrapper[data-state="open"] {
-    animation: faqSlideDown 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
-  .faq-answer-wrapper[data-state="closed"] {
-    animation: faqSlideUp 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .reveal-up,
     .reveal-down,
@@ -4501,8 +4478,7 @@ blockquote {
     .faq-accordion,
     .faq-icon-wrapper,
     .faq-icon,
-    .faq-answer-wrapper[data-state="open"],
-    .faq-answer-wrapper[data-state="closed"] {
+    .faq-answer-wrapper {
       animation: none !important;
       transition: none !important;
     }
@@ -6370,8 +6346,7 @@ blockquote {
   .faq-accordion,
   .faq-icon-wrapper,
   .faq-icon,
-  .faq-answer-wrapper[data-state="open"],
-  .faq-answer-wrapper[data-state="closed"],
+  .faq-answer-wrapper,
   .button,
   .category-card,
   .donation-card,
@@ -6386,4 +6361,8 @@ blockquote {
     transform: none !important;
     transition: none !important;
   }
+}
+
+[data-slot="drawer-viewport"] {
+  z-index: 50;
 }

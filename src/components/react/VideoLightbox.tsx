@@ -1,11 +1,12 @@
 import React from 'react';
 import {
   Dialog,
-  DialogTrigger,
+  DialogBackdrop,
+  DialogClose,
   DialogContent,
   DialogTitle,
-  DialogClose,
-} from '@/components/ui/dialog';
+  DialogTrigger,
+} from '@ui-sdk/react/dialog';
 import { XIcon } from 'lucide-react';
 
 interface VideoLightboxProps {
@@ -45,8 +46,9 @@ export function VideoLightbox({ thumbnailSrc, videoUrl, triggerLabel = 'Saksikan
           </div>
         </div>
       </DialogTrigger>
-      
-      <DialogContent showCloseButton={false} className="w-[90vw] max-w-4xl bg-black border-none p-0 rounded-[0.75rem] overflow-hidden shadow-2xl">
+
+      <DialogBackdrop className="fixed inset-0 z-50 bg-black/10 supports-backdrop-filter:backdrop-blur-xs transition-opacity duration-100 data-[starting-style]:opacity-0 data-[ending-style]:opacity-0" />
+      <DialogContent className="fixed top-1/2 left-1/2 z-50 w-[90vw] max-w-4xl -translate-x-1/2 -translate-y-1/2 bg-black border-none p-0 rounded-[0.75rem] overflow-hidden shadow-2xl ring-1 ring-foreground/10 transition duration-100 data-[starting-style]:opacity-0 data-[starting-style]:scale-95 data-[ending-style]:opacity-0 data-[ending-style]:scale-95">
         <DialogTitle className="sr-only">Pemutar Video</DialogTitle>
         <div className="relative pt-[56.25%] w-full">
           <iframe
@@ -58,7 +60,7 @@ export function VideoLightbox({ thumbnailSrc, videoUrl, triggerLabel = 'Saksikan
             allowFullScreen
           />
         </div>
-        <DialogClose render={<button className="absolute top-4 right-4 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-brand-red transition-colors focus:outline-none" aria-label="Tutup" />}>
+        <DialogClose className="absolute top-4 right-4 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-brand-red transition-colors focus:outline-none" aria-label="Tutup">
           <XIcon className="w-6 h-6" />
         </DialogClose>
       </DialogContent>
