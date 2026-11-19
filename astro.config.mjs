@@ -4,8 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import tailwindcss from 'tailwindcss';
-import autoprefixer from 'autoprefixer';
+import tailwindcss from '@tailwindcss/vite';
 
 // Environment-aware deployment configuration
 const isCloudflare = Boolean(process.env.CF_PAGES) || Boolean(process.env.CLOUDFLARE) || Boolean(process.env.CF_WORKER) || process.env.DEPLOY_TARGET === 'cloudflare';
@@ -168,13 +167,9 @@ export default defineConfig({
     basePathRewriter(base, site),
   ],
   vite: {
+    plugins: [tailwindcss()],
     build: {
       cssMinify: true,
-    },
-    css: {
-      postcss: {
-        plugins: [tailwindcss(), autoprefixer()],
-      },
     },
   },
   redirects: {
