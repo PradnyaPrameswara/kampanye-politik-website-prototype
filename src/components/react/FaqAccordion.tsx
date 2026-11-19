@@ -1,10 +1,11 @@
 import React from 'react';
 import {
   Accordion,
+  AccordionHeader,
   AccordionItem,
+  AccordionPanel,
   AccordionTrigger,
-  AccordionContent,
-} from '@/components/ui/accordion';
+} from '@ui-sdk/react/accordion';
 
 export interface FaqItem {
   question: string;
@@ -66,25 +67,27 @@ export function FaqAccordion({
 
               <div className="padding-bottom padding-large"></div>
 
-              <Accordion className="faq-list">
+              <Accordion className="faq-list w-full">
                 {faqList.map((item, index) => (
-                  <AccordionItem 
-                    key={index} 
+                  <AccordionItem
+                    key={index}
                     value={`item-${index}`}
                     className="faq-accordion reveal-up border-b-0"
                   >
-                    <AccordionTrigger className="faq-question-wrapper w-full text-left bg-transparent border-none p-0 cursor-pointer group hover:no-underline [&>svg]:hidden">
-                      <div className="heading-style-h6">{item.question}</div>
-                      <div className="faq-icon-wrapper">
-                        <div className="faq-icon _1st"></div>
-                        <div className="faq-icon _2nd"></div>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="faq-answer-wrapper overflow-hidden">
+                    <AccordionHeader>
+                      <AccordionTrigger className="faq-question-wrapper w-full text-left text-sm bg-transparent border-none p-0 cursor-pointer">
+                        <div className="heading-style-h6">{item.question}</div>
+                        <div className="faq-icon-wrapper">
+                          <div className="faq-icon _1st"></div>
+                          <div className="faq-icon _2nd"></div>
+                        </div>
+                      </AccordionTrigger>
+                    </AccordionHeader>
+                    <AccordionPanel className="faq-answer-wrapper pb-2.5">
                       <div className="margin-top">
                         <p className="text-size-regular">{item.answer}</p>
                       </div>
-                    </AccordionContent>
+                    </AccordionPanel>
                   </AccordionItem>
                 ))}
               </Accordion>
